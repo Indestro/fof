@@ -1,0 +1,115 @@
+{
+ "orgs": [
+  {
+   "firm": "AIspace Ventures",
+   "lift_per_100": 10.0,
+   "hits": 2,
+   "deals_alltime": 20
+  },
+  {
+   "firm": "E1 Ventures",
+   "lift_per_100": 4.88,
+   "hits": 2,
+   "deals_alltime": 41
+  },
+  {
+   "firm": "Flixfounders",
+   "lift_per_100": 3.33,
+   "hits": 2,
+   "deals_alltime": 60
+  },
+  {
+   "firm": "JAM Fund",
+   "lift_per_100": 2.68,
+   "hits": 3,
+   "deals_alltime": 112
+  },
+  {
+   "firm": "SGH CAPITAL",
+   "lift_per_100": 2.26,
+   "hits": 3,
+   "deals_alltime": 133
+  },
+  {
+   "firm": "Day One Ventures",
+   "lift_per_100": 1.36,
+   "hits": 2,
+   "deals_alltime": 147
+  },
+  {
+   "firm": "Cota Capital",
+   "lift_per_100": 1.35,
+   "hits": 3,
+   "deals_alltime": 223
+  },
+  {
+   "firm": "Four Cities Capital",
+   "lift_per_100": 1.2,
+   "hits": 2,
+   "deals_alltime": 167
+  },
+  {
+   "firm": "Celesta Capital",
+   "lift_per_100": 1.08,
+   "hits": 2,
+   "deals_alltime": 186
+  },
+  {
+   "firm": "redalpine",
+   "lift_per_100": 1.06,
+   "hits": 2,
+   "deals_alltime": 188
+  },
+  {
+   "firm": "Quiet Capital",
+   "lift_per_100": 1.04,
+   "hits": 5,
+   "deals_alltime": 483
+  },
+  {
+   "firm": "AlleyCorp",
+   "lift_per_100": 0.97,
+   "hits": 2,
+   "deals_alltime": 206
+  },
+  {
+   "firm": "Amplify Partners",
+   "lift_per_100": 0.68,
+   "hits": 2,
+   "deals_alltime": 295
+  },
+  {
+   "firm": "Forerunner",
+   "lift_per_100": 0.62,
+   "hits": 2,
+   "deals_alltime": 320
+  },
+  {
+   "firm": "Soma Capital",
+   "lift_per_100": 0.49,
+   "hits": 5,
+   "deals_alltime": 1015
+  },
+  {
+   "firm": "SV Angel",
+   "lift_per_100": 0.32,
+   "hits": 5,
+   "deals_alltime": 1582
+  }
+ ],
+ "persons": [
+  "Justin Mateen",
+  "Igor Ryabenkiy",
+  "Antonio Rodriguez",
+  "Charlie Songhurst",
+  "Immad Akhund",
+  "Scott Belsky",
+  "Mei Z."
+ ],
+ "caveats": [
+  "denominators are ALL-TIME deal counts (old firms penalized)",
+  "small-n lifts (2/20) need beta posterior before ranking is trusted",
+  "precede labels use CB announce dates with 60d ambiguity band",
+  "person layer from CB partner_identifiers is sparse; X/LI must carry it"
+ ]
+}

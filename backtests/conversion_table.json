@@ -1,0 +1,468 @@
+{
+ "base_rate": 0.588,
+ "table": [
+  {
+   "investor": "Quiet Capital",
+   "conv": 1.0,
+   "ci": [
+    0.5655085052479191,
+    1.0000000000000002
+   ],
+   "k": 5,
+   "n": 5,
+   "beats_base": false,
+   "hits": [
+    "assort-health",
+    "decart-abcd",
+    "enter-2",
+    "nothing-4537",
+    "standard-bots"
+   ]
+  },
+  {
+   "investor": "Y Combinator",
+   "conv": 0.8,
+   "ci": [
+    0.49015684672072335,
+    0.9433190520193067
+   ],
+   "k": 8,
+   "n": 10,
+   "beats_base": false,
+   "hits": [
+    "alpacadb",
+    "avoca-ai",
+    "deepgram",
+    "eight-sleep",
+    "happyrobot",
+    "posthog",
+    "stoke-space-technologies",
+    "trm-labs"
+   ]
+  },
+  {
+   "investor": "Mei Z.",
+   "conv": 1.0,
+   "ci": [
+    0.43849391955098227,
+    1.0
+   ],
+   "k": 3,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "etched-ai",
+    "matx",
+    "nscale"
+   ]
+  },
+  {
+   "investor": "Immad Akhund",
+   "conv": 1.0,
+   "ci": [
+    0.43849391955098227,
+    1.0
+   ],
+   "k": 3,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "assort-health",
+    "etched-ai",
+    "stoke-space-technologies"
+   ]
+  },
+  {
+   "investor": "SGH CAPITAL",
+   "conv": 1.0,
+   "ci": [
+    0.43849391955098227,
+    1.0
+   ],
+   "k": 3,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "eight-sleep",
+    "trm-labs",
+    "valar-atomics"
+   ]
+  },
+  {
+   "investor": "SV Angel",
+   "conv": 0.8333333333333334,
+   "ci": [
+    0.43649056343635395,
+    0.9699474141282697
+   ],
+   "k": 5,
+   "n": 6,
+   "beats_base": false,
+   "hits": [
+    "matx",
+    "posthog",
+    "standard-bots",
+    "workos",
+    "you-com-523e"
+   ]
+  },
+  {
+   "investor": "Soma Capital",
+   "conv": 0.75,
+   "ci": [
+    0.40926987910258916,
+    0.9285223111419724
+   ],
+   "k": 6,
+   "n": 8,
+   "beats_base": false,
+   "hits": [
+    "avoca-ai",
+    "eight-sleep",
+    "etched-ai",
+    "exa-1b30",
+    "stoke-space-technologies",
+    "whop"
+   ]
+  },
+  {
+   "investor": "Justin Mateen",
+   "conv": 0.75,
+   "ci": [
+    0.3006360524426366,
+    0.9544139373553637
+   ],
+   "k": 3,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "radiant",
+    "stoke-space-technologies",
+    "whop"
+   ]
+  },
+  {
+   "investor": "JAM Fund",
+   "conv": 0.75,
+   "ci": [
+    0.3006360524426366,
+    0.9544139373553637
+   ],
+   "k": 3,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "radiant",
+    "stoke-space-technologies",
+    "whop"
+   ]
+  },
+  {
+   "investor": "Cota Capital",
+   "conv": 0.75,
+   "ci": [
+    0.3006360524426366,
+    0.9544139373553637
+   ],
+   "k": 3,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "eight-sleep",
+    "farther-finance",
+    "upscale-ai"
+   ]
+  },
+  {
+   "investor": "Plug and Play",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "einride",
+    "iterative-health"
+   ]
+  },
+  {
+   "investor": "Liquid 2 Ventures",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "posthog",
+    "stoke-space-technologies"
+   ]
+  },
+  {
+   "investor": "Day One Ventures",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "valar-atomics",
+    "you-com-523e"
+   ]
+  },
+  {
+   "investor": "Pioneer Fund",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "assort-health",
+    "avoca-ai"
+   ]
+  },
+  {
+   "investor": "Charlie Songhurst",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "radiant",
+    "stoke-space-technologies"
+   ]
+  },
+  {
+   "investor": "E1 Ventures",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "cowboy-space",
+    "valar-atomics"
+   ]
+  },
+  {
+   "investor": "Nat Friedman",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "distyl-ai",
+    "matx"
+   ]
+  },
+  {
+   "investor": "Dell Technologies Capital",
+   "conv": 0.6666666666666666,
+   "ci": [
+    0.2076549551264879,
+    0.9385096847238394
+   ],
+   "k": 2,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "distyl-ai",
+    "vast-data"
+   ]
+  },
+  {
+   "investor": "Craft Ventures",
+   "conv": 0.5,
+   "ci": [
+    0.15003570882017148,
+    0.8499642911798285
+   ],
+   "k": 2,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "norm-ai",
+    "upwind-security"
+   ]
+  },
+  {
+   "investor": "Evolution VC Partners",
+   "conv": 0.5,
+   "ci": [
+    0.15003570882017148,
+    0.8499642911798285
+   ],
+   "k": 2,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "eight-sleep",
+    "sunday-com"
+   ]
+  },
+  {
+   "investor": "Alumni Ventures",
+   "conv": 0.2857142857142857,
+   "ci": [
+    0.0822171657090155,
+    0.6410709098517873
+   ],
+   "k": 2,
+   "n": 7,
+   "beats_base": false,
+   "hits": [
+    "trm-labs",
+    "valar-atomics"
+   ]
+  },
+  {
+   "investor": "Techstars",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "trygeniusai"
+   ]
+  },
+  {
+   "investor": "TCV",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "upwind-security"
+   ]
+  },
+  {
+   "investor": "Nexus Venture Partners",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "avoca-ai"
+   ]
+  },
+  {
+   "investor": "Goldman Sachs",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "vast-data"
+   ]
+  },
+  {
+   "investor": "ZhenFund",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "blacklake-technologies"
+   ]
+  },
+  {
+   "investor": "Tribe Capital",
+   "conv": 0.3333333333333333,
+   "ci": [
+    0.0614903152761605,
+    0.7923450448735121
+   ],
+   "k": 1,
+   "n": 3,
+   "beats_base": false,
+   "hits": [
+    "radiant"
+   ]
+  },
+  {
+   "investor": "Yunqi Partners",
+   "conv": 0.25,
+   "ci": [
+    0.045586062644636216,
+    0.6993639475573634
+   ],
+   "k": 1,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "eight-sleep"
+   ]
+  },
+  {
+   "investor": "Creandum",
+   "conv": 0.25,
+   "ci": [
+    0.045586062644636216,
+    0.6993639475573634
+   ],
+   "k": 1,
+   "n": 4,
+   "beats_base": false,
+   "hits": [
+    "augustus-86bf"
+   ]
+  },
+  {
+   "investor": "Gaingels",
+   "conv": 0.2,
+   "ci": [
+    0.03622316096978745,
+    0.6244717358814613
+   ],
+   "k": 1,
+   "n": 5,
+   "beats_base": false,
+   "hits": [
+    "talkiatry"
+   ]
+  }
+ ]
+}
