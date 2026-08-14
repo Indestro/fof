@@ -216,10 +216,25 @@ simulate();
 </div>
 
 <script>
-(()=>{const uni=['Etched','MatX','Nscale','Black Forest Labs','Whop','Radiant','Stoke Space','Slash','Hadrian','Decart','Assort Health','Modal','Enter','You.com','Invisible Tech','Eight Sleep','Farther','Upscale AI','Cast AI','TRM Labs','Valar Atomics','Avoca','Curative','Omni'];
-const sub=['OpenPhone','Northwood Space','WindBorne','Shinkei Systems','Eyebot','Allium','Dropzone AI','Swarm Aero','Owner.com','Ramp','Biossil','Fun.xyz','Movandi','Regie.ai','Nitra','Cargado','Nyne','Stell Engineering','Beam','Northwood'];
+(()=>{const P=[
+["Etched","~80x",1],["Whop","~80x",1],["Radiant","~80x",1],["Ramp","~80x",1],["Black Forest Labs","~79x",1],
+["Decart","~74x",1],["Eight Sleep","~50x",1],["TRM Labs","~50x",1],["Stoke Space","~48x",1],["Valar Atomics","~48x",1],
+["You.com","~36x",1],["Slash","~34x",1],["Nscale","~31x",1],["Assort Health","~29x",1],["Enter","~29x",1],["Farther","~29x",1],
+["Modal","~26x",1],["MatX","~25x",1],["Cast AI","~24x",1],["Avoca","~24x",1],["Curative","~24x",1],["Hadrian","~38x",1],
+["Omni","~15x",1],["Upscale AI","~10x",1],["Invisible Tech","~10x",1],
+["Owner.com","~16x",0],["OpenPhone","~14x",0],["Northwood Space","~13x",0],["Fun.xyz","~10x",0],["Biossil","~9x",0],
+["Nitra","~7x",0],["WindBorne","~5x",0],["Allium","~5x",0],["Dropzone AI","~5x",0],["Swarm Aero","~5x",0],
+["Eyebot","~3x",0],["Regie.ai","~3x",0],["Shinkei Systems","~3x",0],["Cargado","~3x",0],["Movandi","~2x",0],
+["Stell Engineering","~2x",0],["Beam","~2x",0],["Nyne","~1.5x",0]];
 const w=document.getElementById('logowall');
-uni.forEach(n=>{const d=document.createElement('span');d.textContent=n;d.style.cssText='padding:6px 12px;border:2px solid var(--yellow);border-radius:16px;font-weight:600;font-size:13px';w.appendChild(d);});
-sub.filter(n=>n!=='Northwood').forEach(n=>{const d=document.createElement('span');d.textContent=n;d.style.cssText='padding:6px 12px;border:1px solid #ccc;border-radius:16px;font-size:13px;color:#555';w.appendChild(d);});})();
+const lg=document.createElement('div');
+lg.style.cssText='flex-basis:100%;font-size:11px;color:#777;margin-bottom:2px';
+lg.innerHTML='<span style="border:2px solid var(--yellow);border-radius:10px;padding:1px 8px;font-weight:600;color:#111">unicorn</span> &nbsp; <span style="border:1px solid #ccc;border-radius:10px;padding:1px 8px;color:#555">$30M+ follow-on</span> &nbsp; figures = estimated position multiple, dilution-adjusted, capped at ~80x';
+w.appendChild(lg);
+P.forEach(([n,m,u])=>{const d=document.createElement('span');
+ d.innerHTML=n+' <b style="color:'+(u?'#003876':'#888')+'">'+m+'</b>';
+ d.style.cssText=u?'padding:6px 12px;border:2px solid var(--yellow);border-radius:16px;font-weight:600;font-size:13px'
+                  :'padding:6px 12px;border:1px solid #ccc;border-radius:16px;font-size:13px;color:#555';
+ w.appendChild(d);});})();
 </script>
 </body></html>
