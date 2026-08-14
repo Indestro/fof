@@ -1,0 +1,239 @@
+{
+ "jam-fund": {
+  "orgs": 82,
+  "post30": [
+   [
+    "fun-5da2",
+    72
+   ],
+   [
+    "whop",
+    200
+   ],
+   [
+    "slash-a196",
+    100
+   ],
+   [
+    "radiant",
+    300
+   ],
+   [
+    "openphone",
+    105
+   ],
+   [
+    "breadfast",
+    50
+   ],
+   [
+    "owner-com",
+    120
+   ],
+   [
+    "hadrian-caa2",
+    1370
+   ],
+   [
+    "clara-fintech",
+    150
+   ],
+   [
+    "stoke-space-technologies",
+    860
+   ],
+   [
+    "varda-ba64",
+    275
+   ],
+   [
+    "kavak",
+    300
+   ],
+   [
+    "speak-3",
+    78
+   ]
+  ],
+  "post10": [
+   [
+    "fun-5da2",
+    72
+   ],
+   [
+    "whop",
+    55
+   ],
+   [
+    "slash-a196",
+    100
+   ],
+   [
+    "radiant",
+    300
+   ],
+   [
+    "breadfast",
+    10
+   ],
+   [
+    "owner-com",
+    120
+   ],
+   [
+    "hadrian-caa2",
+    1370
+   ],
+   [
+    "clara-fintech",
+    70
+   ],
+   [
+    "pipe",
+    16
+   ],
+   [
+    "stoke-space-technologies",
+    100
+   ],
+   [
+    "varda-ba64",
+    187
+   ],
+   [
+    "kavak",
+    300
+   ]
+  ],
+  "t1post": [
+   [
+    "slash-a196",
+    "Khosla Ventures"
+   ],
+   [
+    "openphone",
+    "General Catalyst"
+   ],
+   [
+    "hadrian-caa2",
+    "Valor Equity Partners"
+   ],
+   [
+    "clara-fintech",
+    "General Catalyst"
+   ],
+   [
+    "kavak",
+    "Andreessen Horowitz"
+   ],
+   [
+    "speak-3",
+    "Accel"
+   ]
+  ]
+ },
+ "theory-ventures": {
+  "orgs": 5,
+  "post30": [
+   [
+    "allium-2c51",
+    40
+   ],
+   [
+    "dropzone-ai",
+    37
+   ],
+   [
+    "omni",
+    120
+   ]
+  ],
+  "post10": [
+   [
+    "omni",
+    69
+   ]
+  ],
+  "t1post": []
+ },
+ "wischoff-ventures": {
+  "orgs": 10,
+  "post30": [],
+  "post10": [
+   [
+    "cargado",
+    12
+   ],
+   [
+    "beam-b7af",
+    11
+   ]
+  ],
+  "t1post": []
+ },
+ "humba-ventures": {
+  "orgs": 10,
+  "post30": [
+   [
+    "the-lumber-manufactory",
+    34
+   ],
+   [
+    "northwood-space",
+    100
+   ],
+   [
+    "windborne",
+    37
+   ]
+  ],
+  "post10": [
+   [
+    "hexium",
+    13
+   ],
+   [
+    "eyebot",
+    20
+   ],
+   [
+    "the-lumber-manufactory",
+    12
+   ],
+   [
+    "orchard-robotics",
+    22
+   ],
+   [
+    "northwood-space",
+    100
+   ],
+   [
+    "shinkei-systems",
+    22
+   ],
+   [
+    "windborne",
+    37
+   ]
+  ],
+  "t1post": [
+   [
+    "eyebot",
+    "General Catalyst"
+   ],
+   [
+    "northwood-space",
+    "Andreessen Horowitz"
+   ],
+   [
+    "shinkei-systems",
+    "Founders Fund"
+   ],
+   [
+    "windborne",
+    "Khosla Ventures"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "cota-capital": {
+  "entries": 133,
+  "wins": [
+   [
+    "movandi",
+    "2025-10-14",
+    40
+   ],
+   [
+    "cast-ai",
+    "2025-04-30",
+    108
+   ]
+  ]
+ },
+ "day-one-ventures": {
+  "entries": 99,
+  "wins": [
+   [
+    "owner-com",
+    "2025-05-13",
+    120
+   ],
+   [
+    "regie-da23",
+    "2025-02-26",
+    30
+   ]
+  ]
+ },
+ "humba-ventures": {
+  "entries": 10,
+  "wins": [
+   [
+    "northwood-space",
+    "2025-04-22",
+    30
+   ]
+  ]
+ },
+ "jam-fund": {
+  "entries": 82,
+  "wins": [
+   [
+    "fun-5da2",
+    "2026-05-01",
+    72
+   ]
+  ]
+ },
+ "quiet-capital": {
+  "entries": 344,
+  "wins": [
+   [
+    "assort-health",
+    "2025-10-02",
+    76
+   ],
+   [
+    "biossil",
+    "2026-04-23",
+    70
+   ],
+   [
+    "swarm-aero",
+    "2026-03-11",
+    35
+   ],
+   [
+    "nava-038f",
+    "2025-10-07",
+    30
+   ],
+   [
+    "arch-7c76",
+    "2025-09-15",
+    52
+   ],
+   [
+    "sanas",
+    "2025-02-19",
+    65
+   ]
+  ]
+ },
+ "sgh-capital": {
+  "entries": 112,
+  "wins": []
+ },
+ "soma-capital": {
+  "entries": 803,
+  "wins": [
+   [
+    "nitra-inc",
+    "2026-03-10",
+    50
+   ],
+   [
+    "ramp-financial",
+    "2025-11-17",
+    300
+   ],
+   [
+    "heat-watch",
+    "2025-06-09",
+    30
+   ],
+   [
+    "aspora",
+    "2025-05-01",
+    53
+   ],
+   [
+    "astroforge",
+    "2024-08-20",
+    42
+   ]
+  ]
+ },
+ "theory-ventures": {
+  "entries": 5,
+  "wins": [
+   [
+    "allium-2c51",
+    "2026-06-23",
+    40
+   ],
+   [
+    "dropzone-ai",
+    "2025-07-17",
+    37
+   ]
+  ]
+ },
+ "wischoff-ventures": {
+  "entries": 10,
+  "wins": []
+ }
+}
