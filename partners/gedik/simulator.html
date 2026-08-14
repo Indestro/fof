@@ -37,7 +37,7 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 
 <div class="card">
 <p class="ct">We see fund managers' moves months before the market does</p>
-<p class="cs">Verified backtest: public-signal lead time for 5 senior investors who left to raise their own funds (name-diff method on SEC filings, anonymized)</p>
+<p class="cs">Verified backtest: SEC-filing silence preceded each public departure — the name-diff method on Form D related-persons (all public data)</p>
 <canvas id="c2" height="110"></canvas>
 <div class="src"><span>Olympos analysis · SEC EDGAR Form D archive, verified 2022–2026 departure cases</span><span class="byline">OLYMPOS</span></div>
 </div>
@@ -106,10 +106,10 @@ new Chart(c1,{type:'line',data:{labels:pareto.map((_,i)=>i+1),
   y:{min:0,max:60,title:{display:true,text:'Cumulative share of round leads (%)',font:{size:11}},ticks:{callback:v=>v+'%'}}}}});
 
 // ---- Chart 2: departure lead times ----
-new Chart(c2,{type:'bar',data:{labels:['GP A','GP B','GP C','GP D','GP E'],
+new Chart(c2,{type:'bar',data:{labels:['Tomasz Tunguz → Theory','Vic Singh (Eniac)','Brian Singerman → GPx','Ethan Kurzweil → Chemistry','Leo Polovets → Humba'],
  datasets:[{data:[9,9,20,24,26],backgroundColor:[NAVY,NAVY,NAVY,NAVY,GREY],borderRadius:4,barThickness:26}]},
  options:{indexAxis:'y',plugins:{legend:{display:false},
-  tooltip:{callbacks:{label:i=>i.dataIndex==4?'Filing went silent before any public announcement (26 months)':`Signal ${i.parsed.x} months before public announcement`}}},
+  tooltip:{callbacks:{label:i=>i.dataIndex==4?'Omitted from Susa V filing before any announcement; Humba III now raising':`Filing silence began ${i.parsed.x} months before public departure`}}},
  scales:{x:{title:{display:true,text:'Signal lead time (months)',font:{size:11}},grid:{color:'#f0f0f0'}},y:{grid:{display:false}}}}});
 
 // ---- Chart 3: Monte Carlo fan ----
@@ -181,5 +181,45 @@ function simulate(){
 document.getElementById('reroll').addEventListener('click',()=>{SEED=Math.floor(Math.random()*1e6);
  document.getElementById('vSeed').textContent='#'+SEED; simulate();});
 simulate();
+</script>
+
+<div class="card">
+<p class="ct">The August-2024 backtest fund — real managers, real positions</p>
+<p class="cs">The ten managers our signals selected point-in-time, and the companies their books carried into 2025–26 · yellow ring = became a unicorn · grey = $30M+ follow-on round</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin-bottom:14px">
+<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px">Manager</th><th>Fund</th><th>2-yr paper TVPI (sel.-evidence)</th><th>Signature positions</th></tr>
+<tr><td style="padding:4px 8px"><b>Mei Zuo</b></td><td>Mei Z Funds</td><td>—(n=4)</td><td>Etched, MatX, Nscale, Black Forest Labs</td></tr>
+<tr><td style="padding:4px 8px"><b>Justin Mateen</b></td><td>JAM Fund</td><td>5.4x</td><td>Whop, Radiant, Stoke Space, Slash, Hadrian, OpenPhone</td></tr>
+<tr><td style="padding:4px 8px"><b>Tomasz Tunguz</b></td><td>Theory</td><td>2.3x</td><td>Omni, Allium, Dropzone AI</td></tr>
+<tr><td style="padding:4px 8px"><b>Leo Polovets</b></td><td>Humba</td><td>2.1x</td><td>Northwood Space, WindBorne, Shinkei, Eyebot</td></tr>
+<tr><td style="padding:4px 8px"><b>Lee Linden / Quiet</b></td><td>Quiet Capital</td><td>2.2x</td><td>Decart, Assort Health, Modal, Enter, Swarm Aero</td></tr>
+<tr><td style="padding:4px 8px"><b>Masha Bucher</b></td><td>Day One</td><td>2.1x</td><td>You.com, Invisible Tech, Owner.com</td></tr>
+<tr><td style="padding:4px 8px"><b>Bobby Yazdani</b></td><td>Cota</td><td>1.8x</td><td>Eight Sleep, Farther, Upscale AI, Cast AI</td></tr>
+<tr><td style="padding:4px 8px"><b>Alexandre Azoulay</b></td><td>SGH</td><td>1.6x</td><td>TRM Labs, Valar Atomics, Eight Sleep</td></tr>
+<tr><td style="padding:4px 8px"><b>Aneel Ranadive</b></td><td>Soma</td><td>2.5x</td><td>Etched, Whop, Avoca, Curative, Ramp</td></tr>
+<tr><td style="padding:4px 8px"><b>Nichole Wischoff</b></td><td>Wischoff</td><td>1.2x→2.4x (2024 vintage)</td><td>Cargado, Nyne, Stell, Beam</td></tr>
+</table>
+<p class="cs" style="margin-bottom:8px">The would-have-been portfolio (company-level exposure through those funds):</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px" id="logowall"></div>
+<div class="src"><span>Olympos analysis · Crunchbase round histories, SEC EDGAR, cohort valuations · manager selection frozen at 2024-08-14; marks estimated (dilution-adjusted), not audited</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<div class="card">
+<p class="ct">The proposed 2026 fund — named roster by access class</p>
+<p class="cs">$40M first close, 18–20 positions · SFBA-weighted, North America + London + Israel</p>
+<p style="font-size:14px;line-height:1.7">
+<b style="color:var(--navy)">A · Star anchors (2–3):</b> Chemistry II · Diffusion (Lazarte/Fredrickson, ex-Benchmark) · Pebblebed III<br>
+<b style="color:var(--navy)">B · Return engine (7–8):</b> <b>Humba III (raising now)</b> · Mischief (Zach Perret) · Kearny Jackson (a16z &amp; Sequoia are LPs) · Category (Iltchev) · Footwork II · Basecase (Goyal) · Premise (Larco + Bent) · Day One III<br>
+<b style="color:var(--navy)">C · Formation-stage (4–5):</b> Niko Bonatsos (ex-GC) · Ethan Choi (ex-Khosla) · Bryan Kim (ex-a16z) · Josephine Chen (ex-Sequoia) · Mei Zuo vehicle<br>
+<b style="color:var(--navy)">D · Lane options (3–4):</b> Pax (ex-a16z American Dynamism) · Axiom (Venkatachalam) · Orange Collective (YC alumni) · Zero Shot (ex-OpenAI)</p>
+<div class="src"><span>Olympos analysis · access classes reflect open-vehicle status as of Aug 2026 (Form D-verified); roster is a proposal, not commitments</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<script>
+(()=>{const uni=['Etched','MatX','Nscale','Black Forest Labs','Whop','Radiant','Stoke Space','Slash','Hadrian','Decart','Assort Health','Modal','Enter','You.com','Invisible Tech','Eight Sleep','Farther','Upscale AI','Cast AI','TRM Labs','Valar Atomics','Avoca','Curative','Omni'];
+const sub=['OpenPhone','Northwood Space','WindBorne','Shinkei Systems','Eyebot','Allium','Dropzone AI','Swarm Aero','Owner.com','Ramp','Biossil','Fun.xyz','Movandi','Regie.ai','Nitra','Cargado','Nyne','Stell Engineering','Beam','Northwood'];
+const w=document.getElementById('logowall');
+uni.forEach(n=>{const d=document.createElement('span');d.textContent=n;d.style.cssText='padding:6px 12px;border:2px solid var(--yellow);border-radius:16px;font-weight:600;font-size:13px';w.appendChild(d);});
+sub.filter(n=>n!=='Northwood').forEach(n=>{const d=document.createElement('span');d.textContent=n;d.style.cssText='padding:6px 12px;border:1px solid #ccc;border-radius:16px;font-size:13px;color:#555';w.appendChild(d);});})();
 </script>
 </body></html>
