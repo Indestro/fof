@@ -72,7 +72,7 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 <tr><td style="padding:4px 8px">US VC benchmark — vintage median (Cambridge-style, approx.)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
 <tr><td style="padding:4px 8px">US VC benchmark — top quartile (approx.)</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
 </table>
-<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10</span><span class="byline">OLYMPOS</span></div>
+<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · size slider carries an empirical scale penalty (~9%/doubling of log-mean)</span><span class="byline">OLYMPOS</span></div>
 </div>
 
 <div class="card">
@@ -136,7 +136,8 @@ function simulate(){
  const N=1500,YRS=10, sig=0.85;   // per-manager lognormal sigma (single seed-fund TVPI dispersion)
  // calibration: PIT-2024 backtest — equal-weight-all-signals ~1.5-2x base hit rate; tiered 50/35/15 ~3-3.5x
  const MU={none:0.14, equal:0.30, tiered:0.41};   // recalibrated mean-preserving (see backtests)
- const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel], coSig=1.10, mu=MU[sel];   // per-POSITION co-invest params
+ const sizeDrag=0.09*Math.log2(size/40);   // empirical size penalty: each doubling of fund size costs ~9% of log-mean (check-size drift, entry pricing, reserve dilution)
+ const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel]-sizeDrag, coSig=1.10, mu=MU[sel]-sizeDrag;
  const FEE=0.88;             // FoF-level fee/carry drag on gross
  // tier structure: weights of capital and per-tier return premium/discount vs mode mean
  const TIERS = sel==='tiered' ? [[0.50,0.18],[0.35,-0.05],[0.15,-0.22]] : [[1.0,0.0]];
