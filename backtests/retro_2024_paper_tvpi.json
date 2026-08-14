@@ -1,0 +1,78 @@
+{
+ "selection_evidence": {
+  "jam-fund": {
+   "tvpi": 5.43,
+   "n": 82
+  },
+  "theory-ventures": {
+   "tvpi": 2.27,
+   "n": 5
+  },
+  "humba-ventures": {
+   "tvpi": 2.09,
+   "n": 10
+  },
+  "quiet-capital": {
+   "tvpi": 2.24,
+   "n": 344
+  },
+  "day-one-ventures": {
+   "tvpi": 2.06,
+   "n": 99
+  },
+  "cota-capital": {
+   "tvpi": 1.84,
+   "n": 133
+  },
+  "sgh-capital": {
+   "tvpi": 1.59,
+   "n": 112
+  },
+  "soma-capital": {
+   "tvpi": 2.49,
+   "n": 803
+  },
+  "wischoff-ventures": {
+   "tvpi": 1.2,
+   "n": 10
+  }
+ },
+ "owned_vintage": {
+  "jam-fund": {
+   "tvpi": 1.2,
+   "n": 5
+  },
+  "theory-ventures": {
+   "tvpi": 1.39,
+   "n": 11
+  },
+  "humba-ventures": {
+   "tvpi": 1.97,
+   "n": 13
+  },
+  "quiet-capital": {
+   "tvpi": 1.96,
+   "n": 40
+  },
+  "day-one-ventures": {
+   "tvpi": 1.63,
+   "n": 21
+  },
+  "cota-capital": {
+   "tvpi": 1.02,
+   "n": 11
+  },
+  "sgh-capital": {
+   "tvpi": 1.06,
+   "n": 7
+  },
+  "soma-capital": {
+   "tvpi": 1.73,
+   "n": 148
+  },
+  "wischoff-ventures": {
+   "tvpi": 2.4,
+   "n": 15
+  }
+ }
+}

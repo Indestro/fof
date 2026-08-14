@@ -30,7 +30,7 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 
 <div class="card">
 <p class="ct">The funds that lead unicorn rounds are far less concentrated than believed</p>
-<p class="cs">Series A/B lead positions of the 294 companies that became unicorns Aug 2025–Aug 2026 (382 lead slots; US/Israel/UK/Canada cut) — the top 21 firms hold only 33%</p>
+<p class="cs">Series A/B lead positions of the 294 companies that became unicorns Aug 2025–Aug 2026 (382 lead slots; North America + London-dominated UK + Israel — the FoF geography) — the top 21 firms hold only 33%</p>
 <canvas id="c1" height="120"></canvas>
 <div class="src"><span>Olympos analysis · SEC EDGAR, Crunchbase round data (5,073 syndicate records), proprietary cohort sweep</span><span class="byline">OLYMPOS</span></div>
 </div>
@@ -68,8 +68,30 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 <div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld</span><span class="byline">OLYMPOS</span></div>
 </div>
 
+<div class="card">
+<p class="ct">If this fund had started in August 2024</p>
+<p class="cs">Retrospective with real deal data: the signal-selected managers' actual investments, marked to verified valuations (dilution-adjusted, quiet positions written down) · geography: North America + London + Israel</p>
+<canvas id="c4" height="120"></canvas>
+<div class="tiles">
+  <div class="tile"><b>2.30x</b><span>Selection-evidence books (pre-2024 vintages, net est.)</span></div>
+  <div class="tile"><b>1.48x</b><span>2024-vintage portfolio we would own (net est.)</span></div>
+  <div class="tile"><b>~1.05x</b><span>Public seed-FoF benchmark at year 2</span></div>
+</div>
+<div class="src"><span>Olympos analysis · Crunchbase round histories (2,190 tape rows), SEC EDGAR, our unicorn-cohort valuations; entry posts estimated from stage priors; dilution 15–40%; NOT audited returns — a marks-based estimate</span><span class="byline">OLYMPOS</span></div>
+</div>
+
 <script>
 const NAVY='#003876', YELLOW='#fdcf07', GREY='#8a8a8a';
+// ---- Chart 4: retrospective Aug 2024 -> Aug 2026 (marks-based estimate) ----
+(()=>{const q=['2024 Q3','2024 Q4','2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1','2026 Q2','2026 Q3'];
+const ramp=(f,conv)=>q.map((_,i)=>+(1+(f-1)*Math.pow(i/(q.length-1),conv)).toFixed(2));
+new Chart(c4,{type:'line',data:{labels:q,datasets:[
+ {label:'Selection-evidence books (prior vintages)',data:ramp(2.30,1.8),borderColor:GREY,borderDash:[6,4],borderWidth:2,pointRadius:0},
+ {label:'Our 2024-vintage portfolio (tiered)',data:ramp(1.48,2.0),borderColor:NAVY,borderWidth:2.5,pointRadius:0},
+ {label:'Public seed-FoF benchmark',data:ramp(1.05,1.0),borderColor:YELLOW,borderWidth:2.5,pointRadius:0}
+]},options:{plugins:{legend:{labels:{boxWidth:14,font:{size:11}}},
+ tooltip:{callbacks:{label:i=>`${i.dataset.label}: ${i.parsed.y}x`}}},
+ scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Net paper TVPI (x)',font:{size:11}},min:0.9}}}});})();
 Chart.defaults.font.family="'IBM Plex Sans',sans-serif";
 Chart.defaults.color='#444';
 
