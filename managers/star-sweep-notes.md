@@ -25,3 +25,11 @@ KEY LIVE CATCH: **Humba III Form D filed 7/13/2026, SF address** — Polovets ra
 lane-corrected star (1.97x young book, 4/10 T1-entry) has an open entry window.
 Also: Touring ($330M F1), Footwork F2 $225M, BTV III $140M, Renegade III raising, Audacious II $151M.
 Excluded-with-reason list preserved in agent output (Alt/Benchmark status change confirmed twice).
+
+## GP-foundry infrastructure (2026-08-14)
+Fund admin: Emrah has a deep personal relationship w/ **Jeremy Neilson (CEO of Assure; new outfit:
+"Sally")** — guaranteed white-glove service at a discount, scalable. This is the foundry's back-office
+partner: formation, Form D, admin/K-1s for angel->manager conversions (Mei Zuo pilot).
+Diligence note for LP-facing docs: Assure's 2022 shutdown is a known industry event — position Sally
+with continuity guarantees + our oversight; keep a named failover admin in the ops memo.
+Foundry targets: Mei Zuo (#1, confirmed), Songhurst, Akhund, Lando, Belsky (alts: Oringer, Kolysh).
