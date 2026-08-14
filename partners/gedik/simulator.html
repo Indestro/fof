@@ -129,7 +129,7 @@ function simulate(){
  const N=1500,YRS=10, sig=0.85;   // per-manager lognormal sigma (single seed-fund TVPI dispersion)
  // calibration: PIT-2024 backtest — equal-weight-all-signals ~1.5-2x base hit rate; tiered 50/35/15 ~3-3.5x
  const MU={none:0.14, equal:0.30, tiered:0.41};   // recalibrated mean-preserving (see backtests)
- const coMu={none:0.50, equal:0.68, tiered:0.85}[sel], coSig=0.95, mu=MU[sel];
+ const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel], coSig=1.10, mu=MU[sel];   // per-POSITION co-invest params
  const FEE=0.88;             // FoF-level fee/carry drag on gross
  // tier structure: weights of capital and per-tier return premium/discount vs mode mean
  const TIERS = sel==='tiered' ? [[0.50,0.18],[0.35,-0.05],[0.15,-0.22]] : [[1.0,0.0]];
@@ -142,7 +142,9 @@ function simulate(){
      let t=0; for(let i=0;i<tm;i++) t+=lognorm(mu+prem,sig)/tm;
      fundTv+=w*t;
    }
-   const coTv=co>0?lognorm(coMu,coSig):0;
+   let coTv=0;
+   if(co>0){ const k=Math.max(3,Math.round(co*size/2.5));   // # direct positions scales with sleeve dollars
+     for(let i=0;i<k;i++) coTv+=lognorm(coMu,coSig)/k; }
    const finalTv=((1-co)*fundTv+co*coTv)*mkt*FEE;
    const p=[];
    for(let y=0;y<=YRS;y++){
