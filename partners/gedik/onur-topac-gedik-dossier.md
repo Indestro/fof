@@ -22,8 +22,12 @@ Poltio; Finfree exit to Papara 2024 w/ Goodwater in the round).
 Misyon Bank: Avalanche + Chainlink partnerships, Money20/20 presence, "Switzerland of the region"
 custody ambition.
 
+## The discussed structure (Emrah, 2026-08-14)
+New DELAWARE entity: Gedik anchors $20M; Gedik raises +$10M; Emrah raises +$10M (~$40M first close);
+Olympos contributes analytics + manager/co-invest relationships; expand to $100M FoF.
+
 ## The pitch reframe (key finding)
-1. **Distribution logic beats balance-sheet logic.** Group hard-currency capacity for a direct
+1. **Distribution logic beats balance-sheet logic — it's the $40M->$100M growth leg.** Group hard-currency capacity for a direct
    ticket ≈ $5–25M. The real prize: a Turkey-registered feeder / fon-sepeti wrapping the US FoF,
    distributed through Gedik's 280k-client, $2.3B-custody machine and Inveo Portföy's fund factory.
    They productize everything (forex, VİOP, crypto, sukuk) — offer the FoF as their next product.
