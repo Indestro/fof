@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FoF Simülatörü — Olympos</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+:root{--navy:#003876;--yellow:#fdcf07;--grey:#8a8a8a;--light:#f4f4f4}
+*{box-sizing:border-box}body{font-family:'IBM Plex Sans',sans-serif;color:#111;background:#fff;max-width:900px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:700;margin:0}
+.sub{font-size:15px;color:#666;margin:4px 0 30px}
+.card{border:1px solid #e2e2e2;border-radius:6px;padding:20px 22px;margin:0 0 28px}
+.ct{font-size:18px;font-weight:600;color:var(--navy);margin:0 0 2px}
+.cs{font-size:12px;color:#777;margin:0 0 14px}
+.src{font-size:11px;color:#999;margin-top:10px;border-top:1px solid #eee;padding-top:8px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.src span:first-child{flex:1;min-width:0}
+.byline{font-weight:700;color:var(--navy);font-size:11px;letter-spacing:.5px}
+canvas{max-width:100%}
+.controls{display:flex;flex-wrap:wrap;gap:18px;background:var(--light);border-radius:6px;padding:14px 16px;margin-bottom:16px;align-items:center}
+.controls label{font-size:12px;font-weight:600;display:block;margin-bottom:3px}
+.controls .val{font-size:12px;color:var(--navy);font-weight:700}
+input[type=range]{width:150px;accent-color:var(--navy)}
+.toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.toggle input{width:18px;height:18px;accent-color:var(--navy)}
+.tiles{display:flex;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
+.tile{flex:1;min-width:130px;background:var(--light);border-left:4px solid var(--yellow);padding:10px 12px}
+.tile b{font-size:22px;display:block}
+.tile span{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.4px}
+</style></head><body>
+<h1>FoF Simülatörü</h1>
+<div class="sub">ABD erken aşama fon-sepeti stratejisi — veriye dayalı üç bakış · Olympos analitik altyapısı üzerine kurulu prototip</div>
+
+<div class="card">
+<p class="ct">Unicorn turlarını yöneten fonlar sanılandan çok daha dağınık</p>
+<p class="cs">Ağu 2025–Ağu 2026 arasında unicorn olan 294 şirketin Seri A/B tur liderlikleri (382 liderlik pozisyonu, ABD/İsrail/İngiltere/Kanada kesiti) — ilk 21 fon yalnızca %33'ünü tutuyor</p>
+<canvas id="c1" height="120"></canvas>
+<div class="src"><span>Olympos analysis · SEC EDGAR, Crunchbase tur verisi (5.073 sendika kaydı), kendi kohort taraması</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<div class="card">
+<p class="ct">Fon yöneticilerinin hamlelerini aylar önce görüyoruz</p>
+<p class="cs">Doğrulanmış geçmiş test: kendi fonunu kurmak için ayrılan 5 üst düzey yatırımcının kamuya açık sinyal öncülüğü (SEC dosyalarındaki isim-diff yöntemi, anonimleştirilmiş)</p>
+<canvas id="c2" height="110"></canvas>
+<div class="src"><span>Olympos analysis · SEC EDGAR Form D arşivi, 2022–2026 doğrulanmış ayrılık vakaları</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<div class="card">
+<p class="ct">Fon büyüklüğünü ve zamanlamayı kendiniz deneyin</p>
+<p class="cs">Monte Carlo simülasyonu (1.500 senaryo) — net TVPI yolları, %10–%90 güven bandı · varsayılan: 40M$ ilk kapanış (Delaware yapısı)</p>
+<div class="controls">
+  <div><label>Fon büyüklüğü <span class="val" id="vSize">40M$</span></label><input type="range" id="size" min="20" max="100" value="40" step="5"></div>
+  <div><label>Yönetici sayısı <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="8" max="30" value="18"></div>
+  <div><label>Ortak-yatırım payı <span class="val" id="vCo">%30</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
+  <div class="toggle"><input type="checkbox" id="sel" checked><span>Öncü-sinyal seçimi</span></div>
+</div>
+<canvas id="c3" height="150"></canvas>
+<div class="tiles">
+  <div class="tile"><b id="tMed">—</b><span>Medyan net TVPI (10. yıl)</span></div>
+  <div class="tile"><b id="tP90">—</b><span>İyimser senaryo (P90)</span></div>
+  <div class="tile"><b id="tBE">—</b><span>Başabaş yılı (medyan)</span></div>
+  <div class="tile"><b id="tLoss">—</b><span>Anapara kaybı olasılığı</span></div>
+</div>
+<div class="src"><span>Olympos analysis · Getiri dağılımları kamuya açık VC kıyaslarına, seçim etkisi kendi dönüşüm ölçümlerimize kalibre; model detayları saklıdır</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<script>
+const NAVY='#003876', YELLOW='#fdcf07', GREY='#8a8a8a';
+Chart.defaults.font.family="'IBM Plex Sans',sans-serif";
+Chart.defaults.color='#444';
+
+// ---- Chart 1: real cumulative Pareto ----
+const counts=[12,12,11,10,9,6,6,6,6,6,5,5,5,5,4,4,4,4,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2];
+let cum=0; const pareto=counts.map(c=>{cum+=c; return +(100*cum/382).toFixed(1);});
+new Chart(c1,{type:'line',data:{labels:pareto.map((_,i)=>i+1),
+ datasets:[{data:pareto,borderColor:NAVY,borderWidth:2,pointRadius:0,fill:{target:'origin'},backgroundColor:'rgba(0,56,118,.08)'}]},
+ options:{plugins:{legend:{display:false},tooltip:{callbacks:{title:i=>`İlk ${i[0].label} fon`,label:i=>`Liderliklerin %${i.parsed.y}'i`}},
+  annotation:undefined},
+ scales:{x:{title:{display:true,text:'Fon sayısı (liderlik sırasına göre)',font:{size:11}},grid:{display:false}},
+  y:{min:0,max:60,title:{display:true,text:'Tur liderliklerinin kümülatif payı (%)',font:{size:11}},ticks:{callback:v=>v+'%'}}}}});
+
+// ---- Chart 2: departure lead times ----
+new Chart(c2,{type:'bar',data:{labels:['GP A','GP B','GP C','GP D','GP E'],
+ datasets:[{data:[9,9,20,24,26],backgroundColor:[NAVY,NAVY,NAVY,NAVY,GREY],borderRadius:4,barThickness:26}]},
+ options:{indexAxis:'y',plugins:{legend:{display:false},
+  tooltip:{callbacks:{label:i=>i.dataIndex==4?'Dosya, kamu duyurusundan önce (26 ay sessizlik)':`Kamu duyurusundan ${i.parsed.x} ay önce sinyal`}}},
+ scales:{x:{title:{display:true,text:'Sinyal öncülüğü (ay)',font:{size:11}},grid:{color:'#f0f0f0'}},y:{grid:{display:false}}}}});
+
+// ---- Chart 3: Monte Carlo fan ----
+let chart3=null;
+function lognorm(mu,sig){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();
+ return Math.exp(mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v));}
+function simulate(){
+ const size=+document.getElementById('size').value, m=+document.getElementById('mgr').value,
+   co=+document.getElementById('co').value/100, sel=document.getElementById('sel').checked;
+ document.getElementById('vSize').textContent=size+'M$';
+ document.getElementById('vMgr').textContent=m;
+ document.getElementById('vCo').textContent='%'+Math.round(co*100);
+ const N=1500,YRS=10, mu=sel?0.62:0.42, sig=0.52, coMu=sel?0.85:0.55, coSig=0.95;
+ const conc=Math.sqrt(16/m); // fewer managers -> more dispersion
+ const paths=[];
+ for(let s=0;s<N;s++){
+   let fundTv=0; for(let i=0;i<m;i++) fundTv+=lognorm(mu,sig*conc)/m;
+   const coTv=co>0?lognorm(coMu,coSig):0;
+   const finalTv=(1-co)*fundTv+co*coTv;
+   const p=[];
+   for(let y=0;y<=YRS;y++){
+     const dep=Math.min(1,y/3);                       // 3-yr deployment
+     const g=Math.max(0,(y-1.5)/(YRS-1.5));           // value growth ramp
+     const nav=dep*(1+(finalTv-1)*Math.pow(g,1.6));
+     p.push(+(nav).toFixed(3));
+   }
+   p[YRS]=finalTv; paths.push(p);
+ }
+ const q=(arr,p)=>{const a=[...arr].sort((x,y)=>x-y);return a[Math.floor(p*(a.length-1))];};
+ const yrs=[...Array(11).keys()];
+ const P=pp=>yrs.map(y=>+q(paths.map(r=>r[y]),pp).toFixed(2));
+ const p10=P(.10),p25=P(.25),p50=P(.50),p75=P(.75),p90=P(.90);
+ const finals=paths.map(r=>r[10]);
+ document.getElementById('tMed').textContent=q(finals,.5).toFixed(2)+'x';
+ document.getElementById('tP90').textContent=q(finals,.9).toFixed(2)+'x';
+ const be=p50.findIndex(v=>v>=1); document.getElementById('tBE').textContent=be<0?'>10':be+'. yıl';
+ document.getElementById('tLoss').textContent='%'+Math.round(100*finals.filter(v=>v<1).length/N);
+ const ds=[
+  {label:'%10–%90 bandı',data:p90,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.10)'},
+  {data:p10,borderWidth:0,pointRadius:0,fill:false},
+  {label:'%25–%75 bandı',data:p75,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.22)'},
+  {data:p25,borderWidth:0,pointRadius:0,fill:false},
+  {label:'Medyan',data:p50,borderColor:NAVY,borderWidth:2.5,pointRadius:0,fill:false},
+  {label:'Yatırılan sermaye',data:yrs.map(_=>1),borderColor:GREY,borderDash:[5,4],borderWidth:1.5,pointRadius:0,fill:false}];
+ if(chart3){chart3.data.datasets.forEach((d,i)=>d.data=ds[i].data);chart3.update('none');return;}
+ chart3=new Chart(c3,{type:'line',data:{labels:yrs.map(y=>y+'. yıl'),datasets:ds},
+  options:{plugins:{legend:{display:true,labels:{filter:i=>i.text&&!i.text.startsWith('undefined'),boxWidth:14,font:{size:11}}},
+   tooltip:{filter:i=>[4,0,2].includes(i.datasetIndex),callbacks:{label:i=>`${i.dataset.label||''}: ${i.parsed.y}x`}}},
+  scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Net TVPI (x)',font:{size:11}},min:0}}}});
+}
+['size','mgr','co','sel'].forEach(id=>document.getElementById(id).addEventListener('input',simulate));
+simulate();
+</script>
+</body></html>
