@@ -49,7 +49,12 @@ input[type=range]{width:150px;accent-color:var(--navy)}
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="100" value="40" step="5"></div>
   <div><label>Number of managers <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="8" max="30" value="18"></div>
   <div><label>Co-invest share <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
-  <div class="toggle"><input type="checkbox" id="sel" checked><span>Precursor-signal selection</span></div>
+  <div><label>Manager selection <span class="val" id="vSel"></span></label>
+  <select id="sel" style="font-family:inherit;font-size:13px;padding:4px 6px;border:1px solid #ccc;border-radius:4px">
+    <option value="none">No selection (market average)</option>
+    <option value="equal">All signals, equal weight</option>
+    <option value="tiered" selected>Tiered concentration (50/35/15)</option>
+  </select></div>
 </div>
 <canvas id="c3" height="150"></canvas>
 <div class="tiles">
@@ -89,17 +94,27 @@ function lognorm(mu,sig){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.ra
  return Math.exp(mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v));}
 function simulate(){
  const size=+document.getElementById('size').value, m=+document.getElementById('mgr').value,
-   co=+document.getElementById('co').value/100, sel=document.getElementById('sel').checked;
+   co=+document.getElementById('co').value/100, sel=document.getElementById('sel').value;
  document.getElementById('vSize').textContent='$'+size+'M';
  document.getElementById('vMgr').textContent=m;
  document.getElementById('vCo').textContent=Math.round(co*100)+'%';
- const N=1500,YRS=10, mu=sel?0.58:0.38, sig=0.52, coMu=sel?0.80:0.50, coSig=0.95;
+ const N=1500,YRS=10, sig=0.52;
+ // calibration: PIT-2024 backtest — equal-weight-all-signals ~1.5-2x base hit rate; tiered 50/35/15 ~3-3.5x
+ const MU={none:0.38, equal:0.50, tiered:0.62};
+ const coMu={none:0.50, equal:0.68, tiered:0.85}[sel], coSig=0.95, mu=MU[sel];
  const conc=Math.sqrt(16/m); // fewer managers -> more dispersion
  const FEE=0.88;             // FoF-level fee/carry drag on gross
+ // tier structure: weights of capital and per-tier return premium/discount vs mode mean
+ const TIERS = sel==='tiered' ? [[0.50,0.18],[0.35,-0.05],[0.15,-0.22]] : [[1.0,0.0]];
  const paths=[];
  for(let s=0;s<N;s++){
    const mkt=lognorm(-0.05,0.32);                     // correlated market regime (common factor)
-   let fundTv=0; for(let i=0;i<m;i++) fundTv+=lognorm(mu,sig*conc)/m;
+   let fundTv=0;
+   for(const [w,prem] of TIERS){
+     const tm=Math.max(2,Math.round(m*w));
+     let t=0; for(let i=0;i<tm;i++) t+=lognorm(mu+prem,sig*conc)/tm;
+     fundTv+=w*t;
+   }
    const coTv=co>0?lognorm(coMu,coSig):0;
    const finalTv=((1-co)*fundTv+co*coTv)*mkt*FEE;
    const p=[];
