@@ -1,0 +1,486 @@
+{
+ "Accel": {
+  "companies": [
+   "Aalyria",
+   "Dash0",
+   "Framer",
+   "Juspay",
+   "RADAR",
+   "RedotPay"
+  ],
+  "later_leads": [
+   "Atomico",
+   "Battery Ventures",
+   "Cherry Ventures",
+   "Goodwater Capital",
+   "Two Sigma Ventures",
+   "VEF"
+  ]
+ },
+ "SV Angel": {
+  "companies": [
+   "Chai Discovery",
+   "Corgi",
+   "Legora",
+   "MatX",
+   "PostHog",
+   "WorkOS"
+  ],
+  "later_leads": [
+   "ICONIQ Capital",
+   "Lachy Groom",
+   "Oak HC/FT",
+   "Situational Awareness",
+   "TCV",
+   "Y Combinator Continuity Fund"
+  ]
+ },
+ "Justin Mateen": {
+  "companies": [
+   "Curative",
+   "Radiant",
+   "Slash",
+   "Stoke Space",
+   "Whop"
+  ],
+  "later_leads": [
+   "Breakthrough Energy Ventures",
+   "Rick Yang",
+   "The Chainsmokers",
+   "Union Square Ventures",
+   "Upside Vision Fund"
+  ]
+ },
+ "Plug and Play": {
+  "companies": [
+   "Arena",
+   "Iterative Health",
+   "Mesh",
+   "Starcloud"
+  ],
+  "later_leads": [
+   "CRV",
+   "EQT",
+   "Obvious Ventures",
+   "Streamlined"
+  ]
+ },
+ "General Catalyst": {
+  "companies": [
+   "Lila Sciences",
+   "PhysicsX",
+   "Render",
+   "Twenty Technologies"
+  ],
+  "later_leads": [
+   "Addition",
+   "Atomico",
+   "Braidwell",
+   "Tim Junio"
+  ]
+ },
+ "Eclipse": {
+  "companies": [
+   "Bedrock Robotics",
+   "Oxide Computer",
+   "Skyryse",
+   "True Anomaly"
+  ],
+  "later_leads": [
+   "8VC",
+   "Riot Ventures",
+   "US Innovative Technology Fund",
+   "Venrock"
+  ]
+ },
+ "BoxGroup": {
+  "companies": [
+   "Avoca",
+   "Omni",
+   "Rogo"
+  ],
+  "later_leads": [
+   "ICONIQ Growth",
+   "Meritech Capital Partners",
+   "Thrive Capital"
+  ]
+ },
+ "NFX": {
+  "companies": [
+   "Blitzy",
+   "Starcloud",
+   "Stoke Space"
+  ],
+  "later_leads": [
+   "Breakthrough Energy Ventures",
+   "EQT",
+   "Northzone"
+  ]
+ },
+ "South Park Commons": {
+  "companies": [
+   "Baseten",
+   "Luma AI",
+   "Render"
+  ],
+  "later_leads": [
+   "Addition",
+   "Amplify Partners",
+   "IVP"
+  ]
+ },
+ "Benchmark": {
+  "companies": [
+   "LangChain",
+   "Legora",
+   "webAI"
+  ],
+  "later_leads": [
+   "Forerunner",
+   "ICONIQ Capital",
+   "IVP"
+  ]
+ },
+ "Andreessen Horowitz": {
+  "companies": [
+   "HappyRobot",
+   "Starcloud",
+   "fal"
+  ],
+  "later_leads": [
+   "Base10 Partners",
+   "EQT",
+   "Kindred Ventures"
+  ]
+ },
+ "Nebular": {
+  "companies": [
+   "Oratomic",
+   "Starcloud"
+  ],
+  "later_leads": [
+   "ARCH Venture Partners",
+   "EQT"
+  ]
+ },
+ "Techstars": {
+  "companies": [
+   "Arena",
+   "Preply"
+  ],
+  "later_leads": [
+   "CRV",
+   "Hoxton Ventures"
+  ]
+ },
+ "Streamlined": {
+  "companies": [
+   "Mesh",
+   "Nothing"
+  ],
+  "later_leads": [
+   "C Ventures",
+   "Streamlined"
+  ]
+ },
+ "Guillermo Rauch": {
+  "companies": [
+   "Dash0",
+   "fal"
+  ],
+  "later_leads": [
+   "Cherry Ventures",
+   "Kindred Ventures"
+  ]
+ },
+ "Seedcamp": {
+  "companies": [
+   "9fin",
+   "Fluidstack"
+  ],
+  "later_leads": [
+   "Cacti",
+   "redalpine"
+  ]
+ },
+ "Edward Lando": {
+  "companies": [
+   "Starcloud",
+   "Whop"
+  ],
+  "later_leads": [
+   "EQT",
+   "The Chainsmokers"
+  ]
+ },
+ "CAS Star": {
+  "companies": [
+   "Startorus Fusion",
+   "Zhijian Power"
+  ],
+  "later_leads": [
+   "CAS Star",
+   "Shanghai Science and Technology Innovation Group"
+  ]
+ },
+ "ZhenFund": {
+  "companies": [
+   "DexForce",
+   "Startorus Fusion"
+  ],
+  "later_leads": [
+   "Angel Plus China",
+   "Shanghai Science and Technology Innovation Group"
+  ]
+ },
+ "Immad Akhund": {
+  "companies": [
+   "Assort Health",
+   "Stoke Space"
+  ],
+  "later_leads": [
+   "Breakthrough Energy Ventures",
+   "Chemistry"
+  ]
+ },
+ "Charlie Songhurst": {
+  "companies": [
+   "Radiant",
+   "Stoke Space"
+  ],
+  "later_leads": [
+   "Breakthrough Energy Ventures",
+   "Union Square Ventures"
+  ]
+ },
+ "Jason Warner": {
+  "companies": [
+   "PostHog",
+   "Render"
+  ],
+  "later_leads": [
+   "Addition",
+   "Y Combinator Continuity Fund"
+  ]
+ },
+ "Abstract": {
+  "companies": [
+   "Render",
+   "WorkOS"
+  ],
+  "later_leads": [
+   "Addition",
+   "Lachy Groom"
+  ]
+ },
+ "Zillionize": {
+  "companies": [
+   "Alpaca",
+   "Deepgram"
+  ],
+  "later_leads": [
+   "Portage Ventures",
+   "Wing Venture Capital"
+  ]
+ },
+ "Louis Beryl": {
+  "companies": [
+   "Alpaca",
+   "Deepgram"
+  ],
+  "later_leads": [
+   "Portage Ventures",
+   "Wing Venture Capital"
+  ]
+ },
+ "Flixfounders": {
+  "companies": [
+   "Augustus",
+   "Proxima Fusion"
+  ],
+  "later_leads": [
+   "Cherry Ventures",
+   "Valar Ventures"
+  ]
+ },
+ "Redpoint": {
+  "companies": [
+   "Legora",
+   "Omni"
+  ],
+  "later_leads": [
+   "ICONIQ Capital",
+   "ICONIQ Growth"
+  ]
+ },
+ "Terrence Rohan": {
+  "companies": [
+   "Granola",
+   "Legora"
+  ],
+  "later_leads": [
+   "ICONIQ Capital",
+   "NFDG Ventures"
+  ]
+ },
+ "Greylock": {
+  "companies": [
+   "Baseten",
+   "Framer"
+  ],
+  "later_leads": [
+   "Atomico",
+   "IVP"
+  ]
+ },
+ "Logan Kilpatrick": {
+  "companies": [
+   "Norm AI",
+   "fal"
+  ],
+  "later_leads": [
+   "Coatue",
+   "Kindred Ventures"
+  ]
+ },
+ "Haystack": {
+  "companies": [
+   "Granola",
+   "Norm AI"
+  ],
+  "later_leads": [
+   "Coatue",
+   "NFDG Ventures"
+  ]
+ },
+ "Expa": {
+  "companies": [
+   "Norm AI",
+   "RADAR"
+  ],
+  "later_leads": [
+   "Coatue",
+   "Two Sigma Ventures"
+  ]
+ },
+ "Henry Shi": {
+  "companies": [
+   "Higgsfield",
+   "fal"
+  ],
+  "later_leads": [
+   "GFT Ventures",
+   "Kindred Ventures"
+  ]
+ },
+ "Lachy Groom": {
+  "companies": [
+   "Baseten",
+   "Chai Discovery"
+  ],
+  "later_leads": [
+   "IVP",
+   "Oak HC/FT"
+  ]
+ },
+ "Greg Brockman": {
+  "companies": [
+   "Baseten",
+   "RADAR"
+  ],
+  "later_leads": [
+   "IVP",
+   "Two Sigma Ventures"
+  ]
+ },
+ "AlleyCorp": {
+  "companies": [
+   "Rogo",
+   "Valar Atomics"
+  ],
+  "later_leads": [
+   "Snowpoint Ventures",
+   "Thrive Capital"
+  ]
+ },
+ "DCVC": {
+  "companies": [
+   "Chai Discovery",
+   "Curative"
+  ],
+  "later_leads": [
+   "Oak HC/FT",
+   "Upside Vision Fund"
+  ]
+ },
+ "Creandum": {
+  "companies": [
+   "Augustus",
+   "Tide"
+  ],
+  "later_leads": [
+   "Augmentum Fintech",
+   "Valar Ventures"
+  ]
+ },
+ "Shane Curran": {
+  "companies": [
+   "Augustus",
+   "Starcloud"
+  ],
+  "later_leads": [
+   "EQT",
+   "Valar Ventures"
+  ]
+ },
+ "HSG": {
+  "companies": [
+   "RedotPay",
+   "Zhijian Power"
+  ],
+  "later_leads": [
+   "CAS Star",
+   "Goodwater Capital"
+  ]
+ },
+ "Nitesh Banta": {
+  "companies": [
+   "Chai Discovery",
+   "RADAR"
+  ],
+  "later_leads": [
+   "Oak HC/FT",
+   "Two Sigma Ventures"
+  ]
+ },
+ "Forerunner": {
+  "companies": [
+   "Fora",
+   "Sunday"
+  ],
+  "later_leads": [
+   "Heartcore Capital",
+   "Tusk Venture Partners"
+  ]
+ },
+ "Nat Friedman": {
+  "companies": [
+   "Granola",
+   "MatX"
+  ],
+  "later_leads": [
+   "NFDG Ventures",
+   "Situational Awareness"
+  ]
+ },
+ "Daniel Gross": {
+  "companies": [
+   "Granola",
+   "MatX"
+  ],
+  "later_leads": [
+   "NFDG Ventures",
+   "Situational Awareness"
+  ]
+ }
+}
