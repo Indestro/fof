@@ -1,0 +1,115 @@
+[
+ {
+  "manager": "cota-capital",
+  "positions_pre_2024_08": 132,
+  "unicorn_hits": 3,
+  "rate_pct": 2.3,
+  "hits": [
+   "cast-ai",
+   "eight-sleep",
+   "farther-finance"
+  ]
+ },
+ {
+  "manager": "day-one-ventures",
+  "positions_pre_2024_08": 99,
+  "unicorn_hits": 2,
+  "rate_pct": 2.0,
+  "hits": [
+   "invisible-technologies",
+   "you-com-523e"
+  ]
+ },
+ {
+  "manager": "humba-ventures",
+  "positions_pre_2024_08": 10,
+  "unicorn_hits": 0,
+  "rate_pct": 0.0,
+  "hits": []
+ },
+ {
+  "manager": "jam-fund",
+  "positions_pre_2024_08": 82,
+  "unicorn_hits": 6,
+  "rate_pct": 7.3,
+  "hits": [
+   "hadrian-caa2",
+   "radiant",
+   "slash-a196",
+   "stoke-space-technologies",
+   "varda-ba64",
+   "whop"
+  ]
+ },
+ {
+  "manager": "quiet-capital",
+  "positions_pre_2024_08": 344,
+  "unicorn_hits": 8,
+  "rate_pct": 2.3,
+  "hits": [
+   "assort-health",
+   "decart-abcd",
+   "enter-2",
+   "modal-labs",
+   "nothing-4537",
+   "omni-analytics",
+   "standard-bots",
+   "trm-labs"
+  ]
+ },
+ {
+  "manager": "sgh-capital",
+  "positions_pre_2024_08": 112,
+  "unicorn_hits": 2,
+  "rate_pct": 1.8,
+  "hits": [
+   "eight-sleep",
+   "trm-labs"
+  ]
+ },
+ {
+  "manager": "soma-capital",
+  "positions_pre_2024_08": 803,
+  "unicorn_hits": 10,
+  "rate_pct": 1.2,
+  "hits": [
+   "avoca-ai",
+   "curative",
+   "eight-sleep",
+   "etched-ai",
+   "exa-1b30",
+   "kapital-smartbank",
+   "omni",
+   "slash-a196",
+   "stoke-space-technologies",
+   "whop"
+  ]
+ },
+ {
+  "manager": "theory-ventures",
+  "positions_pre_2024_08": 5,
+  "unicorn_hits": 1,
+  "rate_pct": 20.0,
+  "hits": [
+   "omni"
+  ]
+ },
+ {
+  "manager": "wischoff-ventures",
+  "positions_pre_2024_08": 10,
+  "unicorn_hits": 0,
+  "rate_pct": 0.0,
+  "hits": []
+ },
+ {
+  "manager": "mei-zuo (person, known positions only)",
+  "positions_pre_2024_08": 3,
+  "unicorn_hits": 3,
+  "rate_pct": 100.0,
+  "hits": [
+   "etched-ai",
+   "matx",
+   "nscale"
+  ]
+ }
+]
