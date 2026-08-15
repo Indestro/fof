@@ -44,10 +44,10 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 
 <div class="card">
 <p class="ct">Try fund size and timing yourself</p>
-<p class="cs">Monte Carlo simulation (1,500 scenarios) — net TVPI paths with 10–90% confidence bands · default: $40M first close (Delaware structure)</p>
+<p class="cs">Monte Carlo simulation (1,500 scenarios) over the NAMED 2026 roster — the slider buys managers in conviction order: star anchors first, then the return engine, formation-stage, lane options</p>
 <div class="controls">
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="200" value="40" step="5"></div>
-  <div><label>Number of managers <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="3" max="30" value="18"></div>
+  <div><label>Managers from the 2026 roster <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="3" max="21" value="18"></div>
   <div><label>Co-invest share <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
   <div><label>Manager selection <span class="val" id="vSel"></span></label>
   <select id="sel" style="font-family:inherit;font-size:13px;padding:4px 6px;border:1px solid #ccc;border-radius:4px">
@@ -58,6 +58,7 @@ input[type=range]{width:150px;accent-color:var(--navy)}
   <div><label>Scenario seed <span class="val" id="vSeed">#42</span></label>
    <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:5px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer">&#8635; Re-roll 1,500 scenarios</button></div>
 </div>
+<div id="rosterbox" style="font-size:12px;line-height:1.9;margin:-4px 0 14px"></div>
 <canvas id="c3" height="150"></canvas>
 <div class="tiles">
   <div class="tile"><b id="tMed">—</b><span>Median net TVPI (year 10)</span></div>
@@ -121,6 +122,17 @@ new Chart(c2,{type:'bar',data:{labels:['Tomasz Tunguz → Theory','Vic Singh (En
 
 // ---- Chart 3: Monte Carlo fan ----
 let chart3=null, SEED=42;
+// The proposed 2026 roster, ranked by conviction. [name, access class, return premium (log), sigma]
+// Premiums are our measured/estimated edge per manager; sigma is single-fund TVPI dispersion.
+const ROSTER=[
+ ['Chemistry II','A',0.10,0.70],['Diffusion (Lazarte/Fredrickson)','A',0.12,0.85],['Pebblebed III','A',0.08,0.75],
+ ['Humba III (Polovets)','B',0.22,0.90],['JAM Fund (Mateen)','B',0.28,0.95],['Mei Zuo vehicle','B',0.30,1.10],
+ ['Mischief (Perret)','B',0.18,0.85],['Kearny Jackson','B',0.16,0.85],['Premise (Larco+Bent)','B',0.14,0.85],
+ ['Category (Iltchev)','B',0.12,0.80],['Day One III (Bucher)','B',0.14,0.85],
+ ['Verdict (Bonatsos+Fertik)','C',0.16,1.05],['Ethan Choi (ex-Khosla)','C',0.12,1.05],['Bryan Kim (ex-a16z)','C',0.10,1.05],
+ ['Josephine Chen (ex-Sequoia)','C',0.10,1.05],['Astasia Myers (pre-spinout)','C',0.12,1.05],
+ ['Pax (Volz)','D',0.02,0.85],['Axiom (Venkatachalam)','D',0.04,0.85],['Orange Collective (YC)','D',0.02,0.80],
+ ['Zero Shot (ex-OpenAI)','D',0.00,1.00],['Soma (Ranadive) — beta sleeve','D',-0.02,0.55]];
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);
  t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
 let rng=mulberry32(SEED);
@@ -133,23 +145,29 @@ function simulate(){
  document.getElementById('vSize').textContent='$'+size+'M';
  document.getElementById('vMgr').textContent=m;
  document.getElementById('vCo').textContent=Math.round(co*100)+'%';
- const N=1500,YRS=10, sig=0.85;   // per-manager lognormal sigma (single seed-fund TVPI dispersion)
- // calibration: PIT-2024 backtest — equal-weight-all-signals ~1.5-2x base hit rate; tiered 50/35/15 ~3-3.5x
- const MU={none:0.14, equal:0.30, tiered:0.41};   // recalibrated mean-preserving (see backtests)
- const sizeDrag=0.09*Math.log2(size/40);   // empirical size penalty: each doubling of fund size costs ~9% of log-mean (check-size drift, entry pricing, reserve dilution)
- const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel]-sizeDrag, coSig=1.10, mu=MU[sel]-sizeDrag;
- const FEE=0.88;             // FoF-level fee/carry drag on gross
- // tier structure: weights of capital and per-tier return premium/discount vs mode mean
- const TIERS = sel==='tiered' ? [[0.50,0.18],[0.35,-0.05],[0.15,-0.22]] : [[1.0,0.0]];
+ const N=1500,YRS=10;
+ const MU_BASE=0.14;          // unselected market log-mean (calibration: PIT-2024 backtest)
+ const sizeDrag=0.09*Math.log2(size/40);   // empirical size penalty per doubling of fund size
+ const FEE=0.88;              // FoF-level fee/carry drag on gross
+ const CW={A:1.4,B:1.2,C:0.7,D:0.5};       // per-slot capital weight by access class (tiered mode)
+ const chosen=ROSTER.slice(0,m);
+ const wts=chosen.map(r=> sel==='tiered' ? CW[r[1]] : 1);
+ const wsum=wts.reduce((a,b)=>a+b,0);
+ const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel]-sizeDrag, coSig=1.10;
+ // live roster display
+ const CC={A:'#003876',B:'#1b6ec2',C:'#8a6d00',D:'#8a8a8a'};
+ const CN={A:'Star anchor',B:'Return engine',C:'Formation-stage',D:'Lane option'};
+ const byC={A:[],B:[],C:[],D:[]}; chosen.forEach(r=>byC[r[1]].push(r[0]));
+ document.getElementById('rosterbox').innerHTML=Object.keys(byC).filter(k=>byC[k].length)
+   .map(k=>`<b style="color:${CC[k]}">${CN[k]} (${byC[k].length}):</b> ${byC[k].join(' · ')}`).join('<br>');
  const paths=[];
  for(let s=0;s<N;s++){
    const mkt=lognorm(-0.05,0.32);                     // correlated market regime (common factor)
    let fundTv=0;
-   for(const [w,prem] of TIERS){
-     const tm=Math.max(1,Math.round(m*w));
-     let t=0; for(let i=0;i<tm;i++) t+=lognorm(mu+prem,sig)/tm;
-     fundTv+=w*t;
-   }
+   chosen.forEach((r,i)=>{
+     const prem = sel==='none' ? 0 : r[2];            // 'none' strips the selection premium (market average)
+     fundTv += (wts[i]/wsum) * lognorm(MU_BASE+prem-sizeDrag, r[3]);
+   });
    let coTv=0;
    if(co>0){ const k=Math.max(3,Math.round(co*size/2.5));   // # direct positions scales with sleeve dollars
      for(let i=0;i<k;i++) coTv+=lognorm(coMu,coSig)/k; }
