@@ -83,13 +83,17 @@ input[type=range]{width:104px;accent-color:var(--navy);display:block}
 
 <div class="card">
 <p class="ct">If this fund had started in August 2024</p>
-<p class="cs">Retrospective with real deal data: the signal-selected managers' actual investments, marked to verified valuations (dilution-adjusted, quiet positions written down) · geography: North America + London + Israel</p>
+<p class="cs">Retrospective with real deal data under the SAME construction rules as the simulator above (tiered weights, 30% co-invest sleeve, fee drag): the signal-selected managers' actual 2024-vintage investments, marked to verified valuations · year 2 of 10 — far too early to judge, and shown because it disagrees with the model in places</p>
 <canvas id="c4" height="120"></canvas>
 <div class="tiles">
   <div class="tile"><b>2.30x</b><span>Selection-evidence books (pre-2024 vintages, net est.)</span></div>
-  <div class="tile"><b>1.48x</b><span>2024-vintage portfolio we would own (net est.)</span></div>
+  <div class="tile"><b>1.60x</b><span>2024-vintage portfolio, equal weight (net est.)</span></div>
+  <div class="tile"><b>1.51x</b><span>Same portfolio, tiered weights — <b>worse</b></span></div>
   <div class="tile"><b>~1.05x</b><span>Public seed-FoF benchmark at year 2</span></div>
 </div>
+<div style="background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0">
+<b>Two findings that argue against our own model.</b> (1) <b>Tiering would have hurt in this window</b> (1.51x vs 1.60x equal weight): the best 2024-vintage books were Wischoff (2.40x) and Quiet (2.66x), while JAM — our strongest pre-2024 performer — is at 0.96x on just 5 positions. Weights estimated on one period misfire on the next; the disciplined response is to start closer to equal weight and concentrate only as fresh evidence accrues, re-tiering at Fund II.
+(2) <b>A co-invest sleeve chosen without skill would have hurt too</b>: 12 positions drawn at random from the same companies return ~1.27x median even with the no-fee advantage, pulling the portfolio to 1.49x. The simulator above credits co-invest with precursor-informed selection; this window cannot prove that skill, so treat the sleeve's modeled premium as an assumption, not a finding.</div>
 <div class="src"><span>Olympos analysis · Crunchbase round histories (2,190 tape rows), SEC EDGAR, our unicorn-cohort valuations; entry posts estimated from stage priors; dilution 15–40%; NOT audited returns — a marks-based estimate</span><span class="byline">OLYMPOS</span></div>
 </div>
 

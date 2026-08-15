@@ -26,3 +26,27 @@ Perceptive tape unresolved; 294-cohort has known gaps; 2-yr window favors fast A
 
 **Simulator calibration implication:** selection toggle should be tiered — "all-signals equal
 weight" ≈ 1.5–2× hit-rate lift; "top-tier concentrated" ≈ 3–5×.
+
+## Reconciliation with the simulator's construction rules (2026-08-15)
+Applying the sim's OWN rules to the real 2024-vintage books (marks @ Aug 2026, yr 2 of 10):
+| manager | class | n | 2024-vintage TVPI |
+|---|---|---|---|
+| Quiet | B | 40 | 2.66x |
+| Wischoff | D | 15 | 2.40x |
+| Soma | D | 148 | 2.09x |
+| Humba | B | 13 | 1.97x |
+| Day One | B | 21 | 1.58x |
+| Theory | B | 11 | 1.17x |
+| SGH / Cota / JAM | B | 7/11/5 | 1.06x / 1.00x / 0.96x |
+
+**equal weight 1.60x · tiered 1.51x · with a random-pick 30% co-invest sleeve 1.43-1.49x** (sleeve
+median 1.27x from 12 random positions of 271, incl. the no-manager-fee uplift).
+
+TWO FINDINGS AGAINST OUR OWN MODEL:
+1. Tiering HURT in this window — top 2024 books were Wischoff (D-class in our weights) and Quiet;
+   JAM (our best pre-2024 performer, 5.4x) sits at 0.96x on 5 young positions. Weights fitted on one
+   period misfire on the next -> start near equal weight, concentrate as fresh evidence accrues,
+   re-tier at Fund II. (Also: 5 positions at yr 2 is not evidence of anything.)
+2. Co-invest WITHOUT selection skill hurt (random sleeve 1.27x). The sim credits co-invest with
+   precursor-informed picking; this window cannot prove that skill. Treat the sleeve premium as an
+   assumption, and say so to LPs.
