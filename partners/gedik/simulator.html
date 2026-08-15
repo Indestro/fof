@@ -76,7 +76,7 @@ input[type=range]{width:104px;accent-color:var(--navy);display:block}
 <tr><td style="padding:4px 8px">Direct US VC fund — vintage median (Cambridge-style)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
 <tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
 </table>
-<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · size slider carries an empirical scale penalty (~9%/doubling of log-mean)</span><span class="byline">OLYMPOS</span></div>
+<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
 </div>
 
 <div class="card">
@@ -156,26 +156,43 @@ function simulate(){
  // right tail (oversubscribed funds ration allocation). Selection = access to outliers, not
  // avoidance of losers.
  const CAPS={none:3.0, equal:8.0, tiered:25.0};
- const sizeDrag=0.09*Math.log2(size/40);   // empirical size penalty per doubling of fund size
- const FEE=0.90;              // FoF layer only (1% mgmt + 5% carry over 10 yrs); manager fees already netted
+ const sizeDrag=0.09*Math.log2(size/40);   // scale penalty per doubling (check drift, entry pricing)
+ // MINIMUM-SCALE CONSTRAINTS (the other side of the curve):
+ // 1. LP check minimums — oversubscribed funds will not take token checks.
+ const MINCHK={A:2.0,B:0.75,C:0.4,D:0.3};   // $M minimum LP commitment by access class
+ // 2. Fixed operating cost — admin/audit/legal/travel ~$250K/yr for 10 yrs, flat in dollars.
+ const fixedDrag=2.5/size;                  // 12.5% of a $20M fund; 1.25% of $200M
+ const FEE=Math.max(0.55, 1-0.08-fixedDrag);// variable fees+carry (8%) + fixed ops
  const CW={A:1.4,B:1.2,C:0.7,D:0.5};       // per-slot capital weight by access class (tiered mode)
  const chosen=ROSTER.slice(0,m);
  const wts=chosen.map(r=> sel==='tiered' ? CW[r[1]] : 1);
  const wsum=wts.reduce((a,b)=>a+b,0);
- const coMu={none:0.10, equal:0.34, tiered:0.55}[sel]-sizeDrag, coSig=1.15;   // direct positions, no manager fee layer
+ // per-slot dollar check; a slot below its class minimum gets NO allocation -> generic market exposure
+ const lpCapital=size*(1-co);
+ const checks=chosen.map((r,i)=> lpCapital*wts[i]/wsum);
+ const access=chosen.map((r,i)=> checks[i] >= MINCHK[r[1]]);
+ const accW=chosen.reduce((a,r,i)=> a + (access[i]?wts[i]:0), 0)/wsum;   // share of capital with real allocations
+ // co-invest flow comes FROM being a meaningful LP: no allocations -> no breakout co-invests
+ const coMu=({none:0.10, equal:0.34, tiered:0.55}[sel])*(0.35+0.65*accW)-sizeDrag, coSig=1.15;
  // live roster display
  const CC={A:'#003876',B:'#1b6ec2',C:'#8a6d00',D:'#8a8a8a'};
  const CN={A:'Star anchor',B:'Return engine',C:'Formation-stage',D:'Lane option'};
- const byC={A:[],B:[],C:[],D:[]}; chosen.forEach(r=>byC[r[1]].push(r[0]));
+ const byC={A:[],B:[],C:[],D:[]};
+ chosen.forEach((r,i)=>byC[r[1]].push(access[i] ? r[0]
+   : `<span style="color:#b00;text-decoration:line-through" title="check $${checks[i].toFixed(1)}M < $${MINCHK[r[1]]}M minimum">${r[0]}</span>`));
+ const noAcc=access.filter(a=>!a).length;
  document.getElementById('rosterbox').innerHTML=Object.keys(byC).filter(k=>byC[k].length)
-   .map(k=>`<b style="color:${CC[k]}">${CN[k]} (${byC[k].length}):</b> ${byC[k].join(' · ')}`).join('<br>');
+   .map(k=>`<b style="color:${CC[k]}">${CN[k]} (${byC[k].length}):</b> ${byC[k].join(' · ')}`).join('<br>')
+   + (noAcc? `<br><span style="color:#b00;font-weight:600">${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size — check below their minimum LP commitment</span>`:'');
  const paths=[];
  for(let s=0;s<N;s++){
    const mkt=lognorm(-0.09,0.46);                     // vintage/market regime — the dominant FoF risk (cf. 2021 vintages)
    let fundTv=0;
    chosen.forEach((r,i)=>{
-     const prem = sel==='none' ? 0 : (sel==='equal' ? r[2]*0.6 : r[2]);
-     const draw = Math.min(lognorm(MU_BASE+prem-sizeDrag, r[3]), CAPS[sel]);
+     const ok = access[i];
+     const prem = (!ok || sel==='none') ? 0 : (sel==='equal' ? r[2]*0.6 : r[2]);
+     const cap  = ok ? CAPS[sel] : 3.0;      // no allocation = market-access exposure only
+     const draw = Math.min(lognorm(MU_BASE+prem-sizeDrag, ok ? r[3] : 0.7), cap);
      fundTv += (wts[i]/wsum) * draw;
    });
    let coTv=0;
