@@ -1,100 +1,154 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FoF Simulator — Olympos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
-:root{--navy:#003876;--yellow:#fdcf07;--grey:#8a8a8a;--light:#f4f4f4}
-*{box-sizing:border-box}body{font-family:'IBM Plex Sans',sans-serif;color:#111;background:#fff;max-width:900px;margin:0 auto;padding:40px 24px}
-h1{font-size:28px;font-weight:700;margin:0}
-.sub{font-size:15px;color:#666;margin:4px 0 30px}
-.card{border:1px solid #e2e2e2;border-radius:6px;padding:20px 22px;margin:0 0 28px}
-.ct{font-size:18px;font-weight:600;color:var(--navy);margin:0 0 2px}
-.cs{font-size:12px;color:#777;margin:0 0 14px}
-.src{font-size:11px;color:#999;margin-top:10px;border-top:1px solid #eee;padding-top:8px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.src span:first-child{flex:1;min-width:0}
-.byline{font-weight:700;color:var(--navy);font-size:11px;letter-spacing:.5px}
+:root{--navy:#003876;--yellow:#fdcf07;--grey:#8a8a8a;--light:#f4f4f4;--rule:#ddd}
+*{box-sizing:border-box}
+body{font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;color:#111;background:#fff;max-width:900px;margin:0 auto;padding:40px 24px;line-height:1.6}
+h1{font-size:28px;font-weight:600;margin:0;letter-spacing:-.3px}
+.lede{font-size:15px;color:#666;margin:6px 0 26px}
+/* ── chart cards: emrahyalaz.com house format ── */
+.chart-card{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:18px 14px 15px 21px;margin:24px 0 8px;scroll-margin-top:24px}
+.chart-card .chart-title{font-size:18px;font-weight:500;color:#003876;letter-spacing:-.2px;margin-bottom:4px;line-height:1.3}
+.chart-card .chart-sub{font-size:13px;color:#888;margin-bottom:16px}
+.chart-card .chart-source{font-size:11px;color:#aaa;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.6}
+.chart-card .chart-olympos{margin-top:6px;display:flex;justify-content:space-between;align-items:center}
+.chart-card .chart-olympos img{height:21px;opacity:.65}
+.chart-card .chart-date{font-size:11px;color:#aaa}
 canvas{max-width:100%}
+/* ── controls ── */
 .controls{display:flex;flex-wrap:nowrap;gap:14px;background:var(--light);border-radius:6px;padding:12px 14px;margin-bottom:16px;align-items:end;overflow-x:auto}
 .controls>div{flex:0 0 auto}
 .controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap}
 .controls .val{font-size:12px;color:var(--navy);font-weight:700}
 input[type=range]{width:104px;accent-color:var(--navy);display:block}
-.toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
-.toggle input{width:18px;height:18px;accent-color:var(--navy)}
 .tiles{display:flex;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
 .tile{flex:1;min-width:130px;background:var(--light);border-left:4px solid var(--yellow);padding:10px 12px}
-.tile b{font-size:22px;display:block}
+.tile b{font-size:22px;display:block;line-height:1.25}
 .tile span{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.4px}
+.note{background:#fff8e1;border-left:4px solid var(--yellow);padding:10px 13px;font-size:12.5px;line-height:1.55;margin:12px 0 0}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left;font-weight:600}
+/* ── page-level disclaimer ── */
+.disclaimer{margin:38px 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:11px;color:#999;line-height:1.65}
+.disclaimer b{color:#777;font-weight:600}
+.disclaimer summary{cursor:pointer;font-size:12px;color:#777;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.chart-card .chart-source{white-space:normal}}
 </style></head><body>
-<h1>FoF Simulator</h1>
-<div class="sub">US early-stage fund-of-funds strategy — three data-driven views · prototype built on the Olympos analytics engine</div>
+<h1>Fund-of-funds simulator</h1>
+<div class="lede">US early-stage FoF strategy — the model, a 2024 backtest, and the named 2026 roster. Built on the Olympos engine.</div>
 
-<div class="card">
-<p class="ct">The funds that lead unicorn rounds are far less concentrated than believed</p>
-<p class="cs">Series A/B lead positions of the 294 companies that became unicorns Aug 2025–Aug 2026 (382 lead slots; North America + London-dominated UK + Israel — the FoF geography) — the top 21 firms hold only 33%</p>
-<canvas id="c1" height="120"></canvas>
-<div class="src"><span>Olympos analysis · SEC EDGAR, Crunchbase round data (5,073 syndicate records), proprietary cohort sweep</span><span class="byline">OLYMPOS</span></div>
-</div>
-
-<div class="card">
-<p class="ct">We see fund managers' moves months before the market does</p>
-<p class="cs">Verified backtest: SEC-filing silence preceded each public departure — the name-diff method on Form D related-persons (all public data)</p>
-<canvas id="c2" height="110"></canvas>
-<div class="src"><span>Olympos analysis · SEC EDGAR Form D archive, verified 2022–2026 departure cases</span><span class="byline">OLYMPOS</span></div>
-</div>
-
-<div class="card">
-<p class="ct">Try fund size and timing yourself</p>
-<p class="cs">Monte Carlo simulation (1,500 scenarios) over the NAMED 2026 roster — the slider buys managers strictly top-down by our measured edge — 5 managers = the best 5 on the roster</p>
+<!-- ═══ 1. SIMULATOR ═══ -->
+<div class="chart-card" id="simulator">
+<div class="chart-title">Size the fund yourself</div>
+<div class="chart-sub">Monte Carlo, 1,500 scenarios over the named 2026 roster — the slider buys managers top-down by measured edge</div>
 <div class="controls">
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="200" value="40" step="5"></div>
   <div><label>Managers <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="1" max="21" step="1" value="18" style="width:150px"></div>
   <div><label>Co-invest <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
   <div><label>Selection <span class="val" id="vSel"></span></label>
   <select id="sel" style="font-family:inherit;font-size:12px;padding:3px 5px;border:1px solid #ccc;border-radius:4px">
-    <option value="none">No selection</option>
-    <option value="equal">All signals, equal wt</option>
-    <option value="tiered" selected>Tiered concentration</option>
-  </select></div>
+    <option value="none">No selection</option><option value="equal">All signals, equal wt</option>
+    <option value="tiered" selected>Tiered concentration</option></select></div>
   <div><label>Seed <span class="val" id="vSeed">#42</span></label>
    <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:4px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer;white-space:nowrap">&#8635; Re-roll</button></div>
 </div>
 <div id="rosterbox" style="font-size:12px;line-height:1.9;margin:-4px 0 14px"></div>
-<canvas id="c3" height="150"></canvas>
+<canvas id="c3" height="150" role="img" aria-label="Fan chart of net TVPI over ten years: median line with 25-75 and 10-90 percentile bands, against a paid-in capital line at 1.0x.">Median net TVPI with 25–75% and 10–90% outcome bands over ten years, against paid-in capital.</canvas>
 <div class="tiles">
-  <div class="tile"><b id="tMed">—</b><span>Median net TVPI (year 10)</span></div>
-  <div class="tile"><b id="tP90">—</b><span>Optimistic case (P90)</span></div>
+  <div class="tile"><b id="tMed">—</b><span>Median net TVPI (yr 10)</span></div>
+  <div class="tile"><b id="tP90">—</b><span>Optimistic (P90)</span></div>
   <div class="tile"><b id="tIRR">—</b><span>Median net IRR</span></div>
-  <div class="tile"><b id="tDPI">—</b><span>Median DPI break-even (cash returned = called)</span></div>
-  <div class="tile"><b id="tLoss">—</b><span>Probability of capital loss</span></div>
+  <div class="tile"><b id="tDPI">—</b><span>Cash break-even</span></div>
+  <div class="tile"><b id="tLoss">—</b><span>Chance of capital loss</span></div>
 </div>
 <div id="concwarn"></div>
-<table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 4px">
-<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px;width:46%">Fund / outcome</th><th>Net TVPI</th><th>Net IRR</th></tr>
+<table style="margin:14px 0 4px">
+<tr><th style="padding:4px 8px;width:46%">Fund / outcome</th><th>Net TVPI</th><th>Net IRR</th></tr>
 <tbody id="bench"></tbody>
-<tr style="border-top:2px solid #ddd"><td style="padding:4px 8px;color:#777" colspan="3">Benchmarks — each row is the <i>median fund</i> of that category, so compare it to our median row above</td></tr>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median fund</b> (the like-for-like comparison)</td><td>~1.4–1.6x</td><td>~8–10%</td></tr>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top-quartile fund</b></td><td>~1.9–2.2x</td><td>~12–15%</td></tr>
-<tr><td style="padding:4px 8px">Direct US VC fund — median (Cambridge-style; no FoF fee layer)</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
+<tr style="border-top:2px solid var(--rule)"><td style="padding:4px 8px;color:#777" colspan="3">Benchmarks below are the <i>median fund</i> of each category — compare to the median row above</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median</b> (like-for-like)</td><td>~1.4–1.6x</td><td>~8–10%</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top quartile</b></td><td>~1.9–2.2x</td><td>~12–15%</td></tr>
+<tr><td style="padding:4px 8px">Direct US VC fund — median (no FoF fee layer)</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
 <tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td></tr>
 </table>
-<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard — we test only its &ge;2.0x-net leg; its second leg (beating public-market equivalents) is not simulated here); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · per-manager premiums are our measured edge where the denominator is known (JAM: 82 positions/6 unicorns) and an explicit assumption where it is not (Mei Zuo: 4 verified unicorn positions, book size unverified — premium set to a ~30-check mid case) · co-invest sleeve: direct positions in companies our managers already back — no manager fee layer (+25%), single-company power-law dispersion, allocation contingent on holding real LP commitments, and correlated with the fund sleeve because they are the same companies · why the median improves as managers are added even though each added manager is weaker: concentration raises the <b>mean</b> but widens dispersion, so the <b>median</b> LP outcome falls and the left tail fattens — compare the mean shown beside the median · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
+<div class="chart-source">Source: Olympos analysis, Cambridge Associates-style vintage stats, Kauffman Foundation (2012) — model notes at foot of page</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<div class="card">
-<p class="ct">If this fund had started in August 2024</p>
-<p class="cs">Retrospective with real deal data under the SAME construction rules as the simulator above (tiered weights, 30% co-invest sleeve, fee drag): the signal-selected managers' actual 2024-vintage investments, marked to verified valuations · year 2 of 10 — far too early to judge, and shown because it disagrees with the model in places</p>
-<canvas id="c4" height="120"></canvas>
+<!-- ═══ 2. RETROSPECTIVE ═══ -->
+<div class="chart-card" id="backtest">
+<div class="chart-title">If this fund had started in August 2024</div>
+<div class="chart-sub">Same construction rules as the simulator, run on real 2024-vintage deals marked to verified valuations — year 2 of 10</div>
+<canvas id="c4" height="120" role="img" aria-label="Line chart of net paper TVPI from 2024 Q3 to 2026 Q3 for three series: prior-vintage selection-evidence books, the 2024-vintage portfolio, and the public seed fund-of-funds benchmark.">The 2024-vintage portfolio tracks well above the public seed-FoF benchmark but below the managers' prior-vintage books.</canvas>
 <div class="tiles">
-  <div class="tile"><b>2.30x</b><span>Selection-evidence books (pre-2024 vintages, net est.)</span></div>
-  <div class="tile"><b>1.60x</b><span>2024-vintage portfolio, equal weight (net est.)</span></div>
-  <div class="tile"><b>1.51x</b><span>Same portfolio, tiered weights — <b>worse</b></span></div>
-  <div class="tile"><b>~1.05x</b><span>Public seed-FoF benchmark at year 2</span></div>
+  <div class="tile"><b>2.30x</b><span>Prior-vintage books</span></div>
+  <div class="tile"><b>1.60x</b><span>2024 vintage, equal weight</span></div>
+  <div class="tile"><b>1.51x</b><span>Same, tiered — worse</span></div>
+  <div class="tile"><b>~1.05x</b><span>Seed-FoF benchmark, yr 2</span></div>
 </div>
-<div style="background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0">
-<b>Two findings that argue against our own model.</b> (1) <b>Tiering would have hurt in this window</b> (1.51x vs 1.60x equal weight): the best 2024-vintage books were Wischoff (2.40x) and Quiet (2.66x), while JAM — our strongest pre-2024 performer — is at 0.96x on just 5 positions. Weights estimated on one period misfire on the next; the disciplined response is to start closer to equal weight and concentrate only as fresh evidence accrues, re-tiering at Fund II.
-(2) <b>A co-invest sleeve chosen without skill would have hurt too</b>: 12 positions drawn at random from the same companies return ~1.27x median even with the no-fee advantage, pulling the portfolio to 1.49x. The simulator above credits co-invest with precursor-informed selection; this window cannot prove that skill, so treat the sleeve's modeled premium as an assumption, not a finding.</div>
-<div class="src"><span>Olympos analysis · Crunchbase round histories (2,190 tape rows), SEC EDGAR, our unicorn-cohort valuations; entry posts estimated from stage priors; dilution 15–40%; NOT audited returns — a marks-based estimate</span><span class="byline">OLYMPOS</span></div>
+<div class="note"><b>Two findings that argue against our own model.</b>
+<b>(1) Tiering hurt</b> — 1.51x vs 1.60x equal weight. The best 2024 books were Wischoff (2.40x) and Quiet (2.66x); JAM, our strongest prior-vintage name, sits at 0.96x on five positions. Weights fitted to one period misfire on the next: start near equal weight, re-tier at Fund II.
+<b>(2) Unskilled co-invest hurt too</b> — 12 positions drawn at random from the same companies return ~1.27x median even with no fee layer, pulling the portfolio to 1.49x. The simulator credits co-invest with informed selection; this window cannot prove that skill, so treat the premium as an assumption.</div>
+<div class="chart-source">Source: Olympos analysis, Crunchbase round histories (2,190 rows), SEC EDGAR — marks-based estimate, not audited returns</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<!-- ═══ 3. THE BACKTEST FUND ═══ -->
+<div class="chart-card" id="managers">
+<div class="chart-title">Real managers, real positions</div>
+<div class="chart-sub">The ten managers the signals picked on 14 Aug 2024, and what their books carried into 2026 · yellow = unicorn, grey = $30M+ follow-on</div>
+<table style="margin-bottom:14px">
+<tr><th style="padding:4px 8px">Manager</th><th>Fund</th><th>2-yr paper TVPI</th><th>Signature positions</th></tr>
+<tr><td style="padding:4px 8px"><b>Mei Zuo</b></td><td>Mei Z Funds</td><td>— (n=4)</td><td>Etched, MatX, Nscale, Black Forest Labs</td></tr>
+<tr><td style="padding:4px 8px"><b>Justin Mateen</b></td><td>JAM Fund</td><td>5.4x</td><td>Whop, Radiant, Stoke Space, Hadrian</td></tr>
+<tr><td style="padding:4px 8px"><b>Tomasz Tunguz</b></td><td>Theory</td><td>2.3x</td><td>Omni, Allium, Dropzone AI</td></tr>
+<tr><td style="padding:4px 8px"><b>Leo Polovets</b></td><td>Humba</td><td>2.1x</td><td>Northwood Space, WindBorne, Shinkei</td></tr>
+<tr><td style="padding:4px 8px"><b>Lee Linden</b></td><td>Quiet Capital</td><td>2.2x</td><td>Decart, Assort Health, Modal, Swarm Aero</td></tr>
+<tr><td style="padding:4px 8px"><b>Masha Bucher</b></td><td>Day One</td><td>2.1x</td><td>You.com, Invisible Tech, Owner.com</td></tr>
+<tr><td style="padding:4px 8px"><b>Bobby Yazdani</b></td><td>Cota</td><td>1.8x</td><td>Eight Sleep, Farther, Upscale AI</td></tr>
+<tr><td style="padding:4px 8px"><b>Alexandre Azoulay</b></td><td>SGH</td><td>1.6x</td><td>TRM Labs, Valar Atomics</td></tr>
+<tr><td style="padding:4px 8px"><b>Aneel Ranadive</b></td><td>Soma</td><td>2.5x</td><td>Etched, Whop, Avoca, Ramp</td></tr>
+<tr><td style="padding:4px 8px"><b>Nichole Wischoff</b></td><td>Wischoff</td><td>2.4x (2024 vintage)</td><td>Cargado, Nyne, Stell, Beam</td></tr>
+</table>
+<div class="chart-sub" style="margin-bottom:8px">Company-level exposure through those funds:</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px" id="logowall"></div>
+<div class="chart-source">Source: Olympos analysis, Crunchbase, SEC EDGAR — selection frozen 14 Aug 2024; marks dilution-adjusted, not audited</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<!-- ═══ 4. 2026 ROSTER ═══ -->
+<div class="chart-card" id="roster">
+<div class="chart-title">The proposed 2026 roster</div>
+<div class="chart-sub">$40M first close, 21 names by access class — the simulator buys them in this order · North America + London + Israel, SFBA-weighted</div>
+<p style="font-size:14px;line-height:1.7;margin:0">
+<b style="color:var(--navy)">A · Star anchors (3):</b> Chemistry II · Diffusion (ex-Benchmark) · Pebblebed III<br>
+<b style="color:var(--navy)">B · Return engine (8):</b> <b>Humba III (raising now)</b> · <b>JAM Fund (best backtest: 5.4x)</b> · <b>Mei Zuo (3-for-3 pre-tier-1)</b> · Mischief · Kearny Jackson (a16z &amp; Sequoia are LPs) · Premise · Category · Day One III<br>
+<b style="color:var(--navy)">C · Formation-stage (5):</b> Verdict (Bonatsos + Fertik, ex-GC) · Ethan Choi (ex-Khosla) · Bryan Kim (ex-a16z) · Josephine Chen (ex-Sequoia) · Astasia Myers (pre-spinout)<br>
+<b style="color:var(--navy)">D · Lane options (5):</b> Pax · Axiom · Orange Collective · Zero Shot · Soma (beta sleeve, 803 positions)<br>
+<span style="font-size:13px;color:#666">Alternates: Footwork II · Basecase · Boost VC · Eniac · Susa · Wischoff III · Theory Corollary · Earthling · Perceptive · Outcast · Common Magic</span></p>
+<div class="chart-source">Source: Olympos analysis, SEC EDGAR Form D — open-vehicle status as of Aug 2026; a proposal, not commitments</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<!-- ═══ 5. DEPARTURE SIGNAL (moved to foot) ═══ -->
+<div class="chart-card" id="departures">
+<div class="chart-title">We see managers move before the market does</div>
+<div class="chart-sub">Months a partner went missing from their firm's Form D filings before the departure became public</div>
+<div style="height:180px"><canvas id="c2" role="img" aria-label="Horizontal bar chart of Form D filing-silence lead times: Tunguz 9 months, Singerman 20, Kurzweil 24, Polovets 26.">Filing silence preceded every verified departure by 9 to 26 months.</canvas></div>
+<div class="chart-source">Source: Olympos analysis, SEC EDGAR Form D archive — four verified 2022–2026 spinout departures</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<!-- ═══ DISCLAIMER ═══ -->
+<div class="disclaimer">
+<details><summary>Model notes &amp; limitations</summary>
+<b>What is modelled.</b> Return distributions are calibrated to public VC benchmarks; the selection effect to our own conversion measurements; model internals are withheld. Benchmark rows are public-summary approximations (Cambridge Associates-style US vintage stats; the Kauffman 2012 standard — we test only its &ge;2.0x-net leg, not its public-market-equivalent leg). Cash flows assume 3-year calls, distributions in years 5–10 (60% of value) and residual NAV at year 10; our IRR is a fully-realised 10-year cash IRR, harsher than the interim NAV-based IRRs benchmarks quote.<br><br>
+<b>Where the numbers are assumptions.</b> Per-manager premiums are measured where the denominator is known (JAM: 82 positions, 6 unicorns) and explicit assumptions where it is not (Mei Zuo: 4 verified unicorn positions, book size unverified — set to a ~30-check mid case). The co-invest sleeve assumes precursor-informed selection, no manager fee layer (+25%), single-company dispersion, and allocations contingent on real LP commitments — the 2024 window cannot prove that selection skill.<br><br>
+<b>Reading the outputs.</b> Adding managers raises the <i>mean</i> but widens dispersion, so the <i>median</i> LP outcome can fall while the left tail fattens — compare the mean shown beside the median. Size cuts both ways: a scale penalty above (~9% per doubling) and, below, LP check minimums ($2M star anchors, $0.75M emerging) plus ~$250K/yr fixed operating cost. Backtest marks are dilution-adjusted estimates from public round data, not audited returns.
+</details>
 </div>
 
 <script>
@@ -111,23 +165,6 @@ new Chart(c4,{type:'line',data:{labels:q,datasets:[
  scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Net paper TVPI (x)',font:{size:11}},min:0.9}}}});})();
 Chart.defaults.font.family="'IBM Plex Sans',sans-serif";
 Chart.defaults.color='#444';
-
-// ---- Chart 1: real cumulative Pareto ----
-const counts=[12,12,11,10,9,6,6,6,6,6,5,5,5,5,4,4,4,4,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2];
-let cum=0; const pareto=counts.map(c=>{cum+=c; return +(100*cum/382).toFixed(1);});
-new Chart(c1,{type:'line',data:{labels:pareto.map((_,i)=>i+1),
- datasets:[{data:pareto,borderColor:NAVY,borderWidth:2,pointRadius:0,fill:{target:'origin'},backgroundColor:'rgba(0,56,118,.08)'}]},
- options:{plugins:{legend:{display:false},tooltip:{callbacks:{title:i=>`Top ${i[0].label} firms`,label:i=>`${i.parsed.y}% of lead slots`}},
-  annotation:undefined},
- scales:{x:{title:{display:true,text:'Number of firms (ranked by leads)',font:{size:11}},grid:{display:false}},
-  y:{min:0,max:60,title:{display:true,text:'Cumulative share of round leads (%)',font:{size:11}},ticks:{callback:v=>v+'%'}}}}});
-
-// ---- Chart 2: departure lead times ----
-new Chart(c2,{type:'bar',data:{labels:['Tomasz Tunguz → Theory','Vic Singh (Eniac)','Brian Singerman → GPx','Ethan Kurzweil → Chemistry','Leo Polovets → Humba'],
- datasets:[{data:[9,9,20,24,26],backgroundColor:[NAVY,NAVY,NAVY,NAVY,GREY],borderRadius:4,barThickness:26}]},
- options:{indexAxis:'y',plugins:{legend:{display:false},
-  tooltip:{callbacks:{label:i=>i.dataIndex==4?'Omitted from Susa V filing before any announcement; Humba III now raising':`Filing silence began ${i.parsed.x} months before public departure`}}},
- scales:{x:{title:{display:true,text:'Signal lead time (months)',font:{size:11}},grid:{color:'#f0f0f0'}},y:{grid:{display:false}}}}});
 
 // ---- Chart 3: Monte Carlo fan ----
 let chart3=null, SEED=42;
@@ -285,37 +322,16 @@ document.getElementById('reroll').addEventListener('click',()=>{SEED=Math.floor(
 simulate();
 </script>
 
-<div class="card">
-<p class="ct">The August-2024 backtest fund — real managers, real positions</p>
-<p class="cs">The ten managers our signals selected point-in-time, and the companies their books carried into 2025–26 · yellow ring = became a unicorn · grey = $30M+ follow-on round</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px;margin-bottom:14px">
-<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px">Manager</th><th>Fund</th><th>2-yr paper TVPI (sel.-evidence)</th><th>Signature positions</th></tr>
-<tr><td style="padding:4px 8px"><b>Mei Zuo</b></td><td>Mei Z Funds</td><td>—(n=4)</td><td>Etched, MatX, Nscale, Black Forest Labs</td></tr>
-<tr><td style="padding:4px 8px"><b>Justin Mateen</b></td><td>JAM Fund</td><td>5.4x</td><td>Whop, Radiant, Stoke Space, Slash, Hadrian, OpenPhone</td></tr>
-<tr><td style="padding:4px 8px"><b>Tomasz Tunguz</b></td><td>Theory</td><td>2.3x</td><td>Omni, Allium, Dropzone AI</td></tr>
-<tr><td style="padding:4px 8px"><b>Leo Polovets</b></td><td>Humba</td><td>2.1x</td><td>Northwood Space, WindBorne, Shinkei, Eyebot</td></tr>
-<tr><td style="padding:4px 8px"><b>Lee Linden / Quiet</b></td><td>Quiet Capital</td><td>2.2x</td><td>Decart, Assort Health, Modal, Enter, Swarm Aero</td></tr>
-<tr><td style="padding:4px 8px"><b>Masha Bucher</b></td><td>Day One</td><td>2.1x</td><td>You.com, Invisible Tech, Owner.com</td></tr>
-<tr><td style="padding:4px 8px"><b>Bobby Yazdani</b></td><td>Cota</td><td>1.8x</td><td>Eight Sleep, Farther, Upscale AI, Cast AI</td></tr>
-<tr><td style="padding:4px 8px"><b>Alexandre Azoulay</b></td><td>SGH</td><td>1.6x</td><td>TRM Labs, Valar Atomics, Eight Sleep</td></tr>
-<tr><td style="padding:4px 8px"><b>Aneel Ranadive</b></td><td>Soma</td><td>2.5x</td><td>Etched, Whop, Avoca, Curative, Ramp</td></tr>
-<tr><td style="padding:4px 8px"><b>Nichole Wischoff</b></td><td>Wischoff</td><td>1.2x→2.4x (2024 vintage)</td><td>Cargado, Nyne, Stell, Beam</td></tr>
-</table>
-<p class="cs" style="margin-bottom:8px">The would-have-been portfolio (company-level exposure through those funds):</p>
-<div style="display:flex;flex-wrap:wrap;gap:8px" id="logowall"></div>
-<div class="src"><span>Olympos analysis · Crunchbase round histories, SEC EDGAR, cohort valuations · manager selection frozen at 2024-08-14; marks estimated (dilution-adjusted), not audited</span><span class="byline">OLYMPOS</span></div>
-</div>
-
-<div class="card">
-<p class="ct">The proposed 2026 fund — named roster by access class</p>
-<p class="cs">$40M first close, 21-name roster ranked by conviction · the simulator above buys these managers in this order · SFBA-weighted, North America + London + Israel</p>
-<p style="font-size:14px;line-height:1.7">
-<b style="color:var(--navy)">A · Star anchors (2–3):</b> Chemistry II · Diffusion (Lazarte/Fredrickson, ex-Benchmark) · Pebblebed III<br>
-<b style="color:var(--navy)">B · Return engine (8):</b> <b>Humba III (Polovets — raising now)</b> · <b>JAM Fund (Justin Mateen — our best backtest: 5.4x, 7.3% unicorn rate)</b> · <b>Mei Zuo vehicle (3-for-3 pre-tier-1)</b> · Mischief (Zach Perret) · Kearny Jackson (a16z &amp; Sequoia are LPs) · Premise (Larco + Bent) · Category (Iltchev) · Day One III (Bucher)<br>
-<b style="color:var(--navy)">C · Formation-stage (5):</b> Verdict — Niko Bonatsos + Michael Fertik (ex-GC; $300M Fund I open, $0 sold at filing) · Ethan Choi (ex-Khosla) · Bryan Kim (ex-a16z) · Josephine Chen (ex-Sequoia) · Astasia Myers (pre-spinout watch)<br>
-<b style="color:var(--navy)">D · Lane options (5):</b> Pax (ex-a16z American Dynamism) · Axiom (Venkatachalam) · Orange Collective (YC alumni) · Zero Shot (ex-OpenAI) · Soma (Ranadive — beta sleeve: 803-position book, access at scale rather than selection)<br><span style="font-size:13px;color:#666">Alternates held: Footwork II · Basecase (Goyal) · Boost VC (Draper) · Eniac · Susa · Wischoff III · Theory Corollary · Earthling · Perceptive · Outcast · Common Magic</span></p>
-<div class="src"><span>Olympos analysis · access classes reflect open-vehicle status as of Aug 2026 (Form D-verified); roster is a proposal, not commitments</span><span class="byline">OLYMPOS</span></div>
-</div>
+<script>
+// ---- Departure lead times (measured from SEC Form D related-persons name-diff) ----
+new Chart(c2,{type:'bar',data:{
+ labels:['Tomasz Tunguz \u2192 Theory','Brian Singerman \u2192 GPx','Ethan Kurzweil \u2192 Chemistry','Leo Polovets \u2192 Humba'],
+ datasets:[{data:[9,20,24,26],backgroundColor:'#003876',borderRadius:4,barThickness:26}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  plugins:{legend:{display:false},tooltip:{callbacks:{label:i=>`Filing silence began ${i.parsed.x} months before the public announcement`}}},
+  scales:{x:{title:{display:true,text:'Months of Form D silence before the market knew',font:{size:11}},grid:{color:'#f0f0f0'}},
+          y:{grid:{display:false}}}}});
+</script>
 
 <script>
 (()=>{const P=[
