@@ -10,7 +10,11 @@ press = early), Conviction III / Avra II / Matter II / Duration / Saga II / Rene
 Closed (relationship-only): Standard Capital ($425M, Caldwell+Buchheit, YC LP), Marathon ($205.9M in),
 Evantic (London), Touring, Sunflower II.
 
-## Class B — Prime emerging, our-data-validated (7-8 slots, ~$1.5M each; the return engine)
+## Class B — Prime emerging, our-data-validated (8 slots, ~$1.5M each; the return engine)
+**CORRECTION 2026-08-15 (Emrah caught it): JAM Fund (Mateen) and Mei Zuo belong HERE, not as
+alternates/Class C — they are the top two performers in our own PIT-2024 backtest (JAM 5.4x sel.-evidence
+/ 7.3% unicorn rate; Mei 3-for-3 pre-tier-1). The star sweep crowded out our own measured winners; fixed.
+Soma (Ranadive) = Class D 'beta sleeve' — 2.49x but on 803 positions, i.e. access at scale, not selection.**
 **Humba III — TOP PRIORITY: Form D filed 7/13/26, SF addr, raising NOW**; our data: 1.97x young book,
 4/10 positions took a16z/FF/Khosla/GC leads. Then: **Mischief 3** ($165M target, Perret, press-dark),
 **Kearny Jackson** (a16z+Sequoia are LPs), **Category** ($158.5M), **Footwork II**, **Basecase**
