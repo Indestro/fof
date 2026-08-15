@@ -70,14 +70,15 @@ input[type=range]{width:104px;accent-color:var(--navy);display:block}
 </div>
 <div id="concwarn"></div>
 <table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 4px">
-<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px">Fund</th><th>Net TVPI</th><th>Net IRR</th><th>Kauffman standard (&ge;2.0x net + beats public mkts)</th></tr>
+<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px;width:46%">Fund / outcome</th><th>Net TVPI</th><th>Net IRR</th><th>&ge;2.0x net?</th></tr>
 <tbody id="bench"></tbody>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median</b> (the right comparison)</td><td>~1.4–1.6x</td><td>~8–10%</td><td>&#10007;</td></tr>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top quartile</b></td><td>~1.9–2.2x</td><td>~12–15%</td><td>borderline</td></tr>
-<tr><td style="padding:4px 8px">Direct US VC fund — vintage median (Cambridge-style)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
+<tr style="border-top:2px solid #ddd"><td style="padding:4px 8px;color:#777" colspan="4">Benchmarks — each row is the <i>median fund</i> of that category, so compare it to our median row above</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median fund</b> (the like-for-like comparison)</td><td>~1.4–1.6x</td><td>~8–10%</td><td>&#10007;</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top-quartile fund</b></td><td>~1.9–2.2x</td><td>~12–15%</td><td>borderline</td></tr>
+<tr><td style="padding:4px 8px">Direct US VC fund — median (Cambridge-style; no FoF fee layer)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
 <tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
 </table>
-<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · per-manager premiums are our measured edge where the denominator is known (JAM: 82 positions/6 unicorns) and an explicit assumption where it is not (Mei Zuo: 4 verified unicorn positions, book size unverified — premium set to a ~30-check mid case) · co-invest sleeve: direct positions in companies our managers already back — no manager fee layer (+25%), single-company power-law dispersion, allocation contingent on holding real LP commitments, and correlated with the fund sleeve because they are the same companies · why the median improves as managers are added even though each added manager is weaker: concentration raises the <b>mean</b> but widens dispersion, so the <b>median</b> LP outcome falls and the left tail fattens — compare the mean shown beside the median · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
+<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard — we test only its &ge;2.0x-net leg; its second leg (beating public-market equivalents) is not simulated here); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · per-manager premiums are our measured edge where the denominator is known (JAM: 82 positions/6 unicorns) and an explicit assumption where it is not (Mei Zuo: 4 verified unicorn positions, book size unverified — premium set to a ~30-check mid case) · co-invest sleeve: direct positions in companies our managers already back — no manager fee layer (+25%), single-company power-law dispersion, allocation contingent on holding real LP commitments, and correlated with the fund sleeve because they are the same companies · why the median improves as managers are added even though each added manager is weaker: concentration raises the <b>mean</b> but widens dispersion, so the <b>median</b> LP outcome falls and the left tail fattens — compare the mean shown beside the median · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
 </div>
 
 <div class="card">
@@ -250,12 +251,13 @@ function simulate(){
  document.getElementById('tDPI').textContent=beY;
  // benchmark strip
  const p75v=q(finals,.75);
- const kMed=medTv>=2, kMean=meanTv>=2;
- const kTxt = kMed&&kMean ? '&#10003; meets (median and mean)'
-   : (!kMed&&kMean ? '&#10003; on <b>mean</b> '+meanTv.toFixed(2)+'x &nbsp;&#10007; on median — dispersion, not weakness'
-   : '&#10007; below on both');
+ const yes='&#10003;', no='&#10007;';
+ const p25v=q(finals,.25);
  document.getElementById('bench').innerHTML=
-  `<tr><td><b>This portfolio (median / P75)</b></td><td><b>${medTv.toFixed(2)}x / ${p75v.toFixed(2)}x</b></td><td><b>${(100*irrOf(medTv)).toFixed(0)}% / ${(100*irrOf(p75v)).toFixed(0)}%</b></td><td>${kTxt}</td></tr>`;
+  `<tr style="background:#f7f9fc"><td style="padding:5px 8px"><b>This portfolio — median outcome</b> <span style="color:#777">(the coin-flip case)</span></td><td><b>${medTv.toFixed(2)}x</b></td><td><b>${(100*irrOf(medTv)).toFixed(0)}%</b></td><td><b>${medTv>=2?yes:no}</b></td></tr>
+   <tr><td style="padding:4px 8px">This portfolio — expected value (mean)</td><td>${meanTv.toFixed(2)}x</td><td>${(100*irrOf(meanTv)).toFixed(0)}%</td><td>${meanTv>=2?yes:no}</td></tr>
+   <tr><td style="padding:4px 8px">This portfolio — good case (P75)</td><td>${p75v.toFixed(2)}x</td><td>${(100*irrOf(p75v)).toFixed(0)}%</td><td>${p75v>=2?yes:no}</td></tr>
+   <tr><td style="padding:4px 8px">This portfolio — poor case (P25)</td><td>${p25v.toFixed(2)}x</td><td>${(100*irrOf(p25v)).toFixed(0)}%</td><td>${p25v>=2?yes:no}</td></tr>`;
  // concentration warning: a few-manager portfolio is a lottery ticket with positive expected value
  const cw=document.getElementById('concwarn');
  cw.innerHTML = m<=4 ? `<b>Concentration note:</b> with ${m} manager${m>1?'s':''} you are not running a portfolio — you are buying ${m===1?'one':'a few'} lottery ticket${m>1?'s':''} with positive expected value. The <b>mean</b> outcome (${meanTv.toFixed(2)}x) clears the Kauffman bar; the <b>median</b> (${medTv.toFixed(2)}x) does not, and capital loss runs ${document.getElementById('tLoss').textContent}. The Kauffman standard is a portfolio test, not a single-fund test — single seed funds miss it far more often than they beat it, which is precisely why LPs hold 10–20 of them.` : '';
