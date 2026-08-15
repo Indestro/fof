@@ -68,6 +68,7 @@ input[type=range]{width:104px;accent-color:var(--navy);display:block}
   <div class="tile"><b id="tDPI">—</b><span>Median DPI break-even (cash returned = called)</span></div>
   <div class="tile"><b id="tLoss">—</b><span>Probability of capital loss</span></div>
 </div>
+<div id="concwarn"></div>
 <table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 4px">
 <tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px">Fund</th><th>Net TVPI</th><th>Net IRR</th><th>Kauffman standard (&ge;2.0x net + beats public mkts)</th></tr>
 <tbody id="bench"></tbody>
@@ -245,8 +246,16 @@ function simulate(){
  document.getElementById('tDPI').textContent=beY;
  // benchmark strip
  const p75v=q(finals,.75);
+ const kMed=medTv>=2, kMean=meanTv>=2;
+ const kTxt = kMed&&kMean ? '&#10003; meets (median and mean)'
+   : (!kMed&&kMean ? '&#10003; on <b>mean</b> '+meanTv.toFixed(2)+'x &nbsp;&#10007; on median — dispersion, not weakness'
+   : '&#10007; below on both');
  document.getElementById('bench').innerHTML=
-  `<tr><td><b>This portfolio (median / P75)</b></td><td><b>${medTv.toFixed(2)}x / ${p75v.toFixed(2)}x</b></td><td><b>${(100*irrOf(medTv)).toFixed(0)}% / ${(100*irrOf(p75v)).toFixed(0)}%</b></td><td>${medTv>=2?'&#10003; meets':'&#10007; below'} Kauffman</td></tr>`;
+  `<tr><td><b>This portfolio (median / P75)</b></td><td><b>${medTv.toFixed(2)}x / ${p75v.toFixed(2)}x</b></td><td><b>${(100*irrOf(medTv)).toFixed(0)}% / ${(100*irrOf(p75v)).toFixed(0)}%</b></td><td>${kTxt}</td></tr>`;
+ // concentration warning: a few-manager portfolio is a lottery ticket with positive expected value
+ const cw=document.getElementById('concwarn');
+ cw.innerHTML = m<=4 ? `<b>Concentration note:</b> with ${m} manager${m>1?'s':''} you are not running a portfolio — you are buying ${m===1?'one':'a few'} lottery ticket${m>1?'s':''} with positive expected value. The <b>mean</b> outcome (${meanTv.toFixed(2)}x) clears the Kauffman bar; the <b>median</b> (${medTv.toFixed(2)}x) does not, and capital loss runs ${document.getElementById('tLoss').textContent}. The Kauffman standard is a portfolio test, not a single-fund test — single seed funds miss it far more often than they beat it, which is precisely why LPs hold 10–20 of them.` : '';
+ cw.style.cssText = m<=4 ? 'background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0' : '';
  document.getElementById('tLoss').textContent=Math.round(100*finals.filter(v=>v<1).length/N)+'%';
  const ds=[
   {label:'10–90% band',data:p90,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.10)'},
