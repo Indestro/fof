@@ -76,7 +76,7 @@ input[type=range]{width:104px;accent-color:var(--navy);display:block}
 <tr><td style="padding:4px 8px">Direct US VC fund — vintage median (Cambridge-style)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
 <tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
 </table>
-<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · why the median improves as managers are added even though each added manager is weaker: concentration raises the <b>mean</b> but widens dispersion, so the <b>median</b> LP outcome falls and the left tail fattens — compare the mean shown beside the median · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
+<div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · co-invest sleeve: direct positions in companies our managers already back — no manager fee layer (+25%), single-company power-law dispersion, allocation contingent on holding real LP commitments, and correlated with the fund sleeve because they are the same companies · why the median improves as managers are added even though each added manager is weaker: concentration raises the <b>mean</b> but widens dispersion, so the <b>median</b> LP outcome falls and the left tail fattens — compare the mean shown beside the median · size effects run both ways: scale penalty above (~9%/doubling) and, below, LP check minimums ($2M star anchors / $0.75M emerging) plus fixed operating cost (~$250K/yr) — co-invest quality follows from holding real allocations</span><span class="byline">OLYMPOS</span></div>
 </div>
 
 <div class="card">
@@ -175,7 +175,14 @@ function simulate(){
  const access=chosen.map((r,i)=> checks[i] >= MINCHK[r[1]]);
  const accW=chosen.reduce((a,r,i)=> a + (access[i]?wts[i]:0), 0)/wsum;   // share of capital with real allocations
  // co-invest flow comes FROM being a meaningful LP: no allocations -> no breakout co-invests
- const coMu=({none:0.10, equal:0.34, tiered:0.55}[sel])*(0.35+0.65*accW)-sizeDrag, coSig=1.15;
+ // ---- CO-INVEST SLEEVE ----
+ // Direct positions alongside our managers, in companies they already back. Economics differ from
+ // the fund route in three ways: (1) no manager fee/carry layer (~25% uplift on the same outcome),
+ // (2) single-company power law instead of a diversified book (fat sigma), (3) allocation is a
+ // privilege of being a real LP — no meaningful commitments, no invitations.
+ const CO_QUALITY={none:-0.30, equal:-0.05, tiered:0.10};   // log-mean of a single position
+ const FEE_ADV=0.25;                                        // no 2/20 layer on direct positions
+ const coMu=CO_QUALITY[sel]*(0.35+0.65*accW)+FEE_ADV*accW-sizeDrag, coSig=1.45;   // sigma = single-deal power law
  // live roster display
  const CC={A:'#003876',B:'#1b6ec2',C:'#8a6d00',D:'#8a8a8a'};
  const CN={A:'Star anchor',B:'Return engine',C:'Formation-stage',D:'Lane option'};
@@ -198,8 +205,13 @@ function simulate(){
      fundTv += (wts[i]/wsum) * draw;
    });
    let coTv=0;
-   if(co>0){ const k=Math.max(3,Math.round(co*size/2.5));   // # direct positions scales with sleeve dollars
-     for(let i=0;i<k;i++) coTv+=lognorm(coMu,coSig)/k; }
+   if(co>0){
+     const k=Math.max(3,Math.round(co*size/2.5));           // ~$2.5M average ticket -> position count
+     for(let i=0;i<k;i++) coTv+=lognorm(coMu,coSig)/k;
+     // OVERLAP: co-invests sit in the same companies our managers hold, so half their idiosyncratic
+     // fate is shared with the fund sleeve — the correlation cost of concentrating into names we own.
+     coTv *= Math.pow(Math.max(0.25, fundTv/2.40), 0.5);
+   }
    const finalTv=((1-co)*fundTv+co*coTv)*mkt*FEE;
    const p=[];
    for(let y=0;y<=YRS;y++){
