@@ -70,8 +70,10 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 <table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 4px">
 <tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left"><th style="padding:4px 8px">Fund</th><th>Net TVPI</th><th>Net IRR</th><th>Kauffman standard (&ge;2.0x net + beats public mkts)</th></tr>
 <tbody id="bench"></tbody>
-<tr><td style="padding:4px 8px">US VC benchmark — vintage median (Cambridge-style, approx.)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
-<tr><td style="padding:4px 8px">US VC benchmark — top quartile (approx.)</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median</b> (the right comparison)</td><td>~1.4–1.6x</td><td>~8–10%</td><td>&#10007;</td></tr>
+<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top quartile</b></td><td>~1.9–2.2x</td><td>~12–15%</td><td>borderline</td></tr>
+<tr><td style="padding:4px 8px">Direct US VC fund — vintage median (Cambridge-style)</td><td>~1.8–2.0x</td><td>~13–15%</td><td>borderline</td></tr>
+<tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td><td>&#10003;</td></tr>
 </table>
 <div class="src"><span>Olympos analysis · Return distributions calibrated to public VC benchmarks; selection effect calibrated to our own conversion measurements; model internals withheld · benchmark rows are public-summary approximations (Cambridge Associates-style US VC vintage stats; Kauffman Foundation 2012 standard); cash-flow schedule: 3-yr calls, distributions yrs 5–10 (60% of value), residual NAV at yr 10 · our IRR = fully-realized 10-yr cash IRR (harsher than the interim NAV-based IRRs benchmarks quote) · size slider carries an empirical scale penalty (~9%/doubling of log-mean)</span><span class="byline">OLYMPOS</span></div>
 </div>
@@ -146,14 +148,20 @@ function simulate(){
  document.getElementById('vMgr').textContent=m;
  document.getElementById('vCo').textContent=Math.round(co*100)+'%';
  const N=1500,YRS=10;
- const MU_BASE=0.14;          // unselected market log-mean (calibration: PIT-2024 backtest)
+ // Per-manager NET TVPI (already net of the manager's own fees), lognormal.
+ // MU_BASE = median unselected VC fund ~1.5x net (Cambridge-style vintage median).
+ const MU_BASE=0.40;
+ // ACCESS CAP — the actual mechanism by which selection pays: an unselected LP cannot buy the
+ // right tail (oversubscribed funds ration allocation). Selection = access to outliers, not
+ // avoidance of losers.
+ const CAPS={none:3.0, equal:8.0, tiered:25.0};
  const sizeDrag=0.09*Math.log2(size/40);   // empirical size penalty per doubling of fund size
- const FEE=0.88;              // FoF-level fee/carry drag on gross
+ const FEE=0.90;              // FoF layer only (1% mgmt + 5% carry over 10 yrs); manager fees already netted
  const CW={A:1.4,B:1.2,C:0.7,D:0.5};       // per-slot capital weight by access class (tiered mode)
  const chosen=ROSTER.slice(0,m);
  const wts=chosen.map(r=> sel==='tiered' ? CW[r[1]] : 1);
  const wsum=wts.reduce((a,b)=>a+b,0);
- const coMu={none:-0.07, equal:0.14, tiered:0.35}[sel]-sizeDrag, coSig=1.10;
+ const coMu={none:0.10, equal:0.34, tiered:0.55}[sel]-sizeDrag, coSig=1.15;   // direct positions, no manager fee layer
  // live roster display
  const CC={A:'#003876',B:'#1b6ec2',C:'#8a6d00',D:'#8a8a8a'};
  const CN={A:'Star anchor',B:'Return engine',C:'Formation-stage',D:'Lane option'};
@@ -162,11 +170,12 @@ function simulate(){
    .map(k=>`<b style="color:${CC[k]}">${CN[k]} (${byC[k].length}):</b> ${byC[k].join(' · ')}`).join('<br>');
  const paths=[];
  for(let s=0;s<N;s++){
-   const mkt=lognorm(-0.05,0.32);                     // correlated market regime (common factor)
+   const mkt=lognorm(-0.09,0.46);                     // vintage/market regime — the dominant FoF risk (cf. 2021 vintages)
    let fundTv=0;
    chosen.forEach((r,i)=>{
-     const prem = sel==='none' ? 0 : r[2];            // 'none' strips the selection premium (market average)
-     fundTv += (wts[i]/wsum) * lognorm(MU_BASE+prem-sizeDrag, r[3]);
+     const prem = sel==='none' ? 0 : (sel==='equal' ? r[2]*0.6 : r[2]);
+     const draw = Math.min(lognorm(MU_BASE+prem-sizeDrag, r[3]), CAPS[sel]);
+     fundTv += (wts[i]/wsum) * draw;
    });
    let coTv=0;
    if(co>0){ const k=Math.max(3,Math.round(co*size/2.5));   // # direct positions scales with sleeve dollars
