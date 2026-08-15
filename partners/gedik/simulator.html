@@ -14,10 +14,11 @@ h1{font-size:28px;font-weight:700;margin:0}
 .src span:first-child{flex:1;min-width:0}
 .byline{font-weight:700;color:var(--navy);font-size:11px;letter-spacing:.5px}
 canvas{max-width:100%}
-.controls{display:flex;flex-wrap:wrap;gap:18px;background:var(--light);border-radius:6px;padding:14px 16px;margin-bottom:16px;align-items:center}
-.controls label{font-size:12px;font-weight:600;display:block;margin-bottom:3px}
+.controls{display:flex;flex-wrap:nowrap;gap:14px;background:var(--light);border-radius:6px;padding:12px 14px;margin-bottom:16px;align-items:end;overflow-x:auto}
+.controls>div{flex:0 0 auto}
+.controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap}
 .controls .val{font-size:12px;color:var(--navy);font-weight:700}
-input[type=range]{width:150px;accent-color:var(--navy)}
+input[type=range]{width:104px;accent-color:var(--navy);display:block}
 .toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
 .toggle input{width:18px;height:18px;accent-color:var(--navy)}
 .tiles{display:flex;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
@@ -47,16 +48,16 @@ input[type=range]{width:150px;accent-color:var(--navy)}
 <p class="cs">Monte Carlo simulation (1,500 scenarios) over the NAMED 2026 roster — the slider buys managers in conviction order: star anchors first, then the return engine, formation-stage, lane options</p>
 <div class="controls">
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="200" value="40" step="5"></div>
-  <div><label>Managers from the 2026 roster <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="3" max="21" value="18"></div>
-  <div><label>Co-invest share <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
-  <div><label>Manager selection <span class="val" id="vSel"></span></label>
-  <select id="sel" style="font-family:inherit;font-size:13px;padding:4px 6px;border:1px solid #ccc;border-radius:4px">
-    <option value="none">No selection (market average)</option>
-    <option value="equal">All signals, equal weight</option>
-    <option value="tiered" selected>Tiered concentration (50/35/15)</option>
+  <div><label>Managers <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="3" max="21" value="18"></div>
+  <div><label>Co-invest <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
+  <div><label>Selection <span class="val" id="vSel"></span></label>
+  <select id="sel" style="font-family:inherit;font-size:12px;padding:3px 5px;border:1px solid #ccc;border-radius:4px">
+    <option value="none">No selection</option>
+    <option value="equal">All signals, equal wt</option>
+    <option value="tiered" selected>Tiered concentration</option>
   </select></div>
-  <div><label>Scenario seed <span class="val" id="vSeed">#42</span></label>
-   <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:5px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer">&#8635; Re-roll 1,500 scenarios</button></div>
+  <div><label>Seed <span class="val" id="vSeed">#42</span></label>
+   <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:4px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer;white-space:nowrap">&#8635; Re-roll</button></div>
 </div>
 <div id="rosterbox" style="font-size:12px;line-height:1.9;margin:-4px 0 14px"></div>
 <canvas id="c3" height="150"></canvas>
