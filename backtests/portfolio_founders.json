@@ -1,0 +1,4967 @@
+{
+ "last-energy": {
+  "company": "Last Energy",
+  "date": "2024-08-29",
+  "mgr": "jam-fund",
+  "founders": [
+   {
+    "name": "Bret Kugelmass",
+    "permalink": "bret-kugelmass"
+   }
+  ]
+ },
+ "curative": {
+  "company": "Curative",
+  "date": "2025-11-28",
+  "mgr": "jam-fund",
+  "founders": [
+   {
+    "name": "Fred Turner",
+    "permalink": "fred-turner"
+   },
+   {
+    "name": "Isaac Turner",
+    "permalink": "isaac-turner"
+   },
+   {
+    "name": "Vlad Slepnev",
+    "permalink": "vlad-slepnev"
+   }
+  ]
+ },
+ "hidden-studios": {
+  "company": "Hidden Studios",
+  "date": "2025-04-30",
+  "mgr": "jam-fund",
+  "founders": [
+   {
+    "name": "Marcelo Barrera",
+    "permalink": "marcelo-barrera-c20b"
+   },
+   {
+    "name": "Nicholas Motamedi",
+    "permalink": "nicholas-motamedi"
+   },
+   {
+    "name": "Richard Chang",
+    "permalink": "richard-chang-8746"
+   }
+  ]
+ },
+ "rise-e41d": {
+  "company": "Rise",
+  "date": "2024-11-21",
+  "mgr": "jam-fund",
+  "founders": [
+   {
+    "name": "Andrew Maurer",
+    "permalink": "andrew-maurer-2526"
+   },
+   {
+    "name": "Hugo Finkelstein",
+    "permalink": "hugo-finkelstein"
+   }
+  ]
+ },
+ "assort-health": {
+  "company": "Assort Health",
+  "date": "2024-03-14",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Jeffery Liu",
+    "permalink": "jeffery-liu-66f7"
+   },
+   {
+    "name": "Jon Wang",
+    "permalink": "jon-wang-1442"
+   }
+  ]
+ },
+ "suno-279f": {
+  "company": "Suno",
+  "date": "2026-06-03",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Georg Kucsko",
+    "permalink": "georg-kucsko-3d27"
+   },
+   {
+    "name": "Keenan Freyberg",
+    "permalink": "keenan-freyberg-5863"
+   },
+   {
+    "name": "Martin Camacho",
+    "permalink": "martin-camacho-9218"
+   },
+   {
+    "name": "Mikey Shulman",
+    "permalink": "mikey-shulman"
+   }
+  ]
+ },
+ "newlimit": {
+  "company": "NewLimit",
+  "date": "2026-06-02",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Blake Byers",
+    "permalink": "blake-byers"
+   },
+   {
+    "name": "Brian Armstrong",
+    "permalink": "brian-armstrong"
+   },
+   {
+    "name": "Greg Johnson",
+    "permalink": "greg-johnson-0e1f"
+   },
+   {
+    "name": "Jacob Kimmel",
+    "permalink": "jacob-kimmel-14f0"
+   }
+  ]
+ },
+ "quartermaster-ai": {
+  "company": "Quartermaster AI",
+  "date": "2026-05-20",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Neil Sobin",
+    "permalink": "neil-sobin"
+   }
+  ]
+ },
+ "manifest-os": {
+  "company": "Manifest OS",
+  "date": "2026-04-28",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Daniel Mishin",
+    "permalink": "daniel-mishin"
+   }
+  ]
+ },
+ "biossil": {
+  "company": "Biossil",
+  "date": "2026-04-23",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "petual": {
+  "company": "Petual",
+  "date": "2026-04-23",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Snir Kodesh",
+    "permalink": "snir-kodesh"
+   }
+  ]
+ },
+ "foresight-health-32b0": {
+  "company": "Foresight Health",
+  "date": "2026-04-14",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Tienlan Sun",
+    "permalink": "tienlan-sun"
+   }
+  ]
+ },
+ "swarm-aero": {
+  "company": "Swarm Aero",
+  "date": "2026-03-11",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Danny Goodman",
+    "permalink": "danny-goodman-2"
+   },
+   {
+    "name": "Oliver Palmer",
+    "permalink": "oliver-palmer-7d5f"
+   },
+   {
+    "name": "Peter Kalogiannis",
+    "permalink": "peter-kalogiannis-1399"
+   }
+  ]
+ },
+ "greeter-134d": {
+  "company": "Greeter",
+  "date": "2026-03-06",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "science-5003": {
+  "company": "Science",
+  "date": "2026-03-05",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Alan Mardinly",
+    "permalink": "alan-mardinly"
+   },
+   {
+    "name": "Max Hodak",
+    "permalink": "max-hodak"
+   }
+  ]
+ },
+ "inertia-8a39": {
+  "company": "Inertia",
+  "date": "2026-02-11",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Annie Kritcher",
+    "permalink": "annie-kritcher"
+   },
+   {
+    "name": "Jeff Lawson",
+    "permalink": "jeff-lawson"
+   },
+   {
+    "name": "Melinda Lee",
+    "permalink": "melinda-lee-73ff"
+   },
+   {
+    "name": "Mike Dunne",
+    "permalink": "mike-dunne-3cde"
+   }
+  ]
+ },
+ "us-chemical-technologies": {
+  "company": "US Chemical Technologies",
+  "date": "2026-01-23",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "phoebe-137c": {
+  "company": "Phoebe",
+  "date": "2026-01-21",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Justin Woodbridge",
+    "permalink": "justin-woodbridge"
+   }
+  ]
+ },
+ "bearfoot-ai": {
+  "company": "Bearfoot AI",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Kyu-Han Kim",
+    "permalink": "kyu-han-kim-ac2c"
+   },
+   {
+    "name": "Yong Hoon Choi",
+    "permalink": "yong-choi-hoon"
+   }
+  ]
+ },
+ "ndea": {
+  "company": "Ndea",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Fran\u00e7ois Chollet",
+    "permalink": "fran\u00e7ois-chollet"
+   },
+   {
+    "name": "Mike Knoop",
+    "permalink": "mike-knoop"
+   }
+  ]
+ },
+ "homa-ai": {
+  "company": "Homa",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Arman Javaherian",
+    "permalink": "arman-javaherian-3f9c"
+   }
+  ]
+ },
+ "union-ba7c": {
+  "company": "Union",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "pepr-ai": {
+  "company": "Pepr AI",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Haoliang Zhang",
+    "permalink": "haoliang-zhang-49dc"
+   }
+  ]
+ },
+ "everlast-health": {
+  "company": "Everlast Health",
+  "date": "2026-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Gonzo Sanchez",
+    "permalink": "gonzo-sanchez"
+   }
+  ]
+ },
+ "anduril-industries": {
+  "company": "Anduril Industries",
+  "date": "2025-12-23",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Brian Schimpf",
+    "permalink": "brian-schimpf"
+   },
+   {
+    "name": "Joseph Chen",
+    "permalink": "joseph-chen"
+   },
+   {
+    "name": "Matt Grimm",
+    "permalink": "matt-grimm-3"
+   },
+   {
+    "name": "Palmer Luckey",
+    "permalink": "palmer-luckey"
+   },
+   {
+    "name": "Trae Stephens",
+    "permalink": "trae-stephens"
+   }
+  ]
+ },
+ "kilo-code": {
+  "company": "Kilo Code",
+  "date": "2025-12-10",
+  "mgr": "quiet-capital,cota-capital",
+  "founders": [
+   {
+    "name": "Scott Breitenother",
+    "permalink": "scott-breitenother"
+   },
+   {
+    "name": "Sytse Sijbrandij",
+    "permalink": "sytse-sijbrandij"
+   }
+  ]
+ },
+ "aerolensec": {
+  "company": "Aerolensec",
+  "date": "2025-11-08",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Alexander Clerk",
+    "permalink": "alexander-clerk"
+   },
+   {
+    "name": "Sophia Lin",
+    "permalink": "sophia-lin-ec14"
+   }
+  ]
+ },
+ "amae-health": {
+  "company": "Amae Health",
+  "date": "2024-04-25",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Sonia Priscilla Garcia",
+    "permalink": "sonia-priscilla-garcia"
+   },
+   {
+    "name": "Stas Sokolin",
+    "permalink": "stas-sokolin-8179"
+   }
+  ]
+ },
+ "nava-038f": {
+  "company": "Nava",
+  "date": "2025-10-07",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Brandon Weber",
+    "permalink": "brandon-weber"
+   },
+   {
+    "name": "Donald DeSantis",
+    "permalink": "donald-desantis"
+   },
+   {
+    "name": "Kareem Zaki",
+    "permalink": "kareem-zaki"
+   },
+   {
+    "name": "Lincoln Reis",
+    "permalink": "lincoln-reis"
+   }
+  ]
+ },
+ "periodic-labs": {
+  "company": "Periodic Labs",
+  "date": "2025-09-30",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Ekin Dogus Cubuk",
+    "permalink": "ekin-dogus-cubuk"
+   },
+   {
+    "name": "William Fedus",
+    "permalink": "william-fedus-d642"
+   }
+  ]
+ },
+ "luzid-28dd": {
+  "company": "Luzid",
+  "date": "2025-09-30",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "arch-7c76": {
+  "company": "Arch",
+  "date": "2025-09-15",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Jason Trigg",
+    "permalink": "jason-trigg"
+   },
+   {
+    "name": "Joel Stein",
+    "permalink": "joel-stein"
+   },
+   {
+    "name": "Ryan Eisenman",
+    "permalink": "ryan-eisenman"
+   },
+   {
+    "name": "Sacha Schmitz",
+    "permalink": "sacha-schmitz"
+   }
+  ]
+ },
+ "candid-intelligence": {
+  "company": "Candid Intelligence",
+  "date": "2025-09-08",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Talha Faiz",
+    "permalink": "talha-faiz"
+   }
+  ]
+ },
+ "orchard-robotics": {
+  "company": "Orchard Robotics",
+  "date": "2024-03-27",
+  "mgr": "humba-ventures,soma-capital",
+  "founders": [
+   {
+    "name": "Charlie Wu",
+    "permalink": "charlie-wu-3214"
+   }
+  ]
+ },
+ "cache-cb91": {
+  "company": "Cache",
+  "date": "2024-03-13",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Srikanth Narayan",
+    "permalink": "srikanth-narayan-5250"
+   }
+  ]
+ },
+ "taro-health": {
+  "company": "Mending",
+  "date": "2025-06-24",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Frank Wu",
+    "permalink": "frank-wu-be7a"
+   },
+   {
+    "name": "Jeff Yuan",
+    "permalink": "jeff-yuan-75a4"
+   }
+  ]
+ },
+ "tensec-4a86": {
+  "company": "Tensec",
+  "date": "2025-06-18",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Helcio Nobre",
+    "permalink": "helcio-nobre"
+   },
+   {
+    "name": "Sandrine Okasmaa",
+    "permalink": "sandrine-okasmaa"
+   },
+   {
+    "name": "Yang Wang",
+    "permalink": "yang-wang-fcbe"
+   }
+  ]
+ },
+ "bedrock-53bc": {
+  "company": "Bedrock Ocean Exploration",
+  "date": "2025-06-10",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Anthony DiMare",
+    "permalink": "anthony-dimare"
+   },
+   {
+    "name": "Charles Chiau",
+    "permalink": "charles-chiau"
+   }
+  ]
+ },
+ "unbox-3db0": {
+  "company": "Openlayer",
+  "date": "2025-05-14",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Gabriel Bayomi",
+    "permalink": "gabriel-bayomi"
+   },
+   {
+    "name": "Rishab Ramanathan",
+    "permalink": "rishab-ramanathan"
+   },
+   {
+    "name": "Vikas Nair",
+    "permalink": "vikas-nair-4948"
+   }
+  ]
+ },
+ "buywander": {
+  "company": "BuyWander",
+  "date": "2025-04-30",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Brock Kowalchuk",
+    "permalink": "brock-kowalchuk-c83f"
+   },
+   {
+    "name": "Matthew McGee",
+    "permalink": "matthew-mcgee-bdae"
+   },
+   {
+    "name": "Matt Willis",
+    "permalink": "matt-willis"
+   }
+  ]
+ },
+ "safe-superintelligence": {
+  "company": "Safe Superintelligence",
+  "date": "2025-04-12",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Daniel Gross",
+    "permalink": "daniel-gross"
+   },
+   {
+    "name": "Daniel Levy",
+    "permalink": "daniel-levy-8c03"
+   },
+   {
+    "name": "Ilya Sutskever",
+    "permalink": "ilya-sutskever"
+   }
+  ]
+ },
+ "biosnch-ai": {
+  "company": "Biosynch.ai",
+  "date": "2025-04-06",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Maya Patel",
+    "permalink": "maya-patel-e1d3"
+   }
+  ]
+ },
+ "aeon-9233": {
+  "company": "Aeon",
+  "date": "2025-03-14",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Joseph Cieslik",
+    "permalink": "joseph-cieslik-6291"
+   },
+   {
+    "name": "Naweed Tahmas",
+    "permalink": "naweed-tahmas"
+   }
+  ]
+ },
+ "sandtable-dc2b": {
+  "company": "Sandtable",
+  "date": "2025-02-24",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Brian Hamilton",
+    "permalink": "brian-hamilton-57b8"
+   }
+  ]
+ },
+ "swarmbotics-ai": {
+  "company": "Swarmbotics AI",
+  "date": "2025-02-18",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Drew Watson",
+    "permalink": "drew-watson-9b48"
+   },
+   {
+    "name": "Stephen Houghton",
+    "permalink": "stephen-houghton"
+   }
+  ]
+ },
+ "koala-7dcf": {
+  "company": "Koala",
+  "date": "2025-02-13",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Matt Shwery",
+    "permalink": "matt-shwery"
+   },
+   {
+    "name": "Netto Farah",
+    "permalink": "netto-farah"
+   },
+   {
+    "name": "Tido Carriero",
+    "permalink": "thomas-carriero"
+   }
+  ]
+ },
+ "project-b": {
+  "company": "Project B",
+  "date": "2025-02-12",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Aaron Hayos",
+    "permalink": "aaron-hayos"
+   },
+   {
+    "name": "Stephan Weber",
+    "permalink": "stephan-weber-4503"
+   }
+  ]
+ },
+ "magic-83fe": {
+  "company": "Magic",
+  "date": "2025-01-14",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Eric Steinberger",
+    "permalink": "eric-steinberger-b549"
+   },
+   {
+    "name": "Sebastian De Ro",
+    "permalink": "sebastian-de-ro"
+   }
+  ]
+ },
+ "manifest-law": {
+  "company": "Manifest Law",
+  "date": "2025-01-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Avi Goldenberg",
+    "permalink": "avi-goldenberg-bafe"
+   }
+  ]
+ },
+ "firstclub": {
+  "company": "FirstClub",
+  "date": "2024-12-12",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Ayyappan Rajagopal",
+    "permalink": "ayyappan-r"
+   }
+  ]
+ },
+ "mithril-fd0d": {
+  "company": "Mithril",
+  "date": "2024-10-24",
+  "mgr": "quiet-capital",
+  "founders": []
+ },
+ "openai": {
+  "company": "OpenAI",
+  "date": "2024-10-02",
+  "mgr": "quiet-capital,sgh-capital",
+  "founders": [
+   {
+    "name": "Andrej Karpathy",
+    "permalink": "andrej-karpathy-7d6e"
+   },
+   {
+    "name": "Durk Kingma",
+    "permalink": "durk-kingma"
+   },
+   {
+    "name": "Elon Musk",
+    "permalink": "elon-musk"
+   },
+   {
+    "name": "Greg Brockman",
+    "permalink": "greg-brockman"
+   },
+   {
+    "name": "Ilya Sutskever",
+    "permalink": "ilya-sutskever"
+   },
+   {
+    "name": "John Schulman",
+    "permalink": "john-schulman-950d"
+   },
+   {
+    "name": "Pamela Vagata",
+    "permalink": "pamela-vagata"
+   },
+   {
+    "name": "Sam Altman",
+    "permalink": "sam-altman"
+   },
+   {
+    "name": "Trevor Blackwell",
+    "permalink": "trevor-blackwell"
+   },
+   {
+    "name": "Vicki Cheung",
+    "permalink": "vicki-cheung"
+   },
+   {
+    "name": "Wojciech Zaremba",
+    "permalink": "wojciech-zaremba"
+   }
+  ]
+ },
+ "11x-ai": {
+  "company": "11x AI",
+  "date": "2024-09-16",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Hasan Sukkar",
+    "permalink": "hasan-sukkar-eaeb"
+   }
+  ]
+ },
+ "bridge-05d0": {
+  "company": "Bridge",
+  "date": "2024-08-29",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Sean Yu",
+    "permalink": "sean-yu"
+   },
+   {
+    "name": "Zach Abrams",
+    "permalink": "zach-abrams"
+   }
+  ]
+ },
+ "auditive": {
+  "company": "Auditive",
+  "date": "2024-07-31",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Daniel Faddoul",
+    "permalink": "daniel-faddoul-8445"
+   }
+  ]
+ },
+ "w-body-care": {
+  "company": "W Labs",
+  "date": "2024-07-23",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Jake Paul",
+    "permalink": "jake-paul"
+   }
+  ]
+ },
+ "onramp-49eb": {
+  "company": "OnRamp",
+  "date": "2024-07-18",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Paul Holder",
+    "permalink": "paul-holder-ae4f"
+   },
+   {
+    "name": "Ross Lerner",
+    "permalink": "ross-lerner"
+   }
+  ]
+ },
+ "standard-bots": {
+  "company": "Standard Bots",
+  "date": "2024-07-12",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "David Golden",
+    "permalink": "david-golden-3"
+   },
+   {
+    "name": "Evan Beard",
+    "permalink": "evan-beard"
+   },
+   {
+    "name": "James Cordle",
+    "permalink": "james-cordle-ce45"
+   }
+  ]
+ },
+ "mach9-robotics": {
+  "company": "Mach9",
+  "date": "2024-07-07",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Alexander Baikovitz",
+    "permalink": "alexander-baikovitz"
+   },
+   {
+    "name": "Haowen Shi",
+    "permalink": "haowen-shi"
+   },
+   {
+    "name": "Michael Mong",
+    "permalink": "michael-mong-fc18"
+   },
+   {
+    "name": "Zachary Sussman",
+    "permalink": "zachary-sussman-7608"
+   }
+  ]
+ },
+ "evolutionaryscale": {
+  "company": "EvolutionaryScale",
+  "date": "2024-06-25",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Alex Rives",
+    "permalink": "alex-rives"
+   }
+  ]
+ },
+ "oscar-4e53": {
+  "company": "OSCAR",
+  "date": "2024-05-28",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Jo\u00e3o Marques",
+    "permalink": "jo\u00e3o-marques-54df"
+   }
+  ]
+ },
+ "empower-2": {
+  "company": "Tilt (formerly Empower)",
+  "date": "2024-05-01",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Justin Ammerlaan",
+    "permalink": "justin-ammerlaan"
+   },
+   {
+    "name": "Warren Hogarth",
+    "permalink": "warren-hogarth"
+   }
+  ]
+ },
+ "log10-e92e": {
+  "company": "Log10",
+  "date": "2024-04-24",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Arjun Bansal",
+    "permalink": "arjun-bansal"
+   },
+   {
+    "name": "Niklas Nielsen",
+    "permalink": "niklas-nielsen"
+   }
+  ]
+ },
+ "taalas": {
+  "company": "Taalas",
+  "date": "2024-03-05",
+  "mgr": "quiet-capital",
+  "founders": [
+   {
+    "name": "Lejla Bajic",
+    "permalink": "lejla-bajic-c47e"
+   },
+   {
+    "name": "Ljubisa Bajic",
+    "permalink": "ljubisa-bajic"
+   }
+  ]
+ },
+ "clarity-technology-solutions-ef50": {
+  "company": "Clarity Technology Solutions",
+  "date": "2026-08-13",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Andy Ruben",
+    "permalink": "andy-ruben"
+   },
+   {
+    "name": "Darrell Whitelaw",
+    "permalink": "darrell-whitelaw-2"
+   }
+  ]
+ },
+ "aquaporo": {
+  "company": "AquaPoro",
+  "date": "2026-06-24",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Kyle Cordova",
+    "permalink": "kyle-cordova-e99d"
+   }
+  ]
+ },
+ "critical-energy": {
+  "company": "Critical Energy",
+  "date": "2026-06-17",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Spencer Jackson",
+    "permalink": "spencer-jackson-1c8c"
+   }
+  ]
+ },
+ "furientis": {
+  "company": "Furientis",
+  "date": "2026-05-14",
+  "mgr": "humba-ventures",
+  "founders": []
+ },
+ "anvil-robotics": {
+  "company": "Anvil Robotics",
+  "date": "2026-04-02",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Haomiao Huang",
+    "permalink": "haomiao-huang"
+   },
+   {
+    "name": "Mike Xia",
+    "permalink": "mike-xia"
+   },
+   {
+    "name": "Vijay Pradeep",
+    "permalink": "vijay-pradeep-a043"
+   }
+  ]
+ },
+ "adaptyx-biosciences": {
+  "company": "Adaptyx Biosciences",
+  "date": "2025-10-20",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Vijit Sabnis",
+    "permalink": "vijit-sabnis"
+   }
+  ]
+ },
+ "airbound": {
+  "company": "Airbound",
+  "date": "2025-10-14",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Faraaz Baig",
+    "permalink": "faraaz-baig"
+   },
+   {
+    "name": "Naman Pushp",
+    "permalink": "naman-pushp"
+   }
+  ]
+ },
+ "eyebot": {
+  "company": "Eyebot",
+  "date": "2024-06-06",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Jack Moldave",
+    "permalink": "jack-moldave"
+   },
+   {
+    "name": "Matthias Hofmann",
+    "permalink": "matthias-hofmann-c7a8"
+   }
+  ]
+ },
+ "parallel-bio": {
+  "company": "Parallel Bio",
+  "date": "2025-06-11",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Juliana Hilliard",
+    "permalink": "juliana-hilliard"
+   },
+   {
+    "name": "Robert DiFazio",
+    "permalink": "robert-difazio-4ea1"
+   }
+  ]
+ },
+ "northwood-space": {
+  "company": "Northwood Space",
+  "date": "2025-04-22",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Bridgit Mendler",
+    "permalink": "bridgit-mendler-c5bd"
+   },
+   {
+    "name": "Griffin Cleverly",
+    "permalink": "griffin-cleverly"
+   },
+   {
+    "name": "Shaurya Luthra",
+    "permalink": "shaurya-luthra-d15f"
+   }
+  ]
+ },
+ "conductorai": {
+  "company": "ConductorAI",
+  "date": "2025-04-11",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Benjamin Fichter",
+    "permalink": "benjamin-fichter"
+   },
+   {
+    "name": "Eric Schwartz",
+    "permalink": "eric-schwartz-0e56"
+   },
+   {
+    "name": "Zachary Long",
+    "permalink": "zachary-long-b7d0"
+   }
+  ]
+ },
+ "heliux": {
+  "company": "Heliux",
+  "date": "2025-02-24",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Alex Craig",
+    "permalink": "alex-craig-c3ac"
+   }
+  ]
+ },
+ "kerna-labs": {
+  "company": "Kerna Labs",
+  "date": "2025-01-13",
+  "mgr": "humba-ventures,soma-capital",
+  "founders": [
+   {
+    "name": "Amit Deshwar",
+    "permalink": "amit-deshwar-2aa3"
+   },
+   {
+    "name": "Julia Peng",
+    "permalink": "julia-peng-743b"
+   },
+   {
+    "name": "Melissa J. Moore",
+    "permalink": "melissa-j-moore"
+   }
+  ]
+ },
+ "hexium": {
+  "company": "Hexium",
+  "date": "2024-07-24",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Charlie Jarrott",
+    "permalink": "charlie-jarrott-06a5"
+   },
+   {
+    "name": "Jacob Peterson",
+    "permalink": "jacob-peterson-425b"
+   }
+  ]
+ },
+ "jacobi-robotics": {
+  "company": "Jacobi Robotics",
+  "date": "2024-07-11",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Jeffrey Ichnowski",
+    "permalink": "jeffrey-ichnowski"
+   },
+   {
+    "name": "Ken Goldberg",
+    "permalink": "ken-goldberg"
+   },
+   {
+    "name": "Lars Berscheid",
+    "permalink": "lars-berscheid"
+   },
+   {
+    "name": "Max Cao",
+    "permalink": "max-cao-c743"
+   },
+   {
+    "name": "Yahav Avigal",
+    "permalink": "yahav-avigal"
+   }
+  ]
+ },
+ "the-lumber-manufactory": {
+  "company": "The Lumber Manufactory",
+  "date": "2024-05-28",
+  "mgr": "humba-ventures",
+  "founders": [
+   {
+    "name": "Andrew Arsht",
+    "permalink": "andrew-arsht-99a5"
+   },
+   {
+    "name": "Michael Grasso",
+    "permalink": "michael-grasso-c4e0"
+   }
+  ]
+ },
+ "modus-b5ab": {
+  "company": "Modus",
+  "date": "2026-07-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Daniel Shimoni",
+    "permalink": "daniel-shimoni"
+   },
+   {
+    "name": "Tomer Mesika",
+    "permalink": "tomer-mesika"
+   }
+  ]
+ },
+ "augustus-86bf": {
+  "company": "Augustus",
+  "date": "2026-07-21",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ferdinand Dabitz",
+    "permalink": "ferdinand-dabitz"
+   },
+   {
+    "name": "Joshua Becker",
+    "permalink": "joshua-becker-1868"
+   },
+   {
+    "name": "Peter Mosebjane Lieck",
+    "permalink": "peter-mosebjane-lieck"
+   },
+   {
+    "name": "Simon Wimmer",
+    "permalink": "simon-wimmer-69da"
+   }
+  ]
+ },
+ "singularity-84ca": {
+  "company": "Singularity",
+  "date": "2026-07-14",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jack Oswald",
+    "permalink": "jack-oswald-3741"
+   }
+  ]
+ },
+ "monogram-11c1": {
+  "company": "Monogram",
+  "date": "2026-06-30",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "conci-058a": {
+  "company": "Conci",
+  "date": "2026-06-25",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "enzo-health": {
+  "company": "Enzo Health",
+  "date": "2024-05-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Zach Newman",
+    "permalink": "zach-newman-f54f"
+   }
+  ]
+ },
+ "illuminant-surgical": {
+  "company": "Illuminant Surgical",
+  "date": "2026-04-30",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eldrick Millares",
+    "permalink": "eldrick-millares"
+   },
+   {
+    "name": "James Hu",
+    "permalink": "james-hu-47c3"
+   }
+  ]
+ },
+ "thumo": {
+  "company": "Swoop",
+  "date": "2026-04-24",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Aubrey Niederhoffer",
+    "permalink": "aubrey-niederhoffer"
+   },
+   {
+    "name": "Edwin N. Ruiz-Rodriguez",
+    "permalink": "edwin-n-ruiz-rodriguez"
+   }
+  ]
+ },
+ "starcloud": {
+  "company": "Starcloud",
+  "date": "2024-10-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Adi Oltean",
+    "permalink": "adi-oltean"
+   },
+   {
+    "name": "Ezra Feilden",
+    "permalink": "ezra-feilden-7a90"
+   },
+   {
+    "name": "Philip Johnston",
+    "permalink": "philip-johnston-dbff"
+   }
+  ]
+ },
+ "eragon-0368": {
+  "company": "Eragon",
+  "date": "2026-03-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Josh Sirota",
+    "permalink": "josh-sirota-3671"
+   }
+  ]
+ },
+ "nitra-inc": {
+  "company": "Nitra",
+  "date": "2026-03-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jonathan Chen",
+    "permalink": "jonathan-chen"
+   },
+   {
+    "name": "Tim Hwang",
+    "permalink": "tim-hwang"
+   }
+  ]
+ },
+ "baba-care": {
+  "company": "Baba Care",
+  "date": "2026-02-27",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Connor Sweeney",
+    "permalink": "connor-sweeney-b006"
+   }
+  ]
+ },
+ "natilus": {
+  "company": "Natilus",
+  "date": "2026-02-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Aleksey Matyushev",
+    "permalink": "aleksey-matyushev-2"
+   },
+   {
+    "name": "Anatoly Starikov",
+    "permalink": "anatoly-starikov"
+   }
+  ]
+ },
+ "material-depot": {
+  "company": "Material Depot",
+  "date": "2026-02-05",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Manish Reddy",
+    "permalink": "manish-reddy-fcce"
+   },
+   {
+    "name": "Sarthak Agrawal",
+    "permalink": "sarthak-agrawal-b3cd"
+   }
+  ]
+ },
+ "goldenbasis": {
+  "company": "GoldenBasis",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew Wang",
+    "permalink": "andrew-wang-9749"
+   },
+   {
+    "name": "Grant Ackerman",
+    "permalink": "grant-ackerman-8f38"
+   }
+  ]
+ },
+ "cerulion": {
+  "company": "Cerulion",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Lakshay Sharma",
+    "permalink": "lakshay-sharma-bf92"
+   },
+   {
+    "name": "Se Jeon",
+    "permalink": "se-jeon"
+   }
+  ]
+ },
+ "earlybird-52a8": {
+  "company": "Earlybird",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Santhosh Narayan",
+    "permalink": "santhosh-narayan-2f9f"
+   }
+  ]
+ },
+ "haplotype-labs": {
+  "company": "Haplotype Labs",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Mike Polcari",
+    "permalink": "mike-polcari-898e"
+   }
+  ]
+ },
+ "digitalcarbon": {
+  "company": "DigitalCarbon",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Guru Rao",
+    "permalink": "guru-rao-2949"
+   }
+  ]
+ },
+ "superposia": {
+  "company": "Superposia",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "ligo-biosciences": {
+  "company": "Ligo Biosciences",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Arda Goreci",
+    "permalink": "arda-goreci"
+   },
+   {
+    "name": "Edward Harris",
+    "permalink": "edward-harris-e0df"
+   },
+   {
+    "name": "Emily Egerton Warburton",
+    "permalink": "emily-egerton-warburton"
+   }
+  ]
+ },
+ "openclinic": {
+  "company": "FutureClinic",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Hassan Mirza",
+    "permalink": "hassan-mirza-698a"
+   },
+   {
+    "name": "Nabil Belahouane",
+    "permalink": "nabil-belahouane"
+   },
+   {
+    "name": "Riyan Moussaoui",
+    "permalink": "riyan-moussaoui"
+   },
+   {
+    "name": "Usama Syed",
+    "permalink": "usama-syed-26e7"
+   }
+  ]
+ },
+ "1849-bio": {
+  "company": "1849 Bio",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jai Padmakumar",
+    "permalink": "jai-padmakumar"
+   },
+   {
+    "name": "Yongjin Park",
+    "permalink": "yongjin-park-328b"
+   }
+  ]
+ },
+ "hyde-d04b": {
+  "company": "Hyde",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "apex-compute": {
+  "company": "Apex Compute",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Hasan Unlu",
+    "permalink": "hasan-unlu-bb42"
+   }
+  ]
+ },
+ "grand-charter": {
+  "company": "Grand Charter",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "extrian-security": {
+  "company": "Extrian Security",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Luke Bousfield",
+    "permalink": "luke-bousfield"
+   }
+  ]
+ },
+ "zenie": {
+  "company": "Zenie",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Catie Cuan",
+    "permalink": "catie-cuan-18ed"
+   }
+  ]
+ },
+ "scope-ai": {
+  "company": "Scope AI",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jakob Cassiman",
+    "permalink": "jakob-cassiman-b224"
+   },
+   {
+    "name": "Jonathan Low",
+    "permalink": "jonathan-low-b349"
+   }
+  ]
+ },
+ "d-model": {
+  "company": "dmodel",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Anish Tondwalkar",
+    "permalink": "anish-tondwalkar"
+   },
+   {
+    "name": "Daniel Moon",
+    "permalink": "daniel-moon-9afa"
+   }
+  ]
+ },
+ "mindfort-ai": {
+  "company": "MindFort AI",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Akul Gupta",
+    "permalink": "akul-gupta-abba"
+   },
+   {
+    "name": "Brandon Veiseh",
+    "permalink": "brandon-veiseh"
+   }
+  ]
+ },
+ "bucket-robotics": {
+  "company": "Bucket Robotics",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Matt Puchalski",
+    "permalink": "matt-puchalski"
+   },
+   {
+    "name": "Stephan Wolski",
+    "permalink": "stephan-wolski"
+   }
+  ]
+ },
+ "mind-company": {
+  "company": "Mind Company",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Rayhan Ahmed",
+    "permalink": "rayhan-ahmed-dcc6"
+   }
+  ]
+ },
+ "ainia-5312": {
+  "company": "Ainia",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Dun Xiao",
+    "permalink": "dun-xiao"
+   },
+   {
+    "name": "Nick Luo",
+    "permalink": "nick-luo-7de5"
+   }
+  ]
+ },
+ "marblism": {
+  "company": "marblism",
+  "date": "2026-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Cyril Pluche",
+    "permalink": "cyril-pluche-2aaa"
+   },
+   {
+    "name": "Ulric Musset",
+    "permalink": "ulric-musset"
+   }
+  ]
+ },
+ "struction": {
+  "company": "Struction",
+  "date": "2025-12-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Joseph Rainey",
+    "permalink": "joseph-rainey-bce9"
+   }
+  ]
+ },
+ "lemon-slice": {
+  "company": "Lemon Slice",
+  "date": "2025-12-23",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew Weitz",
+    "permalink": "andrew-weitz-1c9d"
+   },
+   {
+    "name": "Lina Colucci",
+    "permalink": "lina-colucci-871c"
+   },
+   {
+    "name": "Sidney Primas",
+    "permalink": "sidney-primas-9311"
+   }
+  ]
+ },
+ "navierai": {
+  "company": "NavierAI",
+  "date": "2025-12-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Cameron Flannery",
+    "permalink": "cameron-flannery-53bc"
+   },
+   {
+    "name": "Evan Kay",
+    "permalink": "evan-kay-b45f"
+   }
+  ]
+ },
+ "rmfg": {
+  "company": "RMFG",
+  "date": "2025-12-04",
+  "mgr": "soma-capital,day-one-ventures",
+  "founders": [
+   {
+    "name": "Kenneth Cassel",
+    "permalink": "kenneth-cassel-a415"
+   }
+  ]
+ },
+ "mira-2ad4": {
+  "company": "Mira",
+  "date": "2025-11-24",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Anhphu Nguyen",
+    "permalink": "anhphu-nguyen"
+   },
+   {
+    "name": "Caine Ardayfio",
+    "permalink": "caine-ardayfio-b851"
+   }
+  ]
+ },
+ "made-card": {
+  "company": "Made Card",
+  "date": "2025-11-20",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ashin Shah",
+    "permalink": "ashin-shah-e533"
+   }
+  ]
+ },
+ "cellbyte": {
+  "company": "Cellbyte",
+  "date": "2025-11-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Daniel Moreira",
+    "permalink": "daniel-moreira-c500"
+   },
+   {
+    "name": "Felix Steinbrenner",
+    "permalink": "felix-steinbrenner"
+   },
+   {
+    "name": "Samuel Moreira",
+    "permalink": "samuel-moreira-ff97"
+   }
+  ]
+ },
+ "ramp-financial": {
+  "company": "Ramp",
+  "date": "2025-11-17",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eric Glyman",
+    "permalink": "eric-glyman"
+   },
+   {
+    "name": "Gene Lee",
+    "permalink": "gene-lee-8396"
+   },
+   {
+    "name": "Karim Atiyeh",
+    "permalink": "karim-atiyeh"
+   }
+  ]
+ },
+ "almanac-health": {
+  "company": "Almanac Health",
+  "date": "2025-10-14",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Cyril Zakka",
+    "permalink": "cyril-zakka"
+   }
+  ]
+ },
+ "m\u00f6bius-industries": {
+  "company": "M\u00f6bius Industries",
+  "date": "2025-10-09",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "remitee": {
+  "company": "Remitee",
+  "date": "2025-10-03",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eduardo Hamel",
+    "permalink": "eduardo-hamel"
+   },
+   {
+    "name": "Sergio Saravia",
+    "permalink": "sergio-saravia-6a43"
+   }
+  ]
+ },
+ "limelight-0977": {
+  "company": "Limelight",
+  "date": "2024-04-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "David Walsh",
+    "permalink": "dave-walsh-97cb"
+   },
+   {
+    "name": "Youngjae Ji",
+    "permalink": "youngjae-ji-f765"
+   }
+  ]
+ },
+ "icarus-robotics": {
+  "company": "Icarus Robotics",
+  "date": "2025-09-17",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ethan Barajas",
+    "permalink": "ethan-barajas"
+   }
+  ]
+ },
+ "synthetic-society": {
+  "company": "Synthetic Society",
+  "date": "2025-09-09",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Aaron Chew",
+    "permalink": "aaron-chew-ae5d"
+   },
+   {
+    "name": "Kavan Doctor",
+    "permalink": "kavan-doctor"
+   }
+  ]
+ },
+ "metis-be4a": {
+  "company": "Metis",
+  "date": "2025-09-09",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Aayush Sheth",
+    "permalink": "aayush-sheth"
+   },
+   {
+    "name": "Aryan Shah",
+    "permalink": "aryan-shah-20ee"
+   },
+   {
+    "name": "Marcus Yearwood",
+    "permalink": "marcus-yearwood"
+   }
+  ]
+ },
+ "kontigo-inc": {
+  "company": "Kontigo",
+  "date": "2025-09-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Gino Guatavita",
+    "permalink": "gino-guatavita"
+   },
+   {
+    "name": "Jesus Castillo",
+    "permalink": "jesus-castillo-cbe7"
+   }
+  ]
+ },
+ "ketone-iq": {
+  "company": "Ketone-IQ",
+  "date": "2025-08-26",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Geoffrey Woo",
+    "permalink": "geoffrey-woo"
+   },
+   {
+    "name": "Michael Brandt",
+    "permalink": "michael-brandt-2"
+   }
+  ]
+ },
+ "oway-a533": {
+  "company": "Oway",
+  "date": "2025-08-22",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Phillip Nadjafov",
+    "permalink": "phillip-nadjafov"
+   }
+  ]
+ },
+ "vigil-labs": {
+  "company": "Vigil Labs",
+  "date": "2025-08-20",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "paradigm-6409": {
+  "company": "Paradigm",
+  "date": "2025-08-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Anna Monaco",
+    "permalink": "anna-monaco-912d"
+   }
+  ]
+ },
+ "endex-ai": {
+  "company": "Endex",
+  "date": "2025-08-06",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Pratham Soni",
+    "permalink": "pratham-soni"
+   },
+   {
+    "name": "Tarun Amasa",
+    "permalink": "tarun-amasa-6a21"
+   }
+  ]
+ },
+ "diode-computers": {
+  "company": "Diode Computers",
+  "date": "2025-07-23",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Davide Asnaghi",
+    "permalink": "davide-asnaghi-d821"
+   },
+   {
+    "name": "Lenny Khazan",
+    "permalink": "lenny-khazan"
+   }
+  ]
+ },
+ "ekho-dealer": {
+  "company": "Ekho Dealer",
+  "date": "2025-07-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Rowan Mockler",
+    "permalink": "rowan-mockler-d67e"
+   }
+  ]
+ },
+ "tilde-abdb": {
+  "company": "Tilde",
+  "date": "2025-07-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "avera-7a43": {
+  "company": "Avera",
+  "date": "2025-07-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "opdefi": {
+  "company": "Circuit",
+  "date": "2025-06-30",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Harry Donnelly",
+    "permalink": "harry-donnelly-b20d"
+   }
+  ]
+ },
+ "openrouter": {
+  "company": "OpenRouter",
+  "date": "2025-06-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alex Atallah",
+    "permalink": "alex-atallah-912d"
+   },
+   {
+    "name": "Chris Clark",
+    "permalink": "chris-clark-5"
+   },
+   {
+    "name": "Louis Vichy",
+    "permalink": "louis-vichy"
+   }
+  ]
+ },
+ "stackup-e155": {
+  "company": "Stackup",
+  "date": "2025-06-20",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Hazim Jumali",
+    "permalink": "hazim-jumali"
+   },
+   {
+    "name": "John Rising",
+    "permalink": "john-rising-6e74"
+   }
+  ]
+ },
+ "grailpay": {
+  "company": "GrailPay",
+  "date": "2025-06-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Lee Jones",
+    "permalink": "lee-jones-2"
+   },
+   {
+    "name": "Will Messina",
+    "permalink": "will-messina-9fe4"
+   }
+  ]
+ },
+ "photonium": {
+  "company": "Photonium",
+  "date": "2025-06-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Adam Mhatre",
+    "permalink": "adam-mhatre"
+   },
+   {
+    "name": "Jennifer Song",
+    "permalink": "jennifer-song-568f"
+   }
+  ]
+ },
+ "heat-watch": {
+  "company": "Runwise",
+  "date": "2025-06-09",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jeffrey Carleton",
+    "permalink": "jeffrey-carleton"
+   },
+   {
+    "name": "Lee Hoffman",
+    "permalink": "lee-hoffman"
+   },
+   {
+    "name": "Michael Cook",
+    "permalink": "michael-cook-ab87"
+   }
+  ]
+ },
+ "handoff-29ae": {
+  "company": "Handoff",
+  "date": "2025-06-03",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Dmitry Alexin",
+    "permalink": "dmitry-alexin"
+   }
+  ]
+ },
+ "halo-e5d5": {
+  "company": "Halo",
+  "date": "2025-06-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Anhphu Nguyen",
+    "permalink": "anhphu-nguyen"
+   },
+   {
+    "name": "Caine Ardayfio",
+    "permalink": "caine-ardayfio-b851"
+   }
+  ]
+ },
+ "oligo-4fd9": {
+  "company": "Oligo",
+  "date": "2025-05-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Benjamin Carlson",
+    "permalink": "benjamin-carlson-1366"
+   },
+   {
+    "name": "Jacob Rodriguez",
+    "permalink": "jacob-rodriguez-3a22"
+   }
+  ]
+ },
+ "wander-6a24": {
+  "company": "Wander",
+  "date": "2025-05-28",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "John Entwistle",
+    "permalink": "john-entwistle"
+   }
+  ]
+ },
+ "wondera": {
+  "company": "Wondera",
+  "date": "2025-05-23",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Bill Dafflon",
+    "permalink": "bill-dafflon"
+   }
+  ]
+ },
+ "atum-works": {
+  "company": "Atum Works",
+  "date": "2025-05-20",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Lucas Pabarcius",
+    "permalink": "lucas-pabarcius"
+   },
+   {
+    "name": "Malcolm Tisdale",
+    "permalink": "malcolm-tisdale-7ddb"
+   }
+  ]
+ },
+ "blockhouse": {
+  "company": "Blockhouse",
+  "date": "2025-05-06",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "operand-8880": {
+  "company": "Operand",
+  "date": "2025-05-06",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Akhil Iyengar",
+    "permalink": "akhil-iyengar-0cf2"
+   },
+   {
+    "name": "Arjun Sahney",
+    "permalink": "arjun-sahney"
+   },
+   {
+    "name": "Ram Gorthi",
+    "permalink": "ram-gorthi"
+   }
+  ]
+ },
+ "phia-1838": {
+  "company": "Phia",
+  "date": "2025-05-02",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Phoebe Gates",
+    "permalink": "phoebe-gates-c8f8"
+   },
+   {
+    "name": "Sophia Kianni",
+    "permalink": "sophia-kianni"
+   }
+  ]
+ },
+ "aspora": {
+  "company": "Aspora",
+  "date": "2025-05-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Parth Garg",
+    "permalink": "parth-garg-4f8c"
+   }
+  ]
+ },
+ "index-841d": {
+  "company": "Index",
+  "date": "2025-05-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eduardo Portet",
+    "permalink": "eduardo-portet"
+   },
+   {
+    "name": "Xavier Pladevall",
+    "permalink": "xavier-pladevall"
+   }
+  ]
+ },
+ "azalea-robotics-corporation": {
+  "company": "Azalea Robotics Corporation",
+  "date": "2025-04-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "David Millard",
+    "permalink": "david-millard-b761"
+   },
+   {
+    "name": "John B. Stroud",
+    "permalink": "john-b-stroud"
+   }
+  ]
+ },
+ "cluely": {
+  "company": "Cluely",
+  "date": "2025-04-21",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alex Chen",
+    "permalink": "alex-chen-df91"
+   },
+   {
+    "name": "Chungin Lee",
+    "permalink": "chungin-lee"
+   },
+   {
+    "name": "Neel Shanmugam",
+    "permalink": "neel-shanmugam"
+   }
+  ]
+ },
+ "artisan-ai": {
+  "company": "Artisan AI",
+  "date": "2024-05-13",
+  "mgr": "soma-capital,day-one-ventures,day-one-ventures",
+  "founders": [
+   {
+    "name": "Jaspar Carmichael-Jack",
+    "permalink": "jaspar-carmichael-jack"
+   },
+   {
+    "name": "Sam Stallings",
+    "permalink": "sam-stallings"
+   }
+  ]
+ },
+ "maverick-biometals": {
+  "company": "MaverickX",
+  "date": "2025-04-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Benjamin Alva",
+    "permalink": "benjamin-alva"
+   },
+   {
+    "name": "Eric Herrera",
+    "permalink": "eric-herrera-96fe"
+   },
+   {
+    "name": "Jesse Evans",
+    "permalink": "jesse-evans-399d"
+   }
+  ]
+ },
+ "pax-ai": {
+  "company": "Pax AI",
+  "date": "2025-04-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Christopher Le",
+    "permalink": "christopher-le-cfcf"
+   },
+   {
+    "name": "Penny Chen",
+    "permalink": "penny-chen-76f7"
+   }
+  ]
+ },
+ "maverickx": {
+  "company": "MaverickX",
+  "date": "2025-04-03",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eric Herrera",
+    "permalink": "eric-herrera-96fe"
+   },
+   {
+    "name": "Jesse Evans",
+    "permalink": "jesse-evans-399d"
+   }
+  ]
+ },
+ "playback": {
+  "company": "Playback",
+  "date": "2025-03-27",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ari Borensztein",
+    "permalink": "ari-borensztein-2253"
+   },
+   {
+    "name": "RJ Halperin",
+    "permalink": "rj-halperin-2f70"
+   }
+  ]
+ },
+ "crossmint": {
+  "company": "Crossmint",
+  "date": "2025-03-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alfonso G\u00f3mez-Jordana Ma\u00f1as",
+    "permalink": "alfonso-gomez-jordana-21a1"
+   },
+   {
+    "name": "Rodri Fernandez Touza",
+    "permalink": "rodri-fernandez-touza"
+   }
+  ]
+ },
+ "featherless-ai": {
+  "company": "Featherless.ai",
+  "date": "2025-03-17",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eugene Cheah",
+    "permalink": "eugene-cheah"
+   },
+   {
+    "name": "Harrison Vanderbyl",
+    "permalink": "harrison-vanderbyl"
+   },
+   {
+    "name": "Wesley George",
+    "permalink": "wesley-george-5a3f"
+   }
+  ]
+ },
+ "podqi": {
+  "company": "Podqi",
+  "date": "2025-03-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ivan Esmeral",
+    "permalink": "ivan-esmeral-42b8"
+   },
+   {
+    "name": "Jesse Xu",
+    "permalink": "jesse-xu-6a72"
+   },
+   {
+    "name": "Trevor West",
+    "permalink": "trevor-west-ccd7"
+   }
+  ]
+ },
+ "eos-atomics": {
+  "company": "Eos Atomics",
+  "date": "2025-03-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "firstwork-16ba": {
+  "company": "FirstWork",
+  "date": "2025-02-27",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Shubham Choudhary",
+    "permalink": "shubham-choudhary"
+   },
+   {
+    "name": "Vardhan Kapoor",
+    "permalink": "vardhan-kapoor"
+   }
+  ]
+ },
+ "cambium-carbon": {
+  "company": "Cambium",
+  "date": "2025-02-24",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ben Christensen",
+    "permalink": "ben-christensen-4e29"
+   },
+   {
+    "name": "Marisa Repka",
+    "permalink": "marisa-repka-f0b8"
+   },
+   {
+    "name": "Theo Hooker",
+    "permalink": "theo-hooker-4a1a"
+   }
+  ]
+ },
+ "pulse-ai-ea00": {
+  "company": "Pulse",
+  "date": "2025-02-19",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ritvik Pandey",
+    "permalink": "ritvik-pandey"
+   },
+   {
+    "name": "Sid Manchkanti",
+    "permalink": "sid-manchkanti"
+   }
+  ]
+ },
+ "sowl-labs-private-limited": {
+  "company": "Sowl Labs Private Limited",
+  "date": "2025-02-17",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "orbit-technologies-9771": {
+  "company": "Orbit Technologies",
+  "date": "2025-02-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Mark Khrapko",
+    "permalink": "mark-khrapko"
+   },
+   {
+    "name": "Steven Pang",
+    "permalink": "steven-pang-9b67"
+   }
+  ]
+ },
+ "human-dd20": {
+  "company": "Human",
+  "date": "2025-02-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Kirill Avery",
+    "permalink": "kirill-averianov"
+   }
+  ]
+ },
+ "flashnet-279f": {
+  "company": "Flashnet",
+  "date": "2025-02-04",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ethan Marcus",
+    "permalink": "ethan-marcus-0d2a"
+   }
+  ]
+ },
+ "final-round-ai": {
+  "company": "Final Round AI",
+  "date": "2025-01-30",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jay Ma",
+    "permalink": "jay-ma-03cf"
+   },
+   {
+    "name": "Michael Guan",
+    "permalink": "michael-guan-d2dd"
+   }
+  ]
+ },
+ "created-by-humans": {
+  "company": "Created by Humans",
+  "date": "2025-01-28",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Edward Igushev",
+    "permalink": "edward-igushev"
+   },
+   {
+    "name": "Jen Singerman",
+    "permalink": "jen-singerman"
+   },
+   {
+    "name": "John Adler",
+    "permalink": "john-adler"
+   },
+   {
+    "name": "Trip Adler",
+    "permalink": "trip-adler-e26e"
+   }
+  ]
+ },
+ "delve-8733": {
+  "company": "Delve",
+  "date": "2025-01-28",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Karun Kaushik",
+    "permalink": "karun-kaushik"
+   },
+   {
+    "name": "Selin Kocalar",
+    "permalink": "selin-kocalar"
+   }
+  ]
+ },
+ "kaya-pay": {
+  "company": "Kaya Pay",
+  "date": "2025-01-22",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Nicholas Selz",
+    "permalink": "nicholas-selz"
+   }
+  ]
+ },
+ "favorited": {
+  "company": "Favorited",
+  "date": "2025-01-22",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Zach Ferraro",
+    "permalink": "zach-ferraro"
+   }
+  ]
+ },
+ "boardy": {
+  "company": "Boardy",
+  "date": "2025-01-14",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew D'Souza",
+    "permalink": "andrew-d-souza-6ed7"
+   }
+  ]
+ },
+ "boundary-07ab": {
+  "company": "Boundary",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Aaron Villalpando",
+    "permalink": "aaron-villalpando"
+   },
+   {
+    "name": "Vaibhav Gupta",
+    "permalink": "vaibhav-gupta-2a3e"
+   }
+  ]
+ },
+ "openhome": {
+  "company": "OpenHome",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jesse Leimgruber",
+    "permalink": "jesse-leimgruber"
+   },
+   {
+    "name": "Shannon Wu",
+    "permalink": "shannon-wu"
+   }
+  ]
+ },
+ "anahad": {
+  "company": "Anahad",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "ikhor": {
+  "company": "Kamikai",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Coco Nitta",
+    "permalink": "coco-nitta"
+   },
+   {
+    "name": "Jackson Felty",
+    "permalink": "jackson-felty-97b0"
+   }
+  ]
+ },
+ "automark-2907": {
+  "company": "AutoMark",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Holden Meyer",
+    "permalink": "holden-meyer"
+   }
+  ]
+ },
+ "cocomo-bc1d": {
+  "company": "Cocomo AI",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Kunal Shah",
+    "permalink": "kunal-shah-b0ed"
+   }
+  ]
+ },
+ "drillbit-427a": {
+  "company": "Drillbit",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alexander Seutin",
+    "permalink": "alexander-seutin-aa5f"
+   },
+   {
+    "name": "Liam Osler",
+    "permalink": "liam-osler-419a"
+   }
+  ]
+ },
+ "story-com": {
+  "company": "Story.com",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Deep Mehta",
+    "permalink": "deep-mehta-a778"
+   },
+   {
+    "name": "Steven Ebin",
+    "permalink": "steven-ebin"
+   }
+  ]
+ },
+ "fasten-rewards": {
+  "company": "Fasten Rewards",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jacob Zachs",
+    "permalink": "jacob-zachs-5760"
+   }
+  ]
+ },
+ "carousel-technologies": {
+  "company": "Carousel Technologies",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Daniel Wolf",
+    "permalink": "daniel-wolf-09d5"
+   },
+   {
+    "name": "Jude Rizzo",
+    "permalink": "jude-rizzo"
+   }
+  ]
+ },
+ "solidintel": {
+  "company": "SolidIntel",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "fleek-3774": {
+  "company": "Fleek",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "todaypay": {
+  "company": "TodayPay",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jeremy Balkin",
+    "permalink": "jeremy-balkin"
+   }
+  ]
+ },
+ "thousand-birds": {
+  "company": "Thousand Birds",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Colton Pierson",
+    "permalink": "colton-pierson"
+   }
+  ]
+ },
+ "srcbook": {
+  "company": "Mocha",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ben Reinhart",
+    "permalink": "ben-reinhart-4ba2"
+   },
+   {
+    "name": "Nicholas Charriere",
+    "permalink": "nicholas-charriere-493a"
+   }
+  ]
+ },
+ "laminate": {
+  "company": "Laminate",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Khurram Aslam",
+    "permalink": "khurram-aslam-fc4c"
+   }
+  ]
+ },
+ "flyby-robotics": {
+  "company": "Flyby Robotics",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Cat Orman",
+    "permalink": "cat-orman-cc1e"
+   },
+   {
+    "name": "Jack Luo",
+    "permalink": "jack-luo"
+   },
+   {
+    "name": "Jason Lu",
+    "permalink": "jason-lu-h"
+   }
+  ]
+ },
+ "grantscout-3a93": {
+  "company": "Grantscout",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ethan Cissell",
+    "permalink": "ethan-cissell-98f3"
+   }
+  ]
+ },
+ "umax-3ea0": {
+  "company": "Umax",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Sarthak Dhawan",
+    "permalink": "sarthak-dhawan-d725"
+   }
+  ]
+ },
+ "carma-aa85": {
+  "company": "Carma",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Brandt Lawson",
+    "permalink": "brandt-lawson-cbcf"
+   },
+   {
+    "name": "Muhammad Alasgarli",
+    "permalink": "muhammad-alasgarli"
+   }
+  ]
+ },
+ "taiyaki-studios": {
+  "company": "Taiyaki Studios",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "boondoggle-ai": {
+  "company": "Boondoggle AI",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Blake Faulkner",
+    "permalink": "blake-faulkner-34c8"
+   },
+   {
+    "name": "Raj Thaker",
+    "permalink": "raj-thaker-fa47"
+   }
+  ]
+ },
+ "critical-loop": {
+  "company": "Critical Loop",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew Grinalds",
+    "permalink": "andrew-grinalds"
+   },
+   {
+    "name": "Balachandar Ramamurthy",
+    "permalink": "balachandar-ramamurthy-3f0c"
+   },
+   {
+    "name": "Lydia Maher",
+    "permalink": "lydia-maher"
+   }
+  ]
+ },
+ "stardex-73ed": {
+  "company": "Stardex",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Pranav Badami",
+    "permalink": "pranav-badami-42e9"
+   },
+   {
+    "name": "Sanket Chauhan",
+    "permalink": "sanket-chauhan-a4dc"
+   }
+  ]
+ },
+ "tuesday-lab": {
+  "company": "Tuesday Lab",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Rosalind Shinkle",
+    "permalink": "rosalind-shinkle-3f3b"
+   }
+  ]
+ },
+ "untold-2429": {
+  "company": "Untold",
+  "date": "2025-01-01",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "pegasi-40e0": {
+  "company": "Pegasi AI",
+  "date": "2024-12-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Kevin Wu",
+    "permalink": "kevin-wu-0b53"
+   }
+  ]
+ },
+ "vapi-97c4": {
+  "company": "Vapi",
+  "date": "2024-12-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "John Dearsley",
+    "permalink": "john-dearsley"
+   },
+   {
+    "name": "Nik Gupta",
+    "permalink": "nikhil-gupta-e0bf"
+   }
+  ]
+ },
+ "vooma-ed49": {
+  "company": "Vooma",
+  "date": "2024-12-02",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jesse Buckingham",
+    "permalink": "jesse-buckingham-b86f"
+   },
+   {
+    "name": "Mike Carter",
+    "permalink": "mike-carter-c0cc"
+   }
+  ]
+ },
+ "play-ht": {
+  "company": "PlayAI",
+  "date": "2024-11-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Hammad Syed",
+    "permalink": "hammad-syed"
+   },
+   {
+    "name": "Mahmoud Felfel",
+    "permalink": "mahmoud-felfel"
+   }
+  ]
+ },
+ "aquaria": {
+  "company": "Aquaria",
+  "date": "2024-11-20",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "revv-6031": {
+  "company": "Revv",
+  "date": "2024-11-19",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Adi Bathla",
+    "permalink": "adi-bathla"
+   },
+   {
+    "name": "Rashmi Sinha",
+    "permalink": "rashmi-sinha-5e41"
+   }
+  ]
+ },
+ "moonvalley-c1d1": {
+  "company": "Moonvalley",
+  "date": "2024-11-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "John Thomas",
+    "permalink": "john-thomas-a2b0"
+   },
+   {
+    "name": "Naeem Ahmed",
+    "permalink": "naeem-ahmed-923d"
+   }
+  ]
+ },
+ "overwatch-data": {
+  "company": "Overwatch Data",
+  "date": "2024-11-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Arjun Bisen",
+    "permalink": "arjun-bisen"
+   },
+   {
+    "name": "Zara Perumal",
+    "permalink": "zara-perumal-fd6e"
+   }
+  ]
+ },
+ "affiniti-d70a": {
+  "company": "Affiniti",
+  "date": "2024-11-13",
+  "mgr": "soma-capital,day-one-ventures",
+  "founders": [
+   {
+    "name": "Aaron Bai",
+    "permalink": "aaron-bai"
+   },
+   {
+    "name": "Sahil Phadnis",
+    "permalink": "sahil-phadnis-3b0e"
+   }
+  ]
+ },
+ "anthrogen": {
+  "company": "Anthrogen",
+  "date": "2024-11-12",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ankit Singhal",
+    "permalink": "ankit-singhal-257d"
+   },
+   {
+    "name": "Connor Lee",
+    "permalink": "connor-lee-3828"
+   },
+   {
+    "name": "Vignesh Karthik",
+    "permalink": "vignesh-karthik-e0bc"
+   }
+  ]
+ },
+ "lume-ee1a": {
+  "company": "Lume",
+  "date": "2024-11-12",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Nebyou Zewde",
+    "permalink": "nebyou-zewde-54af"
+   },
+   {
+    "name": "Nicolas Machado",
+    "permalink": "nicolas-machado-dc66"
+   },
+   {
+    "name": "Robert Ross",
+    "permalink": "robert-ross-29ee"
+   }
+  ]
+ },
+ "chapter-one-0fed": {
+  "company": "Chapter One",
+  "date": "2024-11-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alex Frost",
+    "permalink": "alex-frost-0803"
+   }
+  ]
+ },
+ "glow-labs-4716": {
+  "company": "Glow Labs",
+  "date": "2024-10-31",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "David Vorick",
+    "permalink": "david-vorrick"
+   }
+  ]
+ },
+ "babylon-biosciences": {
+  "company": "Babylon Biosciences",
+  "date": "2024-10-30",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "coframe": {
+  "company": "Coframe",
+  "date": "2024-10-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Josh Payne",
+    "permalink": "josh-payne-26ec"
+   }
+  ]
+ },
+ "manifest-3357": {
+  "company": "Manifest",
+  "date": "2024-10-17",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Amy Wu",
+    "permalink": "amy-wu-aac4"
+   }
+  ]
+ },
+ "gladia-io": {
+  "company": "Gladia",
+  "date": "2024-10-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jean-Louis Qu\u00e9guiner",
+    "permalink": "jean-louis-qu\u00e9guiner"
+   },
+   {
+    "name": "Jonathan Soto",
+    "permalink": "jonathan-soto-a608"
+   }
+  ]
+ },
+ "third-dimension-ai": {
+  "company": "Third Dimension AI",
+  "date": "2024-10-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Piotr Sokolski",
+    "permalink": "piotr-sokolski"
+   },
+   {
+    "name": "Soner Ozgun Pelvan",
+    "permalink": "soner-ozgun-pelvan"
+   },
+   {
+    "name": "Tolga Kart",
+    "permalink": "tolga-kart-ade3"
+   }
+  ]
+ },
+ "terrace-9b20": {
+  "company": "Terrace",
+  "date": "2024-09-26",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jesse Beller",
+    "permalink": "jesse-beller"
+   },
+   {
+    "name": "Sola Ogunsakin",
+    "permalink": "sola-ogunsakin-b5ba"
+   }
+  ]
+ },
+ "networkocean": {
+  "company": "NetworkOcean",
+  "date": "2024-09-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Eric Kim",
+    "permalink": "eric-kim-0e21"
+   },
+   {
+    "name": "Sam Mendel",
+    "permalink": "sam-mendel"
+   }
+  ]
+ },
+ "saphira-ai": {
+  "company": "Saphira AI",
+  "date": "2024-09-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Akshay Chalana",
+    "permalink": "akshay-chalana"
+   },
+   {
+    "name": "Oscar Avatare",
+    "permalink": "oscar-avatare"
+   }
+  ]
+ },
+ "exa-laboratories": {
+  "company": "Zettascale",
+  "date": "2024-09-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Elias Almqvist",
+    "permalink": "elias-almqvist"
+   },
+   {
+    "name": "Prithvi Raj",
+    "permalink": "prithvi-raj-8f7a"
+   }
+  ]
+ },
+ "legion-health": {
+  "company": "Legion Health",
+  "date": "2024-09-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Arthur MacWaters",
+    "permalink": "arthur-macwaters"
+   },
+   {
+    "name": "Daniel Wilson",
+    "permalink": "daniel-wilson-116c"
+   },
+   {
+    "name": "Yash Patel",
+    "permalink": "yash-patel-7580"
+   }
+  ]
+ },
+ "trieve": {
+  "company": "Trieve",
+  "date": "2024-09-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Denzell Ford",
+    "permalink": "denzell-ford"
+   },
+   {
+    "name": "Nicholas Khami",
+    "permalink": "nicholas-khami"
+   }
+  ]
+ },
+ "cerrion": {
+  "company": "Cerrion",
+  "date": "2024-09-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Karim Saleh",
+    "permalink": "karim-saleh-e05d"
+   },
+   {
+    "name": "Michael Gygli",
+    "permalink": "michael-gygli"
+   },
+   {
+    "name": "Nikolay Kobyshev",
+    "permalink": "nikolay-kobyshev"
+   }
+  ]
+ },
+ "minerva-2072": {
+  "company": "Minerva",
+  "date": "2024-09-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jackson Engles",
+    "permalink": "jackson-engles"
+   },
+   {
+    "name": "Mathew Joseph",
+    "permalink": "mathew-joseph-c1bf"
+   }
+  ]
+ },
+ "inventive-ai": {
+  "company": "Inventive AI",
+  "date": "2024-08-28",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Dhiren Bhatia",
+    "permalink": "dhiren-bhatia"
+   },
+   {
+    "name": "Gaurav Nemade",
+    "permalink": "gaurav-nemade"
+   },
+   {
+    "name": "Vishakh Hegde",
+    "permalink": "vishakh-hegde-e4fc"
+   }
+  ]
+ },
+ "astroforge": {
+  "company": "AstroForge",
+  "date": "2024-08-20",
+  "mgr": "soma-capital,day-one-ventures",
+  "founders": [
+   {
+    "name": "Jose Acain",
+    "permalink": "jose-acain-9332"
+   },
+   {
+    "name": "Matthew Gialich",
+    "permalink": "matthew-gialich-193c"
+   }
+  ]
+ },
+ "buildt": {
+  "company": "Cosine",
+  "date": "2024-08-12",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Alistair Pullen",
+    "permalink": "alistair-pullen"
+   },
+   {
+    "name": "Sam Stenner",
+    "permalink": "sam-stenner"
+   },
+   {
+    "name": "Yang Li",
+    "permalink": "yang-li-e80c"
+   }
+  ]
+ },
+ "haize-labs": {
+  "company": "Haize Labs",
+  "date": "2024-08-07",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Leonard Tang",
+    "permalink": "leonard-tang"
+   },
+   {
+    "name": "Steve Li",
+    "permalink": "steve-li"
+   }
+  ]
+ },
+ "sweetspot-6229": {
+  "company": "Sweetspot",
+  "date": "2024-08-07",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew Arkhipov",
+    "permalink": "andrew-arkhipov-ac9b"
+   },
+   {
+    "name": "Philip Kung",
+    "permalink": "philip-kung-adc6"
+   },
+   {
+    "name": "Sachin Subramanian",
+    "permalink": "sachin-subramanian"
+   }
+  ]
+ },
+ "rift-95cf": {
+  "company": "rift",
+  "date": "2024-07-24",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Edvard Eriksson",
+    "permalink": "edvard-eriksson-47bc"
+   },
+   {
+    "name": "Filip Twarowski",
+    "permalink": "filip-twarowski"
+   },
+   {
+    "name": "Tomasz Bachosz",
+    "permalink": "tomasz-bachosz"
+   }
+  ]
+ },
+ "paces-ai": {
+  "company": "Paces",
+  "date": "2024-07-24",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Charles Bai",
+    "permalink": "charles-bai-c624"
+   },
+   {
+    "name": "James McWalter",
+    "permalink": "james-mcwalter"
+   }
+  ]
+ },
+ "oto-global": {
+  "company": "OTO",
+  "date": "2024-07-22",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Furkan Uzar",
+    "permalink": "furkan-uzar"
+   },
+   {
+    "name": "Mohammad Al-Razaz",
+    "permalink": "mohammad-al-razaz"
+   }
+  ]
+ },
+ "pointone-technologies": {
+  "company": "PointOne",
+  "date": "2024-07-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jeremy Ben-Meir",
+    "permalink": "jeremy-ben-meir-ben-meir"
+   },
+   {
+    "name": "Katon Luaces",
+    "permalink": "katon-luaces"
+   }
+  ]
+ },
+ "eden-74ee": {
+  "company": "Eden",
+  "date": "2024-07-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jose Torres",
+    "permalink": "jose-antonio-torres"
+   },
+   {
+    "name": "Julian Cantu",
+    "permalink": "julian-rios-cantu"
+   },
+   {
+    "name": "Raymundo Gonz\u00e1lez",
+    "permalink": "raymundo-gonz\u00e1lez-5df0"
+   }
+  ]
+ },
+ "testparty": {
+  "company": "TestParty",
+  "date": "2024-06-25",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Jason Tan",
+    "permalink": "jason-tan-62d1"
+   },
+   {
+    "name": "Michael Bervell",
+    "permalink": "michael-bervell-22f8"
+   }
+  ]
+ },
+ "decagon-485e": {
+  "company": "Decagon",
+  "date": "2024-06-18",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ashwin Sreenivas",
+    "permalink": "ashwin-sreenivas"
+   },
+   {
+    "name": "Jesse Zhang",
+    "permalink": "jesse-zhang-4db0"
+   }
+  ]
+ },
+ "tandem-space": {
+  "company": "Tandem Space",
+  "date": "2024-06-14",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Brendan Suh",
+    "permalink": "brendan-suh-dacd"
+   },
+   {
+    "name": "Kristen Gallogly",
+    "permalink": "kristen-gallogly-3585"
+   },
+   {
+    "name": "Rafi Sands",
+    "permalink": "rafi-sands-601e"
+   }
+  ]
+ },
+ "tenderd": {
+  "company": "Tenderd",
+  "date": "2024-06-11",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Arjun Mohan",
+    "permalink": "arjun-mohan"
+   }
+  ]
+ },
+ "letter-ai": {
+  "company": "Letter AI",
+  "date": "2024-06-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Ali Akhtar",
+    "permalink": "ali-akhtar-e42e"
+   },
+   {
+    "name": "Armen Forget",
+    "permalink": "armen-forget-f88a"
+   }
+  ]
+ },
+ "truva-52ca": {
+  "company": "Truva",
+  "date": "2024-05-22",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Anuja Verma",
+    "permalink": "anuja-verma-f890"
+   },
+   {
+    "name": "Gaurav Aggarwal",
+    "permalink": "gaurav-aggarwal-b4a5"
+   }
+  ]
+ },
+ "release-cc0c": {
+  "company": "Release",
+  "date": "2024-05-16",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "flux-auto": {
+  "company": "Flux Auto",
+  "date": "2024-05-15",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Abhishek Gupta",
+    "permalink": "abhishek-gupta-14"
+   },
+   {
+    "name": "Pranav Manpuria",
+    "permalink": "pranav-manpuria"
+   }
+  ]
+ },
+ "pludo": {
+  "company": "Cashmere AI",
+  "date": "2024-05-08",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Farbod Nowzad",
+    "permalink": "farbod-nowzad-066e"
+   }
+  ]
+ },
+ "volta-5f77": {
+  "company": "Volta",
+  "date": "2024-05-03",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Daniel Kim",
+    "permalink": "daniel-kim-a51e"
+   },
+   {
+    "name": "George Melika",
+    "permalink": "george-melika"
+   }
+  ]
+ },
+ "volta-5c75": {
+  "company": "Volta",
+  "date": "2024-05-03",
+  "mgr": "soma-capital",
+  "founders": []
+ },
+ "dualentry": {
+  "company": "DualEntry",
+  "date": "2024-05-01",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Benedict Dohmen",
+    "permalink": "benedict-d"
+   },
+   {
+    "name": "Santiago Nestares",
+    "permalink": "santiago-nestares"
+   }
+  ]
+ },
+ "hona": {
+  "company": "Hona",
+  "date": "2024-04-29",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Joshua Christensen",
+    "permalink": "joshua-christensen-28e7"
+   },
+   {
+    "name": "Manny Griffiths",
+    "permalink": "manny-griffiths-fe6a"
+   },
+   {
+    "name": "Matt McClellan",
+    "permalink": "matt-mcclellan-9968"
+   }
+  ]
+ },
+ "momos": {
+  "company": "Momos",
+  "date": "2024-04-19",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Andrew Liu",
+    "permalink": "andrew-liu-20f9"
+   },
+   {
+    "name": "Sai Alluri",
+    "permalink": "sai-alluri-c6e4"
+   }
+  ]
+ },
+ "sapien-f38e": {
+  "company": "Sapien",
+  "date": "2024-04-10",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Edison Qu",
+    "permalink": "edison-qu"
+   },
+   {
+    "name": "Henry Chen",
+    "permalink": "henry-chen-184e"
+   },
+   {
+    "name": "Kelly Ryan",
+    "permalink": "kelly-ryan-4c9e"
+   },
+   {
+    "name": "Trevor Koverko",
+    "permalink": "trevor-koverko"
+   }
+  ]
+ },
+ "rove-6429": {
+  "company": "Rove",
+  "date": "2024-03-27",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Arhan Chhabra",
+    "permalink": "arhan-chhabra"
+   },
+   {
+    "name": "Maxwell Morganroth",
+    "permalink": "maxwell-morganroth"
+   }
+  ]
+ },
+ "airmyne": {
+  "company": "AirMyne",
+  "date": "2024-03-20",
+  "mgr": "soma-capital",
+  "founders": [
+   {
+    "name": "Mark Cyffka",
+    "permalink": "mark-cyffka-4579"
+   },
+   {
+    "name": "Sudip Mukhopadhyay",
+    "permalink": "sudip-mukhopadhyay"
+   }
+  ]
+ },
+ "constellation-space": {
+  "company": "Constellation Space",
+  "date": "2026-03-28",
+  "mgr": "sgh-capital",
+  "founders": [
+   {
+    "name": "Kamran Majid",
+    "permalink": "kamran-majid-c911"
+   },
+   {
+    "name": "Laith Altarabishi",
+    "permalink": "laith-altarabishi"
+   },
+   {
+    "name": "Omeed Tehrani",
+    "permalink": "omeed-tehrani"
+   },
+   {
+    "name": "Raaid Kabir",
+    "permalink": "raaid-kabir"
+   }
+  ]
+ },
+ "cell-type": {
+  "company": "Cell Type",
+  "date": "2026-03-01",
+  "mgr": "sgh-capital",
+  "founders": [
+   {
+    "name": "David van Dijk",
+    "permalink": "david-van-dijk-0782"
+   },
+   {
+    "name": "Ivan Vrkic",
+    "permalink": "ivan-vrkic"
+   }
+  ]
+ },
+ "valar-atomics": {
+  "company": "Valar Atomics",
+  "date": "2025-02-19",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Isaiah Taylor",
+    "permalink": "isaiah-taylor"
+   }
+  ]
+ },
+ "merge-labs-a6e4": {
+  "company": "Merge Labs",
+  "date": "2025-11-04",
+  "mgr": "sgh-capital",
+  "founders": []
+ },
+ "stoke-space-technologies": {
+  "company": "Stoke Space",
+  "date": "2025-10-08",
+  "mgr": "sgh-capital",
+  "founders": [
+   {
+    "name": "Andy Lapsa",
+    "permalink": "andy-lapsa"
+   },
+   {
+    "name": "Thomas Feldman",
+    "permalink": "thomas-feldman-6448"
+   }
+  ]
+ },
+ "persona-ai": {
+  "company": "Persona AI",
+  "date": "2025-05-07",
+  "mgr": "sgh-capital",
+  "founders": [
+   {
+    "name": "Jerry Pratt",
+    "permalink": "jerry-pratt-e3ec"
+   },
+   {
+    "name": "Jide Akinyode",
+    "permalink": "jide-akinyode-327d"
+   },
+   {
+    "name": "Nicolaus Radford",
+    "permalink": "nicolaus-radford"
+   }
+  ]
+ },
+ "groq": {
+  "company": "Groq",
+  "date": "2024-08-05",
+  "mgr": "sgh-capital",
+  "founders": [
+   {
+    "name": "Doug Wightman",
+    "permalink": "doug-wightman-570f"
+   },
+   {
+    "name": "Jonathan Ross",
+    "permalink": "jonathan-ross-80d0"
+   }
+  ]
+ },
+ "canyon-code": {
+  "company": "Canyon Code",
+  "date": "2026-05-26",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "RaviKiran Gopalan",
+    "permalink": "ravikiran-gopalan"
+   }
+  ]
+ },
+ "esper": {
+  "company": "Esper",
+  "date": "2026-03-10",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Andrew Lee",
+    "permalink": "andrew-lee-13"
+   },
+   {
+    "name": "Joe Lonsdale",
+    "permalink": "joe-lonsdale-fe3e"
+   },
+   {
+    "name": "Lilli Oetting",
+    "permalink": "lilli-oetting"
+   },
+   {
+    "name": "Maleka Momand",
+    "permalink": "maleka-momand"
+   }
+  ]
+ },
+ "eino": {
+  "company": "eino.ai",
+  "date": "2026-01-01",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Payman Samadi",
+    "permalink": "payman-samadi"
+   }
+  ]
+ },
+ "velaura-ai": {
+  "company": "Velaura AI",
+  "date": "2026-01-01",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Manu Gulati",
+    "permalink": "manu-gulati"
+   },
+   {
+    "name": "Rajiv Khemani",
+    "permalink": "rajiv-khemani"
+   },
+   {
+    "name": "Sanjay Gupta",
+    "permalink": "sanjay-gupta-cc63"
+   },
+   {
+    "name": "YJ Kim",
+    "permalink": "yj-kim-c130"
+   }
+  ]
+ },
+ "movandi": {
+  "company": "Movandi",
+  "date": "2025-10-14",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Ahmadreza Rofougaran",
+    "permalink": "reza-rofougaran"
+   },
+   {
+    "name": "Maryam Rofougaran",
+    "permalink": "maryam-rofougaran"
+   }
+  ]
+ },
+ "balance-fa57": {
+  "company": "Balance",
+  "date": "2025-09-30",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Batu Inal",
+    "permalink": "batu-inal-7156"
+   },
+   {
+    "name": "Stan Markuze",
+    "permalink": "stan-markuze"
+   }
+  ]
+ },
+ "upscale-ai": {
+  "company": "Upscale AI",
+  "date": "2025-09-17",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Barun Kar",
+    "permalink": "barun-kar"
+   },
+   {
+    "name": "Rajiv Khemani",
+    "permalink": "rajiv-khemani"
+   }
+  ]
+ },
+ "tote-ai": {
+  "company": "Tote.ai",
+  "date": "2025-08-18",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Shyam Rao",
+    "permalink": "shyam-rao"
+   }
+  ]
+ },
+ "mission-bio": {
+  "company": "Mission Bio",
+  "date": "2025-08-05",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Adam Abate",
+    "permalink": "adam-abate"
+   },
+   {
+    "name": "Adam Sciambi",
+    "permalink": "adam-sciambi"
+   },
+   {
+    "name": "Charlie Silver",
+    "permalink": "charlie-silver"
+   },
+   {
+    "name": "Dennis Eastburn",
+    "permalink": "dennis-eastburn"
+   }
+  ]
+ },
+ "memebox": {
+  "company": "Memebox",
+  "date": "2025-07-09",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Doin Kim",
+    "permalink": "doin-kim"
+   },
+   {
+    "name": "Hyungseok Ha",
+    "permalink": "hyungseok-dino-ha"
+   }
+  ]
+ },
+ "cast-ai": {
+  "company": "CAST AI",
+  "date": "2025-04-30",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Augustinas Stirbis",
+    "permalink": "augustinas-stirbis"
+   },
+   {
+    "name": "Austeja Zymantaite",
+    "permalink": "austeja-zymantaite"
+   },
+   {
+    "name": "Einaras von Gravrock",
+    "permalink": "einaras-von-gravrock"
+   },
+   {
+    "name": "Laurent Gil",
+    "permalink": "laurent-gil"
+   },
+   {
+    "name": "Leon Kuperman",
+    "permalink": "leon-kuperman"
+   },
+   {
+    "name": "Vilius Zukauskas",
+    "permalink": "vilius-zukauskas"
+   },
+   {
+    "name": "Yuri Frayman",
+    "permalink": "yuri-frayman"
+   }
+  ]
+ },
+ "amplifier-security": {
+  "company": "Amplifier Security",
+  "date": "2024-04-24",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Shreyas Sadalgi",
+    "permalink": "shreyas-sadalgi"
+   },
+   {
+    "name": "Thomas Donnelly",
+    "permalink": "thomas-donnelly-2e56"
+   }
+  ]
+ },
+ "openinfer": {
+  "company": "OpenInfer",
+  "date": "2025-02-20",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Behnam Bastani",
+    "permalink": "behnam-bastani-a4e5"
+   },
+   {
+    "name": "Reza Nourai",
+    "permalink": "reza-nourai"
+   }
+  ]
+ },
+ "seraphic-algorithms": {
+  "company": "Seraphic Security",
+  "date": "2025-01-30",
+  "mgr": "cota-capital",
+  "founders": []
+ },
+ "savant-labs": {
+  "company": "Savant Labs",
+  "date": "2025-01-30",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Barry Burns",
+    "permalink": "barry-burns-eaea"
+   },
+   {
+    "name": "Chitrang Shah",
+    "permalink": "chitrang-shah"
+   },
+   {
+    "name": "Matt Mesher",
+    "permalink": "matt-mesher"
+   },
+   {
+    "name": "Yintao Song",
+    "permalink": "yintao-song-8859"
+   },
+   {
+    "name": "Yunfeng Yang",
+    "permalink": "yunfeng-yang"
+   }
+  ]
+ },
+ "orchestro-ai": {
+  "company": "Orchestro.AI",
+  "date": "2025-01-01",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Shekar Natarajan",
+    "permalink": "shekar-natarajan-fd98"
+   }
+  ]
+ },
+ "across-ai": {
+  "company": "Across AI",
+  "date": "2024-12-05",
+  "mgr": "cota-capital",
+  "founders": []
+ },
+ "elum-energy": {
+  "company": "Elum Energy",
+  "date": "2024-09-10",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Cyril Colin",
+    "permalink": "cyril-colin"
+   }
+  ]
+ },
+ "rhombus-systems": {
+  "company": "Rhombus Systems",
+  "date": "2024-07-30",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Dave Gustafson",
+    "permalink": "dave-gustafson-b24a"
+   },
+   {
+    "name": "Garrett Larsson",
+    "permalink": "garrett-larsson"
+   },
+   {
+    "name": "Omar Khan",
+    "permalink": "muhammad-omar-khan"
+   }
+  ]
+ },
+ "stelika": {
+  "company": "STELIKA",
+  "date": "2024-07-05",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Viola Arnold",
+    "permalink": "viola-arnold"
+   }
+  ]
+ },
+ "drip-650c": {
+  "company": "Dripos",
+  "date": "2024-04-24",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Avery Durrant",
+    "permalink": "avery-durrant"
+   },
+   {
+    "name": "Jack Pawlik",
+    "permalink": "jack-pawlik"
+   }
+  ]
+ },
+ "simbian": {
+  "company": "Simbian",
+  "date": "2024-04-11",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Alankrit Chona",
+    "permalink": "alankrit-chona"
+   },
+   {
+    "name": "Ambuj Kumar",
+    "permalink": "ambuj-kumar"
+   }
+  ]
+ },
+ "neural-propulsion-systems": {
+  "company": "Neural Propulsion Systems",
+  "date": "2024-03-07",
+  "mgr": "cota-capital",
+  "founders": [
+   {
+    "name": "Babak Hassibi",
+    "permalink": "babak-hassibi"
+   },
+   {
+    "name": "Behrooz Rezvani",
+    "permalink": "behrooz-rezvani"
+   }
+  ]
+ },
+ "tivara": {
+  "company": "Tivara",
+  "date": "2026-01-08",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Aumesh Misra",
+    "permalink": "aumesh-misra"
+   },
+   {
+    "name": "Tej Seelamsetty",
+    "permalink": "tej-seelamsetty"
+   }
+  ]
+ },
+ "netic-b1e2": {
+  "company": "Netic",
+  "date": "2025-06-02",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Melisa Tokmak",
+    "permalink": "melisa-tokmak-9737"
+   }
+  ]
+ },
+ "lantern-8e66": {
+  "company": "Lantern",
+  "date": "2025-10-03",
+  "mgr": "day-one-ventures",
+  "founders": []
+ },
+ "pilgrim-3433": {
+  "company": "Pilgrim",
+  "date": "2025-08-06",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Jake Adler",
+    "permalink": "jake-adler-1fc1"
+   }
+  ]
+ },
+ "root-1d6c": {
+  "company": "Root",
+  "date": "2025-06-17",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Jesse Dietrichson",
+    "permalink": "jesse-dietrichson"
+   }
+  ]
+ },
+ "filed-b2e6": {
+  "company": "Filed",
+  "date": "2025-05-21",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Atul Ramachandran",
+    "permalink": "atul-ramachandran"
+   },
+   {
+    "name": "Leroy Kerry",
+    "permalink": "leroy-kerry-d103"
+   }
+  ]
+ },
+ "filed": {
+  "company": "Filed",
+  "date": "2025-05-21",
+  "mgr": "day-one-ventures",
+  "founders": []
+ },
+ "apx-lending": {
+  "company": "APX Lending",
+  "date": "2025-05-13",
+  "mgr": "day-one-ventures",
+  "founders": []
+ },
+ "owner-com": {
+  "company": "Owner",
+  "date": "2025-05-13",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Adam Guild",
+    "permalink": "adam-guild-c9b5"
+   },
+   {
+    "name": "Dean Bloembergen",
+    "permalink": "dean-bloembergen"
+   }
+  ]
+ },
+ "marveri": {
+  "company": "Marveri",
+  "date": "2025-05-05",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Connor Acle",
+    "permalink": "connor-acle"
+   },
+   {
+    "name": "Emily Mu",
+    "permalink": "emily-mu-f0ae"
+   },
+   {
+    "name": "Jeremie Lasnier",
+    "permalink": "j\u00e9r\u00e9mie-lasnier-2ccf"
+   },
+   {
+    "name": "Samuel Bosch",
+    "permalink": "samuel-bosch"
+   }
+  ]
+ },
+ "durin-f33c": {
+  "company": "Durin",
+  "date": "2025-04-23",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Ted Feldmann",
+    "permalink": "ted-feldmann"
+   }
+  ]
+ },
+ "superpower-d964": {
+  "company": "Superpower",
+  "date": "2025-04-22",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Jacob Peters",
+    "permalink": "jacob-peters"
+   },
+   {
+    "name": "Kevin Unkrich",
+    "permalink": "kevin-unkrich-764e"
+   },
+   {
+    "name": "Max Marchione",
+    "permalink": "max-marchione"
+   }
+  ]
+ },
+ "mellizyme-biotechnology": {
+  "company": "Epoch Biodesign",
+  "date": "2025-03-05",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Douglas Kell",
+    "permalink": "douglas-kell"
+   },
+   {
+    "name": "Jacob Nathan",
+    "permalink": "jacob-nathan"
+   }
+  ]
+ },
+ "esper-satellite-imagery": {
+  "company": "Esper Satellite Imagery",
+  "date": "2024-03-04",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Manjitha Wijesinghe",
+    "permalink": "manjitha-wijesinghe"
+   },
+   {
+    "name": "Przemyslaw Lorenczak",
+    "permalink": "przemyslaw-lorenczak"
+   },
+   {
+    "name": "Shoaib Iqbal",
+    "permalink": "shoaib-iqbal-b56d"
+   }
+  ]
+ },
+ "regie-da23": {
+  "company": "Regie.ai",
+  "date": "2025-02-26",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Matt Millen",
+    "permalink": "matt-millen-d6ca"
+   },
+   {
+    "name": "Srinath Sridhar",
+    "permalink": "srinath-sridhar-7564"
+   }
+  ]
+ },
+ "micro-bf5c": {
+  "company": "Micro",
+  "date": "2025-01-01",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Brett Goldstein",
+    "permalink": "brett-goldstein-fa65"
+   }
+  ]
+ },
+ "wordware-6b65": {
+  "company": "Sauna by Wordware",
+  "date": "2024-11-21",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Filip Kozera",
+    "permalink": "filip-kozera"
+   },
+   {
+    "name": "Robert Chandler",
+    "permalink": "robert-chandler-9a05"
+   }
+  ]
+ },
+ "abel-police": {
+  "company": "Abel Police",
+  "date": "2024-10-17",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Daniel Francis",
+    "permalink": "daniel-francis-4e0b"
+   }
+  ]
+ },
+ "netnow-c53e": {
+  "company": "NetNow",
+  "date": "2024-09-09",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Eli Costea",
+    "permalink": "eli-costea"
+   },
+   {
+    "name": "Nauman Hafeez",
+    "permalink": "nauman-hafeez"
+   },
+   {
+    "name": "Soroush Arghavan",
+    "permalink": "soroush-arghavan"
+   }
+  ]
+ },
+ "starpath-robotics": {
+  "company": "Starpath Robotics",
+  "date": "2024-08-20",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Saurav Shroff",
+    "permalink": "saurav-shroff-d107"
+   }
+  ]
+ },
+ "posh-0e4f": {
+  "company": "Posh",
+  "date": "2024-07-23",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Avante Price",
+    "permalink": "avante-price"
+   },
+   {
+    "name": "Eli Taylor-Lemire",
+    "permalink": "eli-taylor-lemire"
+   }
+  ]
+ },
+ "you-com-523e": {
+  "company": "You.com",
+  "date": "2024-06-17",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Bryan McCann",
+    "permalink": "bryan-mccann-7ecc"
+   },
+   {
+    "name": "Richard Socher",
+    "permalink": "richard-socher"
+   }
+  ]
+ },
+ "rainmaker-technology": {
+  "company": "Rainmaker Technology",
+  "date": "2024-05-07",
+  "mgr": "day-one-ventures",
+  "founders": []
+ },
+ "texture-66bf": {
+  "company": "Texture",
+  "date": "2024-04-23",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Sanjiv Sanghavi",
+    "permalink": "sanjiv-sanghavi"
+   },
+   {
+    "name": "Victor Quinn",
+    "permalink": "victor-quinn"
+   }
+  ]
+ },
+ "symbolica-ai": {
+  "company": "Symbolica AI",
+  "date": "2024-04-09",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "George Morgan",
+    "permalink": "george-morgan-f5d2"
+   }
+  ]
+ },
+ "starlight-charging": {
+  "company": "Starlight Charging",
+  "date": "2024-04-03",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Andrew Kouri",
+    "permalink": "andrew-kouri"
+   }
+  ]
+ },
+ "paylode": {
+  "company": "Paylode",
+  "date": "2024-03-12",
+  "mgr": "day-one-ventures",
+  "founders": [
+   {
+    "name": "Mikhail Naumov",
+    "permalink": "mikhail-naumov"
+   }
+  ]
+ },
+ "friskai": {
+  "company": "FriskAI",
+  "date": "2026-08-11",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Neel Palrecha",
+    "permalink": "neel-palrecha"
+   }
+  ]
+ },
+ "nyne-ai": {
+  "company": "Nyne.ai",
+  "date": "2026-03-13",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Michael Fanous",
+    "permalink": "michael-fanous-9b25"
+   }
+  ]
+ },
+ "nitrility": {
+  "company": "Kled AI",
+  "date": "2026-03-10",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Avi Patel",
+    "permalink": "avi-patel-558c"
+   }
+  ]
+ },
+ "axiom-trust": {
+  "company": "Axiom Trust",
+  "date": "2026-03-09",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "David Meister",
+    "permalink": "david-meister"
+   }
+  ]
+ },
+ "escargot": {
+  "company": "Escargot",
+  "date": "2026-02-27",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Aaron Albert",
+    "permalink": "aaron-albert-ec3d"
+   },
+   {
+    "name": "Andrew Gold",
+    "permalink": "andrew-gold-39d1"
+   }
+  ]
+ },
+ "frontlands": {
+  "company": "Frontlands",
+  "date": "2025-12-22",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Brandon Cotter",
+    "permalink": "brandon-cotter"
+   }
+  ]
+ },
+ "aravolta": {
+  "company": "Aravolta",
+  "date": "2025-12-19",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Jack Sutton",
+    "permalink": "jack-sutton-6ca7"
+   },
+   {
+    "name": "Margarita Groisman",
+    "permalink": "margarita-groisman"
+   }
+  ]
+ },
+ "focal-f1a2": {
+  "company": "Focal",
+  "date": "2025-10-09",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Clayton Stupi",
+    "permalink": "clayton-stupi-clay"
+   },
+   {
+    "name": "Jerry Bai",
+    "permalink": "jerry-bai-jihao"
+   },
+   {
+    "name": "John Connell",
+    "permalink": "john-connell-8fa2"
+   }
+  ]
+ },
+ "pine-c362": {
+  "company": "Pine",
+  "date": "2025-06-10",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Jonathan Shih",
+    "permalink": "justin-herlick-7cb5"
+   },
+   {
+    "name": "Justin Herlick",
+    "permalink": "justin-herlick-b220"
+   }
+  ]
+ },
+ "atomic-canyon": {
+  "company": "Atomic Canyon",
+  "date": "2025-05-28",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Kristian Kielhofner",
+    "permalink": "kristian-kielhofner"
+   },
+   {
+    "name": "Trey Lauderdale",
+    "permalink": "trey-lauderdale"
+   }
+  ]
+ },
+ "corner-health": {
+  "company": "Corner Health",
+  "date": "2025-05-14",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Anne Gifford",
+    "permalink": "anne-gifford-979d"
+   },
+   {
+    "name": "Lava Sunder",
+    "permalink": "lava-sunder-8bef"
+   }
+  ]
+ },
+ "friday-harbor": {
+  "company": "Friday Harbor",
+  "date": "2025-04-09",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Jesse Collins",
+    "permalink": "jesse-collins-c19a"
+   },
+   {
+    "name": "Theo Ellis",
+    "permalink": "theodore-ellis"
+   }
+  ]
+ },
+ "ponte-labor": {
+  "company": "Ponte Labor",
+  "date": "2025-04-01",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Lorenza Velez",
+    "permalink": "lorenza-velez"
+   }
+  ]
+ },
+ "cedar-money": {
+  "company": "Cedar Money",
+  "date": "2025-01-30",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Benjy Feinberg",
+    "permalink": "benjy-feinberg"
+   }
+  ]
+ },
+ "getmyhome": {
+  "company": "GetMyHome",
+  "date": "2024-11-20",
+  "mgr": "wischoff-ventures",
+  "founders": []
+ },
+ "freightmate-ai": {
+  "company": "freightmate Ai",
+  "date": "2024-06-27",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Bryan Lacaillade",
+    "permalink": "bryan-lacaillade-0c60"
+   }
+  ]
+ },
+ "retailready": {
+  "company": "RetailReady",
+  "date": "2024-06-12",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Elle Smyth",
+    "permalink": "elle-smyth"
+   },
+   {
+    "name": "Sarah Hamer",
+    "permalink": "sarah-hamer-cec1"
+   }
+  ]
+ },
+ "ansa-2346": {
+  "company": "Ansa",
+  "date": "2024-04-30",
+  "mgr": "wischoff-ventures",
+  "founders": [
+   {
+    "name": "Sophia Goldberg",
+    "permalink": "sophia-goldberg-9be6"
+   }
+  ]
+ },
+ "ollama": {
+  "company": "Ollama",
+  "date": "2026-07-09",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Jeffrey Morgan",
+    "permalink": "jeffrey-morgan"
+   },
+   {
+    "name": "Michael Chiang",
+    "permalink": "michael-chiang-2"
+   }
+  ]
+ },
+ "sail-research": {
+  "company": "Sail Research",
+  "date": "2026-06-24",
+  "mgr": "theory-ventures",
+  "founders": []
+ },
+ "allium-2c51": {
+  "company": "Allium",
+  "date": "2024-07-18",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Cheng Han Lee",
+    "permalink": "cheng-han-lee"
+   },
+   {
+    "name": "Ethan Chan",
+    "permalink": "ethan-chan-7967"
+   },
+   {
+    "name": "Paul Chun",
+    "permalink": "paul-chun-892f"
+   }
+  ]
+ },
+ "omni-analytics": {
+  "company": "Omni",
+  "date": "2025-03-13",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Christopher Merrick",
+    "permalink": "christopher-merrick"
+   },
+   {
+    "name": "Colin Zima",
+    "permalink": "colin-zima"
+   },
+   {
+    "name": "Jamie Davidson",
+    "permalink": "jamie-davidson-2"
+   }
+  ]
+ },
+ "artemis-5568": {
+  "company": "Artemis",
+  "date": "2026-04-15",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Dan Shiebler",
+    "permalink": "dan-shiebler"
+   },
+   {
+    "name": "Shachar Hirshberg",
+    "permalink": "shachar-hirshberg-d7b8"
+   }
+  ]
+ },
+ "doss-173d": {
+  "company": "Doss",
+  "date": "2025-04-15",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Arnav Mishra",
+    "permalink": "arnav-mishra-c666"
+   },
+   {
+    "name": "Wiley Jones",
+    "permalink": "wiley-jones-a3da"
+   }
+  ]
+ },
+ "backops-ai": {
+  "company": "BackOps AI",
+  "date": "2026-03-12",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Henry Ou",
+    "permalink": "henry-ou-401f"
+   },
+   {
+    "name": "Sean McCarthy",
+    "permalink": "sean-mccarthy-9043"
+   }
+  ]
+ },
+ "koah-labs": {
+  "company": "Koah Labs",
+  "date": "2026-02-24",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Herrick Fang",
+    "permalink": "herrick-fang-26c9"
+   },
+   {
+    "name": "Mike Choi",
+    "permalink": "mike-choi-40d5"
+   },
+   {
+    "name": "Nick Baird",
+    "permalink": "nick-baird-1bcb"
+   }
+  ]
+ },
+ "dropzone-ai": {
+  "company": "Dropzone AI",
+  "date": "2024-04-25",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Edward Wu",
+    "permalink": "edward-wu-515e"
+   }
+  ]
+ },
+ "maze-7eea": {
+  "company": "Maze",
+  "date": "2025-06-10",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Adrian Jozwik",
+    "permalink": "adrian-jozwik"
+   },
+   {
+    "name": "Harry Wetherald",
+    "permalink": "harry-wetherald"
+   },
+   {
+    "name": "Santiago Castineira",
+    "permalink": "santiago-castineira"
+   }
+  ]
+ },
+ "aampe": {
+  "company": "Aampe",
+  "date": "2024-12-10",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Kate Field",
+    "permalink": "kate-field"
+   },
+   {
+    "name": "Paul Meinshausen",
+    "permalink": "paul-meinshausen"
+   },
+   {
+    "name": "Sami Abboud",
+    "permalink": "sami-abboud-6927"
+   },
+   {
+    "name": "Schaun Wheeler",
+    "permalink": "schaun-wheeler-5540"
+   }
+  ]
+ },
+ "initia-labs": {
+  "company": "Initia Labs",
+  "date": "2024-09-25",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Ezaan Mangalji",
+    "permalink": "zon-ia-acc"
+   },
+   {
+    "name": "Stanford Liu",
+    "permalink": "stanford-liu-e1ec"
+   }
+  ]
+ },
+ "tobiko-data": {
+  "company": "Tobiko Data",
+  "date": "2024-06-05",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Iaroslav Zeigerman",
+    "permalink": "iaroslav-zeigerman"
+   },
+   {
+    "name": "Ryan Eakman",
+    "permalink": "ryan-eakman"
+   },
+   {
+    "name": "Tobias Mao",
+    "permalink": "tobias-mao"
+   },
+   {
+    "name": "Tyson Mao",
+    "permalink": "tyson-mao-62be"
+   }
+  ]
+ },
+ "superlinked": {
+  "company": "Superlinked",
+  "date": "2024-03-18",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Ben Gutkovich",
+    "permalink": "ben-gutkovich"
+   },
+   {
+    "name": "Daniel Svonava",
+    "permalink": "daniel-svonava"
+   }
+  ]
+ },
+ "omni": {
+  "company": "Omni",
+  "date": "2024-03-14",
+  "mgr": "theory-ventures",
+  "founders": [
+   {
+    "name": "Aaron Wiener",
+    "permalink": "aaron-wiener"
+   },
+   {
+    "name": "Adam Dexter",
+    "permalink": "adam-dexter"
+   },
+   {
+    "name": "Thomas McLeod",
+    "permalink": "thomas-d-mcleod"
+   }
+  ]
+ }
+}
