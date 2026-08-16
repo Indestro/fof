@@ -55,7 +55,6 @@ th{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-a
   <div><label>Seed <span class="val" id="vSeed">#42</span></label>
    <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:4px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer;white-space:nowrap">&#8635; Re-roll</button></div>
 </div>
-<div id="rosterbox" style="font-size:12px;line-height:1.9;margin:-4px 0 14px"></div>
 <canvas id="c3" height="150" role="img" aria-label="Fan chart of net TVPI over ten years: median line with 25-75 and 10-90 percentile bands, against a paid-in capital line at 1.0x.">Median net TVPI with 25–75% and 10–90% outcome bands over ten years, against paid-in capital.</canvas>
 <div class="tiles">
   <div class="tile"><b id="tMed">—</b><span>Median net TVPI (yr 10)</span></div>
@@ -232,16 +231,7 @@ function simulate(){
  const CO_QUALITY={none:-0.30, equal:-0.05, tiered:0.10};   // log-mean of a single position
  const FEE_ADV=0.25;                                        // no 2/20 layer on direct positions
  const coMu=CO_QUALITY[sel]*(0.35+0.65*accW)+FEE_ADV*accW-sizeDrag, coSig=1.45;   // sigma = single-deal power law
- // live roster display
- const CC={A:'#003876',B:'#1b6ec2',C:'#8a6d00',D:'#8a8a8a'};
- const CN={A:'Star anchor',B:'Return engine',C:'Formation-stage',D:'Lane option'};
- const byC={A:[],B:[],C:[],D:[]};
- chosen.forEach((r,i)=>byC[r[1]].push(access[i] ? r[0]
-   : `<span style="color:#b00;text-decoration:line-through" title="check $${checks[i].toFixed(1)}M < $${MINCHK[r[1]]}M minimum">${r[0]}</span>`));
- const noAcc=access.filter(a=>!a).length;
- document.getElementById('rosterbox').innerHTML=Object.keys(byC).filter(k=>byC[k].length)
-   .map(k=>`<b style="color:${CC[k]}">${CN[k]} (${byC[k].length}):</b> ${byC[k].join(' · ')}`).join('<br>')
-   + (noAcc? `<br><span style="color:#b00;font-weight:600">${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size — check below their minimum LP commitment</span>`:'');
+font-weight:600">${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size — check below their minimum LP commitment</span>`:'');
  const paths=[];
  for(let s=0;s<N;s++){
    const mkt=lognorm(-0.09,0.46);                     // vintage/market regime — the dominant FoF risk (cf. 2021 vintages)
@@ -264,11 +254,12 @@ function simulate(){
    const finalTv=((1-co)*fundTv+co*coTv)*mkt*FEE;
    const p=[];
    for(let y=0;y<=YRS;y++){
-     const dep=Math.min(1,y/3);                       // 3-yr deployment
+     // TVPI = total value / PAID-IN capital: begins at 1.0x, dips through the J-curve as fees are
+     // drawn before marks arrive, then compounds to the terminal multiple.
      const g=Math.max(0,(y-1.5)/(YRS-1.5));           // value growth ramp
-     const jdip=1-0.12*(1-Math.min(1,y/4));           // fee J-curve dip, fades by yr 4
-     const nav=dep*(1+(finalTv-1)*Math.pow(g,1.6))*jdip;
-     p.push(+(nav).toFixed(3));
+     const jdip=1-0.13*Math.exp(-Math.pow((y-1.8)/2.2,2));   // fee-led J-curve trough ~yr 2
+     const tvpi=(1+(finalTv-1)*Math.pow(g,1.6))*jdip;
+     p.push(+(tvpi).toFixed(3));
    }
    p[YRS]=finalTv; paths.push(p);
  }
