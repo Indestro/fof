@@ -320,8 +320,8 @@ simulate();
 <script>
 // ---- Departure lead times (measured from SEC Form D related-persons name-diff) ----
 new Chart(c2,{type:'bar',data:{
- labels:['Tomasz Tunguz \u2192 Theory','Brian Singerman \u2192 GPx','Ethan Kurzweil \u2192 Chemistry','Leo Polovets \u2192 Humba'],
- datasets:[{data:[9,20,24,26],backgroundColor:'#003876',borderRadius:4,barThickness:26}]},
+ labels:['Leo Polovets \u2192 Humba','Ethan Kurzweil \u2192 Chemistry','Brian Singerman \u2192 GPx','Tomasz Tunguz \u2192 Theory'],
+ datasets:[{data:[26,24,20,9],backgroundColor:'#003876',borderRadius:4,barThickness:26}]},
  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
   plugins:{legend:{display:false},tooltip:{callbacks:{label:i=>`Filing silence began ${i.parsed.x} months before the public announcement`}}},
   scales:{x:{title:{display:true,text:'Months of Form D silence before the market knew',font:{size:11}},grid:{color:'#f0f0f0'}},
