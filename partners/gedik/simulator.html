@@ -153,6 +153,8 @@ th{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-a
 
 <script>
 const NAVY='#003876', YELLOW='#fdcf07', GREY='#8a8a8a';
+
+
 // ---- Chart 4: retrospective Aug 2024 -> Aug 2026 (marks-based estimate) ----
 (()=>{const q=['2024 Q3','2024 Q4','2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1','2026 Q2','2026 Q3'];
 const ramp=(f,conv)=>q.map((_,i)=>+(1+(f-1)*Math.pow(i/(q.length-1),conv)).toFixed(2));
@@ -356,3 +358,44 @@ P.forEach(([n,m,u])=>{const d=document.createElement('span');
  w.appendChild(d);});})();
 </script>
 </body></html>
+<div class="card" id="convergence">
+<p class="ct">The managers we would back invest in founders we flagged first</p>
+<p class="cs">5,329 stealth-founder signals delivered weekly to a US venture firm since Mar 2024, matched against 350 companies those managers bought since Mar 2024 — 22 cases where our signal came first, median lead 8.2 months</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 14px">
+<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left">
+<th style="padding:4px 8px;width:34%">Founder / company</th><th>We flagged</th><th>Manager invested</th><th>Lead</th></tr>
+<tr><td style="padding:4px 8px"><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15</td><td><b>9 mo</b></td></tr>
+<tr><td style="padding:4px 8px">Snir Kodesh · Petual</td><td>2025-04-18</td><td>Quiet Capital 2026-04-23</td><td>12 mo</td></tr>
+<tr><td style="padding:4px 8px">Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29</td><td>10 mo</td></tr>
+<tr><td style="padding:4px 8px">Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One (Bucher) 2025-05-21</td><td>9 mo</td></tr>
+<tr><td style="padding:4px 8px">Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27</td><td>7 mo</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+ <div><canvas id="c5" height="150"></canvas></div>
+ <div><canvas id="c6" height="150"></canvas></div>
+</div>
+<div style="background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:12px 0 0">
+<b>Artemis is the case to hold onto:</b> our engine flagged both founders in July 2025, a partner at the client firm independently claimed one, and nine months later Theory Ventures — a manager on the roster below — led their round. Three instruments, three timestamps, one target.<br>
+<b>What this is not:</b> a claim that we beat these managers to their unicorns. Our record begins Mar 2024; their unicorn positions were bought 2021–23. This is convergence — the engine and the manager selection independently pointing at the same founders — and it compounds every week.</div>
+<div class="src"><span>Olympos analysis · 123 weekly deliverables (2024-03-06 → 2026-08-07) timestamped in a third-party CRM; Crunchbase founder + round data; name-matched, 7 of 22 carry year-granularity investment dates and are excluded from the median</span><span class="byline">OLYMPOS</span></div>
+<script>
+// ---- Chart 5: lead-time distribution ----
+(()=>{const leads=[13/30,1,4,7,7,8,8,8,9,9,9,9,10,10,12,16,17,19,20,22];
+ const bins=[0,3,6,9,12,18,24], lbl=['0–3','3–6','6–9','9–12','12–18','18–24'];
+ const cnt=lbl.map((_,i)=>leads.filter(x=>x>=bins[i]&&x<bins[i+1]).length);
+ new Chart(c5,{type:'bar',data:{labels:lbl,datasets:[{data:cnt,backgroundColor:NAVY,borderRadius:4}]},
+ options:{plugins:{legend:{display:false},title:{display:true,text:'How far ahead we were (months)',font:{size:13,weight:'600'},color:NAVY},
+  tooltip:{callbacks:{label:i=>i.parsed.y+' founders flagged '+i.label+' months before the round'}}},
+ scales:{x:{grid:{display:false},title:{display:true,text:'months between our signal and the investment',font:{size:10}}},
+  y:{beginAtZero:true,ticks:{precision:0},title:{display:true,text:'founders',font:{size:10}}}}}});})();
+// ---- Chart 6: convergence rate by manager ----
+(()=>{const M=['Wischoff','Theory','Quiet','Day One','Soma'],hits=[1,2,3,1,15],pos=[15,11,40,21,148];
+ const rate=M.map((_,i)=>+(100*hits[i]/pos[i]).toFixed(1));
+ new Chart(c6,{type:'bar',data:{labels:M,datasets:[{data:rate,backgroundColor:[GREY,YELLOW,NAVY,GREY,NAVY],borderRadius:4}]},
+ options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'Share of each manager’s new positions we had already flagged',font:{size:13,weight:'600'},color:NAVY},
+  tooltip:{callbacks:{label:i=>hits[i.dataIndex]+' of '+pos[i.dataIndex]+' positions ('+i.parsed.x+'%)'}}},
+ scales:{x:{grid:{color:'#f0f0f0'},ticks:{callback:v=>v+'%'},title:{display:true,text:'% of their 2024+ positions pre-signaled by us',font:{size:10}}},y:{grid:{display:false}}}}});})();
+</script>
+
+</div>
+
