@@ -354,6 +354,22 @@ P.forEach(([n,m,u])=>{const d=document.createElement('span');
 
 </body></html>
 
+
+<div class="card" id="t1arrival">
+<p class="ct">Our top grade takes tier-1 money at 1.7x our bottom grade</p>
+<p class="cs">5,323 founders we flagged between March 2024 and August 2026, graded 1 to 3 at the moment of flagging — share whose company later raised from one of the 29 tier-1 firms</p>
+<div style="height:210px"><canvas id="c8" role="img" aria-label="Bar chart of tier-1 conversion by triage grade: grade 1 is 3.63 percent of 2,150 founders, grade 2 is 1.47 percent of 817, grade 3 is 2.10 percent of 1,574.">Grade 1 converts at 3.63 percent, grade 3 at 2.10 percent, grade 2 at 1.47 percent.</canvas></div>
+<p class="cs" style="margin-top:10px">Grade 2 sits below grade 3, on 817 founders — the middle of the scale is not carrying information, and that is where the next model revision has to earn its keep. Rates are floors: only 1,875 of these founders have a named company on LinkedIn today, so every round raised under a still-stealth name is invisible to the match and counted as a miss.</p>
+<div class="src"><span>Source: Olympos signal log, Crunchbase round data (199,620 parsed rounds), LinkedIn profile histories (9.8M) · tier-1 defined as the 29 hand-picked firms</span><span class="byline">OLYMPOS</span></div>
+</div>
+
+<div class="card" id="t1lead">
+<p class="ct">Half the tier-1 money arrives within nine months of our flag</p>
+<p class="cs">Cumulative share of tier-1 rounds already raised, by months elapsed since we flagged the founder — 137 founders who converted</p>
+<div style="height:230px"><canvas id="c9" role="img" aria-label="Line chart of cumulative tier-1 arrival: across all converting founders, 20 percent within 3 months, 35 percent within 6, 47 percent within 9, 63 percent within 12, 86 percent within 18, 96 percent within 24. Grade 1 runs ahead of grade 3 throughout.">Across all grades, 47 percent of tier-1 rounds land within nine months of the flag and 86 percent within eighteen.</canvas></div>
+<p class="cs" style="margin-top:10px">Grade 1 has a median lead of 8.6 months, grade 3 of 11.0. That gap is the window a fund can act in: a manager who takes the feed sees the founder roughly three quarters of a year before the round prices.</p>
+<div class="src"><span>Source: Olympos signal log, Crunchbase round data · first tier-1 round per founder, measured from the week we flagged them</span><span class="byline">OLYMPOS</span></div>
+</div>
 <div class="card" id="coinvest">
 <p class="ct">Ten to fourteen co-invests is the sweet spot</p>
 <p class="cs">Monte Carlo over single-deal outcomes (40,000 draws per point) — median and downside net multiple of the co-invest sleeve against the number of positions it holds</p>
@@ -427,3 +443,30 @@ P.forEach(([n,m,u])=>{const d=document.createElement('span');
    y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'x'},
     title:{display:true,text:'net multiple on the sleeve',color:'#666',font:{size:11,weight:500}}}}}});})();
 </script>
+
+<script>
+(()=>{
+ new Chart(document.getElementById('c8'),{type:'bar',data:{labels:['Grade 1  (n=2,150)','Grade 2  (n=817)','Grade 3  (n=1,574)'],
+  datasets:[{data:[3.63,1.47,2.10],backgroundColor:['#003876','#9ca3af','#9ca3af'],borderWidth:0,barPercentage:.55}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
+    callbacks:{label:i=>i.parsed.y.toFixed(2)+'% took tier-1 money'}}},
+   scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}}},
+    y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'%'},
+     title:{display:true,text:'share that later raised from a tier-1 firm',color:'#666',font:{size:11,weight:500}}}}}});
+
+ const B=[0,3,6,9,12,18,24,36];
+ new Chart(document.getElementById('c9'),{type:'line',data:{labels:B,datasets:[
+  {label:'Grade 1',data:[0,24.4,39.7,53.8,69.2,87.2,96.2,100],borderColor:'#003876',borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.07)'},
+  {label:'Grade 3',data:[0,18.2,33.3,36.4,57.6,87.9,97.0,100],borderColor:'#fdcf07',borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:false},
+  {label:'All grades',data:[0,19.7,35.0,47.4,62.8,86.1,96.4,100],borderColor:'#9ca3af',borderWidth:2,borderDash:[5,4],tension:.2,pointRadius:0,pointHoverRadius:5,fill:false}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:14,font:{size:11},color:'#555'}},
+   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
+    callbacks:{title:i=>'within '+i[0].label+' months',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(0)+'% raised'}}},
+   scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}},
+     title:{display:true,text:'months after we flagged the founder',color:'#666',font:{size:11,weight:500}}},
+    y:{min:0,max:100,grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'%'},
+     title:{display:true,text:'tier-1 rounds already raised',color:'#666',font:{size:11,weight:500}}}}}});
+})();
+</script>
+
