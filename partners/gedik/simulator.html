@@ -35,9 +35,6 @@ p{font-size:15px;margin:10px 0}
 .chart-card .chart-date{font-size:11px;color:#aaa}
 .chart-card .chart-olympos img{height:21px;width:auto;opacity:.65;display:block}
 .chart-card .chart-olympos a:hover img{opacity:1}
-/* ── simulator: the one card allowed to run wide ── */
-.sim-card{margin-left:calc(-1*(100vw - var(--col))/2 + 12px);margin-right:calc(-1*(100vw - var(--col))/2 + 12px)}
-@media(max-width:960px){.sim-card{margin-left:0;margin-right:0}}
 .controls{display:flex;flex-wrap:wrap;gap:16px;background:var(--light);border-radius:6px;padding:12px 15px;margin-bottom:16px;align-items:end}
 .controls>div{flex:0 0 auto}
 .controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap;color:#444}
@@ -197,19 +194,19 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 
 <!-- ═══════════ 6 ═══════════ -->
 <h2><span class="num">6</span>Size the fund yourself</h2>
-<p class="deck">Every number below moves. Switch selection off and the model collapses back to <b>1.57x and 7.3%</b> — the published fund-of-funds median is 1.4x to 1.6x and 8% to 10%. The model was never fitted to that number, so reproducing it is the reason to believe the selected case.</p>
+<p class="deck">Every number below moves. Switch selection off and the model collapses back to <b>1.55x and 7.1%</b> — the published fund-of-funds median is 1.4x to 1.6x and 8% to 10%. The model was never fitted to that number, so reproducing it is the reason to believe the selected case.</p>
 
-<div class="chart-card sim-card" id="simulator">
+<div class="chart-card" id="simulator">
 <div class="chart-title">The default fund returns about three times money, net</div>
 <div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive</div>
-<div class="controls">
-  <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="200" value="40" step="5"></div>
-  <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" min="3" max="18" step="1" value="12" style="width:140px"></div>
-  <div><label>Direct sleeve <span class="val" id="vCo">35%</span></label><input type="range" id="co" min="0" max="60" value="35" step="5"></div>
-  <div><label>Selection</label><select id="sel"><option value="on" selected>Signal-selected managers</option><option value="off">No selection — market pick</option></select></div>
-  <div><label>Weighting</label><select id="wt"><option value="equal" selected>Equal weight</option><option value="tiered">Tiered by conviction</option></select></div>
-  <div><label>Scenario draw <span class="val" id="vSeed">#42</span></label><button id="reroll">&#8635; Re-roll</button></div>
-</div>
+<form class="controls" autocomplete="off" onsubmit="return false">
+  <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" autocomplete="off" min="20" max="200" value="40" step="5"></div>
+  <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" autocomplete="off" min="3" max="18" step="1" value="12" style="width:140px"></div>
+  <div><label>Direct sleeve <span class="val" id="vCo">35%</span></label><input type="range" id="co" autocomplete="off" min="0" max="60" value="35" step="5"></div>
+  <div><label>Selection</label><select id="sel" autocomplete="off"><option value="on" selected>Signal-selected managers</option><option value="off">No selection — market pick</option></select></div>
+  <div><label>Weighting</label><select id="wt" autocomplete="off"><option value="equal" selected>Equal weight</option><option value="tiered">Tiered by conviction</option></select></div>
+  <div><label>Scenario draw <span class="val" id="vSeed">#42</span></label><button type="button" id="reroll">&#8635; Re-roll</button></div>
+</form>
 <div class="chart-legend">
  <span><span class="swatch" style="background:#003876;"></span>Median path</span>
  <span><span class="swatch" style="background:rgba(0,56,118,0.20);"></span>Middle half of outcomes</span>
@@ -264,7 +261,7 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="disclaimer">
 <details><summary>Model notes and what would change these numbers</summary>
 <p><b>Manager returns.</b> Each manager's net TVPI is drawn from a lognormal with a median of 1.65x before selection, dispersion fitted to observed single-fund spread (10th percentile ~0.6x, 90th ~4x). The selection premium is derived from the measured hit rate as 0.35 &times; ln(lift), not assigned by judgement — a manager measured at 2.7x the base rate earns a premium of 0.35, or about a 1.42x multiplier on median outcome. Managers with no measurement receive the roster average and are flagged as unscored.</p>
-<p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.0x to 25x when selection is on. Turn selection off and the fund returns 1.57x and 7.3% against a published median of 1.4-1.6x and 8-10%. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
+<p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.0x to 25x when selection is on. Turn selection off and the fund returns 1.55x and 7.1% against a published median of 1.4-1.6x and 8-10%. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
 <p><b>Fees and costs.</b> An 8% haircut on terminal value covers the vehicle's own management fee and carried interest, plus fixed operating cost of about $60K a year for administration, audit, tax, legal and compliance — a quoted figure, not an estimate. Fixed cost is flat in dollars, so it bites small funds hardest and is what sets the minimum viable size.</p>
 <p><b>Cash flows.</b> Capital called evenly over five years. Distributions of 60% of terminal value paid from year four on a rising schedule, with the remaining 40% held as residual value at year ten. IRR is computed on those flows, which is why it is materially higher than the tenth root of the multiple — committed capital is not outstanding for the full ten years.</p>
 <p><b>The direct sleeve.</b> Positions of about $1M each, so the count moves with both fund size and sleeve share. Single-company outcomes are drawn from a power law with dispersion of 1.45 in logs. Two corrections are applied and both reduce the number: the sleeve holds the same companies as the fund sleeve, so part of its fate is shared rather than independent; and allocation is contingent on being a meaningful limited partner, so if cheques fall below what a manager will accept, the co-investment invitations do not arrive either.</p>
@@ -437,6 +434,7 @@ const size_=document.getElementById('size'),mgr_=document.getElementById('mgr'),
  sel_=document.getElementById('sel'),wt_=document.getElementById('wt');
 ['input','change'].forEach(e=>[size_,mgr_,co_,sel_,wt_].forEach(el=>el.addEventListener(e,simulate)));
 document.getElementById('reroll').onclick=()=>{SEED=Math.floor(Math.random()*9000)+100;simulate();};
+size_.value=40; mgr_.value=12; co_.value=35; sel_.value='on'; wt_.value='equal';
 simulate();
 
 /* 7 — backtest calibration */
