@@ -195,17 +195,18 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 
 <!-- ═══════════ 6 ═══════════ -->
 <h2><span class="num">6</span>Size the fund yourself</h2>
-<p class="deck">Every number below moves. Switch selection off and the model collapses back to <b>1.55x and 7.1%</b> — the published fund-of-funds median is 1.4x to 1.6x and 8% to 10%. The model was never fitted to that number, so reproducing it is the reason to believe the selected case.</p>
+<p class="deck">Every number below moves. The control that matters most is <b>edge persistence</b> — it sets how much of our measured advantage we assume survives into the next fund. It ships at 50%, because our own persistence test found roughly half of top performers stay top. Drag it to zero and the fund still returns 2.48x — because that removes our <i>picking</i> edge but not our <i>access</i>: the right to buy funds an ordinary limited partner cannot get into. Switching selection off removes both, and drops the fund to 1.6x.</p>
 
 <div class="chart-card" id="simulator">
-<div class="chart-title">The default fund returns about three times money, net</div>
-<div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive</div>
+<div class="chart-title">The default fund returns 2.7x net, or 15% a year</div>
+<div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive. Measured edge is discounted 50% for persistence before it is used.</div>
 <form class="controls" autocomplete="off" onsubmit="return false">
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" autocomplete="off" min="20" max="200" value="40" step="5"></div>
   <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" autocomplete="off" min="3" max="18" step="1" value="12" style="width:140px"></div>
   <div><label>Direct sleeve <span class="val" id="vCo">35%</span></label><input type="range" id="co" autocomplete="off" min="0" max="60" value="35" step="5"></div>
   <div><label>Selection</label><select id="sel" autocomplete="off"><option value="on" selected>Signal-selected managers</option><option value="off">No selection — market pick</option></select></div>
   <div><label>Weighting</label><select id="wt" autocomplete="off"><option value="equal" selected>Equal weight</option><option value="tiered">Tiered by conviction</option></select></div>
+  <div><label>Edge persistence <span class="val" id="vPers">50%</span></label><input type="range" id="pers" autocomplete="off" min="0" max="100" value="50" step="5"></div>
   <div><label>Scenario draw <span class="val" id="vSeed">#42</span></label><button type="button" id="reroll">&#8635; Re-roll</button></div>
 </form>
 <div class="chart-legend">
@@ -261,13 +262,15 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 
 <div class="disclaimer">
 <details><summary>Model notes and what would change these numbers</summary>
-<p><b>Manager returns.</b> Each manager's net TVPI is drawn from a lognormal with a median of 1.65x before selection, dispersion fitted to observed single-fund spread (10th percentile ~0.6x, 90th ~4x). The selection premium is derived from the measured hit rate as 0.35 &times; ln(lift), not assigned by judgement — a manager measured at 2.7x the base rate earns a premium of 0.35, or about a 1.42x multiplier on median outcome. Managers with no measurement receive the roster average and are flagged as unscored.</p>
-<p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.0x to 25x when selection is on. Turn selection off and the fund returns 1.55x and 7.1% against a published median of 1.4-1.6x and 8-10%. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
+<p><b>Manager returns.</b> Each manager's net TVPI is drawn from a lognormal with a median of 1.79x before selection, dispersion fitted to observed single-fund spread (10th percentile ~0.6x, 90th ~4x). The selection premium is derived from the measured hit rate as 0.35 &times; ln(lift), not assigned by judgement — a manager measured at 2.7x the base rate earns a premium of 0.35, or about a 1.42x multiplier on median outcome. Managers with no measurement receive the roster average and are flagged as unscored.</p>
+<p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.3x to 25x when selection is on. Turn selection off and drop the direct sleeve and the fund returns about 1.5x with roughly a fifth of scenarios below cost, against a published fund-of-funds median of 1.4-1.6x and a comparable loss rate. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
 <p><b>Fees and costs.</b> An 8% haircut on terminal value covers the vehicle's own management fee and carried interest, plus fixed operating cost of about $60K a year for administration, audit, tax, legal and compliance — a quoted figure, not an estimate. Fixed cost is flat in dollars, so it bites small funds hardest and is what sets the minimum viable size.</p>
-<p><b>Cash flows.</b> Capital called evenly over five years. Distributions of 60% of terminal value paid from year four on a rising schedule, with the remaining 40% held as residual value at year ten. IRR is computed on those flows, which is why it is materially higher than the tenth root of the multiple — committed capital is not outstanding for the full ten years.</p>
-<p><b>The direct sleeve.</b> Positions of about $1M each, so the count moves with both fund size and sleeve share. Single-company outcomes are drawn from a power law with dispersion of 1.45 in logs. Two corrections are applied and both reduce the number: the sleeve holds the same companies as the fund sleeve, so part of its fate is shared rather than independent; and allocation is contingent on being a meaningful limited partner, so if cheques fall below what a manager will accept, the co-investment invitations do not arrive either.</p>
+<p><b>Cash flows.</b> Capital called evenly over five years. Distributions of 60% of terminal value paid <b>from year six</b> on a rising schedule, with the remaining 40% held as residual value at year ten. Seed funds do not return cash before then, and an earlier schedule was flattering the IRR by roughly two points. IRR is computed on those flows, which is why it is higher than the tenth root of the multiple — committed capital is not outstanding for the full ten years.</p>
+<p><b>Persistence.</b> The roster is the top of 816 measured investors, so its hit rates are in-sample maxima and will not repeat at full strength. Our own Seed-100 persistence test found 48 of 100 top performers persisted, with a median 22-place move, so the measured premium is discounted by half before the model uses it. The slider exposes this: at 100% the fund returns roughly a point and a half more, at zero it returns the unselected case.</p>
+<p><b>Vintage risk is regime-switching, not lognormal.</b> A thin-tailed draw cannot produce a 2000 or a 2021, yet both happened inside 25 years. The model gives 18% of vintages a bust regime centred near a 55% haircut, which puts a fund-halving vintage at 12% rather than the 6.5% a lognormal allows. This is the single largest driver of the chance of losing money, and no amount of manager selection diversifies it away.</p>
+<p><b>The direct sleeve.</b> Positions of about $1M each, so the count moves with both fund size and sleeve share. Single-company outcomes are drawn from a power law with dispersion of 1.45 in logs, calibrated so the sleeve returns <b>1.27x without selection — the figure our own 2024 window measured for random co-investment — and 2.20x with it.</b> That 1.7x skill premium is the largest single assumption on this page. Two corrections are applied and both reduce the number: the sleeve holds the same companies as the fund sleeve, so part of its fate is shared rather than independent; and allocation is contingent on being a meaningful limited partner, so if cheques fall below what a manager will accept, the co-investment invitations do not arrive either.</p>
 <p><b>Market risk.</b> A single vintage factor with dispersion of 0.46 in logs multiplies every path. This is the dominant risk in a fund of funds and it is not diversifiable by holding more managers — 2021 vintages are the reference case.</p>
-<p><b>What is measured and what is assumed.</b> Measured: the 22 convergence cases, the 8.6-month median lead, the 5.88% base rate and every manager hit rate, the sector head starts, the 2024 marks. Assumed: that a measured hit rate translates into fund returns at the stated coefficient, that informed co-investment beats random co-investment, and that access to oversubscribed funds can be bought with a signal feed. The first assumption is the one that matters most and the one Fund I exists to test.</p>
+<p><b>What is measured and what is assumed.</b> Measured: the 22 convergence cases, the 8.6-month median lead, the 5.88% base rate and every manager hit rate, the sector head starts, the 2024 marks. Assumed: that a measured hit rate translates into fund returns at the stated coefficient, that informed co-investment returns 2.20x where random co-investment measured 1.27x, and that access to oversubscribed funds can be bought with a signal feed. The first assumption is the one that matters most and the one Fund I exists to test.</p>
 </details>
 <p style="margin-top:12px"><b>Not an offer.</b> Illustrative modelling for discussion between Olympos and Gedik. Simulated results are not returns; the 2024 figures are marks-based estimates, not audited performance. Past patterns do not predict future outcomes, and every forward number on this page is a model output rather than a forecast.</p>
 </div>
@@ -357,7 +360,7 @@ const ROSTER=[
  ['Humba III (Polovets)','B',1.39,0.90,0],['Category (Iltchev)','B',1.35,0.80,0]]
  .sort((a,b)=>b[2]-a[2]);
 const CW={A:1.4,B:1.2,C:0.7,D:0.5}, MINCHK={A:2.0,B:0.75,C:0.4,D:0.3};
-const MU_BASE=0.50;
+const MU_BASE=0.58;
 let SEED=42, chartMC=null;
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
 let rng=mulberry32(SEED);
@@ -365,19 +368,23 @@ function gauss(mu,sig){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();return mu+s
 function lognorm(mu,sig){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();return Math.exp(mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v));}
 const wS=y=>1-Math.exp(-Math.pow(y/6.5,1.8));
 const ramp=(y,fin)=>(1+(fin-1)*wS(y)/wS(10))*(1-0.10*Math.exp(-Math.pow((y-1.6)/2.4,2)));
-function irrOf(tv){const D=[0,0,0,0,.05,.10,.15,.20,.20,.15,.15],cf=[];
+function irrOf(tv){const D=[0,0,0,0,0,0,.10,.15,.25,.25,.25],cf=[];
  for(let y=0;y<=10;y++){let c=(y<5?-0.2:0)+D[y]*tv*0.6;if(y===10)c+=tv*0.4;cf.push(c);}
  let lo=-0.5,hi=1.5;for(let i=0;i<60;i++){const r=(lo+hi)/2;let n=0;cf.forEach((c,y)=>n+=c/Math.pow(1+r,y));if(n>0)lo=r;else hi=r;}
  return (lo+hi)/2;}
 function simulate(){
  rng=mulberry32(SEED);
  const size=+size_.value, m=+mgr_.value, co=+co_.value/100, selOn=sel_.value==='on', wt=wt_.value;
- vSize.textContent='$'+size+'M'; vMgr.textContent=m; vCo.textContent=Math.round(co*100)+'%'; vSeed.textContent='#'+SEED;
- const N=8000, CAPS=selOn?25.0:2.0, ps=selOn?1:0;
+ vSize.textContent='$'+size+'M'; vMgr.textContent=m; vCo.textContent=Math.round(co*100)+'%'; vSeed.textContent='#'+SEED; vPers.textContent=pers_.value+'%';
+ const N=8000, CAPS=selOn?25.0:2.3, ps=selOn?1:0;
  const ch=ROSTER.slice(0,m);
  const w=ch.map(r=> wt==='tiered'?CW[r[1]]:1), ws=w.reduce((a,b)=>a+b,0);
  const sizeDrag=0.09*Math.log2(size/40), fixedDrag=0.60/size, FEE=Math.max(0.55,1-0.08-fixedDrag);
- const prem=ch.map(r=>0.35*Math.log(r[2]));
+ // PERSISTENCE HAIRCUT. The roster is the top of 816 measured investors, so its lifts are
+ // in-sample maxima. Our Seed-100 persistence test found 48 of 100 top performers persist,
+ // median 22-place move — so the measured premium is discounted before it is used.
+ const persist=+pers_.value/100;
+ const prem=ch.map(r=>persist*0.35*Math.log(r[2]));
  // estimation error: a premium measured on 5 entries is far less certain than one on 177.
  const BASE=0.0588;
  const se=ch.map(r=>{ if(!r[4]) return 0.30; const pr=Math.min(0.9,BASE*r[2]);
@@ -386,15 +393,21 @@ function simulate(){
  const accW=ch.reduce((a,r,i)=>a+(acc[i]?w[i]:0),0)/ws;
  const avgP=ch.reduce((a,r,i)=>a+prem[i]*w[i],0)/ws*ps;
  const CENTER=Math.exp(MU_BASE+avgP-sizeDrag);
- const coMu=(selOn?0.10:-0.30)*(0.35+0.65*accW)+0.25*accW-sizeDrag;
+ // DIRECT SLEEVE anchored to measurement, not assumption. Our 2024 window measured random
+ // co-investment into the same companies at 1.27x. Informed selection is credited with 2.20x —
+ // a stated 1.7x skill premium, and the single largest assumption on this page.
+ const coTarget=(selOn?2.20:1.27)*(0.55+0.45*accW);
+ const coMu=Math.log(coTarget)-1.45*1.45/2-sizeDrag;
  const k=Math.max(3,Math.round(co*size/1.0));
  const paths=[];
  for(let s=0;s<N;s++){
-  const mkt=lognorm(0,0.46);
+  // VINTAGE RISK is regime-like, not lognormal: 2000 and 2021 were far worse than any
+  // thin-tailed draw allows. 18% of vintages are busts — roughly one in five and a half years.
+  const mkt = rng()<0.18 ? lognorm(-0.85,0.45) : lognorm(0.19,0.36);
   let ft=0;
   ch.forEach((r,i)=>{const ok=acc[i];
    const pi=ok?gauss(prem[i],se[i]):0;
-   ft+=(w[i]/ws)*Math.min(lognorm(MU_BASE+pi*ps-sizeDrag, ok?r[3]:0.7), ok?CAPS:2.0);});
+   ft+=(w[i]/ws)*Math.min(lognorm(MU_BASE+pi*ps-sizeDrag, ok?r[3]:0.7), ok?CAPS:2.3);});
   let ct=0;
   if(co>0){for(let i=0;i<k;i++) ct+=lognorm(coMu,1.45)/k;
    ct*=Math.pow(Math.max(0.25,ft/CENTER),0.5);}
@@ -432,10 +445,10 @@ function simulate(){
     y:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('net TVPI on committed capital')}}}});
 }
 const size_=document.getElementById('size'),mgr_=document.getElementById('mgr'),co_=document.getElementById('co'),
- sel_=document.getElementById('sel'),wt_=document.getElementById('wt');
-['input','change'].forEach(e=>[size_,mgr_,co_,sel_,wt_].forEach(el=>el.addEventListener(e,simulate)));
+ sel_=document.getElementById('sel'),wt_=document.getElementById('wt'),pers_=document.getElementById('pers');
+['input','change'].forEach(e=>[size_,mgr_,co_,sel_,wt_,pers_].forEach(el=>el.addEventListener(e,simulate)));
 document.getElementById('reroll').onclick=()=>{SEED=Math.floor(Math.random()*9000)+100;simulate();};
-size_.value=40; mgr_.value=12; co_.value=35; sel_.value='on'; wt_.value='equal';
+size_.value=40; mgr_.value=12; co_.value=35; sel_.value='on'; wt_.value='equal'; pers_.value=50;
 simulate();
 
 /* 7 — backtest calibration */

@@ -67,3 +67,50 @@ The page now says this instead of a concentration warning the numbers contradict
 $40M, 12 managers, 35% direct sleeve, signal-selected, equal weight →
 **3.21x median net TVPI, 3.85x mean, 20.3% median net IRR, 2% chance of losing money.**
 Selection off → 1.55x / 7.1%.
+
+
+---
+
+# Second pass: the IRR was too high and the loss rate too low
+
+Emrah pushed back on 20.3% net IRR and a 2% chance of losing money. Both were right to challenge.
+Four further corrections, all of which lower the answer.
+
+**1. Persistence.** The roster is the top 12 of 816 measured investors, so its lifts are in-sample
+maxima — selecting on the outcome variable and then assuming full persistence. Our own Seed-100
+persistence test found 48/100 top performers persisted with a median 22-place move, so the measured
+premium is now **discounted 50%** before use, and the haircut is exposed as a slider.
+
+**2. The direct sleeve was invented.** It carried a 4.05x mean. Our 2024 window measured *random*
+co-investment into the same companies at **1.27x**. The sleeve is now calibrated to return 1.27x
+unselected and **2.20x** selected — a stated 1.7x skill premium, and the largest single assumption
+on the page.
+
+**3. Distribution timing.** Cash was returning from year four. Seed funds do not distribute before
+roughly year six; the schedule now starts there. The old timing was worth about two points of IRR.
+
+**4. Vintage risk was thin-tailed.** A lognormal with sigma 0.46 puts a fund-halving vintage at
+6.5%, yet 2000 and 2021 both happened inside 25 years. Replaced with a **regime switch: 18% of
+vintages are busts** centred near a 55% haircut. That moves a fund-halving vintage to 12% and is
+the dominant driver of the chance of losing money — no amount of manager selection diversifies it.
+
+Base return also lifted (MU 0.50 -> 0.58, unselected cap 2.0 -> 2.3) so the calibration case still
+lands on the published benchmark after the four haircuts above.
+
+## Where it lands now
+
+| Configuration | Net TVPI | Net IRR | Chance of loss |
+|---|---|---|---|
+| **Default** — $40M, 12 managers, 35% sleeve, selected, equal weight | **2.74x** (mean 3.08x) | **15.4%** | **8%** |
+| Persistence at 100% | 3.04x | 17.1% | 7% |
+| Persistence at 0% — picking edge gone, access kept | 2.48x | 13.7% | 10% |
+| **Calibration** — selection off, no sleeve | **1.60x** | 6.9% | **21%** |
+
+Published benchmarks: fund-of-funds median 1.4-1.6x / 8-10%; top quartile 1.9-2.2x / 12-15%.
+The calibration case now lands on the median for TVPI and loss rate, slightly under on IRR (the
+year-six distribution schedule costs it). The default sits at top-quartile, which is a claim we can
+defend, where 3.21x / 20.3% was not.
+
+**The edge now decomposes**, which is worth more in a meeting than the headline: access alone is
+worth 1.60x -> 2.48x; picking on top of access is worth 2.48x -> 2.74x at the persistence we assume,
+3.04x if it persists fully.
