@@ -1,0 +1,498 @@
+[
+ {
+  "yrank": 1,
+  "name": "Y Combinator",
+  "ycount": 326,
+  "entries": 2254,
+  "hits": 188,
+  "raw": 0.0834072759538598,
+  "shrunk": 0.08313725988924121,
+  "lift": 1.4140766630969535,
+  "active24": 1943
+ },
+ {
+  "yrank": 2,
+  "name": "Alumni Ventures",
+  "ycount": 149,
+  "entries": 279,
+  "hits": 22,
+  "raw": 0.07885304659498207,
+  "shrunk": 0.07720333976177868,
+  "lift": 1.3131469718357196,
+  "active24": 247
+ },
+ {
+  "yrank": 3,
+  "name": "Liquid 2 Ventures",
+  "ycount": 119,
+  "entries": 363,
+  "hits": 53,
+  "raw": 0.14600550964187328,
+  "shrunk": 0.14038612187520802,
+  "lift": 2.3878191202222485,
+  "active24": 128
+ },
+ {
+  "yrank": 4,
+  "name": "Pioneer Fund",
+  "ycount": 87,
+  "entries": 162,
+  "hits": 10,
+  "raw": 0.06172839506172839,
+  "shrunk": 0.06133591062877389,
+  "lift": 1.0432588221634875,
+  "active24": 327
+ },
+ {
+  "yrank": 5,
+  "name": "Soma Capital",
+  "ycount": 81,
+  "entries": 177,
+  "hits": 13,
+  "raw": 0.07344632768361582,
+  "shrunk": 0.0716327489484194,
+  "lift": 1.2183971270690288,
+  "active24": 155
+ },
+ {
+  "yrank": 6,
+  "name": "BoxGroup",
+  "ycount": 76,
+  "entries": 106,
+  "hits": 13,
+  "raw": 0.12264150943396226,
+  "shrunk": 0.11045660524870776,
+  "lift": 1.8787497684575862,
+  "active24": 91
+ },
+ {
+  "yrank": 7,
+  "name": "Edward Lando",
+  "ycount": 76,
+  "entries": 174,
+  "hits": 16,
+  "raw": 0.09195402298850575,
+  "shrunk": 0.08778801652050612,
+  "lift": 1.493181103473947,
+  "active24": 22
+ },
+ {
+  "yrank": 8,
+  "name": "Pareto Holdings",
+  "ycount": 73,
+  "entries": 191,
+  "hits": 18,
+  "raw": 0.09424083769633508,
+  "shrunk": 0.09013803373879962,
+  "lift": 1.5331524052788423,
+  "active24": 39
+ },
+ {
+  "yrank": 9,
+  "name": "Gaingels",
+  "ycount": 72,
+  "entries": 106,
+  "hits": 5,
+  "raw": 0.04716981132075472,
+  "shrunk": 0.049387902958631436,
+  "lift": 0.8400358768876801,
+  "active24": 79
+ },
+ {
+  "yrank": 10,
+  "name": "Amplify Partners",
+  "ycount": 70,
+  "entries": 40,
+  "hits": 10,
+  "raw": 0.25,
+  "shrunk": 0.17645869673201103,
+  "lift": 3.0013753806857255,
+  "active24": 29
+ },
+ {
+  "yrank": 11,
+  "name": "Abstract",
+  "ycount": 66,
+  "entries": 74,
+  "hits": 14,
+  "raw": 0.1891891891891892,
+  "shrunk": 0.1562607604806133,
+  "lift": 2.657829895377788,
+  "active24": 68
+ },
+ {
+  "yrank": 12,
+  "name": "FJ Labs",
+  "ycount": 65,
+  "entries": 194,
+  "hits": 23,
+  "raw": 0.11855670103092783,
+  "shrunk": 0.11173431638164712,
+  "lift": 1.9004822804224475,
+  "active24": 126
+ },
+ {
+  "yrank": 13,
+  "name": "Global Founders Capital",
+  "ycount": 65,
+  "entries": 282,
+  "hits": 21,
+  "raw": 0.07446808510638298,
+  "shrunk": 0.07319158074130527,
+  "lift": 1.2449112034645002,
+  "active24": 16
+ },
+ {
+  "yrank": 14,
+  "name": "Kima Ventures",
+  "ycount": 53,
+  "entries": 176,
+  "hits": 13,
+  "raw": 0.07386363636363637,
+  "shrunk": 0.07198913078398367,
+  "lift": 1.2244588043181284,
+  "active24": 133
+ },
+ {
+  "yrank": 15,
+  "name": "Guillermo Rauch",
+  "ycount": 51,
+  "entries": 23,
+  "hits": 5,
+  "raw": 0.21739130434782608,
+  "shrunk": 0.13478781849126495,
+  "lift": 2.29259791400596,
+  "active24": 32
+ },
+ {
+  "yrank": 16,
+  "name": "Cl\u00e9ment Delangue",
+  "ycount": 49
+ },
+ {
+  "yrank": 17,
+  "name": "Arash Ferdowsi",
+  "ycount": 48
+ },
+ {
+  "yrank": 18,
+  "name": "Nadav Ben-Chanoch",
+  "ycount": 48,
+  "entries": 75,
+  "hits": 1,
+  "raw": 0.013333333333333334,
+  "shrunk": 0.02469815287580718,
+  "lift": 0.4200893997445722,
+  "active24": 0
+ },
+ {
+  "yrank": 19,
+  "name": "Afore Capital",
+  "ycount": 44,
+  "entries": 53,
+  "hits": 9,
+  "raw": 0.16981132075471697,
+  "shrunk": 0.13422840112282972,
+  "lift": 2.2830828175655764,
+  "active24": 51
+ },
+ {
+  "yrank": 20,
+  "name": "Jack Altman",
+  "ycount": 43,
+  "entries": 18,
+  "hits": 4,
+  "raw": 0.2222222222222222,
+  "shrunk": 0.12720500668792367,
+  "lift": 2.1636223232053227,
+  "active24": 3
+ },
+ {
+  "yrank": 21,
+  "name": "Flybridge",
+  "ycount": 41,
+  "entries": 116,
+  "hits": 12,
+  "raw": 0.10344827586206896,
+  "shrunk": 0.09553060487645898,
+  "lift": 1.6248743240672807,
+  "active24": 94
+ },
+ {
+  "yrank": 22,
+  "name": "Gokul Rajaram",
+  "ycount": 41,
+  "entries": 38,
+  "hits": 5,
+  "raw": 0.13157894736842105,
+  "shrunk": 0.1026954807552495,
+  "lift": 1.7467412678140648,
+  "active24": 54
+ },
+ {
+  "yrank": 23,
+  "name": "Nate Matherson",
+  "ycount": 41
+ },
+ {
+  "yrank": 24,
+  "name": "Adam D\u2019Angelo",
+  "ycount": 40
+ },
+ {
+  "yrank": 25,
+  "name": "Charlie Songhurst",
+  "ycount": 40,
+  "entries": 61,
+  "hits": 4,
+  "raw": 0.06557377049180328,
+  "shrunk": 0.06360250334396184,
+  "lift": 1.0818111616026613,
+  "active24": 38
+ },
+ {
+  "yrank": 26,
+  "name": "Craft Ventures",
+  "ycount": 39,
+  "entries": 61,
+  "hits": 9,
+  "raw": 0.14754098360655737,
+  "shrunk": 0.12174203822768276,
+  "lift": 2.070703020582732,
+  "active24": 19
+ },
+ {
+  "yrank": 27,
+  "name": "A.Capital Ventures",
+  "ycount": 39,
+  "entries": 51,
+  "hits": 9,
+  "raw": 0.17647058823529413,
+  "shrunk": 0.13776072746816734,
+  "lift": 2.3431639443436176,
+  "active24": 48
+ },
+ {
+  "yrank": 28,
+  "name": "Lachy Groom",
+  "ycount": 39,
+  "entries": 23,
+  "hits": 2,
+  "raw": 0.08695652173913043,
+  "shrunk": 0.07228781849126496,
+  "lift": 1.2295391656023842,
+  "active24": 12
+ },
+ {
+  "yrank": 29,
+  "name": "Firestreak Ventures",
+  "ycount": 39
+ },
+ {
+  "yrank": 30,
+  "name": "Eight Capital",
+  "ycount": 39,
+  "entries": 40,
+  "hits": 3,
+  "raw": 0.075,
+  "shrunk": 0.06876638903970335,
+  "lift": 1.169643383436487,
+  "active24": 42
+ },
+ {
+  "yrank": 31,
+  "name": "Quiet Capital",
+  "ycount": 38,
+  "entries": 97,
+  "hits": 10,
+  "raw": 0.10309278350515463,
+  "shrunk": 0.09401487940639933,
+  "lift": 1.59909344052928,
+  "active24": 36
+ },
+ {
+  "yrank": 32,
+  "name": "A.Capital Ventures",
+  "ycount": 38,
+  "entries": 51,
+  "hits": 9,
+  "raw": 0.17647058823529413,
+  "shrunk": 0.13776072746816734,
+  "lift": 2.3431639443436176,
+  "active24": 48
+ },
+ {
+  "yrank": 33,
+  "name": "Bain Capital Ventures",
+  "ycount": 37,
+  "entries": 53,
+  "hits": 9,
+  "raw": 0.16981132075471697,
+  "shrunk": 0.13422840112282972,
+  "lift": 2.2830828175655764,
+  "active24": 32
+ },
+ {
+  "yrank": 34,
+  "name": "TRAC",
+  "ycount": 37
+ },
+ {
+  "yrank": 35,
+  "name": "Tribe Capital",
+  "ycount": 36,
+  "entries": 44,
+  "hits": 3,
+  "raw": 0.06818181818181818,
+  "shrunk": 0.06477993170406837,
+  "lift": 1.101837969903937,
+  "active24": 15
+ },
+ {
+  "yrank": 36,
+  "name": "Gradient",
+  "ycount": 36,
+  "entries": 53,
+  "hits": 6,
+  "raw": 0.11320754716981132,
+  "shrunk": 0.09576686266129125,
+  "lift": 1.628892818547991,
+  "active24": 57
+ },
+ {
+  "yrank": 37,
+  "name": "SV Angel",
+  "ycount": 36,
+  "entries": 151,
+  "hits": 40,
+  "raw": 0.26490066225165565,
+  "shrunk": 0.2356239504976177,
+  "lift": 4.007713630558458,
+  "active24": 84
+ },
+ {
+  "yrank": 38,
+  "name": "Outset Ventures",
+  "ycount": 36,
+  "entries": 16,
+  "hits": 0,
+  "raw": 0.0,
+  "shrunk": 0.035849153355627265,
+  "lift": 0.6097560975609757,
+  "active24": 9
+ },
+ {
+  "yrank": 39,
+  "name": "Mandeep Singh",
+  "ycount": 35,
+  "entries": 20,
+  "hits": 4,
+  "raw": 0.2,
+  "shrunk": 0.12155145083512707,
+  "lift": 2.067461331062864,
+  "active24": 18
+ },
+ {
+  "yrank": 40,
+  "name": "Correlation Ventures",
+  "ycount": 34,
+  "entries": 44,
+  "hits": 3,
+  "raw": 0.06818181818181818,
+  "shrunk": 0.06477993170406837,
+  "lift": 1.101837969903937,
+  "active24": 19
+ },
+ {
+  "yrank": 41,
+  "name": "Everywhere Ventures",
+  "ycount": 34,
+  "entries": 113,
+  "hits": 14,
+  "raw": 0.12389380530973451,
+  "shrunk": 0.11210011077957041,
+  "lift": 1.9067040553797174,
+  "active24": 70
+ },
+ {
+  "yrank": 42,
+  "name": "Nat Friedman",
+  "ycount": 34,
+  "entries": 15,
+  "hits": 4,
+  "raw": 0.26666666666666666,
+  "shrunk": 0.13674538218951796,
+  "lift": 2.325893997445722,
+  "active24": 18
+ },
+ {
+  "yrank": 43,
+  "name": "Dylan Field",
+  "ycount": 34,
+  "entries": 26,
+  "hits": 5,
+  "raw": 0.19230769230769232,
+  "shrunk": 0.12685912328589644,
+  "lift": 2.1577392131820803,
+  "active24": 10
+ },
+ {
+  "yrank": 44,
+  "name": "Leonis Capital",
+  "ycount": 34
+ },
+ {
+  "yrank": 45,
+  "name": "Asymmetric",
+  "ycount": 33,
+  "entries": 17,
+  "hits": 3,
+  "raw": 0.17647058823529413,
+  "shrunk": 0.10642417351382662,
+  "lift": 1.8101623791278965,
+  "active24": 19
+ },
+ {
+  "yrank": 46,
+  "name": "Goodwater Capital",
+  "ycount": 33,
+  "entries": 193,
+  "hits": 4,
+  "raw": 0.02072538860103627,
+  "shrunk": 0.02509089581459045,
+  "lift": 0.42676954081572877,
+  "active24": 46
+ },
+ {
+  "yrank": 47,
+  "name": "Palm Drive Capital",
+  "ycount": 33
+ },
+ {
+  "yrank": 48,
+  "name": "Lowercarbon Capital",
+  "ycount": 33,
+  "entries": 23,
+  "hits": 2,
+  "raw": 0.08695652173913043,
+  "shrunk": 0.07228781849126496,
+  "lift": 1.2295391656023842,
+  "active24": 17
+ },
+ {
+  "yrank": 49,
+  "name": "Essence VC",
+  "ycount": 33,
+  "entries": 22,
+  "hits": 2,
+  "raw": 0.09090909090909091,
+  "shrunk": 0.07382585718256847,
+  "lift": 1.2556995733811582,
+  "active24": 14
+ },
+ {
+  "yrank": 50,
+  "name": "Fredrik Hjelm",
+  "ycount": 33
+ }
+]
