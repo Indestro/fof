@@ -1,0 +1,208 @@
+{
+ "base": 0.05879261150322871,
+ "n": 26636,
+ "rows": [
+  {
+   "mgr": "SV Angel",
+   "cb": "SV Angel",
+   "entries": 151,
+   "hits": 40,
+   "raw": 0.26490066225165565,
+   "shrunk": 0.2356239504976177,
+   "lift": 4.007713630558458
+  },
+  {
+   "mgr": "Chapter One",
+   "cb": "Chapter One",
+   "entries": 28,
+   "hits": 9,
+   "raw": 0.32142857142857145,
+   "shrunk": 0.1975436846713343,
+   "lift": 3.3600086749078293
+  },
+  {
+   "mgr": "1984 Ventures",
+   "cb": "1984 Ventures",
+   "entries": 25,
+   "hits": 7,
+   "raw": 0.28,
+   "shrunk": 0.16939630575161435,
+   "lift": 2.8812515964240104
+  },
+  {
+   "mgr": "Silent Ventures (Moses)",
+   "cb": "Jackson Moses",
+   "entries": 22,
+   "hits": 6,
+   "raw": 0.2727272727272727,
+   "shrunk": 0.15893224016129187,
+   "lift": 2.703268932909432
+  },
+  {
+   "mgr": "Abstract (Naimi)",
+   "cb": "Abstract",
+   "entries": 74,
+   "hits": 14,
+   "raw": 0.1891891891891892,
+   "shrunk": 0.1562607604806133,
+   "lift": 2.657829895377788
+  },
+  {
+   "mgr": "Volt Capital",
+   "cb": "Volt Capital",
+   "entries": 19,
+   "hits": 5,
+   "raw": 0.2631578947368421,
+   "shrunk": 0.1470412565359254,
+   "lift": 2.50101590618832
+  },
+  {
+   "mgr": "A* (Hartz)",
+   "cb": "A*",
+   "entries": 51,
+   "hits": 9,
+   "raw": 0.17647058823529413,
+   "shrunk": 0.13776072746816734,
+   "lift": 2.3431639443436176
+  },
+  {
+   "mgr": "Afore Capital",
+   "cb": "Afore Capital",
+   "entries": 53,
+   "hits": 9,
+   "raw": 0.16981132075471697,
+   "shrunk": 0.13422840112282972,
+   "lift": 2.2830828175655764
+  },
+  {
+   "mgr": "JAM Fund (Mateen)",
+   "cb": "JAM Fund",
+   "entries": 16,
+   "hits": 4,
+   "raw": 0.25,
+   "shrunk": 0.13341012896538337,
+   "lift": 2.2691648755568017
+  },
+  {
+   "mgr": "Pebblebed III",
+   "cb": "Pebblebed",
+   "entries": 5,
+   "hits": 2,
+   "raw": 0.4,
+   "shrunk": 0.11566050958602393,
+   "lift": 1.9672626649638145
+  },
+  {
+   "mgr": "Everywhere Ventures",
+   "cb": "Everywhere Ventures",
+   "entries": 113,
+   "hits": 14,
+   "raw": 0.12389380530973451,
+   "shrunk": 0.11210011077957041,
+   "lift": 1.9067040553797174
+  },
+  {
+   "mgr": "Marathon (Rajaram)",
+   "cb": "Marathon Management Partners",
+   "entries": 18,
+   "hits": 3,
+   "raw": 0.16666666666666666,
+   "shrunk": 0.1039491927344353,
+   "lift": 1.7680655796132942
+  },
+  {
+   "mgr": "Mischief (Perret)",
+   "cb": "Mischief",
+   "entries": 28,
+   "hits": 4,
+   "raw": 0.14285714285714285,
+   "shrunk": 0.10320406202982486,
+   "lift": 1.7553916961854503
+  },
+  {
+   "mgr": "Kearny Jackson",
+   "cb": "Kearny Jackson",
+   "entries": 8,
+   "hits": 1,
+   "raw": 0.125,
+   "shrunk": 0.074842887502446,
+   "lift": 1.2729981810441582
+  },
+  {
+   "mgr": "Soma Capital",
+   "cb": "Soma Capital",
+   "entries": 177,
+   "hits": 13,
+   "raw": 0.07344632768361582,
+   "shrunk": 0.0716327489484194,
+   "lift": 1.2183971270690288
+  },
+  {
+   "mgr": "Day One III (Bucher)",
+   "cb": "Day One Ventures",
+   "entries": 34,
+   "hits": 2,
+   "raw": 0.058823529411764705,
+   "shrunk": 0.058810428603063014,
+   "lift": 1.0003030499816006
+  },
+  {
+   "mgr": "Orange Collective",
+   "cb": "Orange Collective",
+   "entries": 2,
+   "hits": 0,
+   "raw": 0.0,
+   "shrunk": 0.05443760324373029,
+   "lift": 0.9259259259259259
+  },
+  {
+   "mgr": "Mei Zuo vehicle",
+   "cb": "Mei Z.",
+   "entries": 4,
+   "hits": 0,
+   "raw": 0.0,
+   "shrunk": 0.05068328577864544,
+   "lift": 0.8620689655172414
+  },
+  {
+   "mgr": "Humba III (Polovets)",
+   "entries": 0,
+   "hits": 0,
+   "raw": null,
+   "shrunk": null,
+   "lift": null
+  },
+  {
+   "mgr": "Category (Iltchev)",
+   "entries": 0,
+   "hits": 0,
+   "raw": null,
+   "shrunk": null,
+   "lift": null
+  },
+  {
+   "mgr": "Chemistry II",
+   "entries": 0,
+   "hits": 0,
+   "raw": null,
+   "shrunk": null,
+   "lift": null
+  },
+  {
+   "mgr": "Theory (Tunguz)",
+   "entries": 0,
+   "hits": 0,
+   "raw": null,
+   "shrunk": null,
+   "lift": null
+  },
+  {
+   "mgr": "Earthling (Ghashghai)",
+   "entries": 0,
+   "hits": 0,
+   "raw": null,
+   "shrunk": null,
+   "lift": null
+  }
+ ]
+}

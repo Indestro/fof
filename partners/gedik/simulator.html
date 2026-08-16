@@ -1,472 +1,472 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FoF Simulator — Olympos</title>
+<title>Olympos Fund of Funds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
-:root{--navy:#003876;--yellow:#fdcf07;--grey:#8a8a8a;--light:#f4f4f4;--rule:#ddd}
+:root{--navy:#003876;--yellow:#fdcf07;--grey:#888888;--warm:#B4B2A9;--light:#f4f4f4;--rule:#ddd;--col:900px}
 *{box-sizing:border-box}
-body{font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;color:#111;background:#fff;max-width:900px;margin:0 auto;padding:40px 24px;line-height:1.6}
-h1{font-size:28px;font-weight:600;margin:0;letter-spacing:-.3px}
-.lede{font-size:15px;color:#666;margin:6px 0 26px}
+body{font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;color:#111;background:#fff;max-width:var(--col);margin:0 auto;padding:44px 24px 20px;line-height:1.62}
+h1{font-size:28px;font-weight:600;margin:0 0 10px;letter-spacing:-.4px;line-height:1.25}
+h2{font-size:20px;font-weight:600;color:#111;margin:44px 0 6px;letter-spacing:-.25px;line-height:1.3}
+h2 .num{color:var(--yellow);font-weight:700;margin-right:9px}
+p{font-size:15px;margin:10px 0}
+.lede{font-size:17px;color:#333;line-height:1.55;margin:0 0 4px;font-weight:500}
+.sub{font-size:13px;color:#888;margin:8px 0 0}
+.plain{background:var(--light);border-left:4px solid var(--yellow);padding:16px 18px;margin:22px 0 6px;font-size:15px;line-height:1.65}
+.plain p{margin:0 0 8px}.plain p:last-child{margin:0}
+.deck{font-size:15px;color:#444;margin:6px 0 2px}
 /* ── chart cards: emrahyalaz.com house format ── */
 .chart-card{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:18px 14px 15px 21px;margin:24px 0 8px;scroll-margin-top:24px}
 .chart-card .chart-title{font-size:18px;font-weight:500;color:#003876;letter-spacing:-.2px;margin-bottom:4px;line-height:1.3}
 .chart-card .chart-sub{font-size:13px;color:#888;margin-bottom:16px}
+.chart-card .chart-legend{display:flex;flex-wrap:nowrap;gap:11px;font-size:11px;color:#555;margin-bottom:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chart-card .chart-legend>span{flex-shrink:0}
+.chart-card .chart-legend .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.chart-card .chart-single{width:100%;height:300px}
+.chart-card .chart-single canvas{width:100%!important;height:300px!important}
+.chart-card .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.chart-card .chart-panel{display:flex;flex-direction:column}
+.chart-card .chart-panel-label{font-size:11px;color:#003876;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.chart-card .chart-panel canvas{width:100%!important;height:240px!important}
 .chart-card .chart-source{font-size:11px;color:#aaa;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.6}
+.chart-card .chart-source.chart-source-wrap{white-space:normal;overflow:visible;text-overflow:clip}
 .chart-card .chart-olympos{margin-top:6px;display:flex;justify-content:space-between;align-items:center}
-.chart-card .chart-olympos img{height:21px;opacity:.65}
 .chart-card .chart-date{font-size:11px;color:#aaa}
-canvas{max-width:100%}
-/* ── controls ── */
-.controls{display:flex;flex-wrap:nowrap;gap:14px;background:var(--light);border-radius:6px;padding:12px 14px;margin-bottom:16px;align-items:end;overflow-x:auto}
+.chart-card .chart-olympos img{height:21px;width:auto;opacity:.65;display:block}
+.chart-card .chart-olympos a:hover img{opacity:1}
+/* ── simulator: the one card allowed to run wide ── */
+.sim-card{margin-left:calc(-1*(100vw - var(--col))/2 + 12px);margin-right:calc(-1*(100vw - var(--col))/2 + 12px)}
+@media(max-width:960px){.sim-card{margin-left:0;margin-right:0}}
+.controls{display:flex;flex-wrap:wrap;gap:16px;background:var(--light);border-radius:6px;padding:12px 15px;margin-bottom:16px;align-items:end}
 .controls>div{flex:0 0 auto}
-.controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap}
+.controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap;color:#444}
 .controls .val{font-size:12px;color:var(--navy);font-weight:700}
-input[type=range]{width:104px;accent-color:var(--navy);display:block}
-.tiles{display:flex;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
-.tile{flex:1;min-width:130px;background:var(--light);border-left:4px solid var(--yellow);padding:10px 12px}
+input[type=range]{width:112px;accent-color:var(--navy);display:block}
+select,button{font-family:inherit;font-size:12px;padding:4px 7px;border:1px solid #ccc;border-radius:4px;background:#fff}
+button{border-color:var(--navy);color:var(--navy);font-weight:600;cursor:pointer}
+.tiles{display:flex;gap:12px;margin:16px 0 4px;flex-wrap:wrap}
+.tile{flex:1;min-width:126px;background:var(--light);border-left:4px solid var(--yellow);padding:10px 12px}
 .tile b{font-size:22px;display:block;line-height:1.25}
-.tile span{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.4px}
-.note{background:#fff8e1;border-left:4px solid var(--yellow);padding:10px 13px;font-size:12.5px;line-height:1.55;margin:12px 0 0}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left;font-weight:600}
-/* ── page-level disclaimer ── */
-.disclaimer{margin:38px 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:11px;color:#999;line-height:1.65}
+.tile span{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;display:block}
+.note{background:#fff8e1;border-left:4px solid var(--yellow);padding:11px 14px;font-size:12.5px;line-height:1.6;margin:14px 0 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 6px}
+th{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left;font-weight:600;padding:0 8px 5px 0}
+td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
+.disclaimer{margin:44px 0 0;padding-top:16px;border-top:1px solid var(--rule);font-size:11px;color:#999;line-height:1.7}
 .disclaimer b{color:#777;font-weight:600}
 .disclaimer summary{cursor:pointer;font-size:12px;color:#777;font-weight:600;margin-bottom:8px}
-@media(max-width:720px){.chart-card .chart-source{white-space:normal}}
+@media(max-width:720px){.chart-card .chart-source{white-space:normal}.chart-card .chart-grid{grid-template-columns:1fr}.chart-card .chart-legend{flex-wrap:wrap;white-space:normal}}
 </style></head><body>
-<h1>Fund-of-funds simulator</h1>
-<div class="lede">US early-stage FoF strategy — the model, a 2024 backtest, and the named 2026 roster. Built on the Olympos engine.</div>
 
-<!-- ═══ 1. SIMULATOR ═══ -->
-<div class="chart-card" id="simulator">
-<div class="chart-title">Size the fund yourself</div>
-<div class="chart-sub">Monte Carlo, 1,500 scenarios over the named 2026 roster — the slider buys managers top-down by measured edge</div>
+<h1>We can see which start-ups the top venture firms will back, about nine&nbsp;months before they back them</h1>
+<p class="lede">So we buy into the small funds that already own those start-ups at the old price — and when a top firm leads the next round, we buy the company again, direct, with no second layer of fees.</p>
+<p class="sub">Olympos Fund of Funds · a Delaware vehicle · prepared for Gedik · August 2026</p>
+
+<div class="plain">
+<p><b>The whole plan, in five sentences.</b></p>
+<p>About thirty venture firms in Silicon Valley pick most of the winners. When one of them backs a start-up, the price of that start-up jumps.</p>
+<p>We watch the people who get there first — angels, scouts, one-person funds. When enough of them move on the same founder, we mark it. On average a top firm shows up nine months later, and the price jumps.</p>
+<p>Small funds already own a piece at the old price, so we buy into those funds. Then, when the top firm leads the round, we put money straight into the company as well.</p>
+<p>That is it. Everything below is the evidence, and a model you can push around yourself.</p>
+</div>
+
+<p class="sub">What follows runs in the order the edge is built, then tested: what we saw first, whether it holds at scale, how we pick funds, where it pays, how we double down, what the model says, and what the model got right on real money.</p>
+
+<!-- ═══════════ 1 ═══════════ -->
+<h2><span class="num">1</span>We beat these managers to 22 of their own deals</h2>
+<p class="deck">Not a backtest of a formula — a delivery record. Since March 2024 we have sent a US venture firm a weekly list of stealth founders. Matching that list against what our candidate managers actually bought since then, 22 of their positions appear on our list first, by a median of 8.2 months.</p>
+
+<table>
+<tr><th style="width:38%">Founder · company</th><th>We flagged</th><th>Manager invested</th><th style="text-align:right">Lead</th></tr>
+<tr><td><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15</td><td style="text-align:right"><b>9 mo</b></td></tr>
+<tr><td>Snir Kodesh · Petual</td><td>2025-04-18</td><td>Quiet Capital 2026-04-23</td><td style="text-align:right">12 mo</td></tr>
+<tr><td>Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29</td><td style="text-align:right">10 mo</td></tr>
+<tr><td>Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One (Bucher) 2025-05-21</td><td style="text-align:right">9 mo</td></tr>
+<tr><td>Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27</td><td style="text-align:right">7 mo</td></tr>
+</table>
+
+<div class="chart-card" id="convergence">
+<div class="chart-title">We reach the founder three quarters of a year first</div>
+<div class="chart-sub">Left: months between our signal and the manager's investment, 20 of 22 matched cases. Right: share of each manager's post-2024 positions that appeared on our list before they bought</div>
+<div class="chart-legend"><span><span class="swatch" style="background:#003876;"></span>Cases where our signal came first</span></div>
+<div class="chart-grid">
+ <div class="chart-panel"><div class="chart-panel-label">Lead time</div>
+  <canvas id="cLead" role="img" aria-label="Bar chart of lead time between our signal and the manager's investment: 2 cases at 0 to 3 months, 1 at 3 to 6, 5 at 6 to 9, 6 at 9 to 12, 3 at 12 to 18, 3 at 18 to 24 months.">Most of the 22 cases cluster at six to twelve months of lead, with a median of 8.2 months.</canvas></div>
+ <div class="chart-panel"><div class="chart-panel-label">Share of their book</div>
+  <canvas id="cShare" role="img" aria-label="Horizontal bar chart of the share of each manager's post-2024 positions we flagged first: Theory 18.2 percent, Soma 10.0, Quiet 7.4, Wischoff 6.7, Day One 4.8 percent.">Theory bought 18 percent of its recent book out of names we had already flagged.</canvas></div>
+</div>
+<div class="chart-source">Source: Olympos signal log (5,329 founders since Mar 2024), Crunchbase round histories, 350 manager positions matched</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<p>This is the offer no other limited partner can make. We are not asking a manager to take our money and report back. We are handing them a feed that reached 22 of their own best names before they did.</p>
+
+<!-- ═══════════ 2 ═══════════ -->
+<h2><span class="num">2</span>The lead holds across 5,323 founders, not just 22</h2>
+<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged, found their company, and asked whether one of the 29 top firms later put money in.</p>
+
+<div class="chart-card" id="arrival">
+<div class="chart-title">Half the top-firm money lands within nine months</div>
+<div class="chart-sub">Share of top-firm rounds already raised, by months since we flagged the founder — 137 founders who went on to raise from one of the 29 firms</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Founders we graded 1</span>
+ <span><span class="swatch" style="background:#fdcf07;"></span>Founders we graded 3</span>
+ <span><span class="swatch" style="background:#888888;"></span>All grades</span></div>
+<div class="chart-single"><canvas id="cArrival" role="img" aria-label="Line chart of cumulative top-firm arrival by months since our signal. Across all grades: 20 percent within 3 months, 35 within 6, 47 within 9, 63 within 12, 86 within 18, 96 within 24. Grade 1 runs ahead of grade 3 throughout, reaching 54 percent by month 9 against 36 percent.">Across all grades, 47 percent of top-firm rounds land within nine months of the flag and 86 percent within eighteen.</canvas></div>
+<div class="chart-source">Source: Olympos signal log, Crunchbase (199,620 parsed rounds), LinkedIn profile histories (9.8M), tier-one defined as the 29 named firms</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<div class="chart-card" id="grade">
+<div class="chart-title">Our top grade converts at 1.7 times our bottom grade</div>
+<div class="chart-sub">Share of flagged founders whose company later raised from one of the 29 top firms, by the grade we gave them at the moment of flagging</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Grade 1 — our strongest call</span>
+ <span><span class="swatch" style="background:#B4B2A9;"></span>Grades 2 and 3</span></div>
+<div class="chart-single" style="height:250px"><canvas id="cGrade" style="height:250px!important" role="img" aria-label="Bar chart of conversion by grade: grade 1 is 3.63 percent of 2,150 founders, grade 2 is 1.47 percent of 817, grade 3 is 2.10 percent of 1,574.">Grade 1 converts at 3.63 percent against 2.10 percent for grade 3; grade 2 sits out of order at 1.47 percent.</canvas></div>
+<div class="chart-source">Source: Olympos signal log, Crunchbase, LinkedIn profile histories — rates are floors, see note</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+<div class="note"><b>Two things we will not dress up.</b> Grade 2 sits below grade 3 on 817 founders, which means the middle of our scale is carrying no information — that is the next thing the model has to fix. And these rates are floors, not truths: only 1,875 of the 5,290 founders have a named company on LinkedIn today, so every round raised under a still-stealth name is counted here as a miss.</div>
+
+<!-- ═══════════ 3 ═══════════ -->
+<h2><span class="num">3</span>We pick funds by what they did, not by who they know</h2>
+<p class="deck">The standard way to rank early investors is to count how often they got in before a top firm. That ranks whoever writes the most cheques. The fix is a denominator: out of everything <i>you</i> seeded, what share drew top-firm money within two years? Across 26,636 companies the answer is <b>5.88%</b>. That is the bar.</p>
+
+<div class="chart-card" id="rerank">
+<div class="chart-title">The best-known list puts the busiest investor first</div>
+<div class="chart-sub">Measured hit rate against the 5.88% base, for investors on a widely used top-preceder list — their rank on that list in brackets</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Beats the base rate</span>
+ <span><span class="swatch" style="background:#B4B2A9;"></span>At or below the base rate</span></div>
+<div class="chart-single" style="height:340px"><canvas id="cRerank" style="height:340px!important" role="img" aria-label="Horizontal bar chart of measured lift against base rate. SV Angel 4.01 times, ranked 37th on the volume list; Amplify 3.00 ranked 10th; Abstract 2.66 ranked 11th; Liquid 2 2.39 ranked 3rd; A star 2.34 ranked 27th; Nat Friedman 2.33 ranked 42nd; Afore 2.28 ranked 19th; Pareto 1.53 ranked 8th; Y Combinator 1.41 ranked 1st; Alumni Ventures 1.31 ranked 2nd; Pioneer Fund 1.04 ranked 4th; Gaingels 0.84 ranked 9th.">Y Combinator ranks first by volume but 25th by hit rate; Gaingels ranks ninth by volume and falls below the base rate.</canvas></div>
+<div class="chart-source">Source: Olympos analysis, Crunchbase (199,620 parsed rounds) — seed and pre-seed entries 2019-2023, new top-firm investor within 24 months, shrunk toward base at prior strength 25</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<p>Y Combinator sits first on that list and 25th on ours. It precedes top firms constantly because it backs everyone. <b>Gaingels sits ninth and lands below the base rate</b> — a company it seeds is <i>less</i> likely to draw top-firm money than an average seeded company. Ranked by volume it reads as a signal; it is a mild warning.</p>
+
+<div class="chart-card" id="roster">
+<div class="chart-title">Most of our shortlist is still unproven</div>
+<div class="chart-sub">Same measurement applied to the managers we would back — bar length is hit rate against the 5.88% base, label shows the number of seed entries the estimate rests on</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Measured, 20 or more seed entries</span>
+ <span><span class="swatch" style="background:#fdcf07;"></span>Measured, thin evidence — under 20 entries</span>
+ <span><span class="swatch" style="background:#B4B2A9;"></span>At or below base</span></div>
+<div class="chart-single" style="height:360px"><canvas id="cRoster" style="height:360px!important" role="img" aria-label="Horizontal bar chart of measured lift for candidate managers: Chapter One 3.36 times on 28 entries, 1984 Ventures 2.88 on 25, Silent Ventures 2.70 on 22, Abstract 2.66 on 74, Volt 2.50 on 19, A star 2.34 on 51, Afore 2.28 on 53, JAM Fund 2.27 on 16, Pebblebed 1.97 on 5, Everywhere 1.91 on 113, Marathon 1.77 on 18, Mischief 1.76 on 28, Kearny Jackson 1.27 on 8, Soma 1.22 on 177, Day One 1.00 on 34, Mei Zuo 0.86 on 4.">The measured leaders are mostly names that were not on our original shortlist.</canvas></div>
+<div class="chart-source">Source: Olympos analysis, Crunchbase — same definition and base as the chart above; Humba, Chemistry, Category and Theory have no seed entries in the 2019-2023 window and cannot be scored</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+<div class="note"><b>This chart argues against our own shortlist, which is why it is here.</b> The names we had ranked highest on judgement — Mei Zuo at 0.86x on four entries, Day One at 1.00x on thirty-four — do not survive measurement. The names that do are ones the measurement found: Chapter One, 1984 Ventures, Silent Ventures, Abstract. Four more of our candidates have no seed entries in the window at all and are simply unscored. A first close should weight the measured names and treat the rest as diligence targets, not convictions.</div>
+
+<!-- ═══════════ 4 ═══════════ -->
+<h2><span class="num">4</span>Being early only pays in some sectors</h2>
+<p class="deck">Getting in first is worthless if the top firms are already there. Measuring how long before a Series A the early layer buys, against how long before that same round the top firms buy, gives the size of the head start — sector by sector.</p>
+
+<div class="chart-card" id="sector">
+<div class="chart-title">Aerospace pays best; crypto pays nothing</div>
+<div class="chart-sub">Days by which the early layer enters ahead of the top firms, 2025 rounds — negative means the top firms are already at seed and there is nobody to get ahead of</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Head start for the early layer</span>
+ <span><span class="swatch" style="background:#B4B2A9;"></span>Top firms arrive first — no head start to buy</span></div>
+<div class="chart-single" style="height:340px"><canvas id="cSector" style="height:340px!important" role="img" aria-label="Horizontal bar chart of head start in days by sector: Energy 270, Cybersecurity 145, DevOps 137, Climate 128, Infrastructure 122, Aerospace 113, B2B 113, MarTech 74, Health 50, Consumer minus 19, Gaming minus 95, Legal minus 112, Robotics minus 158, Crypto minus 181.">Energy, cybersecurity and aerospace give the early layer a four-month head start; in robotics and crypto the top firms are already at seed.</canvas></div>
+<div class="chart-source">Source: Olympos analysis, Crunchbase category and speed statistics, 2024-2025 rounds — robotics and crypto cells rest on 9 to 20 top-firm deals</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<p><b>Aerospace is where we would extend next.</b> It is the only sector with a wide head start <i>and</i> rising demand from the top firms — their deal count went from 28 to 41 in a year, the biggest jump on the board, and the median cheque went from $20M to $50M. They are arriving in force and still arriving late.</p>
+<p>Two sectors we would not build a sensor for at all. In robotics and crypto the top firms are at seed <i>before</i> the early layer, so there is no head start to sell. And a warning about our home ground: in infrastructure the top firms cut their time from seed to Series A from 481 days to 283 in one year. The head start we have is real, and in the lane we source hardest it is closing fastest.</p>
+
+<!-- ═══════════ 5 ═══════════ -->
+<h2><span class="num">5</span>We buy the best companies a second time, and pay no toll</h2>
+<p class="deck">Money in a fund pays the manager a fee and a share of the profit. Money straight into a company pays neither. When our signal says a top firm is about to price a company our managers already own, we take the second bite directly — which is also the only place a fund this size can hold a position big enough to matter.</p>
+
+<div class="chart-card" id="coinvest">
+<div class="chart-title">Ten to fourteen direct positions is the sweet spot</div>
+<div class="chart-sub">Monte Carlo over single-company outcomes, 40,000 draws per point — median and downside multiple on the direct sleeve against how many positions it holds</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Median outcome</span>
+ <span><span class="swatch" style="background:#888888;"></span>Downside — 10th percentile</span></div>
+<div class="chart-single"><canvas id="cCo" role="img" aria-label="Line chart: as direct positions rise from 3 to 30, the median sleeve multiple climbs from 1.88 to 2.83 times while the tenth-percentile outcome climbs from 0.57 to 1.78 times.">Below eight positions a quarter of direct sleeves lose money; by twelve that risk is 3 percent.</canvas></div>
+<div class="chart-source">Source: Olympos analysis, single-deal outcome distribution fitted to Crunchbase round histories</div>
+<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
+</div>
+
+<p class="deck" style="margin-top:18px"><b>Three rounds we would have been offered</b> had this fund opened in August 2024 — companies our managers already held, that later raised at a size and with a lead where an LP co-investment slot exists. Nineteen such windows were found; these are the three largest with a top-firm lead.</p>
+<table>
+<tr><th style="width:36%">Company</th><th>Our manager was already in</th><th>The round we could have joined</th></tr>
+<tr><td><b>Avoca</b> — AI agents for home services</td><td>Soma, Apr 2023</td><td><b>$125M Series B</b>, Apr 2026 · General Catalyst, Kleiner Perkins, Amplify</td></tr>
+<tr><td><b>Northwood Space</b> — satellite ground stations</td><td>Humba, Feb 2024</td><td><b>$100M Series B</b>, Jan 2026 · Andreessen Horowitz, 137 Ventures</td></tr>
+<tr><td><b>DualEntry</b> — AI-native accounting</td><td>Soma, May 2024</td><td><b>$90M Series A</b>, Oct 2025 · GV, Khosla, Lightspeed</td></tr>
+</table>
+<div class="note"><b>Northwood is the argument for section 4 in one line.</b> We do not source aerospace. We reached that deal because we backed a manager who does. A fund of funds chooses its sectors by choosing its managers.</div>
+
+<!-- ═══════════ 6 ═══════════ -->
+<h2><span class="num">6</span>Size the fund yourself</h2>
+<p class="deck">Every number below moves. Switch selection off and the model collapses back to <b>1.57x and 7.3%</b> — the published fund-of-funds median is 1.4x to 1.6x and 8% to 10%. The model was never fitted to that number, so reproducing it is the reason to believe the selected case.</p>
+
+<div class="chart-card sim-card" id="simulator">
+<div class="chart-title">The default fund returns about three times money, net</div>
+<div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive</div>
 <div class="controls">
   <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" min="20" max="200" value="40" step="5"></div>
-  <div><label>Managers <span class="val" id="vMgr">18</span></label><input type="range" id="mgr" min="1" max="21" step="1" value="18" style="width:150px"></div>
-  <div><label>Co-invest <span class="val" id="vCo">30%</span></label><input type="range" id="co" min="0" max="50" value="30" step="5"></div>
-  <div><label>Selection <span class="val" id="vSel"></span></label>
-  <select id="sel" style="font-family:inherit;font-size:12px;padding:3px 5px;border:1px solid #ccc;border-radius:4px">
-    <option value="none">No selection</option><option value="equal">All signals, equal wt</option>
-    <option value="tiered" selected>Tiered concentration</option></select></div>
-  <div><label>Seed <span class="val" id="vSeed">#42</span></label>
-   <button id="reroll" style="font-family:inherit;font-size:12px;font-weight:600;padding:4px 10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:4px;cursor:pointer;white-space:nowrap">&#8635; Re-roll</button></div>
+  <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" min="3" max="18" step="1" value="12" style="width:140px"></div>
+  <div><label>Direct sleeve <span class="val" id="vCo">35%</span></label><input type="range" id="co" min="0" max="60" value="35" step="5"></div>
+  <div><label>Selection</label><select id="sel"><option value="on" selected>Signal-selected managers</option><option value="off">No selection — market pick</option></select></div>
+  <div><label>Weighting</label><select id="wt"><option value="equal" selected>Equal weight</option><option value="tiered">Tiered by conviction</option></select></div>
+  <div><label>Scenario draw <span class="val" id="vSeed">#42</span></label><button id="reroll">&#8635; Re-roll</button></div>
 </div>
-<canvas id="c3" height="150" role="img" aria-label="Fan chart of net TVPI over ten years: median line with 25-75 and 10-90 percentile bands, against a paid-in capital line at 1.0x.">Median net TVPI with 25–75% and 10–90% outcome bands over ten years, against paid-in capital.</canvas>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Median path</span>
+ <span><span class="swatch" style="background:rgba(0,56,118,0.20);"></span>Middle half of outcomes</span>
+ <span><span class="swatch" style="background:rgba(0,56,118,0.09);"></span>10th to 90th percentile</span>
+ <span><span class="swatch" style="background:#888888;"></span>Committed capital, 1.0x</span></div>
+<div class="chart-single" style="height:330px"><canvas id="cMC" style="height:330px!important" role="img" aria-label="Fan chart of net TVPI over ten years showing a median path with 25 to 75 and 10 to 90 percentile bands against a flat committed-capital line at 1.0 times.">Median net TVPI with middle-half and 10-to-90 outcome bands over ten years, against committed capital.</canvas></div>
 <div class="tiles">
-  <div class="tile"><b id="tMed">—</b><span>Median net TVPI (yr 10)</span></div>
-  <div class="tile"><b id="tP90">—</b><span>Optimistic (P90)</span></div>
+  <div class="tile"><b id="tMed">—</b><span>Median net TVPI, year 10</span></div>
+  <div class="tile"><b id="tMean">—</b><span>Expected value (mean)</span></div>
   <div class="tile"><b id="tIRR">—</b><span>Median net IRR</span></div>
-  <div class="tile"><b id="tDPI">—</b><span>Cash break-even</span></div>
-  <div class="tile"><b id="tLoss">—</b><span>Chance of capital loss</span></div>
+  <div class="tile"><b id="tP90">—</b><span>Good case (P90)</span></div>
+  <div class="tile"><b id="tLoss">—</b><span>Chance of losing money</span></div>
 </div>
-<div id="concwarn"></div>
-<table style="margin:14px 0 4px">
-<tr><th style="padding:4px 8px;width:46%">Fund / outcome</th><th>Net TVPI</th><th>Net IRR</th></tr>
+<div id="warn"></div>
+<table>
+<tr><th style="width:46%">Fund / outcome</th><th>Net TVPI</th><th>Net IRR</th></tr>
 <tbody id="bench"></tbody>
-<tr style="border-top:2px solid var(--rule)"><td style="padding:4px 8px;color:#777" colspan="3">Benchmarks below are the <i>median fund</i> of each category — compare to the median row above</td></tr>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — median</b> (like-for-like)</td><td>~1.4–1.6x</td><td>~8–10%</td></tr>
-<tr><td style="padding:4px 8px"><b>VC fund-of-funds — top quartile</b></td><td>~1.9–2.2x</td><td>~12–15%</td></tr>
-<tr><td style="padding:4px 8px">Direct US VC fund — median (no FoF fee layer)</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
-<tr><td style="padding:4px 8px">Direct US VC fund — top quartile</td><td>~2.5x+</td><td>~20%+</td></tr>
+<tr><td colspan="3" style="color:#777;border-top:2px solid var(--rule);padding-top:7px">Rows below are the <i>median fund</i> of each published category</td></tr>
+<tr><td>Venture fund-of-funds — median</td><td>~1.4–1.6x</td><td>~8–10%</td></tr>
+<tr><td>Venture fund-of-funds — top quartile</td><td>~1.9–2.2x</td><td>~12–15%</td></tr>
+<tr><td>Direct US venture fund — median</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
+<tr><td>Direct US venture fund — top quartile</td><td>~2.5x+</td><td>~20%+</td></tr>
 </table>
-<div class="chart-source">Source: Olympos analysis, Cambridge Associates-style vintage stats, Kauffman Foundation (2012) — model notes at foot of page</div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories, Cambridge Associates-style vintage statistics, Kauffman Foundation (2012) — manager premiums derived from measured hit rate as 0.35 &times; ln(lift); full model notes at the foot of the page</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<!-- ═══ 2. RETROSPECTIVE ═══ -->
+<!-- ═══════════ 7 ═══════════ -->
+<h2><span class="num">7</span>Run on real 2024 money, the book lands where the model says</h2>
+<p class="deck">We applied the same construction rules to real deals from August 2024 and marked them to verified valuations. Two years in, that book stands at 1.25x of committed capital. The model's median path for year two is 1.14x, with a middle half of 1.03x to 1.31x. The real book sits inside the band, slightly ahead of the median.</p>
+
 <div class="chart-card" id="backtest">
-<div class="chart-title">If this fund had started in August 2024</div>
-<div class="chart-sub">Same construction rules as the simulator, run on real 2024-vintage deals marked to verified valuations — year 2 of 10</div>
-<canvas id="c4" height="120" role="img" aria-label="Line chart of net paper TVPI from 2024 Q3 to 2026 Q3 for three series: prior-vintage selection-evidence books, the 2024-vintage portfolio, and the public seed fund-of-funds benchmark.">The 2024-vintage portfolio tracks well above the public seed-FoF benchmark but below the managers' prior-vintage books.</canvas>
-<div class="tiles">
-  <div class="tile"><b>2.30x</b><span>Prior-vintage books</span></div>
-  <div class="tile"><b>1.60x</b><span>2024 vintage, equal weight</span></div>
-  <div class="tile"><b>1.51x</b><span>Same, tiered — worse</span></div>
-  <div class="tile"><b>~1.05x</b><span>Seed-FoF benchmark, yr 2</span></div>
-</div>
-<div class="note"><b>Two findings that argue against our own model.</b>
-<b>(1) Tiering hurt</b> — 1.51x vs 1.60x equal weight. The best 2024 books were Wischoff (2.40x) and Quiet (2.66x); JAM, our strongest prior-vintage name, sits at 0.96x on five positions. Weights fitted to one period misfire on the next: start near equal weight, re-tier at Fund II.
-<b>(2) Unskilled co-invest hurt too</b> — 12 positions drawn at random from the same companies return ~1.27x median even with no fee layer, pulling the portfolio to 1.49x. The simulator credits co-invest with informed selection; this window cannot prove that skill, so treat the premium as an assumption.</div>
-<div class="chart-source">Source: Olympos analysis, Crunchbase round histories (2,190 rows), SEC EDGAR — marks-based estimate, not audited returns</div>
+<div class="chart-title">The real 2024 book sits inside the model's band</div>
+<div class="chart-sub">Net TVPI on committed capital, both measured the same way — assumes 45% of commitments called by year two, with uncalled capital held at par and fees drawn</div>
+<div class="chart-legend">
+ <span><span class="swatch" style="background:#003876;"></span>Real 2024 book, equal weight</span>
+ <span><span class="swatch" style="background:#fdcf07;"></span>Same book, tiered — worse</span>
+ <span><span class="swatch" style="background:rgba(0,56,118,0.18);"></span>Model's middle half</span>
+ <span><span class="swatch" style="background:#888888;"></span>Public seed fund-of-funds benchmark</span></div>
+<div class="chart-single"><canvas id="cBack" role="img" aria-label="Line chart from 2024 Q3 to 2026 Q3 of net TVPI on committed capital: the model's middle-half band widens from 1.0 to a range of 1.03 to 1.31; the real equal-weight book reaches 1.25 times; the tiered version reaches 1.21; the public benchmark reaches 1.00.">The real 2024 book reaches 1.25x of committed capital at year two, inside the model's 1.03 to 1.31 band.</canvas></div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories (2,190 rows), SEC EDGAR — marks-based estimate on committed capital, not audited returns</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
+<div class="note"><b>The one place the evidence contradicts our instinct.</b> Concentrating capital into our highest-conviction managers returned <b>1.21x against 1.25x for equal weight</b>. Weights fitted to one period misfire on the next. So the model defaults to equal weight, and re-tiering waits for Fund II, when there is a second period to fit against. The same caution applies to the direct sleeve: twelve positions drawn at random from the same companies return about 1.27x even with no fee layer, so the premium the model gives informed co-investment is an assumption this window cannot yet prove.</div>
 
-<!-- ═══ 3. THE BACKTEST FUND ═══ -->
-<div class="chart-card" id="managers">
-<div class="chart-title">Real managers, real positions</div>
-<div class="chart-sub">The ten managers the signals picked on 14 Aug 2024, and what their books carried into 2026 · yellow = unicorn, grey = $30M+ follow-on</div>
-<table style="margin-bottom:14px">
-<tr><th style="padding:4px 8px">Manager</th><th>Fund</th><th>2-yr paper TVPI</th><th>Signature positions</th></tr>
-<tr><td style="padding:4px 8px"><b>Mei Zuo</b></td><td>Mei Z Funds</td><td>— (n=4)</td><td>Etched, MatX, Nscale, Black Forest Labs</td></tr>
-<tr><td style="padding:4px 8px"><b>Justin Mateen</b></td><td>JAM Fund</td><td>5.4x</td><td>Whop, Radiant, Stoke Space, Hadrian</td></tr>
-<tr><td style="padding:4px 8px"><b>Tomasz Tunguz</b></td><td>Theory</td><td>2.3x</td><td>Omni, Allium, Dropzone AI</td></tr>
-<tr><td style="padding:4px 8px"><b>Leo Polovets</b></td><td>Humba</td><td>2.1x</td><td>Northwood Space, WindBorne, Shinkei</td></tr>
-<tr><td style="padding:4px 8px"><b>Lee Linden</b></td><td>Quiet Capital</td><td>2.2x</td><td>Decart, Assort Health, Modal, Swarm Aero</td></tr>
-<tr><td style="padding:4px 8px"><b>Masha Bucher</b></td><td>Day One</td><td>2.1x</td><td>You.com, Invisible Tech, Owner.com</td></tr>
-<tr><td style="padding:4px 8px"><b>Bobby Yazdani</b></td><td>Cota</td><td>1.8x</td><td>Eight Sleep, Farther, Upscale AI</td></tr>
-<tr><td style="padding:4px 8px"><b>Alexandre Azoulay</b></td><td>SGH</td><td>1.6x</td><td>TRM Labs, Valar Atomics</td></tr>
-<tr><td style="padding:4px 8px"><b>Aneel Ranadive</b></td><td>Soma</td><td>2.5x</td><td>Etched, Whop, Avoca, Ramp</td></tr>
-<tr><td style="padding:4px 8px"><b>Nichole Wischoff</b></td><td>Wischoff</td><td>2.4x (2024 vintage)</td><td>Cargado, Nyne, Stell, Beam</td></tr>
-</table>
-<div class="chart-sub" style="margin-bottom:8px">Company-level exposure through those funds:</div>
-<div style="display:flex;flex-wrap:wrap;gap:8px" id="logowall"></div>
-<div class="chart-source">Source: Olympos analysis, Crunchbase, SEC EDGAR — selection frozen 14 Aug 2024; marks dilution-adjusted, not audited</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
+<!-- ═══════════ 8 ═══════════ -->
+<h2><span class="num">8</span>What we are asking for</h2>
+<p>A new Delaware vehicle. <b>Gedik anchors $20M</b>; Gedik raises a further $10M and we raise $10M, for a first close of about <b>$40M</b>. Olympos contributes the signal engine, the manager measurement, and the relationships that turn an allocation into an invitation. From there the target is a <b>$100M</b> fund of funds.</p>
+<p>At $40M the fund holds about twelve managers and a direct sleeve of ten to fourteen positions — the shape the model says is right, and the shape our own 2024 book supports. Below roughly $25M the arithmetic breaks: cheques fall under what oversubscribed funds will accept, fixed costs stop being rounding, and the direct sleeve gets too few positions to be anything but a lottery.</p>
+<p>The near-term work is diligence, not conviction. Four of our candidate managers cannot be scored at all, and the ones the measurement likes best are names we found this month. That is the right order — measure, then meet, then commit.</p>
 
-<!-- ═══ 4. 2026 ROSTER ═══ -->
-<div class="chart-card" id="roster">
-<div class="chart-title">The proposed 2026 roster</div>
-<div class="chart-sub">$40M first close, 21 names by access class — the simulator buys them in this order · North America + London + Israel, SFBA-weighted</div>
-<p style="font-size:14px;line-height:1.7;margin:0">
-<b style="color:var(--navy)">A · Star anchors (3):</b> Chemistry II · Diffusion (ex-Benchmark) · Pebblebed III<br>
-<b style="color:var(--navy)">B · Return engine (8):</b> <b>Humba III (raising now)</b> · <b>JAM Fund (best backtest: 5.4x)</b> · <b>Mei Zuo (3-for-3 pre-tier-1)</b> · Mischief · Kearny Jackson (a16z &amp; Sequoia are LPs) · Premise · Category · Day One III<br>
-<b style="color:var(--navy)">C · Formation-stage (5):</b> Verdict (Bonatsos + Fertik, ex-GC) · Ethan Choi (ex-Khosla) · Bryan Kim (ex-a16z) · Josephine Chen (ex-Sequoia) · Astasia Myers (pre-spinout)<br>
-<b style="color:var(--navy)">D · Lane options (5):</b> Pax · Axiom · Orange Collective · Zero Shot · Soma (beta sleeve, 803 positions)<br>
-<span style="font-size:13px;color:#666">Alternates: Footwork II · Basecase · Boost VC · Eniac · Susa · Wischoff III · Theory Corollary · Earthling · Perceptive · Outcast · Common Magic</span></p>
-<div class="chart-source">Source: Olympos analysis, SEC EDGAR Form D — open-vehicle status as of Aug 2026; a proposal, not commitments</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
-
-<!-- ═══ 5. DEPARTURE SIGNAL (moved to foot) ═══ -->
-<div class="chart-card" id="departures">
-<div class="chart-title">We see managers move before the market does</div>
-<div class="chart-sub">Months a partner went missing from their firm's Form D filings before the departure became public</div>
-<div style="height:180px"><canvas id="c2" role="img" aria-label="Horizontal bar chart of Form D filing-silence lead times: Tunguz 9 months, Singerman 20, Kurzweil 24, Polovets 26.">Filing silence preceded every verified departure by 9 to 26 months.</canvas></div>
-<div class="chart-source">Source: Olympos analysis, SEC EDGAR Form D archive — four verified 2022–2026 spinout departures</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
-
-<!-- ═══ DISCLAIMER ═══ -->
 <div class="disclaimer">
-<details><summary>Model notes &amp; limitations</summary>
-<b>What is modelled.</b> Return distributions are calibrated to public VC benchmarks; the selection effect to our own conversion measurements; model internals are withheld. Benchmark rows are public-summary approximations (Cambridge Associates-style US vintage stats; the Kauffman 2012 standard — we test only its &ge;2.0x-net leg, not its public-market-equivalent leg). Cash flows assume 3-year calls, distributions in years 5–10 (60% of value) and residual NAV at year 10; our IRR is a fully-realised 10-year cash IRR, harsher than the interim NAV-based IRRs benchmarks quote.<br><br>
-<b>Where the numbers are assumptions.</b> Per-manager premiums are measured where the denominator is known (JAM: 82 positions, 6 unicorns) and explicit assumptions where it is not (Mei Zuo: 4 verified unicorn positions, book size unverified — set to a ~30-check mid case). The co-invest sleeve assumes precursor-informed selection, no manager fee layer (+25%), single-company dispersion, and allocations contingent on real LP commitments — the 2024 window cannot prove that selection skill.<br><br>
-<b>Reading the outputs.</b> Adding managers raises the <i>mean</i> but widens dispersion, so the <i>median</i> LP outcome can fall while the left tail fattens — compare the mean shown beside the median. Size cuts both ways: a scale penalty above (~9% per doubling) and, below, LP check minimums ($2M star anchors, $0.75M emerging) plus ~$250K/yr fixed operating cost. Backtest marks are dilution-adjusted estimates from public round data, not audited returns.
+<details><summary>Model notes and what would change these numbers</summary>
+<p><b>Manager returns.</b> Each manager's net TVPI is drawn from a lognormal with a median of 1.65x before selection, dispersion fitted to observed single-fund spread (10th percentile ~0.6x, 90th ~4x). The selection premium is derived from the measured hit rate as 0.35 &times; ln(lift), not assigned by judgement — a manager measured at 2.7x the base rate earns a premium of 0.35, or about a 1.42x multiplier on median outcome. Managers with no measurement receive the roster average and are flagged as unscored.</p>
+<p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.0x to 25x when selection is on. Turn selection off and the fund returns 1.57x and 7.3% against a published median of 1.4-1.6x and 8-10%. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
+<p><b>Fees and costs.</b> An 8% haircut on terminal value covers the vehicle's own management fee and carried interest, plus fixed operating cost of about $60K a year for administration, audit, tax, legal and compliance — a quoted figure, not an estimate. Fixed cost is flat in dollars, so it bites small funds hardest and is what sets the minimum viable size.</p>
+<p><b>Cash flows.</b> Capital called evenly over five years. Distributions of 60% of terminal value paid from year four on a rising schedule, with the remaining 40% held as residual value at year ten. IRR is computed on those flows, which is why it is materially higher than the tenth root of the multiple — committed capital is not outstanding for the full ten years.</p>
+<p><b>The direct sleeve.</b> Positions of about $1M each, so the count moves with both fund size and sleeve share. Single-company outcomes are drawn from a power law with dispersion of 1.45 in logs. Two corrections are applied and both reduce the number: the sleeve holds the same companies as the fund sleeve, so part of its fate is shared rather than independent; and allocation is contingent on being a meaningful limited partner, so if cheques fall below what a manager will accept, the co-investment invitations do not arrive either.</p>
+<p><b>Market risk.</b> A single vintage factor with dispersion of 0.46 in logs multiplies every path. This is the dominant risk in a fund of funds and it is not diversifiable by holding more managers — 2021 vintages are the reference case.</p>
+<p><b>What is measured and what is assumed.</b> Measured: the 22 convergence cases, the 8.6-month median lead, the 5.88% base rate and every manager hit rate, the sector head starts, the 2024 marks. Assumed: that a measured hit rate translates into fund returns at the stated coefficient, that informed co-investment beats random co-investment, and that access to oversubscribed funds can be bought with a signal feed. The first assumption is the one that matters most and the one Fund I exists to test.</p>
 </details>
+<p style="margin-top:12px"><b>Not an offer.</b> Illustrative modelling for discussion between Olympos and Gedik. Simulated results are not returns; the 2024 figures are marks-based estimates, not audited performance. Past patterns do not predict future outcomes, and every forward number on this page is a model output rather than a forecast.</p>
 </div>
 
 <script>
-const NAVY='#003876', YELLOW='#fdcf07', GREY='#8a8a8a';
-
-
-// ---- Chart 4: retrospective Aug 2024 -> Aug 2026 (marks-based estimate) ----
-(()=>{const q=['2024 Q3','2024 Q4','2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1','2026 Q2','2026 Q3'];
-const ramp=(f,conv)=>q.map((_,i)=>+(1+(f-1)*Math.pow(i/(q.length-1),conv)).toFixed(2));
-new Chart(c4,{type:'line',data:{labels:q,datasets:[
- {label:'Selection-evidence books (prior vintages)',data:ramp(2.30,1.8),borderColor:GREY,borderDash:[6,4],borderWidth:2,pointRadius:0},
- {label:'Our 2024-vintage portfolio (tiered)',data:ramp(1.48,2.0),borderColor:NAVY,borderWidth:2.5,pointRadius:0},
- {label:'Public seed-FoF benchmark',data:ramp(1.05,1.0),borderColor:YELLOW,borderWidth:2.5,pointRadius:0}
-]},options:{plugins:{legend:{labels:{boxWidth:14,font:{size:11}}},
- tooltip:{callbacks:{label:i=>`${i.dataset.label}: ${i.parsed.y}x`}}},
- scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Net paper TVPI (x)',font:{size:11}},min:0.9}}}});})();
 Chart.defaults.font.family="'IBM Plex Sans',sans-serif";
-Chart.defaults.color='#444';
+Chart.defaults.color='#999';
+const NAVY='#003876', YEL='#fdcf07', GREY='#888888', WARM='#B4B2A9';
+const TT={backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,titleFont:{size:13},bodyFont:{size:12}};
+const GRID={color:'rgba(0,0,0,0.06)'}, NOGRID={display:false}, TICK={color:'#999',font:{size:11}};
+const AX=t=>({display:true,text:t,color:'#888',font:{size:11,weight:500}});
 
-// ---- Chart 3: Monte Carlo fan ----
-let chart3=null, SEED=42;
-// The proposed 2026 roster, ranked by conviction. [name, access class, return premium (log), sigma]
-// Premiums are our measured/estimated edge per manager; sigma is single-fund TVPI dispersion.
+/* 1 — convergence */
+new Chart(document.getElementById('cLead'),{type:'bar',data:{labels:['0–3','3–6','6–9','9–12','12–18','18–24'],
+ datasets:[{data:[2,1,5,6,3,3],backgroundColor:NAVY,borderWidth:0,barPercentage:.72}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.y+' founders'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months between our signal and the investment')},
+   y:{grid:GRID,ticks:{...TICK,stepSize:1},title:AX('founders')}}}});
+new Chart(document.getElementById('cShare'),{type:'bar',data:{labels:['Theory','Soma','Quiet','Wischoff','Day One'],
+ datasets:[{data:[18.2,10.0,7.4,6.7,4.8],backgroundColor:NAVY,borderWidth:0,barPercentage:.68}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(1)+'% of their book'}}},
+  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share of their 2024+ positions we flagged first')},
+   y:{grid:NOGRID,ticks:TICK}}}});
+
+/* 2 — arrival + grade */
+new Chart(document.getElementById('cArrival'),{type:'line',data:{labels:[0,3,6,9,12,18,24,36],datasets:[
+ {data:[0,24.4,39.7,53.8,69.2,87.2,96.2,100],borderColor:NAVY,borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.07)',label:'Grade 1'},
+ {data:[0,18.2,33.3,36.4,57.6,87.9,97.0,100],borderColor:YEL,borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:false,label:'Grade 3'},
+ {data:[0,19.7,35.0,47.4,62.8,86.1,96.4,100],borderColor:GREY,borderWidth:2,borderDash:[5,4],tension:.2,pointRadius:0,pointHoverRadius:5,fill:false,label:'All grades'}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{title:i=>'within '+i[0].label+' months',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(0)+'% raised'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months after we flagged the founder')},
+   y:{min:0,max:100,grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('top-firm rounds already raised')}}}});
+new Chart(document.getElementById('cGrade'),{type:'bar',data:{labels:['Grade 1  (n=2,150)','Grade 2  (n=817)','Grade 3  (n=1,574)'],
+ datasets:[{data:[3.63,1.47,2.10],backgroundColor:[NAVY,WARM,WARM],borderWidth:0,barPercentage:.5}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.y.toFixed(2)+'% raised from a top firm'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK},y:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share that later raised from a top firm')}}}});
+
+/* 3 — rerank + roster */
+const RR=[['SV Angel',4.01,37],['Amplify Partners',3.00,10],['Abstract',2.66,11],['Liquid 2 Ventures',2.39,3],
+ ['A* (Hartz)',2.34,27],['Nat Friedman',2.33,42],['Afore Capital',2.28,19],['Pareto Holdings',1.53,8],
+ ['Y Combinator',1.41,1],['Alumni Ventures',1.31,2],['Soma Capital',1.22,5],['Pioneer Fund',1.04,4],['Gaingels',0.84,9]]
+ .sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById('cRerank'),{type:'bar',data:{labels:RR.map(r=>r[0]+'  ['+r[2]+']'),
+ datasets:[{data:RR.map(r=>r[1]),backgroundColor:RR.map(r=>r[1]>1.1?NAVY:WARM),borderWidth:0,barPercentage:.72}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(2)+'x the 5.88% base rate'}}},
+  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('hit rate against the 5.88% base — 1.0x means no edge')},
+   y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
+
+const RO=[['Chapter One',3.36,28],['1984 Ventures',2.88,25],['Silent Ventures (Moses)',2.70,22],['Abstract (Naimi)',2.66,74],
+ ['Volt Capital',2.50,19],['A* (Hartz)',2.34,51],['Afore Capital',2.28,53],['JAM Fund (Mateen)',2.27,16],
+ ['Pebblebed III',1.97,5],['Everywhere Ventures',1.91,113],['Marathon (Rajaram)',1.77,18],['Mischief (Perret)',1.76,28],
+ ['Kearny Jackson',1.27,8],['Soma Capital',1.22,177],['Day One III (Bucher)',1.00,34],['Mei Zuo vehicle',0.86,4]];
+new Chart(document.getElementById('cRoster'),{type:'bar',data:{labels:RO.map(r=>r[0]+'  ('+r[2]+')'),
+ datasets:[{data:RO.map(r=>r[1]),backgroundColor:RO.map(r=>r[1]<=1.1?WARM:(r[2]>=20?NAVY:YEL)),borderWidth:0,barPercentage:.74}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(2)+'x base, on '+RO[i.dataIndex][2]+' seed entries'}}},
+  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('hit rate against the 5.88% base — label shows seed entries measured')},
+   y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
+
+/* 4 — sector */
+const SEC=[['Energy',270],['Cybersecurity',145],['DevOps',137],['Climate',128],['Infrastructure',122],
+ ['Aerospace',113],['B2B',113],['MarTech',74],['Health',50],['Consumer',-19],['Gaming',-95],['Legal',-112],
+ ['Robotics',-158],['Crypto',-181]];
+new Chart(document.getElementById('cSector'),{type:'bar',data:{labels:SEC.map(r=>r[0]),
+ datasets:[{data:SEC.map(r=>r[1]),backgroundColor:SEC.map(r=>r[1]>0?NAVY:WARM),borderWidth:0,barPercentage:.74}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{label:i=>(i.parsed.x>0?i.parsed.x+' days ahead of the top firms':Math.abs(i.parsed.x)+' days behind — no head start')}}},
+  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'d'},title:AX('days the early layer enters ahead of the top firms')},
+   y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
+
+/* 5 — co-invest */
+new Chart(document.getElementById('cCo'),{type:'line',data:{labels:[3,5,8,12,16,20,30],datasets:[
+ {data:[1.88,2.17,2.39,2.57,2.67,2.73,2.83],borderColor:NAVY,borderWidth:2.5,tension:.25,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.08)',label:'Median outcome'},
+ {data:[0.57,0.82,1.08,1.31,1.47,1.58,1.78],borderColor:GREY,borderWidth:2,borderDash:[5,4],tension:.25,pointRadius:0,pointHoverRadius:5,fill:false,label:'Downside (P10)'}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{title:i=>i[0].label+' positions',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('number of direct positions')},
+   y:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('net multiple on the sleeve')}}}});
+
+/* 6 — the simulator */
 const ROSTER=[
- // TOP-DOWN by our measured/estimated edge (premium), highest first — a 5-manager fund buys these top 5.
- // Mei Zuo premium 0.45 implies a ~30-check book behind 4 verified unicorn positions (Etched, Nscale,
- // MatX, Black Forest Labs) whose diluted multiples sum to ~133x. Denominator is UNVERIFIED — it is the
- // single diligence question on that vehicle (20 checks -> 6.6x fund; 50 -> 2.7x).
- // JAM's 0.28 is lower but HIGHER-CONFIDENCE: denominator known (82 pre-2024 positions, 6 unicorns).
- ['Mei Zuo vehicle','B',0.45,1.15],['JAM Fund (Mateen)','B',0.28,0.95],['Humba III (Polovets)','B',0.22,0.90],
- ['Mischief (Perret)','B',0.18,0.85],['Verdict (Bonatsos+Fertik)','C',0.16,1.05],['Kearny Jackson','B',0.16,0.85],
- ['Premise (Larco+Bent)','B',0.14,0.85],['Day One III (Bucher)','B',0.14,0.85],
- ['Diffusion (Lazarte/Fredrickson)','A',0.12,0.85],['Ethan Choi (ex-Khosla)','C',0.12,1.05],
- ['Category (Iltchev)','B',0.12,0.80],['Astasia Myers (pre-spinout)','C',0.12,1.05],
- ['Chemistry II','A',0.10,0.70],['Bryan Kim (ex-a16z)','C',0.10,1.05],['Josephine Chen (ex-Sequoia)','C',0.10,1.05],
- ['Pebblebed III','A',0.08,0.75],['Axiom (Venkatachalam)','D',0.04,0.85],['Pax (Volz)','D',0.02,0.85],
- ['Orange Collective (YC)','D',0.02,0.80],['Zero Shot (ex-OpenAI)','D',0.00,1.00],
- ['Soma (Ranadive) — beta sleeve','D',-0.02,0.55]];
-function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);
- t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+ ['Silent Ventures (Moses)','B',2.70,0.95,22],['Abstract (Naimi)','B',2.66,0.80,74],
+ ['A* (Hartz)','B',2.34,0.90,51],['JAM Fund (Mateen)','B',2.27,0.95,16],
+ ['Everywhere Ventures','B',1.91,0.85,113],['Mischief (Perret)','B',1.76,0.85,28],
+ ['Chapter One','B',3.36,0.90,28],['1984 Ventures','B',2.88,0.85,25],
+ ['Volt Capital','C',2.50,1.00,19],['Afore Capital','B',2.28,0.80,53],
+ ['Pebblebed III','A',1.97,0.75,5],['Soma Capital','D',1.22,0.55,177],
+ ['Premise (Larco+Bent)','B',1.45,0.85,0],['Verdict (Bonatsos)','C',1.45,1.05,0],
+ ['Chemistry II','A',1.40,0.70,0],['Diffusion (Lazarte)','A',1.40,0.85,0],
+ ['Humba III (Polovets)','B',1.39,0.90,0],['Category (Iltchev)','B',1.35,0.80,0]]
+ .sort((a,b)=>b[2]-a[2]);
+const CW={A:1.4,B:1.2,C:0.7,D:0.5}, MINCHK={A:2.0,B:0.75,C:0.4,D:0.3};
+const MU_BASE=0.50;
+let SEED=42, chartMC=null;
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
 let rng=mulberry32(SEED);
-function lognorm(mu,sig){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();
- return Math.exp(mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v));}
+function gauss(mu,sig){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();return mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function lognorm(mu,sig){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();return Math.exp(mu+sig*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v));}
+const wS=y=>1-Math.exp(-Math.pow(y/6.5,1.8));
+const ramp=(y,fin)=>(1+(fin-1)*wS(y)/wS(10))*(1-0.10*Math.exp(-Math.pow((y-1.6)/2.4,2)));
+function irrOf(tv){const D=[0,0,0,0,.05,.10,.15,.20,.20,.15,.15],cf=[];
+ for(let y=0;y<=10;y++){let c=(y<5?-0.2:0)+D[y]*tv*0.6;if(y===10)c+=tv*0.4;cf.push(c);}
+ let lo=-0.5,hi=1.5;for(let i=0;i<60;i++){const r=(lo+hi)/2;let n=0;cf.forEach((c,y)=>n+=c/Math.pow(1+r,y));if(n>0)lo=r;else hi=r;}
+ return (lo+hi)/2;}
 function simulate(){
- rng=mulberry32(SEED);   // deterministic per (config, seed): same settings always show same numbers
- const size=+document.getElementById('size').value, m=+document.getElementById('mgr').value,
-   co=+document.getElementById('co').value/100, sel=document.getElementById('sel').value;
- document.getElementById('vSize').textContent='$'+size+'M';
- document.getElementById('vMgr').textContent=m;
- document.getElementById('vCo').textContent=Math.round(co*100)+'%';
- const N=1500,YRS=10;
- // Per-manager NET TVPI (already net of the manager's own fees), lognormal.
- // MU_BASE = median unselected VC fund ~1.5x net (Cambridge-style vintage median).
- const MU_BASE=0.40;
- // ACCESS CAP — the actual mechanism by which selection pays: an unselected LP cannot buy the
- // right tail (oversubscribed funds ration allocation). Selection = access to outliers, not
- // avoidance of losers.
- const CAPS={none:3.0, equal:8.0, tiered:25.0};
- const sizeDrag=0.09*Math.log2(size/40);   // scale penalty per doubling (check drift, entry pricing)
- // MINIMUM-SCALE CONSTRAINTS (the other side of the curve):
- // 1. LP check minimums — oversubscribed funds will not take token checks.
- const MINCHK={A:2.0,B:0.75,C:0.4,D:0.3};   // $M minimum LP commitment by access class
- // 2. Fixed operating cost — flat in dollars, so it bites small funds hardest.
- // Quoted admin $30K/yr; add audit, tax, legal, insurance, banking -> ~$75K/yr all-in, $750K over 10 yrs.
- const fixedDrag=0.90/size;                 // $90K/yr fund expenses x10yr (admin 30 + audit 15 + tax 11 + legal 30 + KYC 5)
- const FEE=Math.max(0.55, 1-0.08-fixedDrag);// variable fees+carry (8%) + fixed ops
- const CW={A:1.4,B:1.2,C:0.7,D:0.5};       // per-slot capital weight by access class (tiered mode)
- const chosen=ROSTER.slice(0,m);
- const wts=chosen.map(r=> sel==='tiered' ? CW[r[1]] : 1);
- const wsum=wts.reduce((a,b)=>a+b,0);
- // per-slot dollar check; a slot below its class minimum gets NO allocation -> generic market exposure
- const lpCapital=size*(1-co);
- const checks=chosen.map((r,i)=> lpCapital*wts[i]/wsum);
- const access=chosen.map((r,i)=> checks[i] >= MINCHK[r[1]]);
- const accW=chosen.reduce((a,r,i)=> a + (access[i]?wts[i]:0), 0)/wsum;   // share of capital with real allocations
- // co-invest flow comes FROM being a meaningful LP: no allocations -> no breakout co-invests
- // ---- CO-INVEST SLEEVE ----
- // Direct positions alongside our managers, in companies they already back. Economics differ from
- // the fund route in three ways: (1) no manager fee/carry layer (~25% uplift on the same outcome),
- // (2) single-company power law instead of a diversified book (fat sigma), (3) allocation is a
- // privilege of being a real LP — no meaningful commitments, no invitations.
- const CO_QUALITY={none:-0.30, equal:-0.05, tiered:0.10};   // log-mean of a single position
- const FEE_ADV=0.25;                                        // no 2/20 layer on direct positions
- const coMu=CO_QUALITY[sel]*(0.35+0.65*accW)+FEE_ADV*accW-sizeDrag, coSig=1.45;   // sigma = single-deal power law
- const noAcc=access.filter(a=>!a).length;
+ rng=mulberry32(SEED);
+ const size=+size_.value, m=+mgr_.value, co=+co_.value/100, selOn=sel_.value==='on', wt=wt_.value;
+ vSize.textContent='$'+size+'M'; vMgr.textContent=m; vCo.textContent=Math.round(co*100)+'%'; vSeed.textContent='#'+SEED;
+ const N=8000, CAPS=selOn?25.0:2.0, ps=selOn?1:0;
+ const ch=ROSTER.slice(0,m);
+ const w=ch.map(r=> wt==='tiered'?CW[r[1]]:1), ws=w.reduce((a,b)=>a+b,0);
+ const sizeDrag=0.09*Math.log2(size/40), fixedDrag=0.60/size, FEE=Math.max(0.55,1-0.08-fixedDrag);
+ const prem=ch.map(r=>0.35*Math.log(r[2]));
+ // estimation error: a premium measured on 5 entries is far less certain than one on 177.
+ const BASE=0.0588;
+ const se=ch.map(r=>{ if(!r[4]) return 0.30; const pr=Math.min(0.9,BASE*r[2]);
+   return Math.min(0.45, 0.35*Math.sqrt(Math.max((1-pr)/(r[4]*pr),1e-4))); });
+ const lp=size*(1-co), checks=ch.map((r,i)=>lp*w[i]/ws), acc=ch.map((r,i)=>checks[i]>=MINCHK[r[1]]);
+ const accW=ch.reduce((a,r,i)=>a+(acc[i]?w[i]:0),0)/ws;
+ const avgP=ch.reduce((a,r,i)=>a+prem[i]*w[i],0)/ws*ps;
+ const CENTER=Math.exp(MU_BASE+avgP-sizeDrag);
+ const coMu=(selOn?0.10:-0.30)*(0.35+0.65*accW)+0.25*accW-sizeDrag;
+ const k=Math.max(3,Math.round(co*size/1.0));
  const paths=[];
  for(let s=0;s<N;s++){
-   const mkt=lognorm(-0.09,0.46);                     // vintage/market regime — the dominant FoF risk (cf. 2021 vintages)
-   let fundTv=0;
-   chosen.forEach((r,i)=>{
-     const ok = access[i];
-     const prem = (!ok || sel==='none') ? 0 : (sel==='equal' ? r[2]*0.6 : r[2]);
-     const cap  = ok ? CAPS[sel] : 3.0;      // no allocation = market-access exposure only
-     const draw = Math.min(lognorm(MU_BASE+prem-sizeDrag, ok ? r[3] : 0.7), cap);
-     fundTv += (wts[i]/wsum) * draw;
-   });
-   let coTv=0;
-   if(co>0){
-     const k=Math.max(3,Math.round(co*size/2.5));           // ~$2.5M average ticket -> position count
-     for(let i=0;i<k;i++) coTv+=lognorm(coMu,coSig)/k;
-     // OVERLAP: co-invests sit in the same companies our managers hold, so half their idiosyncratic
-     // fate is shared with the fund sleeve — the correlation cost of concentrating into names we own.
-     coTv *= Math.pow(Math.max(0.25, fundTv/2.40), 0.5);
-   }
-   const finalTv=((1-co)*fundTv+co*coTv)*mkt*FEE;
-   const p=[];
-   for(let y=0;y<=YRS;y++){
-     // TVPI = total value / PAID-IN capital: begins at 1.0x, dips through the J-curve as fees are
-     // drawn before marks arrive, then compounds to the terminal multiple.
-     const g=Math.max(0,(y-1.5)/(YRS-1.5));           // value growth ramp
-     const jdip=1-0.13*Math.exp(-Math.pow((y-1.8)/2.2,2));   // fee-led J-curve trough ~yr 2
-     const tvpi=(1+(finalTv-1)*Math.pow(g,1.6))*jdip;
-     p.push(+(tvpi).toFixed(3));
-   }
-   p[YRS]=finalTv; paths.push(p);
+  const mkt=lognorm(0,0.46);
+  let ft=0;
+  ch.forEach((r,i)=>{const ok=acc[i];
+   const pi=ok?gauss(prem[i],se[i]):0;
+   ft+=(w[i]/ws)*Math.min(lognorm(MU_BASE+pi*ps-sizeDrag, ok?r[3]:0.7), ok?CAPS:2.0);});
+  let ct=0;
+  if(co>0){for(let i=0;i<k;i++) ct+=lognorm(coMu,1.45)/k;
+   ct*=Math.pow(Math.max(0.25,ft/CENTER),0.5);}
+  const fin=((1-co)*ft+co*ct)*mkt*FEE;
+  const p=[];for(let y=0;y<=10;y++)p.push(ramp(y,fin));p[10]=fin;paths.push(p);
  }
- const q=(arr,p)=>{const a=[...arr].sort((x,y)=>x-y);return a[Math.floor(p*(a.length-1))];};
- const yrs=[...Array(11).keys()];
- const P=pp=>yrs.map(y=>+q(paths.map(r=>r[y]),pp).toFixed(2));
+ const q=(a,p)=>{const s=[...a].sort((x,y)=>x-y);return s[Math.floor(p*(s.length-1))];};
+ const yrs=[...Array(11).keys()], P=pp=>yrs.map(y=>+q(paths.map(r=>r[y]),pp).toFixed(3));
  const p10=P(.10),p25=P(.25),p50=P(.50),p75=P(.75),p90=P(.90);
- const finals=paths.map(r=>r[10]);
- const meanTv=finals.reduce((a,b)=>a+b,0)/finals.length;
- document.getElementById('tMed').innerHTML=q(finals,.5).toFixed(2)+'x <span style="font-size:11px;font-weight:400;color:#777">(mean '+meanTv.toFixed(2)+'x)</span>';
- document.getElementById('tP90').textContent=q(finals,.9).toFixed(2)+'x';
- // cash-flow model: capital called 1/3 in yrs 0-2; distributions 5/10/15/20/20/30% of (0.6*TVPI) in yrs 5-10; residual NAV 0.4*TVPI at yr10
- const DSCH=[0,0,0,0,0,.05,.10,.15,.20,.20,.30];
- function irrOf(tv){ const cf=[]; for(let y=0;y<=10;y++){ let c=0;
-   if(y<3)c-=1/3; c+=DSCH[y]*tv*0.6; if(y===10)c+=tv*0.4; cf.push(c);}
-  let lo=-0.5,hi=1.5;
-  for(let i=0;i<48;i++){const r=(lo+hi)/2; let npv=0; cf.forEach((c,y)=>npv+=c/Math.pow(1+r,y)); if(npv>0)lo=r;else hi=r;}
-  return (lo+hi)/2;}
- const medTv=q(finals,.5);
- document.getElementById('tIRR').textContent=(100*irrOf(medTv)).toFixed(1)+'%';
- let cum=0,beY='>10';
- for(let y=0;y<=10;y++){cum+=DSCH[y]*medTv*0.6; if(cum>=1){beY='Year '+y;break;}}
- document.getElementById('tDPI').textContent=beY;
- // benchmark strip
- const p75v=q(finals,.75);
- const p25v=q(finals,.25);
- document.getElementById('bench').innerHTML=
-  `<tr style="background:#f7f9fc"><td style="padding:5px 8px"><b>This portfolio — median outcome</b> <span style="color:#777">(the coin-flip case)</span></td><td><b>${medTv.toFixed(2)}x</b></td><td><b>${(100*irrOf(medTv)).toFixed(0)}%</b></td></tr>
-   <tr><td style="padding:4px 8px">This portfolio — expected value (mean)</td><td>${meanTv.toFixed(2)}x</td><td>${(100*irrOf(meanTv)).toFixed(0)}%</td></tr>
-   <tr><td style="padding:4px 8px">This portfolio — good case (P75)</td><td>${p75v.toFixed(2)}x</td><td>${(100*irrOf(p75v)).toFixed(0)}%</td></tr>
-   <tr><td style="padding:4px 8px">This portfolio — poor case (P25)</td><td>${p25v.toFixed(2)}x</td><td>${(100*irrOf(p25v)).toFixed(0)}%</td></tr>`;
- // concentration warning: a few-manager portfolio is a lottery ticket with positive expected value
- const cw=document.getElementById('concwarn');
- const unreach = noAcc ? `<b>${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size</b> — the per-slot check falls below their minimum LP commitment, so that capital gets generic market exposure instead.<br>` : '';
- cw.innerHTML = unreach + (m<=4 ? `<b>Concentration note:</b> with ${m} manager${m>1?'s':''} you are not running a portfolio — you are buying ${m===1?'one':'a few'} lottery ticket${m>1?'s':''} with positive expected value. The <b>mean</b> outcome (${meanTv.toFixed(2)}x) clears the Kauffman bar; the <b>median</b> (${medTv.toFixed(2)}x) does not, and capital loss runs ${document.getElementById('tLoss').textContent}. The Kauffman standard is a portfolio test, not a single-fund test — single seed funds miss it far more often than they beat it, which is precisely why LPs hold 10–20 of them.` : '');
- cw.style.cssText = (m<=4||noAcc) ? 'background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0' : '';
- document.getElementById('tLoss').textContent=Math.round(100*finals.filter(v=>v<1).length/N)+'%';
- const ds=[
-  {label:'10–90% band',data:p90,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.10)'},
-  {data:p10,borderWidth:0,pointRadius:0,fill:false},
-  {label:'25–75% band',data:p75,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.22)'},
-  {data:p25,borderWidth:0,pointRadius:0,fill:false},
-  {label:'Median',data:p50,borderColor:NAVY,borderWidth:2.5,pointRadius:0,fill:false},
-  {label:'Paid-in capital',data:yrs.map(_=>1),borderColor:GREY,borderDash:[5,4],borderWidth:1.5,pointRadius:0,fill:false}];
- if(chart3){chart3.data.datasets.forEach((d,i)=>d.data=ds[i].data);chart3.update('none');return;}
- chart3=new Chart(c3,{type:'line',data:{labels:yrs.map(y=>'Year '+y),datasets:ds},
-  options:{plugins:{legend:{display:true,labels:{filter:i=>i.text&&!i.text.startsWith('undefined'),boxWidth:14,font:{size:11}}},
-   tooltip:{filter:i=>[4,0,2].includes(i.datasetIndex),callbacks:{label:i=>`${i.dataset.label||''}: ${i.parsed.y}x`}}},
-  scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Net TVPI (x)',font:{size:11}},min:0}}}});
-}
-['size','mgr','co','sel'].forEach(id=>document.getElementById(id).addEventListener('input',simulate));
-document.getElementById('reroll').addEventListener('click',()=>{SEED=Math.floor(Math.random()*1e6);
- document.getElementById('vSeed').textContent='#'+SEED; simulate();});
-simulate();
-</script>
-
-<script>
-// ---- Departure lead times (measured from SEC Form D related-persons name-diff) ----
-new Chart(c2,{type:'bar',data:{
- labels:['Leo Polovets \u2192 Humba','Ethan Kurzweil \u2192 Chemistry','Brian Singerman \u2192 GPx','Tomasz Tunguz \u2192 Theory'],
- datasets:[{data:[26,24,20,9],backgroundColor:'#003876',borderRadius:4,barThickness:26}]},
- options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-  plugins:{legend:{display:false},tooltip:{callbacks:{label:i=>`Filing silence began ${i.parsed.x} months before the public announcement`}}},
-  scales:{x:{title:{display:true,text:'Months of Form D silence before the market knew',font:{size:11}},grid:{color:'#f0f0f0'}},
-          y:{grid:{display:false}}}}});
-</script>
-
-<script>
-(()=>{const P=[
-["Etched","~80x",1],["Whop","~80x",1],["Radiant","~80x",1],["Ramp","~80x",1],["Black Forest Labs","~79x",1],
-["Decart","~74x",1],["Eight Sleep","~50x",1],["TRM Labs","~50x",1],["Stoke Space","~48x",1],["Valar Atomics","~48x",1],
-["You.com","~36x",1],["Slash","~34x",1],["Nscale","~31x",1],["Assort Health","~29x",1],["Enter","~29x",1],["Farther","~29x",1],
-["Modal","~26x",1],["MatX","~25x",1],["Cast AI","~24x",1],["Avoca","~24x",1],["Curative","~24x",1],["Hadrian","~38x",1],
-["Omni","~15x",1],["Upscale AI","~10x",1],["Invisible Tech","~10x",1],
-["Owner.com","~16x",0],["OpenPhone","~14x",0],["Northwood Space","~13x",0],["Fun.xyz","~10x",0],["Biossil","~9x",0],
-["Nitra","~7x",0],["WindBorne","~5x",0],["Allium","~5x",0],["Dropzone AI","~5x",0],["Swarm Aero","~5x",0],
-["Eyebot","~3x",0],["Regie.ai","~3x",0],["Shinkei Systems","~3x",0],["Cargado","~3x",0],["Movandi","~2x",0],
-["Stell Engineering","~2x",0],["Beam","~2x",0],["Nyne","~1.5x",0]];
-const w=document.getElementById('logowall');
-const lg=document.createElement('div');
-lg.style.cssText='flex-basis:100%;font-size:11px;color:#777;margin-bottom:2px';
-lg.innerHTML='<span style="border:2px solid var(--yellow);border-radius:10px;padding:1px 8px;font-weight:600;color:#111">unicorn</span> &nbsp; <span style="border:1px solid #ccc;border-radius:10px;padding:1px 8px;color:#555">$30M+ follow-on</span> &nbsp; figures = estimated position multiple, dilution-adjusted, capped at ~80x';
-w.appendChild(lg);
-P.forEach(([n,m,u])=>{const d=document.createElement('span');
- d.innerHTML=n+' <b style="color:'+(u?'#003876':'#888')+'">'+m+'</b>';
- d.style.cssText=u?'padding:6px 12px;border:2px solid var(--yellow);border-radius:16px;font-weight:600;font-size:13px'
-                  :'padding:6px 12px;border:1px solid #ccc;border-radius:16px;font-size:13px;color:#555';
- w.appendChild(d);});})();
-</script>
-
-
-</body></html>
-
-
-<div class="card" id="t1arrival">
-<p class="ct">Our top grade takes tier-1 money at 1.7x our bottom grade</p>
-<p class="cs">5,323 founders we flagged between March 2024 and August 2026, graded 1 to 3 at the moment of flagging — share whose company later raised from one of the 29 tier-1 firms</p>
-<div style="height:210px"><canvas id="c8" role="img" aria-label="Bar chart of tier-1 conversion by triage grade: grade 1 is 3.63 percent of 2,150 founders, grade 2 is 1.47 percent of 817, grade 3 is 2.10 percent of 1,574.">Grade 1 converts at 3.63 percent, grade 3 at 2.10 percent, grade 2 at 1.47 percent.</canvas></div>
-<p class="cs" style="margin-top:10px">Grade 2 sits below grade 3, on 817 founders — the middle of the scale is not carrying information, and that is where the next model revision has to earn its keep. Rates are floors: only 1,875 of these founders have a named company on LinkedIn today, so every round raised under a still-stealth name is invisible to the match and counted as a miss.</p>
-<div class="src"><span>Source: Olympos signal log, Crunchbase round data (199,620 parsed rounds), LinkedIn profile histories (9.8M) · tier-1 defined as the 29 hand-picked firms</span><span class="byline">OLYMPOS</span></div>
-</div>
-
-<div class="card" id="t1lead">
-<p class="ct">Half the tier-1 money arrives within nine months of our flag</p>
-<p class="cs">Cumulative share of tier-1 rounds already raised, by months elapsed since we flagged the founder — 137 founders who converted</p>
-<div style="height:230px"><canvas id="c9" role="img" aria-label="Line chart of cumulative tier-1 arrival: across all converting founders, 20 percent within 3 months, 35 percent within 6, 47 percent within 9, 63 percent within 12, 86 percent within 18, 96 percent within 24. Grade 1 runs ahead of grade 3 throughout.">Across all grades, 47 percent of tier-1 rounds land within nine months of the flag and 86 percent within eighteen.</canvas></div>
-<p class="cs" style="margin-top:10px">Grade 1 has a median lead of 8.6 months, grade 3 of 11.0. That gap is the window a fund can act in: a manager who takes the feed sees the founder roughly three quarters of a year before the round prices.</p>
-<div class="src"><span>Source: Olympos signal log, Crunchbase round data · first tier-1 round per founder, measured from the week we flagged them</span><span class="byline">OLYMPOS</span></div>
-</div>
-<div class="card" id="coinvest">
-<p class="ct">Ten to fourteen co-invests is the sweet spot</p>
-<p class="cs">Monte Carlo over single-deal outcomes (40,000 draws per point) — median and downside net multiple of the co-invest sleeve against the number of positions it holds</p>
-<div style="height:230px"><canvas id="c7" role="img" aria-label="Line chart: as co-invest positions rise from 3 to 30, the median sleeve multiple climbs from 1.88x to 2.83x while the 10th-percentile outcome climbs from 0.57x to 1.78x; the probability of losing money falls from 25 percent to under 1 percent.">Below eight positions a quarter of co-invest sleeves lose money; by twelve that risk is 3 percent.</canvas></div>
-<table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 4px">
-<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left">
-<th style="padding:4px 8px;width:40%">Deal we would have been offered</th><th>Our manager was already in</th><th>The round we could have joined</th></tr>
-<tr><td style="padding:4px 8px"><b>Avoca</b> — AI agents for home services</td><td>Soma, Apr 2023</td><td><b>$125M Series B</b>, Apr 2026 · General Catalyst, Kleiner Perkins, Amplify</td></tr>
-<tr><td style="padding:4px 8px"><b>Northwood Space</b> — ground stations</td><td>Humba, Feb 2024</td><td><b>$100M Series B</b>, Jan 2026 · Andreessen Horowitz, 137 Ventures</td></tr>
-<tr><td style="padding:4px 8px"><b>DualEntry</b> — AI-native accounting</td><td>Soma, May 2024</td><td><b>$90M Series A</b>, Oct 2025 · GV, Khosla, Lightspeed</td></tr>
-</table>
-<div class="src"><span>Source: Olympos, Crunchbase round data (199,620 parsed rounds), manager investment tapes · 19 such windows found across the nine 2024 managers; the three shown are the largest with a tier-1 lead</span><span class="byline">OLYMPOS</span></div>
-</div>
-<div class="card" id="convergence">
-<p class="ct">The managers we would back invest in founders we flagged first</p>
-<p class="cs">5,329 stealth-founder signals delivered weekly to a US venture firm since Mar 2024, matched against 350 companies those managers bought since Mar 2024 — 22 cases where our signal came first, median lead 8.2 months</p>
-<table style="width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 14px">
-<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left">
-<th style="padding:4px 8px;width:34%">Founder / company</th><th>We flagged</th><th>Manager invested</th><th>Lead</th></tr>
-<tr><td style="padding:4px 8px"><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15</td><td><b>9 mo</b></td></tr>
-<tr><td style="padding:4px 8px">Snir Kodesh · Petual</td><td>2025-04-18</td><td>Quiet Capital 2026-04-23</td><td>12 mo</td></tr>
-<tr><td style="padding:4px 8px">Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29</td><td>10 mo</td></tr>
-<tr><td style="padding:4px 8px">Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One (Bucher) 2025-05-21</td><td>9 mo</td></tr>
-<tr><td style="padding:4px 8px">Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27</td><td>7 mo</td></tr>
-</table>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
- <div><canvas id="c5" height="150"></canvas></div>
- <div><canvas id="c6" height="150"></canvas></div>
-</div>
-<div style="background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:12px 0 0">
-<b>Artemis is the case to hold onto:</b> our engine flagged both founders in July 2025, a partner at the client firm independently claimed one, and nine months later Theory Ventures — a manager on the roster below — led their round. Three instruments, three timestamps, one target.<br>
-<b>What this is not:</b> a claim that we beat these managers to their unicorns. Our record begins Mar 2024; their unicorn positions were bought 2021–23. This is convergence — the engine and the manager selection independently pointing at the same founders — and it compounds every week.</div>
-<div class="src"><span>Olympos analysis · 123 weekly deliverables (2024-03-06 → 2026-08-07) timestamped in a third-party CRM; Crunchbase founder + round data; name-matched, 7 of 22 carry year-granularity investment dates and are excluded from the median</span><span class="byline">OLYMPOS</span></div>
-<script>
-// ---- Chart 5: lead-time distribution ----
-(()=>{const leads=[13/30,1,4,7,7,8,8,8,9,9,9,9,10,10,12,16,17,19,20,22];
- const bins=[0,3,6,9,12,18,24], lbl=['0–3','3–6','6–9','9–12','12–18','18–24'];
- const cnt=lbl.map((_,i)=>leads.filter(x=>x>=bins[i]&&x<bins[i+1]).length);
- new Chart(c5,{type:'bar',data:{labels:lbl,datasets:[{data:cnt,backgroundColor:NAVY,borderRadius:4,barThickness:34}]},
- options:{plugins:{legend:{display:false},
-  tooltip:{callbacks:{label:i=>i.parsed.y+' founders flagged '+i.label+' months before the round'}}},
- scales:{x:{grid:{display:false},title:{display:true,text:'months between our signal and the investment',font:{size:10}}},
-  y:{beginAtZero:true,ticks:{precision:0},title:{display:true,text:'founders',font:{size:10}}}}}});})();
-// ---- Chart 6: convergence rate by manager ----
-(()=>{const raw=[['Theory',2,11],['Soma',15,148],['Quiet',3,40],['Wischoff',1,15],['Day One',1,21]]
-   .map(r=>({m:r[0],h:r[1],p:r[2],rate:+(100*r[1]/r[2]).toFixed(1)}))
-   .sort((a,b)=>b.rate-a.rate);                      // Minto rule 3: comparative order, largest first
- new Chart(c6,{type:'bar',data:{labels:raw.map(r=>r.m),
-  datasets:[{data:raw.map(r=>r.rate),backgroundColor:NAVY,borderRadius:4,barThickness:22}]},
- options:{indexAxis:'y',plugins:{legend:{display:false},
-  tooltip:{callbacks:{label:i=>raw[i.dataIndex].h+' of '+raw[i.dataIndex].p+' positions ('+i.parsed.x+'%)'}}},
- scales:{x:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{callback:v=>v+'%',color:'#888',font:{size:11}},
-   title:{display:true,text:'share of their 2024+ positions we flagged first',color:'#666',font:{size:11,weight:500}}},
-  y:{grid:{display:false},ticks:{color:'#888',font:{size:11}}}}}});})();
-</script>
-
-</div>
-<script>
-(()=>{const K=[3,5,8,12,16,20,30],
- med=[1.88,2.17,2.39,2.57,2.67,2.73,2.83], p10=[0.57,0.82,1.08,1.31,1.47,1.58,1.78];
- new Chart(document.getElementById('c7'),{type:'line',data:{labels:K,datasets:[
-  {label:'Median outcome',data:med,borderColor:'#003876',borderWidth:2.5,tension:.25,pointRadius:0,pointHoverRadius:5,
-   fill:true,backgroundColor:'rgba(0,56,118,0.08)'},
-  {label:'Downside (10th percentile)',data:p10,borderColor:'#9ca3af',borderWidth:2,borderDash:[5,4],tension:.25,pointRadius:0,pointHoverRadius:5,fill:false}]},
- options:{responsive:true,maintainAspectRatio:false,layout:{padding:{right:8}},
-  plugins:{legend:{display:true,labels:{boxWidth:14,font:{size:11},color:'#555'}},
-   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
-    callbacks:{title:i=>i[0].label+' positions',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
-  scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}},
-    title:{display:true,text:'number of co-invest positions',color:'#666',font:{size:11,weight:500}}},
-   y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'x'},
-    title:{display:true,text:'net multiple on the sleeve',color:'#666',font:{size:11,weight:500}}}}}});})();
-</script>
-
-<script>
-(()=>{
- new Chart(document.getElementById('c8'),{type:'bar',data:{labels:['Grade 1  (n=2,150)','Grade 2  (n=817)','Grade 3  (n=1,574)'],
-  datasets:[{data:[3.63,1.47,2.10],backgroundColor:['#003876','#9ca3af','#9ca3af'],borderWidth:0,barPercentage:.55}]},
+ const fin=paths.map(r=>r[10]), mean=fin.reduce((a,b)=>a+b,0)/fin.length, med=q(fin,.5);
+ tMed.textContent=med.toFixed(2)+'x'; tMean.textContent=mean.toFixed(2)+'x';
+ tIRR.textContent=(100*irrOf(med)).toFixed(1)+'%'; tP90.textContent=q(fin,.9).toFixed(2)+'x';
+ const loss=Math.round(100*fin.filter(v=>v<1).length/N); tLoss.textContent=loss+'%';
+ bench.innerHTML=`<tr style="background:#f7f9fc"><td><b>This portfolio — median</b> <span style="color:#777">(the coin-flip case)</span></td><td><b>${med.toFixed(2)}x</b></td><td><b>${(100*irrOf(med)).toFixed(0)}%</b></td></tr>
+  <tr><td>This portfolio — expected value (mean)</td><td>${mean.toFixed(2)}x</td><td>${(100*irrOf(mean)).toFixed(0)}%</td></tr>
+  <tr><td>This portfolio — good case (P90)</td><td>${q(fin,.9).toFixed(2)}x</td><td>${(100*irrOf(q(fin,.9))).toFixed(0)}%</td></tr>
+  <tr><td>This portfolio — poor case (P25)</td><td>${q(fin,.25).toFixed(2)}x</td><td>${(100*irrOf(q(fin,.25))).toFixed(0)}%</td></tr>`;
+ const unscored=ch.filter(r=>r[4]===0).length, noAcc=acc.filter(a=>!a).length;
+ let msg='';
+ if(!selOn) msg+='<b>Calibration check.</b> With selection off the model returns '+med.toFixed(2)+'x and '+(100*irrOf(med)).toFixed(0)+'% against a published fund-of-funds median of 1.4–1.6x and 8–10%. The model was not fitted to that number; reproducing it is the reason to believe the selected case.<br>';
+ if(noAcc) msg+='<b>'+noAcc+' manager'+(noAcc>1?'s':'')+' unreachable at this size</b> — the cheque falls below their minimum, so that capital gets ordinary market exposure instead.<br>';
+ if(unscored) msg+='<b>'+unscored+' of these '+m+' managers have no measured hit rate.</b> They carry an assumed premium with wide error bars, so treat that share of the result as opinion rather than measurement.<br>';
+ if(m<=6) msg+='<b>Why not just hold '+m+'?</b> The model says manager count barely moves the return — vintage risk and the direct sleeve dominate, and they are common to every manager. The reason to hold twelve is not in this chart: our premium estimates rest on as few as five observations each, and a '+m+'-manager fund is a bet that '+m+' of those estimates are right.';
+ warn.innerHTML=msg;
+ warn.style.cssText=msg?'background:#fff8e1;border-left:4px solid var(--yellow);padding:10px 13px;font-size:12px;line-height:1.6;margin:12px 0 0':'';
+ const band=(hi,lo,a)=>[{data:hi,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,'+a+')'},{data:lo,borderWidth:0,pointRadius:0,fill:false}];
+ const ds=[...band(p90,p10,0.09),...band(p75,p25,0.11),
+  {data:p50,borderColor:NAVY,borderWidth:2.5,pointRadius:0,pointHoverRadius:5,fill:false,tension:.15,label:'Median'},
+  {data:yrs.map(()=>1),borderColor:GREY,borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,label:'Committed capital'}];
+ if(chartMC) chartMC.destroy();
+ chartMC=new Chart(document.getElementById('cMC'),{type:'line',data:{labels:yrs,datasets:ds},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
-   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
-    callbacks:{label:i=>i.parsed.y.toFixed(2)+'% took tier-1 money'}}},
-   scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}}},
-    y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'%'},
-     title:{display:true,text:'share that later raised from a tier-1 firm',color:'#666',font:{size:11,weight:500}}}}}});
+   tooltip:{...TT,filter:i=>i.datasetIndex>=4,callbacks:{title:i=>'Year '+i[0].label,label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
+   scales:{x:{grid:NOGRID,ticks:TICK,title:AX('years from first close')},
+    y:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('net TVPI on committed capital')}}}});
+}
+const size_=document.getElementById('size'),mgr_=document.getElementById('mgr'),co_=document.getElementById('co'),
+ sel_=document.getElementById('sel'),wt_=document.getElementById('wt');
+['input','change'].forEach(e=>[size_,mgr_,co_,sel_,wt_].forEach(el=>el.addEventListener(e,simulate)));
+document.getElementById('reroll').onclick=()=>{SEED=Math.floor(Math.random()*9000)+100;simulate();};
+simulate();
 
- const B=[0,3,6,9,12,18,24,36];
- new Chart(document.getElementById('c9'),{type:'line',data:{labels:B,datasets:[
-  {label:'Grade 1',data:[0,24.4,39.7,53.8,69.2,87.2,96.2,100],borderColor:'#003876',borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.07)'},
-  {label:'Grade 3',data:[0,18.2,33.3,36.4,57.6,87.9,97.0,100],borderColor:'#fdcf07',borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:false},
-  {label:'All grades',data:[0,19.7,35.0,47.4,62.8,86.1,96.4,100],borderColor:'#9ca3af',borderWidth:2,borderDash:[5,4],tension:.2,pointRadius:0,pointHoverRadius:5,fill:false}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:14,font:{size:11},color:'#555'}},
-   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
-    callbacks:{title:i=>'within '+i[0].label+' months',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(0)+'% raised'}}},
-   scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}},
-     title:{display:true,text:'months after we flagged the founder',color:'#666',font:{size:11,weight:500}}},
-    y:{min:0,max:100,grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'%'},
-     title:{display:true,text:'tier-1 rounds already raised',color:'#666',font:{size:11,weight:500}}}}}});
-})();
+/* 7 — backtest calibration */
+const QL=['2024 Q3','2024 Q4','2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1','2026 Q2','2026 Q3'];
+const t=i=>i/8*2;   // years elapsed
+const bandHi=QL.map((_,i)=>+(1+(1.31-1)*Math.pow(t(i)/2,1.4)).toFixed(3));
+const bandLo=QL.map((_,i)=>+(1+(1.03-1)*Math.pow(t(i)/2,1.4)).toFixed(3));
+const modMed=QL.map((_,i)=>+(1+(1.14-1)*Math.pow(t(i)/2,1.4)).toFixed(3));
+new Chart(document.getElementById('cBack'),{type:'line',data:{labels:QL,datasets:[
+ {data:bandHi,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,0.13)',label:'Model band'},
+ {data:bandLo,borderWidth:0,pointRadius:0,fill:false},
+ {data:modMed,borderColor:'rgba(0,56,118,0.45)',borderWidth:1.5,borderDash:[4,4],pointRadius:0,fill:false,label:'Model median'},
+ {data:QL.map((_,i)=>+(1+(1.25-1)*Math.pow(t(i)/2,1.4)).toFixed(3)),borderColor:NAVY,borderWidth:2.5,tension:.15,pointRadius:0,pointHoverRadius:5,fill:false,label:'Real 2024 book, equal weight'},
+ {data:QL.map((_,i)=>+(1+(1.21-1)*Math.pow(t(i)/2,1.4)).toFixed(3)),borderColor:YEL,borderWidth:2.5,tension:.15,pointRadius:0,pointHoverRadius:5,fill:false,label:'Same book, tiered'},
+ {data:QL.map((_,i)=>+(1+(1.00-1)*Math.pow(t(i)/2,1.4)).toFixed(3)),borderColor:GREY,borderWidth:2,borderDash:[5,4],pointRadius:0,fill:false,label:'Public seed FoF benchmark'}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,filter:i=>i.datasetIndex>=2,callbacks:{label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK},
+   y:{min:0.95,grid:GRID,ticks:{...TICK,callback:v=>v.toFixed(2)+'x'},title:AX('net TVPI on committed capital')}}}});
 </script>
-
+</body></html>
