@@ -231,7 +231,7 @@ function simulate(){
  const CO_QUALITY={none:-0.30, equal:-0.05, tiered:0.10};   // log-mean of a single position
  const FEE_ADV=0.25;                                        // no 2/20 layer on direct positions
  const coMu=CO_QUALITY[sel]*(0.35+0.65*accW)+FEE_ADV*accW-sizeDrag, coSig=1.45;   // sigma = single-deal power law
-font-weight:600">${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size — check below their minimum LP commitment</span>`:'');
+ const noAcc=access.filter(a=>!a).length;
  const paths=[];
  for(let s=0;s<N;s++){
    const mkt=lognorm(-0.09,0.46);                     // vintage/market regime — the dominant FoF risk (cf. 2021 vintages)
@@ -293,8 +293,9 @@ font-weight:600">${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size
    <tr><td style="padding:4px 8px">This portfolio — poor case (P25)</td><td>${p25v.toFixed(2)}x</td><td>${(100*irrOf(p25v)).toFixed(0)}%</td></tr>`;
  // concentration warning: a few-manager portfolio is a lottery ticket with positive expected value
  const cw=document.getElementById('concwarn');
- cw.innerHTML = m<=4 ? `<b>Concentration note:</b> with ${m} manager${m>1?'s':''} you are not running a portfolio — you are buying ${m===1?'one':'a few'} lottery ticket${m>1?'s':''} with positive expected value. The <b>mean</b> outcome (${meanTv.toFixed(2)}x) clears the Kauffman bar; the <b>median</b> (${medTv.toFixed(2)}x) does not, and capital loss runs ${document.getElementById('tLoss').textContent}. The Kauffman standard is a portfolio test, not a single-fund test — single seed funds miss it far more often than they beat it, which is precisely why LPs hold 10–20 of them.` : '';
- cw.style.cssText = m<=4 ? 'background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0' : '';
+ const unreach = noAcc ? `<b>${noAcc} manager${noAcc>1?'s':''} unreachable at this fund size</b> — the per-slot check falls below their minimum LP commitment, so that capital gets generic market exposure instead.<br>` : '';
+ cw.innerHTML = unreach + (m<=4 ? `<b>Concentration note:</b> with ${m} manager${m>1?'s':''} you are not running a portfolio — you are buying ${m===1?'one':'a few'} lottery ticket${m>1?'s':''} with positive expected value. The <b>mean</b> outcome (${meanTv.toFixed(2)}x) clears the Kauffman bar; the <b>median</b> (${medTv.toFixed(2)}x) does not, and capital loss runs ${document.getElementById('tLoss').textContent}. The Kauffman standard is a portfolio test, not a single-fund test — single seed funds miss it far more often than they beat it, which is precisely why LPs hold 10–20 of them.` : '');
+ cw.style.cssText = (m<=4||noAcc) ? 'background:#fff8e1;border-left:4px solid var(--yellow);padding:9px 12px;font-size:12px;line-height:1.55;margin:10px 0 0' : '';
  document.getElementById('tLoss').textContent=Math.round(100*finals.filter(v=>v<1).length/N)+'%';
  const ds=[
   {label:'10–90% band',data:p90,borderWidth:0,pointRadius:0,fill:'+1',backgroundColor:'rgba(0,56,118,.10)'},
