@@ -376,18 +376,22 @@ P.forEach(([n,m,u])=>{const d=document.createElement('span');
 (()=>{const leads=[13/30,1,4,7,7,8,8,8,9,9,9,9,10,10,12,16,17,19,20,22];
  const bins=[0,3,6,9,12,18,24], lbl=['0–3','3–6','6–9','9–12','12–18','18–24'];
  const cnt=lbl.map((_,i)=>leads.filter(x=>x>=bins[i]&&x<bins[i+1]).length);
- new Chart(c5,{type:'bar',data:{labels:lbl,datasets:[{data:cnt,backgroundColor:NAVY,borderRadius:4}]},
- options:{plugins:{legend:{display:false},title:{display:true,text:'How far ahead we were (months)',font:{size:13,weight:'600'},color:NAVY},
+ new Chart(c5,{type:'bar',data:{labels:lbl,datasets:[{data:cnt,backgroundColor:NAVY,borderRadius:4,barThickness:34}]},
+ options:{plugins:{legend:{display:false},
   tooltip:{callbacks:{label:i=>i.parsed.y+' founders flagged '+i.label+' months before the round'}}},
  scales:{x:{grid:{display:false},title:{display:true,text:'months between our signal and the investment',font:{size:10}}},
   y:{beginAtZero:true,ticks:{precision:0},title:{display:true,text:'founders',font:{size:10}}}}}});})();
 // ---- Chart 6: convergence rate by manager ----
-(()=>{const M=['Wischoff','Theory','Quiet','Day One','Soma'],hits=[1,2,3,1,15],pos=[15,11,40,21,148];
- const rate=M.map((_,i)=>+(100*hits[i]/pos[i]).toFixed(1));
- new Chart(c6,{type:'bar',data:{labels:M,datasets:[{data:rate,backgroundColor:[GREY,YELLOW,NAVY,GREY,NAVY],borderRadius:4}]},
- options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'Share of each manager’s new positions we had already flagged',font:{size:13,weight:'600'},color:NAVY},
-  tooltip:{callbacks:{label:i=>hits[i.dataIndex]+' of '+pos[i.dataIndex]+' positions ('+i.parsed.x+'%)'}}},
- scales:{x:{grid:{color:'#f0f0f0'},ticks:{callback:v=>v+'%'},title:{display:true,text:'% of their 2024+ positions pre-signaled by us',font:{size:10}}},y:{grid:{display:false}}}}});})();
+(()=>{const raw=[['Theory',2,11],['Soma',15,148],['Quiet',3,40],['Wischoff',1,15],['Day One',1,21]]
+   .map(r=>({m:r[0],h:r[1],p:r[2],rate:+(100*r[1]/r[2]).toFixed(1)}))
+   .sort((a,b)=>b.rate-a.rate);                      // Minto rule 3: comparative order, largest first
+ new Chart(c6,{type:'bar',data:{labels:raw.map(r=>r.m),
+  datasets:[{data:raw.map(r=>r.rate),backgroundColor:NAVY,borderRadius:4,barThickness:22}]},
+ options:{indexAxis:'y',plugins:{legend:{display:false},
+  tooltip:{callbacks:{label:i=>raw[i.dataIndex].h+' of '+raw[i.dataIndex].p+' positions ('+i.parsed.x+'%)'}}},
+ scales:{x:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{callback:v=>v+'%',color:'#888',font:{size:11}},
+   title:{display:true,text:'share of their 2024+ positions we flagged first',color:'#666',font:{size:11,weight:500}}},
+  y:{grid:{display:false},ticks:{color:'#888',font:{size:11}}}}}});})();
 </script>
 
 </div>
