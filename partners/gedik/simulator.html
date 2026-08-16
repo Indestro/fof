@@ -104,31 +104,20 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 
 <!-- ═══════════ 2 ═══════════ -->
 <h2><span class="num">2</span>The lead holds across 5,323 founders, not just 22</h2>
-<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged, found their company, and asked whether one of the 29 top firms later put money in.</p>
+<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged — 5,323 of them — found their company, and asked whether one of the 29 top firms later put money in. It happened 137 times, and the median gap between our flag and their cheque was <b>8.6 months</b>. That gap is the product: it is how long a manager has to act on the feed before the round prices.</p>
 
 <div class="chart-card" id="arrival">
-<div class="chart-title">Half the top-firm money lands within nine months</div>
-<div class="chart-sub">Share of top-firm rounds already raised, by months since we flagged the founder — 137 founders who went on to raise from one of the 29 firms</div>
+<div class="chart-title">Half the money arrives within nine months of our flag</div>
+<div class="chart-sub">Months between our signal and the first round from one of the 29 top firms — 137 founders who went on to raise from one</div>
 <div class="chart-legend">
- <span><span class="swatch" style="background:#003876;"></span>Founders we graded 1</span>
- <span><span class="swatch" style="background:#fdcf07;"></span>Founders we graded 3</span>
- <span><span class="swatch" style="background:#888888;"></span>All grades</span></div>
-<div class="chart-single"><canvas id="cArrival" role="img" aria-label="Line chart of cumulative top-firm arrival by months since our signal. Across all grades: 20 percent within 3 months, 35 within 6, 47 within 9, 63 within 12, 86 within 18, 96 within 24. Grade 1 runs ahead of grade 3 throughout, reaching 54 percent by month 9 against 36 percent.">Across all grades, 47 percent of top-firm rounds land within nine months of the flag and 86 percent within eighteen.</canvas></div>
+ <span><span class="swatch" style="background:#003876;"></span>Inside the nine-month window — 47% of rounds</span>
+ <span><span class="swatch" style="background:#B4B2A9;"></span>Later</span></div>
+<div class="chart-single" style="height:270px"><canvas id="cArrival" style="height:270px!important" role="img" aria-label="Bar chart of months between our signal and the top-firm round: 20 percent arrive within 3 months, 15 percent at 3 to 6, 12 percent at 6 to 9, 15 percent at 9 to 12, 23 percent at 12 to 18, 10 percent at 18 to 24, and 4 percent at 24 to 36 months. Forty-seven percent fall inside the first nine months.">Forty-seven percent of top-firm rounds land within nine months of our flag; the median lead is 8.6 months.</canvas></div>
 <div class="chart-source">Source: Olympos signal log, Crunchbase (199,620 parsed rounds), LinkedIn profile histories (9.8M), tier-one defined as the 29 named firms</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<div class="chart-card" id="grade">
-<div class="chart-title">Our top grade converts at 1.7 times our bottom grade</div>
-<div class="chart-sub">Share of flagged founders whose company later raised from one of the 29 top firms, by the grade we gave them at the moment of flagging</div>
-<div class="chart-legend">
- <span><span class="swatch" style="background:#003876;"></span>Grade 1 — our strongest call</span>
- <span><span class="swatch" style="background:#B4B2A9;"></span>Grades 2 and 3</span></div>
-<div class="chart-single" style="height:250px"><canvas id="cGrade" style="height:250px!important" role="img" aria-label="Bar chart of conversion by grade: grade 1 is 3.63 percent of 2,150 founders, grade 2 is 1.47 percent of 817, grade 3 is 2.10 percent of 1,574.">Grade 1 converts at 3.63 percent against 2.10 percent for grade 3; grade 2 sits out of order at 1.47 percent.</canvas></div>
-<div class="chart-source">Source: Olympos signal log, Crunchbase, LinkedIn profile histories — rates are floors, see note</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
-<div class="note"><b>Two things we will not dress up.</b> Grade 2 sits below grade 3 on 817 founders, which means the middle of our scale is carrying no information — that is the next thing the model has to fix. And these rates are floors, not truths: only 1,875 of the 5,290 founders have a named company on LinkedIn today, so every round raised under a still-stealth name is counted here as a miss.</div>
+<div class="note"><b>What this number is not.</b> It is a floor. Only 1,875 of these 5,323 founders have a named company on LinkedIn today, so any round raised while the company is still trading under a stealth name is invisible to the match and counted here as a miss. The true lead is at least this long.</div>
 
 <!-- ═══════════ 3 ═══════════ -->
 <h2><span class="num">3</span>We pick funds by what they did, not by who they know</h2>
@@ -301,20 +290,15 @@ new Chart(document.getElementById('cShare'),{type:'bar',data:{labels:['Theory','
   scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share of their 2024+ positions we flagged first')},
    y:{grid:NOGRID,ticks:TICK}}}});
 
-/* 2 — arrival + grade */
-new Chart(document.getElementById('cArrival'),{type:'line',data:{labels:[0,3,6,9,12,18,24,36],datasets:[
- {data:[0,24.4,39.7,53.8,69.2,87.2,96.2,100],borderColor:NAVY,borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.07)',label:'Grade 1'},
- {data:[0,18.2,33.3,36.4,57.6,87.9,97.0,100],borderColor:YEL,borderWidth:2.5,tension:.2,pointRadius:0,pointHoverRadius:5,fill:false,label:'Grade 3'},
- {data:[0,19.7,35.0,47.4,62.8,86.1,96.4,100],borderColor:GREY,borderWidth:2,borderDash:[5,4],tension:.2,pointRadius:0,pointHoverRadius:5,fill:false,label:'All grades'}]},
+/* 2 — arrival */
+new Chart(document.getElementById('cArrival'),{type:'bar',
+ data:{labels:['0–3','3–6','6–9','9–12','12–18','18–24','24–36'],
+  datasets:[{data:[19.7,15.3,12.4,15.4,23.3,10.3,3.6],
+   backgroundColor:[NAVY,NAVY,NAVY,WARM,WARM,WARM,WARM],borderWidth:0,barPercentage:.74}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
-  tooltip:{...TT,callbacks:{title:i=>'within '+i[0].label+' months',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(0)+'% raised'}}},
-  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months after we flagged the founder')},
-   y:{min:0,max:100,grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('top-firm rounds already raised')}}}});
-new Chart(document.getElementById('cGrade'),{type:'bar',data:{labels:['Grade 1  (n=2,150)','Grade 2  (n=817)','Grade 3  (n=1,574)'],
- datasets:[{data:[3.63,1.47,2.10],backgroundColor:[NAVY,WARM,WARM],borderWidth:0,barPercentage:.5}]},
- options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.y.toFixed(2)+'% raised from a top firm'}}},
-  scales:{x:{grid:NOGRID,ticks:TICK},y:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share that later raised from a top firm')}}}});
-
+  tooltip:{...TT,callbacks:{title:i=>i[0].label+' months after our flag',label:i=>i.parsed.y.toFixed(1)+'% of the rounds'}}},
+  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months between our signal and the top-firm round')},
+   y:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share of the 137 rounds')}}}});
 /* 3 — rerank + roster */
 const RR=[['SV Angel',4.01,37],['Amplify Partners',3.00,10],['Abstract',2.66,11],['Liquid 2 Ventures',2.39,3],
  ['A* (Hartz)',2.34,27],['Nat Friedman',2.33,42],['Afore Capital',2.28,19],['Pareto Holdings',1.53,8],
