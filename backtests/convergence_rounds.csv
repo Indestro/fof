@@ -1,0 +1,40 @@
+company,permalink,round_type,round_uuid,announced_on,money_usd,investor,is_lead
+Petual,petual,Seed Round,,2026-04-23,20000000,First Round Capital,True
+Petual,petual,Seed Round,,2026-04-23,20000000,Andreessen Horowitz,True
+Pepr AI,pepr-ai,Seed Round,,2026-01-01,,,False
+Candid Intelligence,candid-intelligence,Seed Round,,2025-09-08,5500000,Quiet Capital,True
+Modus,modus-b5ab,Seed Round,,2026-07-29,10000000,Insight Partners,True
+Haplotype Labs,haplotype-labs,Seed Round,,2026-01-01,,,False
+Haplotype Labs,haplotype-labs,Pre Seed Round,,2024-02-27,500000,Y Combinator,True
+1849 Bio,1849-bio,Seed Round,,2026-01-01,,,False
+1849 Bio,1849-bio,Pre Seed Round,,2024-09-25,500000,Y Combinator,True
+Apex Compute,apex-compute,Seed Round,,2026-01-01,,,False
+dmodel,d-model,Seed Round,,2026-01-01,,HOF Capital,True
+dmodel,d-model,Pre Seed Round,,2024-09-25,500000,Y Combinator,True
+MindFort AI,mindfort-ai,Seed Round,,2026-01-01,,,False
+MindFort AI,mindfort-ai,Pre Seed Round,,2025-05-01,500000,Y Combinator,True
+Atum Works,atum-works,Seed Round,,2025-05-20,,,False
+Pax AI,pax-ai,Seed Round,,2025-04-08,4500000,Initialized Capital,True
+Pax AI,pax-ai,Pre Seed Round,,2024-09-25,500000,Y Combinator,True
+FirstWork,firstwork-16ba,Seed Round,,2025-02-27,5000000,Gradient,True
+FirstWork,firstwork-16ba,Pre Seed Round,,2024-07-01,500000,Y Combinator,True
+Boardy,boardy,Funding Round,,2026-02-01,,,False
+Boardy,boardy,Seed Round,,2025-01-14,8000000,Creandum,True
+Boardy,boardy,Pre Seed Round,,2024-10-24,3000000,HFO,True
+NetworkOcean,networkocean,Pre Seed Round,,2024-09-25,500000,Y Combinator,True
+Minerva,minerva-2072,Series A,,2026-06-09,20000000,,False
+Minerva,minerva-2072,Venture Round,,2025-12-15,7157323,,False
+Minerva,minerva-2072,Venture Round,,2024-09-10,8164660,,False
+Minerva,minerva-2072,Pre Seed Round,,2023-07-25,,,False
+Paces,paces-ai,Series A,,2024-07-24,11000000,Navitas Capital,True
+Paces,paces-ai,Seed Round,,2022-06-02,2800000,Resolute Ventures,True
+Volta,volta-5f77,Seed Round,,2024-05-03,4100000,Haven Ventures,True
+Volta,volta-5f77,Seed Round,,2024-05-03,4100000,Fika Ventures,True
+Filed,filed-b2e6,Seed Round,,2025-05-21,17000000,,False
+Filed,filed-b2e6,Pre Seed Round,,2025-05-21,200000,Northzone,True
+freightmate Ai,freightmate-ai,Seed Round,,2025-01-30,5000000,FUSE,True
+freightmate Ai,freightmate-ai,Pre Seed Round,,2024-06-27,650000,Wischoff Ventures,True
+Artemis,artemis-5568,Series A,,2026-04-15,55000000,Felicis,True
+Artemis,artemis-5568,Seed Round,,2026-04-15,15000000,Brightmind Partners,True
+Artemis,artemis-5568,Seed Round,,2026-04-15,15000000,First Round Capital,True
+Artemis,artemis-5568,Non Equity Assistance,,2026-01-05,,AWS & Crowdstrike Cybersecurity Accelerator,True

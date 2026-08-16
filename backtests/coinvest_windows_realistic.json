@@ -1,0 +1,362 @@
+[
+ {
+  "company": "Avoca",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-04-18",
+  "round": "series_b",
+  "date": "2026-04-27",
+  "amount": 125000000,
+  "investors": [
+   "Alt Capital",
+   "Amplify Partners",
+   "BoxGroup",
+   "General Catalyst",
+   "Kleiner Perkins",
+   "Meritech Capital Partners",
+   "Nexus Venture Partners",
+   "Y Combinator"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Northwood Space",
+  "mgr": "humba-ventures",
+  "mgr_entry": "2024-02-19",
+  "round": "series_b",
+  "date": "2026-01-27",
+  "amount": 100000000,
+  "investors": [
+   "137 Ventures",
+   "Alpine Space Ventures",
+   "Also Capital",
+   "Andreessen Horowitz",
+   "Balerion Space Ventures",
+   "BoxGroup",
+   "Founders Fund",
+   "Fulcrum Venture Group",
+   "GC1 Ventures",
+   "Pax Ventures",
+   "SignalRank",
+   "StepStone Group",
+   "Washington Harbour Partners"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "DualEntry",
+  "mgr": "soma-capital",
+  "mgr_entry": "2024-05-01",
+  "round": "series_a",
+  "date": "2025-10-02",
+  "amount": 90000000,
+  "investors": [
+   "Contrary",
+   "GV",
+   "Khosla Ventures",
+   "Lightspeed Venture Partners",
+   "RTP Global",
+   "Vesey Ventures"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Bretton AI",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-11-08",
+  "round": "series_b",
+  "date": "2026-02-10",
+  "amount": 75000000,
+  "investors": [
+   "Canvas Prime",
+   "Greylock",
+   "Sapphire Ventures",
+   "Thomson Reuters Ventures",
+   "TIAA Ventures",
+   "Y Combinator"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Hubble Network",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-05-29",
+  "round": "series_b",
+  "date": "2025-09-17",
+  "amount": 70000000,
+  "investors": [
+   "Marc Weiser",
+   "Mike Farley",
+   "Ryan Swagar",
+   "Tom Gonser",
+   "Tuff Yen",
+   "Y Combinator"
+  ],
+  "t1": 0
+ },
+ {
+  "company": "Chaos Labs",
+  "mgr": "quiet-capital",
+  "mgr_entry": "2023-02-21",
+  "round": "series_a",
+  "date": "2024-08-15",
+  "amount": 55000000,
+  "investors": [
+   "Anatoly Yakovenko",
+   "Anton Katz",
+   "Bessemer Venture Partners",
+   "Coinbase",
+   "F-Prime",
+   "Francesco Agosti",
+   "Galaxy Digital",
+   "General Catalyst",
+   "Haun Ventures",
+   "Kevin Weil",
+   "Lightspeed Venture Partners",
+   "Michael Shaulov",
+   "PayPal Ventures",
+   "Slow Ventures",
+   "The Spartan Group",
+   "Wintermute Ventures"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Siro",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-10-25",
+  "round": "series_b",
+  "date": "2025-05-21",
+  "amount": 50000000,
+  "investors": [
+   "01 Advisors",
+   "CRV",
+   "Dave Salvant",
+   "Ding Zhou",
+   "Fika Ventures",
+   "Index Ventures",
+   "Michael Stoppelman",
+   "Saumil Mehta",
+   "SignalFire",
+   "Songe LaRon",
+   "StepStone Group"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Thatch",
+  "mgr": "quiet-capital",
+  "mgr_entry": "2023-02-15",
+  "round": "series_b",
+  "date": "2025-04-03",
+  "amount": 40000000,
+  "investors": [
+   "ADP Ventures",
+   "Andreessen Horowitz",
+   "General Catalyst",
+   "Index Ventures",
+   "PeopleTech Partners",
+   "SemperVirens Venture Capital",
+   "The General Partnership"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Tavus",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-03-20",
+  "round": "series_b",
+  "date": "2025-11-12",
+  "amount": 40000000,
+  "investors": [
+   "Correlation Ventures",
+   "CRV",
+   "Flex Capital",
+   "HubSpot Ventures",
+   "Scale Venture Partners",
+   "Sequoia Capital",
+   "Seven Stars",
+   "SV Angel",
+   "Y Combinator"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Letter AI",
+  "mgr": "soma-capital",
+  "mgr_entry": "2024-06-01",
+  "round": "series_b",
+  "date": "2026-02-24",
+  "amount": 40000000,
+  "investors": [
+   "Battery Ventures",
+   "Formus Capital",
+   "Lightbank",
+   "Northwestern Mutual Future Ventures",
+   "Stage 2 Capital",
+   "Y Combinator"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Allium",
+  "mgr": "theory-ventures",
+  "mgr_entry": "2024-07-18",
+  "round": "series_b",
+  "date": "2026-06-23",
+  "amount": 40000000,
+  "investors": [
+   "Amplify Partners",
+   "Kleiner Perkins",
+   "PruVen Capital",
+   "Theory Ventures"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Dropzone AI",
+  "mgr": "theory-ventures",
+  "mgr_entry": "2024-04-25",
+  "round": "series_b",
+  "date": "2025-07-17",
+  "amount": 37000000,
+  "investors": [
+   "Decibel Partners",
+   "IQT",
+   "Madrona",
+   "Pioneer Square Labs",
+   "Theory Ventures"
+  ],
+  "t1": 0
+ },
+ {
+  "company": "WindBorne Systems",
+  "mgr": "humba-ventures",
+  "mgr_entry": "2023-06-22",
+  "round": "series_b",
+  "date": "2026-08-05",
+  "amount": 37000000,
+  "investors": [
+   "Galvanize Climate Solutions",
+   "Khosla Ventures",
+   "Lux Capital",
+   "Translink Capital"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Swarm Aero",
+  "mgr": "quiet-capital",
+  "mgr_entry": "2023-04-14",
+  "round": "series_a",
+  "date": "2026-03-11",
+  "amount": 35000000,
+  "investors": [
+   "Alumni Ventures",
+   "Coatue",
+   "Construct Capital",
+   "Founders Fund",
+   "Friends & Family Capital",
+   "Khosla Ventures",
+   "MaC Venture Capital",
+   "Scribble Ventures",
+   "Silent Ventures",
+   "Two Sigma Ventures"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "LanceDB",
+  "mgr": "soma-capital",
+  "mgr_entry": "2024-05-15",
+  "round": "series_a",
+  "date": "2025-06-24",
+  "amount": 30000000,
+  "investors": [
+   "CRV",
+   "Databricks Ventures",
+   "Runway",
+   "Swift Ventures",
+   "Theory Ventures",
+   "Y Combinator",
+   "Zero Prime Ventures"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Aleph",
+  "mgr": "soma-capital",
+  "mgr_entry": "2023-10-24",
+  "round": "series_b",
+  "date": "2025-09-17",
+  "amount": 29000000,
+  "investors": [
+   "Bain Capital Ventures",
+   "Khosla Ventures",
+   "Picus Capital",
+   "Y Combinator"
+  ],
+  "t1": 1
+ },
+ {
+  "company": "Artisan AI",
+  "mgr": "soma-capital",
+  "mgr_entry": "2024-05-13",
+  "round": "series_a",
+  "date": "2025-04-09",
+  "amount": 25000000,
+  "investors": [
+   "Alumni Ventures",
+   "Bond",
+   "Day One Ventures",
+   "Fellows Fund",
+   "Glade Brook Capital Partners",
+   "HubSpot Ventures",
+   "Olive Technology Ventures",
+   "Oliver Jung",
+   "Sahin Boydas",
+   "Sequoia Scout",
+   "Soma Capital",
+   "TriplePoint Capital",
+   "Y Combinator"
+  ],
+  "t1": 0
+ },
+ {
+  "company": "Rainmaker Technology",
+  "mgr": "day-one-ventures",
+  "mgr_entry": "2024-05-07",
+  "round": "series_a",
+  "date": "2025-05-05",
+  "amount": 25000000,
+  "investors": [
+   "1517 Fund",
+   "Acequia Capital (AceCap)",
+   "Drover Ventures",
+   "Garry Tan",
+   "Long Journey Ventures",
+   "Lowercarbon Capital",
+   "Naval Ravikant",
+   "Sovereign\u2019s Capital",
+   "Starship Ventures"
+  ],
+  "t1": 0
+ },
+ {
+  "company": "Amae Health",
+  "mgr": "quiet-capital",
+  "mgr_entry": "2024-04-25",
+  "round": "series_b",
+  "date": "2025-11-06",
+  "amount": 25000000,
+  "investors": [
+   "8VC",
+   "Altos Ventures",
+   "Bling Capital",
+   "Cedars-Sinai Technology Ventures",
+   "Healthier Capital",
+   "Quiet Capital",
+   "Virtue"
+  ],
+  "t1": 1
+ }
+]

@@ -350,7 +350,38 @@ P.forEach(([n,m,u])=>{const d=document.createElement('span');
                   :'padding:6px 12px;border:1px solid #ccc;border-radius:16px;font-size:13px;color:#555';
  w.appendChild(d);});})();
 </script>
+
+<script>
+(()=>{const K=[3,5,8,12,16,20,30],
+ med=[1.88,2.17,2.39,2.57,2.67,2.73,2.83], p10=[0.57,0.82,1.08,1.31,1.47,1.58,1.78];
+ new Chart(document.getElementById('c7'),{type:'line',data:{labels:K,datasets:[
+  {label:'Median outcome',data:med,borderColor:'#003876',borderWidth:2.5,tension:.25,pointRadius:0,pointHoverRadius:5,
+   fill:true,backgroundColor:'rgba(0,56,118,0.08)'},
+  {label:'Downside (10th percentile)',data:p10,borderColor:'#9ca3af',borderWidth:2,borderDash:[5,4],tension:.25,pointRadius:0,pointHoverRadius:5,fill:false}]},
+ options:{responsive:true,maintainAspectRatio:false,layout:{padding:{right:8}},
+  plugins:{legend:{display:true,labels:{boxWidth:14,font:{size:11},color:'#555'}},
+   tooltip:{backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#333',bodyColor:'#555',padding:8,displayColors:false,
+    callbacks:{title:i=>i[0].label+' positions',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
+  scales:{x:{grid:{display:false},ticks:{color:'#888',font:{size:11}},
+    title:{display:true,text:'number of co-invest positions',color:'#666',font:{size:11,weight:500}}},
+   y:{grid:{color:'rgba(0,0,0,0.06)'},ticks:{color:'#888',font:{size:11},callback:v=>v+'x'},
+    title:{display:true,text:'net multiple on the sleeve',color:'#666',font:{size:11,weight:500}}}}}});})();
+</script>
 </body></html>
+
+<div class="card" id="coinvest">
+<p class="ct">Ten to fourteen co-invests is the sweet spot</p>
+<p class="cs">Monte Carlo over single-deal outcomes (40,000 draws per point) — median and downside net multiple of the co-invest sleeve against the number of positions it holds</p>
+<div style="height:230px"><canvas id="c7" role="img" aria-label="Line chart: as co-invest positions rise from 3 to 30, the median sleeve multiple climbs from 1.88x to 2.83x while the 10th-percentile outcome climbs from 0.57x to 1.78x; the probability of losing money falls from 25 percent to under 1 percent.">Below eight positions a quarter of co-invest sleeves lose money; by twelve that risk is 3 percent.</canvas></div>
+<table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 4px">
+<tr style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.4px;text-align:left">
+<th style="padding:4px 8px;width:40%">Deal we would have been offered</th><th>Our manager was already in</th><th>The round we could have joined</th></tr>
+<tr><td style="padding:4px 8px"><b>Avoca</b> — AI agents for home services</td><td>Soma, Apr 2023</td><td><b>$125M Series B</b>, Apr 2026 · General Catalyst, Kleiner Perkins, Amplify</td></tr>
+<tr><td style="padding:4px 8px"><b>Northwood Space</b> — ground stations</td><td>Humba, Feb 2024</td><td><b>$100M Series B</b>, Jan 2026 · Andreessen Horowitz, 137 Ventures</td></tr>
+<tr><td style="padding:4px 8px"><b>DualEntry</b> — AI-native accounting</td><td>Soma, May 2024</td><td><b>$90M Series A</b>, Oct 2025 · GV, Khosla, Lightspeed</td></tr>
+</table>
+<div class="src"><span>Source: Olympos, Crunchbase round data (199,620 parsed rounds), manager investment tapes · 19 such windows found across the nine 2024 managers; the three shown are the largest with a tier-1 lead</span><span class="byline">OLYMPOS</span></div>
+</div>
 <div class="card" id="convergence">
 <p class="ct">The managers we would back invest in founders we flagged first</p>
 <p class="cs">5,329 stealth-founder signals delivered weekly to a US venture firm since Mar 2024, matched against 350 companies those managers bought since Mar 2024 — 22 cases where our signal came first, median lead 8.2 months</p>
