@@ -210,8 +210,9 @@ function simulate(){
  // MINIMUM-SCALE CONSTRAINTS (the other side of the curve):
  // 1. LP check minimums — oversubscribed funds will not take token checks.
  const MINCHK={A:2.0,B:0.75,C:0.4,D:0.3};   // $M minimum LP commitment by access class
- // 2. Fixed operating cost — admin/audit/legal/travel ~$250K/yr for 10 yrs, flat in dollars.
- const fixedDrag=2.5/size;                  // 12.5% of a $20M fund; 1.25% of $200M
+ // 2. Fixed operating cost — flat in dollars, so it bites small funds hardest.
+ // Quoted admin $30K/yr; add audit, tax, legal, insurance, banking -> ~$75K/yr all-in, $750K over 10 yrs.
+ const fixedDrag=0.75/size;                 // 3.8% of a $20M fund; 1.9% of $40M; 0.4% of $200M
  const FEE=Math.max(0.55, 1-0.08-fixedDrag);// variable fees+carry (8%) + fixed ops
  const CW={A:1.4,B:1.2,C:0.7,D:0.5};       // per-slot capital weight by access class (tiered mode)
  const chosen=ROSTER.slice(0,m);

@@ -2,6 +2,7 @@
 """For each company the FoF's managers bought since Mar-2024, pull its founders from Crunchbase.
 Feeds the convergence test: did Olympos signal these founders at stealth before the manager invested?"""
 import json, subprocess, glob, os, time, sys
+os.environ.setdefault('CDP_PORT','9222')
 SK=os.path.expanduser('~/skills'); CA=os.path.expanduser('~/.local/share/showrun/data/crunchbase-companies/cache')
 OUT=os.path.expanduser('~/sourcing/fof/backtests/portfolio_founders.json')
 cos=json.load(open('/private/tmp/claude-502/-Users-emrahyalaz/3522596e-a3a4-41b4-ad0b-9766c12afdc5/scratchpad/mgr_cos.json'))
