@@ -56,23 +56,30 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 @media(max-width:720px){.chart-card .chart-source{white-space:normal}.chart-card .chart-grid{grid-template-columns:1fr}.chart-card .chart-legend{flex-wrap:wrap;white-space:normal}}
 </style></head><body>
 
-<h1>We can see which start-ups the top venture firms will back, about nine&nbsp;months before they back them</h1>
+<h1>We flagged 137 founders before the top venture firms funded them — by a median of nine&nbsp;months</h1>
 <p class="lede">So we buy into the small funds that already own those start-ups at the old price — and when a top firm leads the next round, we buy the company again, direct, with no second layer of fees.</p>
 <p class="sub">Olympos Fund of Funds · a Delaware vehicle · prepared for Gedik · August 2026<br>The market-structure analysis behind sections 3 and 4 is published at <a href="https://emrahyalaz.com/#vc-conviction" style="color:#003876">emrahyalaz.com/#vc-conviction</a> — the 29-firm definition used there is the one used here.</p>
 
 <div class="plain">
 <p><b>The whole plan, in five sentences.</b></p>
-<p>Twenty-nine venture firms in Silicon Valley backed <b>82% of every new billion-dollar US start-up by Series A</b> since 2022. When one of them shows up, the price jumps.</p>
-<p>We watch the feeders — the angels, scouts and one-person funds that get in before those twenty-nine. When enough of them move on the same founder, we mark it. On average a top firm shows up nine months later, and the price jumps.</p>
+<p>Twenty-nine venture firms invested in <b>82% of all new unicorns, by Series A, since January 2022</b>. When one of them shows up, the price jumps.</p>
+<p>We watch the feeders — the angels, scouts and one-person funds that get in before those twenty-nine. When enough of them move on the same founder, we mark it. Most marked founders never raise from a top firm. But 137 of them have, and for those the median gap between our mark and the cheque was nine months.</p>
 <p>Small funds already own a piece at the old price, so we buy into those funds. Then, when the top firm leads the round, we put money straight into the company as well.</p>
 <p>That is it. Everything below is the evidence, and a model you can push around yourself.</p>
+</div>
+
+<div class="note" style="background:#f4f4f4;border-left-color:#003876;margin:22px 0 6px">
+<b>What on this page is measured, and what is assumed.</b>
+<b>Measured</b> — the 22 convergence cases and their 8.2-month median; the 137 conversions out of 5,323 flagged founders and their 8.6-month median; the 5.88% base rate across 26,636 companies and every manager hit rate against it; the sector head starts; the 19 co-investment windows; the 2024 marks.
+<b>Assumed</b> — that a measured hit rate converts into fund returns at 0.35 &times; ln(lift); that half of it persists into the next fund; that informed co-investment returns 2.20x where random co-investment measured 1.27x; that access to oversubscribed funds can be bought with a signal feed.
+Every forward number in section 6 rests on those four assumptions. The first is the one Fund&nbsp;I exists to test, and none of them is established by the evidence above.
 </div>
 
 <p class="sub">What follows runs in the order the edge is built, then tested: what we saw first, whether it holds at scale, how we pick funds, where it pays, how we double down, what the model says, and what the model got right on real money.</p>
 
 <!-- ═══════════ 1 ═══════════ -->
 <h2><span class="num">1</span>We beat these managers to 22 of their own deals</h2>
-<p class="deck">Not a backtest of a formula — a delivery record. Since March 2024 we have sent a US venture firm a weekly list of stealth founders. Matching that list against what our candidate managers actually bought since then, 22 of their positions appear on our list first, by a median of 8.2 months.</p>
+<p class="deck">Not a backtest of a formula — a delivery record. Since March 2024 we have sent a US venture firm a weekly list of stealth founders. Matching that list against 350 positions our candidate managers actually bought since then, 22 appear on our list first — 6% of their book — by a median of 8.2 months.</p>
 
 <table>
 <tr><th style="width:38%">Founder · company</th><th>We flagged</th><th>Manager invested</th><th style="text-align:right">Lead</th></tr>
@@ -93,19 +100,19 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 </div>
 
 <div class="chart-card" id="convergence-share">
-<div class="chart-title">Theory bought a fifth of its book off our list</div>
-<div class="chart-sub">Share of each manager's positions taken since 2024 that had already appeared on our weekly stealth-founder list before they invested</div>
+<div class="chart-title">Theory bought 18% of its recent book off our list</div>
+<div class="chart-sub">Share of each manager's positions taken since 2024 that had already appeared on our weekly stealth-founder list before they invested — 350 positions across the five, so individual shares rest on small books</div>
 <div class="chart-legend"><span><span class="swatch" style="background:#003876;"></span>Share we flagged first</span></div>
 <div class="chart-single" style="height:250px"><canvas id="cShare" style="height:250px!important" role="img" aria-label="Horizontal bar chart of the share of each manager's post-2024 positions we flagged first: Theory 18.2 percent, Soma 10.0, Quiet 7.4, Wischoff 6.7, Day One 4.8 percent.">Theory bought 18 percent of its recent book out of names we had already flagged.</canvas></div>
 <div class="chart-source">Source: Olympos signal log, Crunchbase round histories — 350 manager positions matched</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<p>This is the offer no other limited partner can make. We are not asking a manager to take our money and report back. We are handing them a feed that reached 22 of their own best names before they did.</p>
+<p>We know of no other limited partner making this offer. We are not asking a manager to take our money and report back. We are handing them a feed that reached 22 of their own best names before they did.</p>
 
 <!-- ═══════════ 2 ═══════════ -->
 <h2><span class="num">2</span>The lead holds across 5,323 founders, not just 22</h2>
-<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged — 5,323 of them — found their company, and asked whether one of the 29 top firms later put money in. It happened 137 times, and the median gap between our flag and their cheque was <b>8.6 months</b>. That gap is the product: it is how long a manager has to act on the feed before the round prices.</p>
+<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged — 5,329 signals, 5,323 distinct founders, 5,290 matched to a LinkedIn profile — found their company, and asked whether one of the 29 top firms later put money in. It happened 137 times — 2.6% of the founders we flagged. For those 137 the median gap between our flag and the cheque was <b>8.6 months</b>. That gap is measured after the fact on the ones that converted; what a manager buys is the earlier look, not a guarantee that any given name will convert.</p>
 
 <div class="chart-card" id="arrival">
 <div class="chart-title">Half the money arrives within nine months of our flag</div>
@@ -118,7 +125,7 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<div class="note"><b>What this number is not.</b> It is a floor. Only 1,875 of these 5,323 founders have a named company on LinkedIn today, so any round raised while the company is still trading under a stealth name is invisible to the match and counted here as a miss. The true lead is at least this long.</div>
+<div class="note"><b>What this number is not.</b> It is a floor. Only 1,875 of the 5,290 matched founders have a named company on LinkedIn today, so any round raised while the company is still trading under a stealth name is invisible to the match and counted here as a miss. The true lead is at least this long.</div>
 
 <!-- ═══════════ 3 ═══════════ -->
 <h2><span class="num">3</span>We pick funds by what they did, not by who they know</h2>
@@ -135,7 +142,7 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<p>Y Combinator sits first on that list and 25th on ours. It precedes top firms constantly because it backs everyone. <b>Gaingels sits ninth and lands below the base rate</b> — a company it seeds is <i>less</i> likely to draw top-firm money than an average seeded company. Ranked by volume it reads as a signal; it is a mild warning.</p>
+<p>Y Combinator sits first on that list and 25th on ours. Its 1.41x is real and statistically solid on 2,254 entries — but it precedes top firms constantly because it backs everyone, and volume is not the same as an edge. <b>Gaingels sits ninth and measures 0.84x</b>, five hits where the base rate predicts six. On 106 entries that gap is well inside the noise, so the honest statement is not that Gaingels is a negative signal — it is that nothing in its record supports treating it as a positive one. Of the 41 names measurable here, five clear the base rate by more than two standard errors and one falls below it by more than two.</p>
 
 <div class="chart-card" id="roster">
 <div class="chart-title">Most of our shortlist is still unproven</div>
@@ -148,11 +155,11 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="chart-source">Source: Olympos analysis, Crunchbase — same definition and base as the chart above; Humba, Chemistry, Category and Theory have no seed entries in the 2019-2023 window and cannot be scored</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
-<div class="note"><b>This chart argues against our own shortlist, which is why it is here.</b> The names we had ranked highest on judgement — Mei Zuo at 0.86x on four entries, Day One at 1.00x on thirty-four — do not survive measurement. The names that do are ones the measurement found: Chapter One, 1984 Ventures, Silent Ventures, Abstract. Four more of our candidates have no seed entries in the window at all and are simply unscored. A first close should weight the measured names and treat the rest as diligence targets, not convictions.</div>
+<div class="note"><b>This chart argues against our own shortlist, which is why it is here.</b> The names we had ranked highest on judgement do not hold up. Mei Zuo's 0.86x rests on four seed entries and cannot be assessed at all; Day One's 1.00x on thirty-four sits exactly at the base rate. The names that do are ones the measurement found — Chapter One, Silent Ventures and Abstract each clear the base rate by more than four standard errors. Four more of our candidates have no seed entries in the window at all and are simply unscored. A first close should weight the measured names and treat the rest as diligence targets, not convictions.</div>
 
 <!-- ═══════════ 4 ═══════════ -->
 <h2><span class="num">4</span>Being early only pays in some sectors</h2>
-<p class="deck">Two things are happening to the twenty-nine at once. They are doing <b>fewer deals at larger cheques</b> — across 11,327 tier-one and feeder deals, deal counts fell in most sectors while average investment rose. And the companies that reach $10B concentrate exactly there: <b>18 of the 19 new US decacorns of 2026 minted in sectors where deal counts fell and cheques rose.</b> Less discovery from them means more of it falls to the feeder layer — which is the layer we buy.</p>
+<p class="deck">Two things are happening to the twenty-nine at once. They are doing <b>fewer deals at larger cheques</b> — across 11,327 tier-one and feeder deals, deal counts fell in most sectors while average investment rose. And the companies that reach $10B concentrate exactly there: of 2026's 19 new US decacorns, <b>18 could be mapped to a sector, and most of those sectors are ones where deal counts fell and cheques rose</b> — infrastructure minted four, B2B three, semiconductors and health two each. Less discovery from the twenty-nine means more of it falls to the feeder layer, which is the layer we buy.</p>
 <p class="deck">Getting in first is worthless if the top firms are already there. Measuring how long before a Series A the <b>feeder</b> layer buys, against how long before that same round the top firms buy, gives the size of the head start — sector by sector.</p>
 
 <div class="chart-card" id="sector">
@@ -161,30 +168,30 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="chart-legend">
  <span><span class="swatch" style="background:#003876;"></span>Head start for the feeder layer</span>
  <span><span class="swatch" style="background:#B4B2A9;"></span>Top firms arrive first — no head start to buy</span></div>
-<div class="chart-single" style="height:340px"><canvas id="cSector" style="height:340px!important" role="img" aria-label="Horizontal bar chart of head start in days by sector: Energy 270, Cybersecurity 145, DevOps 137, Climate 128, Infrastructure 122, Aerospace 113, B2B 113, MarTech 74, Health 50, Consumer minus 19, Gaming minus 95, Legal minus 112, Robotics minus 158, Crypto minus 181.">Energy, cybersecurity and aerospace give the feeder layer a four-month head start; in robotics and crypto the top firms are already at seed.</canvas></div>
+<div class="chart-single" style="height:340px"><canvas id="cSector" style="height:340px!important" role="img" aria-label="Horizontal bar chart of head start in days by sector: Energy 270, Cybersecurity 145, DevOps 137, Climate 128, Infrastructure 122, Aerospace 113, B2B 113, MarTech 74, Health 50, Consumer minus 19, Gaming minus 95, Legal minus 112, Robotics minus 158, Crypto minus 181.">Energy gives the feeder layer a nine-month head start, cybersecurity five and aerospace four; in robotics and crypto the top firms are already at seed.</canvas></div>
 <div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase, PitchBook, RaisingFi — 11,327 tier-one and feeder deals, 2024-2025; robotics and crypto cells rest on 9 to 20 top-firm deals</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<p><b>Aerospace is where we would extend next.</b> It is the only sector with a wide head start <i>and</i> rising demand from the top firms — their deal count went from 28 to 41 in a year, the biggest jump on the board, and the median cheque went from $20M to $50M. It also minted <b>7 new US unicorns in 2026</b>, behind only infrastructure, health and B2B. They are arriving in force, and still arriving late.</p>
+<p><b>Aerospace is where we would extend next.</b> It is the only sector with a wide head start <i>and</i> rising demand from the top firms — their deal count went from 28 to 41 in a year — the biggest <i>proportional</i> rise on the board, though B2B added more deals outright — and the median cheque went from $20M to $50M. It also minted <b>7 new US unicorns in 2026</b>, behind only infrastructure, health and B2B. They are arriving in force, and still arriving late.</p>
 <p>Two sectors we would not build a sensor for at all. In robotics and crypto the top firms are at seed <i>before</i> the feeder layer, so there is no head start to sell. And a warning about our home ground: in infrastructure the top firms cut their time from seed to Series A from 481 days to 283 in one year. The head start we have is real, and in the lane we source hardest it is closing fastest.</p>
 
 <!-- ═══════════ 5 ═══════════ -->
 <h2><span class="num">5</span>We buy the best companies a second time, and pay no toll</h2>
-<p class="deck">Money in a fund pays the manager a fee and a share of the profit. Money straight into a company pays neither. When our signal says a top firm is about to price a company our managers already own, we take the second bite directly — which is also the only place a fund this size can hold a position big enough to matter.</p>
+<p class="deck">Money in a fund pays the manager a fee and a share of the profit. Money straight into a company pays neither. When our signal says a top firm is about to price a company our managers already own, we take the second bite directly — which is also also where a fund this size can hold a position large enough to move the result.</p>
 
 <div class="chart-card" id="coinvest">
-<div class="chart-title">Ten to fourteen direct positions is the sweet spot</div>
-<div class="chart-sub">Monte Carlo over single-company outcomes, 40,000 draws per point — median and downside multiple on the direct sleeve against how many positions it holds</div>
+<div class="chart-title">Under twelve direct positions, the downside bites</div>
+<div class="chart-sub">Monte Carlo over single-company outcomes, 40,000 draws per point, on the same distribution the simulator uses — median and downside multiple on the direct sleeve against how many positions it holds</div>
 <div class="chart-legend">
  <span><span class="swatch" style="background:#003876;"></span>Median outcome</span>
  <span><span class="swatch" style="background:#888888;"></span>Downside — 10th percentile</span></div>
-<div class="chart-single"><canvas id="cCo" role="img" aria-label="Line chart: as direct positions rise from 3 to 30, the median sleeve multiple climbs from 1.88 to 2.83 times while the tenth-percentile outcome climbs from 0.57 to 1.78 times.">Below eight positions a quarter of direct sleeves lose money; by twelve that risk is 3 percent.</canvas></div>
-<div class="chart-source">Source: Olympos analysis, single-deal outcome distribution fitted to Crunchbase round histories</div>
+<div class="chart-single"><canvas id="cCo" role="img" aria-label="Line chart: as direct positions rise from 3 to 30, the median sleeve multiple climbs from 1.31 to 1.98 times while the tenth-percentile outcome climbs from 0.40 to 1.25 times.">At three positions 39 percent of direct sleeves return less than cost; at twelve that falls to 13 percent and at twenty to 6 percent.</canvas></div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis — single-deal power law with 1.45 dispersion in logs, calibrated so the sleeve means 2.20x with selection against the 1.27x our 2024 window measured for random co-investment</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<p class="deck" style="margin-top:18px"><b>Three rounds we would have been offered</b> had this fund opened in August 2024 — companies our managers already held, that later raised at a size and with a lead where an LP co-investment slot exists. Nineteen such windows were found; these are the three largest with a top-firm lead.</p>
+<p class="deck" style="margin-top:18px"><b>Three rounds where a co-investment slot plausibly existed</b> had this fund opened in August 2024 — companies our managers already held, that later raised at a size and with a lead where LPs are customarily offered allocation. Nineteen such windows were found; these are the three largest with a top-firm lead. Whether we would in fact have been offered any of them is not something this exercise can show.</p>
 <table>
 <tr><th style="width:36%">Company</th><th>Our manager was already in</th><th>The round we could have joined</th></tr>
 <tr><td><b>Avoca</b> — AI agents for home services</td><td>Soma, Apr 2023</td><td><b>$125M Series B</b>, Apr 2026 · General Catalyst, Kleiner Perkins, Amplify</td></tr>
@@ -231,13 +238,13 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <tr><td>Direct US venture fund — median</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
 <tr><td>Direct US venture fund — top quartile</td><td>~2.5x+</td><td>~20%+</td></tr>
 </table>
-<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories, Cambridge Associates-style vintage statistics, Kauffman Foundation (2012) — manager premiums derived from measured hit rate as 0.35 &times; ln(lift); full model notes at the foot of the page</div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories; benchmark rows are indicative ranges from published industry statistics, not a single cited series — manager premiums derived from measured hit rate as 0.35 &times; ln(lift), then halved for persistence; full model notes at the foot of the page</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
 <!-- ═══════════ 7 ═══════════ -->
 <h2><span class="num">7</span>Run on real 2024 money, the book lands where the model says</h2>
-<p class="deck">We applied the same construction rules to real deals from August 2024 and marked them to verified valuations. Two years in, that book stands at 1.25x of committed capital. The model's median path for year two is 1.14x, with a middle half of 1.03x to 1.31x. The real book sits inside the band, slightly ahead of the median.</p>
+<p class="deck">We applied the same construction rules to real deals from August 2024 and marked them to verified valuations. Two years in, that book is marked at 1.25x of committed capital. The model's median path for year two is 1.14x, with a middle half of 1.03x to 1.31x. The real book sits inside the band, slightly ahead of the median.</p>
 
 <div class="chart-card" id="backtest">
 <div class="chart-title">The real 2024 book sits inside the model's band</div>
@@ -339,8 +346,8 @@ new Chart(document.getElementById('cSector'),{type:'bar',data:{labels:SEC.map(r=
 
 /* 5 — co-invest */
 new Chart(document.getElementById('cCo'),{type:'line',data:{labels:[3,5,8,12,16,20,30],datasets:[
- {data:[1.88,2.17,2.39,2.57,2.67,2.73,2.83],borderColor:NAVY,borderWidth:2.5,tension:.25,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.08)',label:'Median outcome'},
- {data:[0.57,0.82,1.08,1.31,1.47,1.58,1.78],borderColor:GREY,borderWidth:2,borderDash:[5,4],tension:.25,pointRadius:0,pointHoverRadius:5,fill:false,label:'Downside (P10)'}]},
+ {data:[1.31,1.51,1.67,1.78,1.86,1.90,1.98],borderColor:NAVY,borderWidth:2.5,tension:.25,pointRadius:0,pointHoverRadius:5,fill:true,backgroundColor:'rgba(0,56,118,0.08)',label:'Median outcome'},
+ {data:[0.40,0.58,0.76,0.91,1.02,1.10,1.25],borderColor:GREY,borderWidth:2,borderDash:[5,4],tension:.25,pointRadius:0,pointHoverRadius:5,fill:false,label:'Downside (P10)'}]},
  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
   tooltip:{...TT,callbacks:{title:i=>i[0].label+' positions',label:i=>i.dataset.label+': '+i.parsed.y.toFixed(2)+'x'}}},
   scales:{x:{grid:NOGRID,ticks:TICK,title:AX('number of direct positions')},

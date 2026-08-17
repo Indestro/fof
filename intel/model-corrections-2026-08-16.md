@@ -114,3 +114,56 @@ defend, where 3.21x / 20.3% was not.
 **The edge now decomposes**, which is worth more in a meeting than the headline: access alone is
 worth 1.60x -> 2.48x; picking on top of access is worth 2.48x -> 2.74x at the persistence we assume,
 3.04x if it persists fully.
+
+---
+
+# Third pass: truth-in-research audit of every assertion on the page
+
+Emrah asked that every claim be scientifically defensible. Twelve failed. Recorded so they are
+not reintroduced by a later edit.
+
+**Overclaims of capability**
+1. Headline read *"We can see which start-ups the top venture firms will back."* We cannot. 137 of
+   5,323 flagged founders converted — a 2.6% rate. Replaced with the measured fact: *"We flagged
+   137 founders before the top venture firms funded them — by a median of nine months."*
+2. *"On average a top firm shows up nine months later"* — a conditioning error. Nine months is the
+   median **among converters only**; for ~97% no top firm arrives. Now stated conditionally.
+3. *"Three rounds we would have been offered"* — we cannot know that. Now *"three rounds where a
+   co-investment slot plausibly existed"*, with an explicit line saying the exercise cannot show
+   whether we would have been offered them.
+4. *"This is the offer no other limited partner can make"* — unfalsifiable. Now *"we know of no
+   other limited partner making this offer."*
+
+**Statistical overclaims**
+5. *"Gaingels... a company it seeds is less likely to draw top-firm money than average."* False.
+   5 hits on 106 entries against 6.2 expected is **z = −0.51** — inside the noise. Now states the
+   defensible negative: nothing in its record supports treating it as a positive signal.
+6. *"Mei Zuo... does not survive measurement."* It was never measured — 0 hits on **4** entries,
+   z = −0.50. Now *"cannot be assessed at all."*
+7. Added the significance frame: of 41 measurable names, five clear base by >2 SE (SV Angel z=+10.8,
+   Chapter One +5.9, Abstract +4.8, Silent Ventures +4.3, YC +5.0) and one falls below by >2 SE
+   (Goodwater z=−2.25). Gaingels, Ben-Chanoch, Day One and Mei Zuo are all indistinguishable.
+
+**Arithmetic and sourcing errors**
+8. *"Deal count 28→41, the biggest jump on the board."* B2B went 284→317 = +33, larger outright.
+   Corrected to *biggest proportional rise*, with the B2B caveat.
+9. *"A four-month head start"* for energy, cyber and aerospace. They are 270, 145 and 113 days.
+   Corrected to nine, five and four months respectively.
+10. Decacorn claim asserted *18 of 19 minted in falling-count sectors*; the published chart's own
+    source note says 18 of 19 were **mappable**. Softened to match the published wording.
+11. Benchmark rows were sourced to *"Cambridge Associates-style vintage statistics"* — weasel
+    wording implying a series we do not cite. Now labelled indicative ranges from published
+    industry statistics.
+12. Founder counts were inconsistent (5,329 / 5,323). Now stated once: 5,329 signals, 5,323
+    distinct founders, 5,290 matched to a profile, 1,875 with a named company.
+
+**An internal inconsistency I had created**
+The co-invest chart still carried numbers computed before the sleeve was recalibrated — it showed
+median 1.88x→2.83x and a 3% loss rate at twelve positions. Under the current calibration (sleeve
+mean 2.20x, dispersion 1.45) the true curve is **median 1.31x→1.98x, with loss falling 39% at three
+positions to 13% at twelve and 6% at twenty.** Chart, title, aria-label and takeaway all corrected.
+The chart's source line now names the calibration anchor explicitly.
+
+**Added:** a visible measured-versus-assumed panel above section 1, so a reader does not have to
+open the model notes to see that all of section 6 rests on four assumptions, none of which the
+evidence above establishes.
