@@ -76,17 +76,6 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<div class="chart-card" id="rerank">
-<div class="chart-title">The best-known list puts the busiest investor first</div>
-<div class="chart-sub">The same measurement applied to a widely used top-preceder ranking — that list's own rank in brackets</div>
-<div class="chart-legend">
- <span><span class="swatch" style="background:#003876;"></span>Beats the base rate</span>
- <span><span class="swatch" style="background:#B4B2A9;"></span>At or below it</span></div>
-<div class="chart-single" style="height:320px"><canvas id="cRerank" style="height:320px!important" role="img" aria-label="Horizontal bars of measured lift: SV Angel 4.01 times ranked 37th on the volume list, Amplify 3.00 ranked 10th, Abstract 2.66 ranked 11th, Liquid 2 2.39 ranked 3rd, A star 2.34 ranked 27th, Nat Friedman 2.33 ranked 42nd, Afore 2.28 ranked 19th, Pareto 1.53 ranked 8th, Y Combinator 1.41 ranked 1st, Alumni Ventures 1.31 ranked 2nd, Soma 1.22 ranked 5th, Pioneer 1.04 ranked 4th, Gaingels 0.84 ranked 9th.">Y Combinator ranks first by volume and 25th by hit rate; Gaingels ranks ninth by volume and sits at the base rate.</canvas></div>
-<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase — same definition and base as the chart above</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
-<p>Y Combinator sits first on that list and 25th on ours — its 1.41x is real and statistically solid on 2,254 bets, but it precedes top firms constantly because it backs everyone, and volume is not an edge. Gaingels sits ninth and measures 0.84x: five hits where the base predicts six, which on 106 bets is inside the noise. The honest statement is not that Gaingels is a negative signal, only that nothing supports treating it as a positive one.</p>
 
 <!-- 3 -->
 <h2><span class="num">3</span>The fund backs the entry cheque, not the follow-on</h2>
@@ -190,15 +179,6 @@ new Chart(document.getElementById('cPeople'),{type:'bar',data:{labels:PP.map(r=>
   scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('hit rate against the 5.88% base — label shows bets measured')},
    y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
 
-const RR=[['SV Angel',4.01,37],['Amplify Partners',3.00,10],['Abstract',2.66,11],['Liquid 2 Ventures',2.39,3],
- ['A* (Hartz)',2.34,27],['Nat Friedman',2.33,42],['Afore Capital',2.28,19],['Pareto Holdings',1.53,8],
- ['Y Combinator',1.41,1],['Alumni Ventures',1.31,2],['Soma Capital',1.22,5],['Pioneer Fund',1.04,4],['Gaingels',0.84,9]];
-new Chart(document.getElementById('cRerank'),{type:'bar',data:{labels:RR.map(r=>r[0]+'  ['+r[2]+']'),
- datasets:[{data:RR.map(r=>r[1]),backgroundColor:RR.map(r=>r[1]>1.1?NAVY:WARM),borderWidth:0,barPercentage:.72}]},
- options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
-  tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(2)+'x the 5.88% base'}}},
-  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('hit rate against the 5.88% base — 1.0x means no edge')},
-   y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
 
 
 /* ── simulator ── */
