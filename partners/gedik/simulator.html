@@ -57,53 +57,22 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 <div class="plain">
 <p><b>The whole thing, in six sentences.</b></p>
 <p>Twenty-nine venture firms invested in 82% of all new unicorns, by Series A, since January 2022. When one arrives the price jumps — and a company that draws one within two years of its seed is <b>five times</b> more likely to go on and raise $100M.</p>
-<p>We can see them coming. We flag founders while they are still in stealth, and for the ones a top firm later funds, our flag came a median of nine months first.</p>
 <p>A small number of individuals are unusually good at getting into those companies at seed. We can now measure exactly who, from records rather than reputation.</p>
 <p>Almost none of them has a fund. So the fund gives them capital to write bigger cheques, they keep most of the upside, and we sit behind every one of their picks at the entry price.</p>
 </div>
 
 <div class="note" style="background:#f4f4f4;border-left-color:#003876;margin:22px 0 6px">
 <b>What on this page is measured, and what is assumed.</b>
-<b>Measured</b> — the seven verified cases where our flag preceded a professional investor; the 137 conversions out of 5,323 flagged founders; the 5.88% base rate across 26,636 companies and every individual's rate against it; what a tier-one arrival is worth, from 15,090 companies seeded 2019-21; the sector head starts.
+<b>Measured</b> — what a tier-one arrival is worth, from 15,090 companies seeded 2019-21; the 5.88% base rate across 26,636 companies and every individual's rate against it; how much of a measured rate survives out of sample; the sector head starts.
 <b>Assumed</b> — that these individuals can convert a $25k invitation into a $250k allocation; that they would accept the arrangement; that a hit rate measured on small personal cheques holds at ten times the size.
 The first is what decides whether this is a business, and it is answered by asking, not by modelling.
 </div>
 
-<p class="sub">In order: what we saw first, whether it holds at scale, what the signal is worth, who picks best, where being early pays, how the fund would back them, what it returns, and the structure.</p>
+<p class="sub">In order: what a tier-one arrival is worth, who picks best, where being early pays, how the fund would back them, what it returns, and the structure.</p>
 
 <!-- 1 -->
-<h2><span class="num">1</span>We beat professionals to seven of their own deals</h2>
-<p class="deck">A delivery record, not a backtest. Since March 2024 we have sent a US venture firm a weekly list of stealth founders, timestamped by a third party. Checked line by line against round records, <b>seven cases confirm</b> — the founder was on our list before the investor bought, both dates verified. Median lead <b>8.7 months</b>.</p>
-<table>
-<tr><th style="width:36%">Founder · company</th><th>We flagged</th><th>Investor bought</th><th style="text-align:right">Lead</th></tr>
-<tr><td>Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29 · $10M seed</td><td style="text-align:right">10.1 mo</td></tr>
-<tr><td>Penny Chen · Pax AI</td><td>2024-07-05</td><td>Soma 2025-04-08 · $4.5M seed</td><td style="text-align:right">9.1 mo</td></tr>
-<tr><td><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15 · $55M Series A</td><td style="text-align:right"><b>8.7 mo</b></td></tr>
-<tr><td>Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One 2025-05-21 · $17M seed</td><td style="text-align:right">8.7 mo</td></tr>
-<tr><td>Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27 · $5M seed</td><td style="text-align:right">7.1 mo</td></tr>
-<tr><td>Talha Faiz · Candid Intelligence</td><td>2025-08-15</td><td>Quiet Capital 2025-09-08 · $5.5M seed</td><td style="text-align:right">0.8 mo</td></tr>
-<tr><td>Bryan Lacaillade · freightmate AI</td><td>2024-06-14</td><td>Wischoff 2024-06-27 · $0.7M pre-seed</td><td style="text-align:right">0.4 mo</td></tr>
-</table>
-<div class="note"><b>What the check threw out, and the one case it reversed.</b> An earlier pass claimed 22 cases. Re-checked against round records: seven confirm; three carry a Crunchbase date of exactly 1 January 2026, a year-granularity artifact that makes the lead time worthless; three name an investor the round record does not list; four companies are absent from the corpus; and <b>one reverses</b> — we had claimed Paces, but Soma was in from June 2022, twenty-one months <i>before</i> our signal. Only these seven appear anywhere on this page.</div>
-
-<!-- 2 -->
-<h2><span class="num">2</span>The lead holds across 5,323 founders, not just seven</h2>
-<p class="deck">Seven cases could be luck. So we took every founder the system has ever flagged — 5,329 signals, 5,323 distinct people, 5,290 matched to a profile — found their company, and asked whether one of the 29 firms later invested. It happened <b>137 times</b>, 2.6% of those flagged, and for those the median gap was <b>8.6 months</b>.</p>
-<div class="chart-card" id="arrival">
-<div class="chart-title">Half the money arrives within nine months of our flag</div>
-<div class="chart-sub">Months between our signal and the first round from one of the 29 top firms — the 137 founders who went on to raise from one</div>
-<div class="chart-legend">
- <span><span class="swatch" style="background:#003876;"></span>Inside the nine-month window — 47%</span>
- <span><span class="swatch" style="background:#B4B2A9;"></span>Later</span></div>
-<div class="chart-single" style="height:250px"><canvas id="cArrival" style="height:250px!important" role="img" aria-label="Bar chart of months between our signal and the top-firm round: 20 percent within 3 months, 15 at 3 to 6, 12 at 6 to 9, 15 at 9 to 12, 23 at 12 to 18, 10 at 18 to 24, 4 at 24 to 36.">Forty-seven percent of top-firm rounds land within nine months of our flag; the median lead is 8.6 months.</canvas></div>
-<div class="chart-source">Source: Olympos signal log, Crunchbase (199,620 parsed rounds), LinkedIn profile histories (9.7M people)</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
-<div class="note"><b>It is a floor.</b> Only 1,875 of the 5,290 matched founders have a named company on LinkedIn today, so any round raised while the company is still trading under a stealth name is invisible to the match and counted here as a miss.</div>
-
-<!-- 3 -->
-<h2><span class="num">3</span>A tier-one arrival is worth five times the outcome</h2>
-<p class="deck">Everything above predicts one event: a top firm arriving within two years of the seed. That is only worth predicting if the event is worth something. It is — measured across every company seeded between 2019 and 2021, with outcomes run to today.</p>
+<h2><span class="num">1</span>A tier-one arrival is worth five times the outcome</h2>
+<p class="deck">Everything that follows predicts one event: a top firm arriving within two years of a company's seed round. Start here, because the whole thing is worthless unless that event is worth something. It is — measured across every company seeded between 2019 and 2021, with outcomes run to today.</p>
 <div class="chart-card" id="worth">
 <div class="chart-title">Companies that draw a top firm raise nine times as much</div>
 <div class="chart-sub">15,090 companies seeded 2019-2021, split by whether a <i>new</i> top-29 firm invested within 24 months — share reaching each subsequent funding threshold</div>
@@ -114,10 +83,9 @@ The first is what decides whether this is a business, and it is answered by aski
 <div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase parsed round records — seed and pre-seed entries 2019-2021, subsequent capital measured to August 2026; median raised $37.2M against $4.0M</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
-<p>This is the keystone. It turns a signal about <i>who gets funded</i> into a claim about <i>what gets built</i>, and it prices the model in section 7: an individual picking at three times the base arrival rate produces roughly a <b>1.5x</b> uplift on the chance of a $100M outcome. That factor comes from these conditionals rather than from an assumption.</p>
 
-<!-- 4 -->
-<h2><span class="num">4</span>We rank people by what they picked, not funds by reputation</h2>
+<!-- 2 -->
+<h2><span class="num">2</span>We rank people by what they picked, not funds by reputation</h2>
 <p class="deck">The usual way to rank early investors is to count how often they got in before a top firm. That ranks whoever writes the most cheques. Put a denominator on it — out of everything <i>you</i> seeded, what share drew top-firm money within two years — and across 26,636 companies the answer is <b>5.88%</b>. That is the bar.</p>
 <div class="chart-card" id="people">
 <div class="chart-title">The best pickers are individuals, and most have no fund</div>
@@ -143,8 +111,8 @@ The first is what decides whether this is a business, and it is answered by aski
 </div>
 <p>Y Combinator sits first on that list and 25th on ours — its 1.41x is real and statistically solid on 2,254 bets, but it precedes top firms constantly because it backs everyone, and volume is not an edge. Gaingels sits ninth and measures 0.84x: five hits where the base predicts six, which on 106 bets is inside the noise. The honest statement is not that Gaingels is a negative signal, only that nothing supports treating it as a positive one.</p>
 
-<!-- 5 -->
-<h2><span class="num">5</span>Being early only pays in some sectors</h2>
+<!-- 3 -->
+<h2><span class="num">3</span>Being early only pays in some sectors</h2>
 <p class="deck">Getting in first is worthless where the top firms are already there. Measuring how long before a Series A the feeder layer buys, against how long before the same round the top firms buy, gives the head start — sector by sector.</p>
 <div class="chart-card" id="sector">
 <div class="chart-title">Aerospace pays best; crypto pays nothing</div>
@@ -158,15 +126,15 @@ The first is what decides whether this is a business, and it is answered by aski
 </div>
 <p><b>Aerospace is where we would extend.</b> The only sector with a wide head start and rising demand from the top firms — deal count 28 to 41 in a year, the biggest proportional rise on the board, median cheque $20M to $50M, and 7 new US unicorns in 2026. Two sectors we would not build for at all: in robotics and crypto the top firms are at seed <i>before</i> the feeder layer, so there is nothing to get ahead of. And a warning about our own ground — in infrastructure the top firms cut their time from seed to Series A from 481 days to 283 in one year. Our head start is real, and it is closing fastest in the lane we source hardest.</p>
 
-<!-- 6 -->
-<h2><span class="num">6</span>The fund backs the entry cheque, not the follow-on</h2>
+<!-- 4 -->
+<h2><span class="num">4</span>The fund backs the entry cheque, not the follow-on</h2>
 <p class="deck">The obvious move is to invest alongside these people in the big rounds their companies later raise — Etched at $500M, Exa at $250M. That is the wrong trade. It buys their <b>brand</b>, not their <b>edge</b>: the edge was entering at seed at a price they helped set, and a cheque into the Series C is an ordinary late-stage investment anyone can source.</p>
 <p>So the fund backs the entry cheque. Each person on the bench receives an annual allocation to deploy at their own discretion, at seed, into their own picks. They keep most of the carry on their own deals and pay no management fee, because they are not managing anything. The fund keeps final approval — which is the defence against being handed only the deals they could not fill themselves, and the point at which our own signal enters.</p>
 <p><b>The arithmetic.</b> One of these people gets $100–250k of allocation in a hot seed; they cannot hand the fund $1M. So we do not ask. Give one person $2–4M a year to write their own cheques and the fund sits behind every one at entry price. Six people is <b>$15–25M a year</b> — the right pace for a $40M fund, across 80 to 120 positions, which is correct when returns are a power law and the edge is in selection rather than concentration.</p>
 <div class="note"><b>The question that decides everything, and it is not in the model.</b> Can a $25k invitation become a $250k allocation? A founder lets an angel in for $25k for their name and their help; $250k is a real allocation decision competing with the lead. If the answer is no, the structure caps below fund size and nothing else on this page matters. It is answered by asking, and it is the first question in every conversation.</div>
 
-<!-- 7 -->
-<h2><span class="num">7</span>Size it yourself</h2>
+<!-- 5 -->
+<h2><span class="num">5</span>Size it yourself</h2>
 <p class="deck">Every parameter traces to something measured. Set the bench to market quality and the model returns an ordinary seed portfolio — that is the calibration, and it was not fitted to.</p>
 <div class="chart-card" id="simulator">
 <div class="chart-title">A six-person bench returns about 3x net</div>
@@ -208,8 +176,8 @@ The first is what decides whether this is a business, and it is answered by aski
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<!-- 8 -->
-<h2><span class="num">8</span>The structure</h2>
+<!-- 6 -->
+<h2><span class="num">6</span>The structure</h2>
 <p class="deck">A new Delaware vehicle. <b>Gedik anchors $20M</b>; Gedik raises a further $10M and we raise $10M, for a first close of about <b>$40M</b>. Olympos contributes the signal engine, the measurement, and the relationships that turn an allocation into an invitation. From there the target is $100M.</p>
 <table>
 <tr><th style="width:30%">Item</th><th>Where it lands</th></tr>
@@ -239,13 +207,6 @@ const TT={backgroundColor:'#fff',borderColor:'#ddd',borderWidth:1,titleColor:'#3
 const GRID={color:'rgba(0,0,0,0.06)'}, NOGRID={display:false}, TICK={color:'#999',font:{size:11}};
 const AX=t=>({display:true,text:t,color:'#888',font:{size:11,weight:500}});
 
-new Chart(document.getElementById('cArrival'),{type:'bar',
- data:{labels:['0–3','3–6','6–9','9–12','12–18','18–24','24–36'],
-  datasets:[{data:[19.7,15.3,12.4,15.4,23.3,10.3,3.6],backgroundColor:[NAVY,NAVY,NAVY,WARM,WARM,WARM,WARM],borderWidth:0,barPercentage:.74}]},
- options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
-  tooltip:{...TT,callbacks:{title:i=>i[0].label+' months after our flag',label:i=>i.parsed.y.toFixed(1)+'% of the rounds'}}},
-  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months between our signal and the top-firm round')},
-   y:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share of the 137 rounds')}}}});
 
 new Chart(document.getElementById('cWorth'),{type:'bar',
  data:{labels:['Never raised again','Raised $50M+','Raised $100M+','Raised $250M+'],datasets:[
