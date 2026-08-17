@@ -1,0 +1,226 @@
+{
+ "base": 0.05879261150322871,
+ "n": 122,
+ "rows": [
+  {
+   "rank": 1,
+   "name": "Kevin Hartz",
+   "entries": 16,
+   "hits": 6,
+   "raw": 0.375,
+   "lift": 3.0988692645547147,
+   "active24": 7,
+   "self": false
+  },
+  {
+   "rank": 2,
+   "name": "Ameet Patel",
+   "entries": 27,
+   "hits": 8,
+   "raw": 0.2962962962962963,
+   "lift": 3.0975292268395718,
+   "active24": 5,
+   "self": false
+  },
+  {
+   "rank": 3,
+   "name": "Mei Zuo",
+   "entries": 45,
+   "hits": 11,
+   "raw": 0.24444444444444444,
+   "lift": 3.02997628170042,
+   "active24": null,
+   "self": true
+  },
+  {
+   "rank": 4,
+   "name": "Scott Belsky",
+   "entries": 46,
+   "hits": 10,
+   "raw": 0.21739130434782608,
+   "lift": 2.7477380245714387,
+   "active24": 22,
+   "self": false
+  },
+  {
+   "rank": 5,
+   "name": "Jackson Moses",
+   "entries": 22,
+   "hits": 6,
+   "raw": 0.2727272727272727,
+   "lift": 2.703268932909432,
+   "active24": 11,
+   "self": false
+  },
+  {
+   "rank": 6,
+   "name": "Nat Friedman",
+   "entries": 15,
+   "hits": 4,
+   "raw": 0.26666666666666666,
+   "lift": 2.325893997445722,
+   "active24": 18,
+   "self": false
+  },
+  {
+   "rank": 7,
+   "name": "Justin Mateen",
+   "entries": 30,
+   "hits": 6,
+   "raw": 0.2,
+   "lift": 2.3100661790316965,
+   "active24": 3,
+   "self": false
+  },
+  {
+   "rank": 8,
+   "name": "Guillermo Rauch",
+   "entries": 23,
+   "hits": 5,
+   "raw": 0.21739130434782608,
+   "lift": 2.29259791400596,
+   "active24": 32,
+   "self": false
+  },
+  {
+   "rank": 9,
+   "name": "Jaynti Kanani",
+   "entries": 16,
+   "hits": 4,
+   "raw": 0.25,
+   "lift": 2.2691648755568017,
+   "active24": 4,
+   "self": false
+  },
+  {
+   "rank": 10,
+   "name": "Christian Reber",
+   "entries": 17,
+   "hits": 4,
+   "raw": 0.23529411764705882,
+   "lift": 2.2151371404244973,
+   "active24": 4,
+   "self": false
+  },
+  {
+   "rank": 11,
+   "name": "Jack Altman",
+   "entries": 18,
+   "hits": 4,
+   "raw": 0.2222222222222222,
+   "lift": 2.1636223232053227,
+   "active24": 3,
+   "self": false
+  },
+  {
+   "rank": 12,
+   "name": "Jeremy Yap",
+   "entries": 18,
+   "hits": 4,
+   "raw": 0.2222222222222222,
+   "lift": 2.1636223232053227,
+   "active24": 4,
+   "self": false
+  },
+  {
+   "rank": 13,
+   "name": "Stani Kulechov",
+   "entries": 18,
+   "hits": 4,
+   "raw": 0.2222222222222222,
+   "lift": 2.1636223232053227,
+   "active24": 6,
+   "self": false
+  },
+  {
+   "rank": 14,
+   "name": "Dylan Field",
+   "entries": 26,
+   "hits": 5,
+   "raw": 0.19230769230769232,
+   "lift": 2.1577392131820803,
+   "active24": 10,
+   "self": false
+  },
+  {
+   "rank": 15,
+   "name": "Kevin Mahaffey",
+   "entries": 20,
+   "hits": 4,
+   "raw": 0.2,
+   "lift": 2.067461331062864,
+   "active24": 12,
+   "self": false
+  },
+  {
+   "rank": 16,
+   "name": "Mandeep Singh",
+   "entries": 20,
+   "hits": 4,
+   "raw": 0.2,
+   "lift": 2.067461331062864,
+   "active24": 18,
+   "self": false
+  },
+  {
+   "rank": 17,
+   "name": "Naval Ravikant",
+   "entries": 45,
+   "hits": 7,
+   "raw": 0.15555555555555556,
+   "lift": 2.0580368545885785,
+   "active24": 16,
+   "self": false
+  },
+  {
+   "rank": 18,
+   "name": "Ramakant Sharma",
+   "entries": 32,
+   "hits": 5,
+   "raw": 0.15625,
+   "lift": 1.9306087696892296,
+   "active24": 13,
+   "self": false
+  },
+  {
+   "rank": 19,
+   "name": "Gaurav Munjal",
+   "entries": 16,
+   "hits": 3,
+   "raw": 0.1875,
+   "lift": 1.8543126810578452,
+   "active24": 5,
+   "self": false
+  },
+  {
+   "rank": 20,
+   "name": "Zach Weinberg",
+   "entries": 16,
+   "hits": 3,
+   "raw": 0.1875,
+   "lift": 1.8543126810578452,
+   "active24": 1,
+   "self": false
+  },
+  {
+   "rank": 21,
+   "name": "Immad Akhund",
+   "entries": 16,
+   "hits": 3,
+   "raw": 0.1875,
+   "lift": 1.8543126810578452,
+   "active24": 20,
+   "self": false
+  },
+  {
+   "rank": 22,
+   "name": "David Helgason",
+   "entries": 16,
+   "hits": 3,
+   "raw": 0.1875,
+   "lift": 1.8543126810578452,
+   "active24": 2,
+   "self": false
+  }
+ ]
+}
