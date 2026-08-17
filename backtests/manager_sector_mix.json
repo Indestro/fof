@@ -1,0 +1,223 @@
+{
+ "Chapter One": {
+  "deals": 67,
+  "categorised": 34,
+  "mix": {
+   "Fintech": 6,
+   "Crypto": 3,
+   "B2B": 17,
+   "Infra": 3,
+   "Energy": 2,
+   "Consumer": 2,
+   "Health": 1
+  }
+ },
+ "1984 Ventures": {
+  "deals": 80,
+  "categorised": 44,
+  "mix": {
+   "Consumer": 3,
+   "B2B": 31,
+   "Health": 7,
+   "Other": 1,
+   "Fintech": 2
+  }
+ },
+ "Silent (Moses)": {
+  "deals": 55,
+  "categorised": 32,
+  "mix": {
+   "B2B": 5,
+   "Aerospace": 11,
+   "Fintech": 2,
+   "Robotics": 2,
+   "Energy": 2,
+   "Climate": 1,
+   "Other": 4,
+   "Manufacturing": 2,
+   "Infra": 1,
+   "Health": 2
+  }
+ },
+ "Abstract": {
+  "deals": 307,
+  "categorised": 173,
+  "mix": {
+   "Consumer": 14,
+   "B2B": 85,
+   "Crypto": 5,
+   "Infra": 21,
+   "Other": 5,
+   "Fintech": 18,
+   "Climate": 2,
+   "Aerospace": 2,
+   "Health": 13,
+   "Robotics": 4,
+   "Education": 2,
+   "Energy": 1,
+   "Manufacturing": 1
+  }
+ },
+ "Volt": {
+  "deals": 46,
+  "categorised": 18,
+  "mix": {
+   "Infra": 4,
+   "Robotics": 1,
+   "Consumer": 2,
+   "B2B": 5,
+   "Other": 2,
+   "Fintech": 2,
+   "Crypto": 1,
+   "Aerospace": 1
+  }
+ },
+ "A*": {
+  "deals": 210,
+  "categorised": 91,
+  "mix": {
+   "Consumer": 12,
+   "Fintech": 7,
+   "B2B": 42,
+   "Health": 5,
+   "Infra": 12,
+   "Other": 4,
+   "Education": 1,
+   "Crypto": 3,
+   "Aerospace": 1,
+   "Robotics": 4
+  }
+ },
+ "Afore": {
+  "deals": 147,
+  "categorised": 91,
+  "mix": {
+   "Health": 10,
+   "B2B": 56,
+   "Infra": 7,
+   "Consumer": 7,
+   "Education": 3,
+   "Aerospace": 1,
+   "Other": 1,
+   "Fintech": 6
+  }
+ },
+ "JAM Fund": {
+  "deals": 84,
+  "categorised": 33,
+  "mix": {
+   "B2B": 12,
+   "Fintech": 7,
+   "Health": 3,
+   "Aerospace": 3,
+   "Consumer": 4,
+   "Other": 1,
+   "Crypto": 1,
+   "Energy": 1,
+   "Manufacturing": 1
+  }
+ },
+ "Everywhere": {
+  "deals": 264,
+  "categorised": 120,
+  "mix": {
+   "Fintech": 19,
+   "B2B": 65,
+   "Infra": 4,
+   "Other": 2,
+   "Aerospace": 4,
+   "Health": 15,
+   "Climate": 2,
+   "Consumer": 8,
+   "Education": 1
+  }
+ },
+ "Mischief": {
+  "deals": 71,
+  "categorised": 52,
+  "mix": {
+   "B2B": 29,
+   "Fintech": 15,
+   "Other": 1,
+   "Infra": 1,
+   "Crypto": 2,
+   "Consumer": 1,
+   "Health": 3
+  }
+ },
+ "Pebblebed": {
+  "deals": 18,
+  "categorised": 15,
+  "mix": {
+   "B2B": 5,
+   "Robotics": 1,
+   "Other": 4,
+   "Infra": 4,
+   "Health": 1
+  }
+ },
+ "Soma": {
+  "deals": 712,
+  "categorised": 341,
+  "mix": {
+   "B2B": 162,
+   "Fintech": 48,
+   "Aerospace": 14,
+   "Other": 14,
+   "Crypto": 8,
+   "Robotics": 6,
+   "Health": 17,
+   "Consumer": 20,
+   "Infra": 34,
+   "Climate": 7,
+   "Manufacturing": 2,
+   "Education": 4,
+   "Energy": 3,
+   "Semis": 2
+  }
+ },
+ "Humba": {
+  "deals": 17,
+  "categorised": 8,
+  "mix": {
+   "B2B": 2,
+   "Climate": 1,
+   "Manufacturing": 1,
+   "Health": 2,
+   "Robotics": 1,
+   "Energy": 1
+  }
+ },
+ "Theory": {
+  "deals": 15,
+  "categorised": 11,
+  "mix": {
+   "Infra": 5,
+   "B2B": 6
+  }
+ },
+ "Day One": {
+  "deals": 110,
+  "categorised": 57,
+  "mix": {
+   "B2B": 32,
+   "Fintech": 8,
+   "Other": 3,
+   "Health": 4,
+   "Robotics": 3,
+   "Infra": 2,
+   "Consumer": 2,
+   "Aerospace": 1,
+   "Energy": 2
+  }
+ },
+ "Mei Zuo": {
+  "deals": 22,
+  "categorised": 16,
+  "mix": {
+   "Infra": 6,
+   "B2B": 5,
+   "Health": 5
+  }
+ }
+}
