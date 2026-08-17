@@ -35,12 +35,12 @@ p{font-size:15px;margin:10px 0}
 .chart-card .chart-date{font-size:11px;color:#aaa}
 .chart-card .chart-olympos img{height:21px;width:auto;opacity:.65;display:block}
 .chart-card .chart-olympos a:hover img{opacity:1}
-.controls{display:flex;flex-wrap:wrap;gap:16px;background:var(--light);border-radius:6px;padding:12px 15px;margin-bottom:16px;align-items:end}
+.controls{display:flex;flex-wrap:nowrap;gap:11px;background:var(--light);border-radius:6px;padding:12px 13px;margin-bottom:16px;align-items:end;overflow-x:auto}
 .controls>div{flex:0 0 auto}
 .controls label{font-size:11px;font-weight:600;display:block;margin-bottom:3px;white-space:nowrap;color:#444}
 .controls .val{font-size:12px;color:var(--navy);font-weight:700}
-input[type=range]{width:112px;accent-color:var(--navy);display:block}
-select,button{font-family:inherit;font-size:12px;padding:4px 7px;border:1px solid #ccc;border-radius:4px;background:#fff}
+input[type=range]{width:90px;accent-color:var(--navy);display:block}
+select,button{font-family:inherit;font-size:11.5px;padding:4px 6px;border:1px solid #ccc;border-radius:4px;background:#fff;white-space:nowrap}
 button{border-color:var(--navy);color:var(--navy);font-weight:600;cursor:pointer}
 .tiles{display:flex;gap:12px;margin:16px 0 4px;flex-wrap:wrap}
 .tile{flex:1;min-width:126px;background:var(--light);border-left:4px solid var(--yellow);padding:10px 12px}
@@ -201,19 +201,21 @@ Every forward number in section 6 rests on those four assumptions. The first is 
 
 <!-- ═══════════ 6 ═══════════ -->
 <h2><span class="num">6</span>Size the fund yourself</h2>
-<p class="deck">Every number below moves. The control that matters most is <b>edge persistence</b> — it sets how much of our measured advantage we assume survives into the next fund. It ships at 50%, because our own persistence test found roughly half of top performers stay top. Drag it to zero and the fund still returns 2.48x — because that removes our <i>picking</i> edge but not our <i>access</i>: the right to buy funds an ordinary limited partner cannot get into. Switching selection off removes both, and drops the fund to 1.6x.</p>
+<p class="deck">Every number below moves. The control that matters most is <b>edge persistence</b> — it sets how much of our measured advantage we assume survives into the next fund. It ships at 50%, because our own persistence test found roughly half of top performers stay top. Drag it to zero and the fund still returns 2.48x — because that removes our <i>picking</i> edge but not our <i>access</i>: the right to buy funds an ordinary limited partner cannot get into. Switching the strategy to market pick removes both, and drops the fund to 1.6x.</p>
 
 <div class="chart-card" id="simulator">
 <div class="chart-title">The default fund returns 2.7x net, or 15% a year</div>
 <div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive. Measured edge is discounted 50% for persistence before it is used.</div>
 <form class="controls" autocomplete="off" onsubmit="return false">
-  <div><label>Fund size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" autocomplete="off" min="20" max="200" value="40" step="5"></div>
-  <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" autocomplete="off" min="3" max="18" step="1" value="12" style="width:140px"></div>
-  <div><label>Direct sleeve <span class="val" id="vCo">35%</span></label><input type="range" id="co" autocomplete="off" min="0" max="60" value="35" step="5"></div>
-  <div><label>Selection</label><select id="sel" autocomplete="off"><option value="on" selected>Signal-selected managers</option><option value="off">No selection — market pick</option></select></div>
-  <div><label>Weighting</label><select id="wt" autocomplete="off"><option value="equal" selected>Equal weight</option><option value="tiered">Tiered by conviction</option></select></div>
-  <div><label>Edge persistence <span class="val" id="vPers">50%</span></label><input type="range" id="pers" autocomplete="off" min="0" max="100" value="50" step="5"></div>
-  <div><label>Scenario draw <span class="val" id="vSeed">#42</span></label><button type="button" id="reroll">&#8635; Re-roll</button></div>
+  <div><label>Size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" autocomplete="off" min="20" max="200" value="40" step="5"></div>
+  <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" autocomplete="off" min="3" max="18" step="1" value="12" style="width:104px"></div>
+  <div><label>Co-invest <span class="val" id="vCo">35%</span></label><input type="range" id="co" autocomplete="off" min="0" max="60" value="35" step="5"></div>
+  <div><label>Strategy</label><select id="mode" autocomplete="off">
+    <option value="equal" selected>Selected, equal weight</option>
+    <option value="tiered">Selected, tiered by conviction</option>
+    <option value="none">No selection — market pick</option></select></div>
+  <div><label>Persistence <span class="val" id="vPers">50%</span></label><input type="range" id="pers" autocomplete="off" min="0" max="100" value="50" step="5"></div>
+  <div><label>Scenario <span class="val" id="vSeed">#42</span></label><button type="button" id="reroll">&#8635; Re-roll</button></div>
 </form>
 <div class="chart-legend">
  <span><span class="swatch" style="background:#003876;"></span>Median path</span>
@@ -380,7 +382,8 @@ function irrOf(tv){const D=[0,0,0,0,0,0,.10,.15,.25,.25,.25],cf=[];
  return (lo+hi)/2;}
 function simulate(){
  rng=mulberry32(SEED);
- const size=+size_.value, m=+mgr_.value, co=+co_.value/100, selOn=sel_.value==='on', wt=wt_.value;
+ const size=+size_.value, m=+mgr_.value, co=+co_.value/100;
+ const mode=mode_.value, selOn=mode!=='none', wt=(mode==='tiered')?'tiered':'equal';
  vSize.textContent='$'+size+'M'; vMgr.textContent=m; vCo.textContent=Math.round(co*100)+'%'; vSeed.textContent='#'+SEED; vPers.textContent=pers_.value+'%';
  const N=8000, CAPS=selOn?25.0:2.3, ps=selOn?1:0;
  const ch=ROSTER.slice(0,m);
@@ -451,10 +454,10 @@ function simulate(){
     y:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('net TVPI on committed capital')}}}});
 }
 const size_=document.getElementById('size'),mgr_=document.getElementById('mgr'),co_=document.getElementById('co'),
- sel_=document.getElementById('sel'),wt_=document.getElementById('wt'),pers_=document.getElementById('pers');
-['input','change'].forEach(e=>[size_,mgr_,co_,sel_,wt_,pers_].forEach(el=>el.addEventListener(e,simulate)));
+ mode_=document.getElementById('mode'),pers_=document.getElementById('pers');
+['input','change'].forEach(e=>[size_,mgr_,co_,mode_,pers_].forEach(el=>el.addEventListener(e,simulate)));
 document.getElementById('reroll').onclick=()=>{SEED=Math.floor(Math.random()*9000)+100;simulate();};
-size_.value=40; mgr_.value=12; co_.value=35; sel_.value='on'; wt_.value='equal'; pers_.value=50;
+size_.value=40; mgr_.value=12; co_.value=35; mode_.value='equal'; pers_.value=50;
 simulate();
 
 /* 7 — backtest calibration */
