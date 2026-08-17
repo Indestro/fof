@@ -70,9 +70,10 @@ Olympos
 | Manager | Lift vs base | Seed entries | Variant | Status |
 |---|---|---|---|---|
 | SV Angel | 4.01x | 151 | B | not an emerging manager — relationship only |
-| Chapter One (Jeff Morris Jr.) | 3.36x | 28 | B | diligence in progress |
+| **Silent Ventures (Jackson Moses)** | 2.70x* | 22 | B | **FUND II OPEN — $85M sold, indefinite target, +$10.5M in 3mo. Move first.** |
+| Chapter One (Jeff Morris Jr.) | 3.36x | 28 | B | Fund III at 63% of target, no new vehicle on file — relationship call, not allocation |
 | 1984 Ventures | 2.88x | 25 | B | diligence in progress |
-| Silent Ventures (Jackson Moses) | 2.70x | 22 | B | diligence in progress · defence lane |
+
 | Abstract (Ramtin Naimi) | 2.66x | 74 | B | diligence in progress |
 | Volt Capital (Soona Amhaz) | 2.50x | 19 | B | diligence in progress |
 | A\* (Kevin Hartz) | 2.34x | 51 | B | diligence in progress |
@@ -87,3 +88,6 @@ Olympos
 **Do not send until the convergence dates are re-verified.** Seven of the 22 cases carry a Crunchbase
 date of exactly 2026-01-01, which is a year-granularity artifact — those lead times are ±6 months and
 must never appear in a variant-A email. Only the 15 precise-dated cases are quotable.
+
+
+\* Silent's 2.70x is the GP's personal record; the fund vehicle has only 6 measurable entries. Say so if asked — they disclose the same split themselves.

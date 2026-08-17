@@ -146,10 +146,10 @@ Every forward number in section 6 rests on those four assumptions. The first is 
  <span><span class="swatch" style="background:#fdcf07;"></span>Measured, thin evidence — under 20 entries</span>
  <span><span class="swatch" style="background:#B4B2A9;"></span>At or below base</span></div>
 <div class="chart-single" style="height:360px"><canvas id="cRoster" style="height:360px!important" role="img" aria-label="Horizontal bar chart of measured lift for candidate managers: Chapter One 3.36 times on 28 entries, 1984 Ventures 2.88 on 25, Silent Ventures 2.70 on 22, Abstract 2.66 on 74, Volt 2.50 on 19, A star 2.34 on 51, Afore 2.28 on 53, JAM Fund 2.27 on 16, Pebblebed 1.97 on 5, Everywhere 1.91 on 113, Marathon 1.77 on 18, Mischief 1.76 on 28, Kearny Jackson 1.27 on 8, Soma 1.22 on 177, Day One 1.00 on 34, Mei Zuo 0.86 on 4.">The measured leaders are mostly names that were not on our original shortlist.</canvas></div>
-<div class="chart-source">Source: Olympos analysis, Crunchbase — same definition and base as the chart above; Humba, Chemistry, Category and Theory have no seed entries in the 2019-2023 window and cannot be scored</div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase — same definition and base as the chart above; Humba, Chemistry, Category and Theory have no seed entries in the 2019-2023 window and cannot be scored; Silent Ventures and Mei Zuo are scored on the GP's personal record, not the fund vehicle</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
-<div class="note"><b>This chart argues against our own shortlist, which is why it is here.</b> The names we had ranked highest on judgement do not hold up. Mei Zuo's 0.86x rests on four seed entries and cannot be assessed at all; Day One's 1.00x on thirty-four sits exactly at the base rate. The names that do are ones the measurement found — Chapter One, Silent Ventures and Abstract each clear the base rate by more than four standard errors. Four more of our candidates have no seed entries in the window at all and are simply unscored. A first close should weight the measured names and treat the rest as diligence targets, not convictions.</div>
+<div class="note"><b>This chart argues against our own shortlist, which is why it is here.</b> The names we had ranked highest on judgement do not hold up. Mei Zuo's 0.86x rests on four seed entries and cannot be assessed at all; Day One's 1.00x on thirty-four sits exactly at the base rate. The names that do are ones the measurement found — Chapter One, Silent Ventures and Abstract each clear the base rate by more than four standard errors. Four more of our candidates have no seed entries in the window at all and are simply unscored. And one score is mis-attributed: <b>Silent Ventures' 2.70x is keyed on Jackson Moses the person, not the fund</b> — the vehicle itself has six entries in this window because Fund I launched in 2023, and the firm's own site separates its fund deals from the earlier personal ones where Anduril and Axiom Space sit. A first close should weight the measured names and treat the rest as diligence targets, not convictions.</div>
 
 <!-- ═══════════ 4 ═══════════ -->
 <h2><span class="num">4</span>Being early only pays in some sectors</h2>
@@ -315,7 +315,7 @@ new Chart(document.getElementById('cRerank'),{type:'bar',data:{labels:RR.map(r=>
   scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'x'},title:AX('hit rate against the 5.88% base — 1.0x means no edge')},
    y:{grid:NOGRID,ticks:{...TICK,font:{size:10.5}}}}}});
 
-const RO=[['Chapter One',3.36,28],['1984 Ventures',2.88,25],['Silent Ventures (Moses)',2.70,22],['Abstract (Naimi)',2.66,74],
+const RO=[['Chapter One',3.36,28],['1984 Ventures',2.88,25],['Silent Ventures — GP personal record',2.70,22],['Abstract (Naimi)',2.66,74],
  ['Volt Capital',2.50,19],['A* (Hartz)',2.34,51],['Afore Capital',2.28,53],['JAM Fund (Mateen)',2.27,16],
  ['Pebblebed III',1.97,5],['Everywhere Ventures',1.91,113],['Marathon (Rajaram)',1.77,18],['Mischief (Perret)',1.76,28],
  ['Kearny Jackson',1.27,8],['Soma Capital',1.22,177],['Day One III (Bucher)',1.00,34],['Mei Zuo vehicle',0.86,4]];
