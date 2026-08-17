@@ -1,0 +1,2450 @@
+[
+ {
+  "name": "SV Angel",
+  "fit_entries": 115,
+  "fit_hits": 35,
+  "fit_lift": 3.306680881307747,
+  "test_entries": 47,
+  "test_hits": 8,
+  "test_lift": 5.27875815731552
+ },
+ {
+  "name": "Foundation Capital",
+  "fit_entries": 33,
+  "fit_hits": 12,
+  "fit_lift": 3.0198147195059186,
+  "test_entries": 34,
+  "test_hits": 3,
+  "test_lift": 2.736415074196648
+ },
+ {
+  "name": "Ameet Patel",
+  "fit_entries": 19,
+  "fit_hits": 8,
+  "fit_lift": 2.8431705110809586,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Haystack",
+  "fit_entries": 25,
+  "fit_hits": 9,
+  "fit_lift": 2.7522388059701495,
+  "test_entries": 17,
+  "test_hits": 2,
+  "test_lift": 3.6485534322621973
+ },
+ {
+  "name": "boldstart ventures",
+  "fit_entries": 22,
+  "fit_hits": 8,
+  "fit_lift": 2.6616915422885574,
+  "test_entries": 17,
+  "test_hits": 1,
+  "test_lift": 1.8242767161310987
+ },
+ {
+  "name": "Scott Belsky",
+  "fit_entries": 27,
+  "fit_hits": 9,
+  "fit_lift": 2.64638346727899,
+  "test_entries": 29,
+  "test_hits": 1,
+  "test_lift": 1.069403592214782
+ },
+ {
+  "name": "Slow Ventures",
+  "fit_entries": 59,
+  "fit_hits": 15,
+  "fit_lift": 2.5319829424307034,
+  "test_entries": 36,
+  "test_hits": 4,
+  "test_lift": 3.4458560193587418
+ },
+ {
+  "name": "Bossa Invest",
+  "fit_entries": 220,
+  "fit_hits": 47,
+  "fit_lift": 2.502386029038481,
+  "test_entries": 93,
+  "test_hits": 5,
+  "test_lift": 1.667349686786488
+ },
+ {
+  "name": "Peak XV Partners",
+  "fit_entries": 21,
+  "fit_hits": 7,
+  "fit_lift": 2.4475448842742806,
+  "test_entries": 38,
+  "test_hits": 3,
+  "test_lift": 2.448371382175948
+ },
+ {
+  "name": "Upfront Ventures",
+  "fit_entries": 22,
+  "fit_hits": 7,
+  "fit_lift": 2.3954694612046152,
+  "test_entries": 18,
+  "test_hits": 1,
+  "test_lift": 1.7229280096793709
+ },
+ {
+  "name": "Floodgate",
+  "fit_entries": 23,
+  "fit_hits": 7,
+  "fit_lift": 2.3455638474295193,
+  "test_entries": 18,
+  "test_hits": 1,
+  "test_lift": 1.7229280096793709
+ },
+ {
+  "name": "Naval Ravikant",
+  "fit_entries": 23,
+  "fit_hits": 7,
+  "fit_lift": 2.3455638474295193,
+  "test_entries": 29,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Abstract",
+  "fit_entries": 50,
+  "fit_hits": 12,
+  "fit_lift": 2.335323383084577,
+  "test_entries": 32,
+  "test_hits": 2,
+  "test_lift": 1.9382940108892923
+ },
+ {
+  "name": "Reshape",
+  "fit_entries": 18,
+  "fit_hits": 6,
+  "fit_lift": 2.327316903852829,
+  "test_entries": 13,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "1984 Ventures",
+  "fit_entries": 19,
+  "fit_hits": 6,
+  "fit_lift": 2.274423337856174,
+  "test_entries": 11,
+  "test_hits": 2,
+  "test_lift": 5.638673486223396
+ },
+ {
+  "name": "Coinbase Ventures",
+  "fit_entries": 48,
+  "fit_hits": 11,
+  "fit_lift": 2.2279015879506576,
+  "test_entries": 94,
+  "test_hits": 5,
+  "test_lift": 1.6496119241610998
+ },
+ {
+  "name": "Pear VC",
+  "fit_entries": 71,
+  "fit_hits": 15,
+  "fit_lift": 2.2154850746268657,
+  "test_entries": 49,
+  "test_hits": 3,
+  "test_lift": 1.8987369902588984
+ },
+ {
+  "name": "Homebrew",
+  "fit_entries": 26,
+  "fit_hits": 7,
+  "fit_lift": 2.207589503463077,
+  "test_entries": 12,
+  "test_hits": 3,
+  "test_lift": 7.753176043557169
+ },
+ {
+  "name": "Pantera Capital",
+  "fit_entries": 15,
+  "fit_hits": 5,
+  "fit_lift": 2.1890547263681595,
+  "test_entries": 28,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Titan Capital",
+  "fit_entries": 61,
+  "fit_hits": 13,
+  "fit_lift": 2.1821126923521925,
+  "test_entries": 54,
+  "test_hits": 2,
+  "test_lift": 1.1486186731195804
+ },
+ {
+  "name": "Liquid 2 Ventures",
+  "fit_entries": 240,
+  "fit_hits": 44,
+  "fit_lift": 2.171876466722989,
+  "test_entries": 175,
+  "test_hits": 15,
+  "test_lift": 2.658231786362458
+ },
+ {
+  "name": "1kx",
+  "fit_entries": 16,
+  "fit_hits": 5,
+  "fit_lift": 2.1356631476762526,
+  "test_entries": 27,
+  "test_hits": 2,
+  "test_lift": 2.297237346239161
+ },
+ {
+  "name": "MONASHEES",
+  "fit_entries": 16,
+  "fit_hits": 5,
+  "fit_lift": 2.1356631476762526,
+  "test_entries": 10,
+  "test_hits": 1,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "Operator Partners",
+  "fit_entries": 28,
+  "fit_hits": 7,
+  "fit_lift": 2.1242842391814514,
+  "test_entries": 32,
+  "test_hits": 1,
+  "test_lift": 0.9691470054446462
+ },
+ {
+  "name": "NFX",
+  "fit_entries": 70,
+  "fit_hits": 14,
+  "fit_lift": 2.107096098455093,
+  "test_entries": 45,
+  "test_hits": 1,
+  "test_lift": 0.6891712038717484
+ },
+ {
+  "name": "Golden Ventures",
+  "fit_entries": 24,
+  "fit_hits": 6,
+  "fit_lift": 2.042339323789217,
+  "test_entries": 12,
+  "test_hits": 1,
+  "test_lift": 2.584392014519056
+ },
+ {
+  "name": "HSG",
+  "fit_entries": 18,
+  "fit_hits": 5,
+  "fit_lift": 2.036329978016892,
+  "test_entries": 42,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Company Ventures",
+  "fit_entries": 31,
+  "fit_hits": 7,
+  "fit_lift": 2.0104832977967306,
+  "test_entries": 21,
+  "test_hits": 4,
+  "test_lift": 5.907181747472128
+ },
+ {
+  "name": "Digital Currency Group",
+  "fit_entries": 19,
+  "fit_hits": 5,
+  "fit_lift": 1.9900497512437811,
+  "test_entries": 22,
+  "test_hits": 2,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Unusual Ventures",
+  "fit_entries": 19,
+  "fit_hits": 5,
+  "fit_lift": 1.9900497512437811,
+  "test_entries": 13,
+  "test_hits": 1,
+  "test_lift": 2.385592628786821
+ },
+ {
+  "name": "Afore Capital",
+  "fit_entries": 32,
+  "fit_hits": 7,
+  "fit_lift": 1.9752116609932793,
+  "test_entries": 29,
+  "test_hits": 6,
+  "test_lift": 6.416421553288692
+ },
+ {
+  "name": "Inovia Capital",
+  "fit_entries": 20,
+  "fit_hits": 5,
+  "fit_lift": 1.9458264234383638,
+  "test_entries": 13,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Surge",
+  "fit_entries": 34,
+  "fit_hits": 7,
+  "fit_lift": 1.9082553335019816,
+  "test_entries": 25,
+  "test_hits": 1,
+  "test_lift": 1.2405081669691471
+ },
+ {
+  "name": "Nitesh Banta",
+  "fit_entries": 15,
+  "fit_hits": 4,
+  "fit_lift": 1.8762437810945276,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Tiny VC",
+  "fit_entries": 15,
+  "fit_hits": 4,
+  "fit_lift": 1.8762437810945276,
+  "test_entries": 30,
+  "test_hits": 1,
+  "test_lift": 1.0337568058076225
+ },
+ {
+  "name": "Script Capital",
+  "fit_entries": 15,
+  "fit_hits": 4,
+  "fit_lift": 1.8762437810945276,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Amplify Partners",
+  "fit_entries": 22,
+  "fit_hits": 5,
+  "fit_lift": 1.8630252990367313,
+  "test_entries": 21,
+  "test_hits": 5,
+  "test_lift": 7.383977184340161
+ },
+ {
+  "name": "Unpopular Ventures",
+  "fit_entries": 50,
+  "fit_hits": 9,
+  "fit_lift": 1.8348258706467664,
+  "test_entries": 161,
+  "test_hits": 4,
+  "test_lift": 0.7705019670615819
+ },
+ {
+  "name": "Notation Capital",
+  "fit_entries": 16,
+  "fit_hits": 4,
+  "fit_lift": 1.8304817376531974,
+  "test_entries": 17,
+  "test_hits": 1,
+  "test_lift": 1.8242767161310987
+ },
+ {
+  "name": "Dylan Field",
+  "fit_entries": 17,
+  "fit_hits": 4,
+  "fit_lift": 1.7868988391376452,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "IDEO CoLab Ventures",
+  "fit_entries": 17,
+  "fit_hits": 4,
+  "fit_lift": 1.7868988391376452,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Village Global",
+  "fit_entries": 102,
+  "fit_hits": 16,
+  "fit_lift": 1.7732205116151527,
+  "test_entries": 51,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Justin Mateen",
+  "fit_entries": 25,
+  "fit_hits": 5,
+  "fit_lift": 1.7512437810945274,
+  "test_entries": 10,
+  "test_hits": 2,
+  "test_lift": 6.202540834845736
+ },
+ {
+  "name": "Balaji Srinivasan",
+  "fit_entries": 25,
+  "fit_hits": 5,
+  "fit_lift": 1.7512437810945274,
+  "test_entries": 66,
+  "test_hits": 2,
+  "test_lift": 0.9397789143705659
+ },
+ {
+  "name": "BoxGroup",
+  "fit_entries": 68,
+  "fit_hits": 11,
+  "fit_lift": 1.7487829668860002,
+  "test_entries": 55,
+  "test_hits": 4,
+  "test_lift": 2.2554693944893582
+ },
+ {
+  "name": "468 Capital",
+  "fit_entries": 18,
+  "fit_hits": 4,
+  "fit_lift": 1.7453430521809559,
+  "test_entries": 32,
+  "test_hits": 3,
+  "test_lift": 2.9074410163339386
+ },
+ {
+  "name": "Point Nine",
+  "fit_entries": 18,
+  "fit_hits": 4,
+  "fit_lift": 1.7453430521809559,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "CoinFund",
+  "fit_entries": 18,
+  "fit_hits": 4,
+  "fit_lift": 1.7453430521809559,
+  "test_entries": 20,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "SignalFire",
+  "fit_entries": 18,
+  "fit_hits": 4,
+  "fit_lift": 1.7453430521809559,
+  "test_entries": 20,
+  "test_hits": 2,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "7percent Ventures",
+  "fit_entries": 18,
+  "fit_hits": 4,
+  "fit_lift": 1.7453430521809559,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Dragonfly",
+  "fit_entries": 26,
+  "fit_hits": 5,
+  "fit_lift": 1.716905667739733,
+  "test_entries": 37,
+  "test_hits": 4,
+  "test_lift": 3.3527247755922893
+ },
+ {
+  "name": "Primary Venture Partners",
+  "fit_entries": 27,
+  "fit_hits": 5,
+  "fit_lift": 1.6838882510524305,
+  "test_entries": 19,
+  "test_hits": 3,
+  "test_lift": 4.896742764351896
+ },
+ {
+  "name": "Uncork Capital",
+  "fit_entries": 20,
+  "fit_hits": 4,
+  "fit_lift": 1.6677722498618022,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Gokul Rajaram",
+  "fit_entries": 20,
+  "fit_hits": 4,
+  "fit_lift": 1.6677722498618022,
+  "test_entries": 29,
+  "test_hits": 1,
+  "test_lift": 1.069403592214782
+ },
+ {
+  "name": "The LAO",
+  "fit_entries": 20,
+  "fit_hits": 4,
+  "fit_lift": 1.6677722498618022,
+  "test_entries": 10,
+  "test_hits": 1,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "peercheque",
+  "fit_entries": 20,
+  "fit_hits": 4,
+  "fit_lift": 1.6677722498618022,
+  "test_entries": 13,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Craft Ventures",
+  "fit_entries": 43,
+  "fit_hits": 7,
+  "fit_lift": 1.6556921275973076,
+  "test_entries": 32,
+  "test_hits": 2,
+  "test_lift": 1.9382940108892923
+ },
+ {
+  "name": "Fly Ventures",
+  "fit_entries": 21,
+  "fit_hits": 4,
+  "fit_lift": 1.6315163313865457,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Graph Ventures",
+  "fit_entries": 21,
+  "fit_hits": 4,
+  "fit_lift": 1.6315163313865457,
+  "test_entries": 21,
+  "test_hits": 2,
+  "test_lift": 2.953590873736064
+ },
+ {
+  "name": "FJ Labs",
+  "fit_entries": 108,
+  "fit_hits": 15,
+  "fit_lift": 1.5991471215351811,
+  "test_entries": 146,
+  "test_hits": 10,
+  "test_lift": 2.1241578201526488
+ },
+ {
+  "name": "Crane Venture Partners",
+  "fit_entries": 22,
+  "fit_hits": 4,
+  "fit_lift": 1.5968032179527893,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Blume Ventures",
+  "fit_entries": 30,
+  "fit_hits": 5,
+  "fit_lift": 1.592039800995025,
+  "test_entries": 38,
+  "test_hits": 2,
+  "test_lift": 1.6322475881172986
+ },
+ {
+  "name": "Collaborative Fund",
+  "fit_entries": 30,
+  "fit_hits": 5,
+  "fit_lift": 1.592039800995025,
+  "test_entries": 29,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Great Oaks Venture Capital",
+  "fit_entries": 38,
+  "fit_hits": 6,
+  "fit_lift": 1.5884861407249469,
+  "test_entries": 33,
+  "test_hits": 2,
+  "test_lift": 1.8795578287411319
+ },
+ {
+  "name": "Everywhere Ventures",
+  "fit_entries": 63,
+  "fit_hits": 9,
+  "fit_lift": 1.5637720488466758,
+  "test_entries": 81,
+  "test_hits": 6,
+  "test_lift": 2.297237346239161
+ },
+ {
+  "name": "Bain Capital Ventures",
+  "fit_entries": 39,
+  "fit_hits": 6,
+  "fit_lift": 1.5636660447761195,
+  "test_entries": 24,
+  "test_hits": 5,
+  "test_lift": 6.4609800362976415
+ },
+ {
+  "name": "Musha Ventures",
+  "fit_entries": 31,
+  "fit_hits": 5,
+  "fit_lift": 1.5636105188343996,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Rebel Fund",
+  "fit_entries": 15,
+  "fit_hits": 3,
+  "fit_lift": 1.5634328358208955,
+  "test_entries": 51,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Kevin Mahaffey",
+  "fit_entries": 15,
+  "fit_hits": 3,
+  "fit_lift": 1.5634328358208955,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Kaszek",
+  "fit_entries": 15,
+  "fit_hits": 3,
+  "fit_lift": 1.5634328358208955,
+  "test_entries": 12,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Electric Capital",
+  "fit_entries": 15,
+  "fit_hits": 3,
+  "fit_lift": 1.5634328358208955,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Whiteboard Capital",
+  "fit_entries": 15,
+  "fit_hits": 3,
+  "fit_lift": 1.5634328358208955,
+  "test_entries": 16,
+  "test_hits": 1,
+  "test_lift": 1.9382940108892923
+ },
+ {
+  "name": "Kunal Shah",
+  "fit_entries": 48,
+  "fit_hits": 7,
+  "fit_lift": 1.5422885572139304,
+  "test_entries": 69,
+  "test_hits": 1,
+  "test_lift": 0.44945948078592285
+ },
+ {
+  "name": "South Park Commons",
+  "fit_entries": 32,
+  "fit_hits": 5,
+  "fit_lift": 1.5361787553460768,
+  "test_entries": 40,
+  "test_hits": 8,
+  "test_lift": 6.202540834845736
+ },
+ {
+  "name": "Green D Ventures",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 12,
+  "test_hits": 4,
+  "test_lift": 10.337568058076224
+ },
+ {
+  "name": "M13",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 26,
+  "test_hits": 3,
+  "test_lift": 3.578388943180232
+ },
+ {
+  "name": "Bradley Horowitz",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "Expa",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Thibaud Elziere",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 15,
+  "test_hits": 1,
+  "test_lift": 2.067513611615245
+ },
+ {
+  "name": "Frontline Ventures",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 17,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "MaC Venture Capital",
+  "fit_entries": 16,
+  "fit_hits": 3,
+  "fit_lift": 1.525300327630142,
+  "test_entries": 41,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Flybridge",
+  "fit_entries": 74,
+  "fit_hits": 10,
+  "fit_lift": 1.5164078596914419,
+  "test_entries": 85,
+  "test_hits": 4,
+  "test_lift": 1.4594213729048788
+ },
+ {
+  "name": "Precursor Ventures",
+  "fit_entries": 58,
+  "fit_hits": 8,
+  "fit_lift": 1.507222921536894,
+  "test_entries": 49,
+  "test_hits": 1,
+  "test_lift": 0.6329123300862994
+ },
+ {
+  "name": "Susa Ventures",
+  "fit_entries": 25,
+  "fit_hits": 4,
+  "fit_lift": 1.500995024875622,
+  "test_entries": 33,
+  "test_hits": 6,
+  "test_lift": 5.638673486223396
+ },
+ {
+  "name": "A.Capital Ventures",
+  "fit_entries": 17,
+  "fit_hits": 3,
+  "fit_lift": 1.4889836531627576,
+  "test_entries": 44,
+  "test_hits": 7,
+  "test_lift": 4.933839300445471
+ },
+ {
+  "name": "Jackson Moses",
+  "fit_entries": 17,
+  "fit_hits": 3,
+  "fit_lift": 1.4889836531627576,
+  "test_entries": 10,
+  "test_hits": 3,
+  "test_lift": 9.303811252268602
+ },
+ {
+  "name": "Initialized Capital",
+  "fit_entries": 34,
+  "fit_hits": 5,
+  "fit_lift": 1.4841048992326504,
+  "test_entries": 20,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Ramakant Sharma",
+  "fit_entries": 26,
+  "fit_hits": 4,
+  "fit_lift": 1.4715637498780607,
+  "test_entries": 11,
+  "test_hits": 2,
+  "test_lift": 5.638673486223396
+ },
+ {
+  "name": "byFounders",
+  "fit_entries": 18,
+  "fit_hits": 3,
+  "fit_lift": 1.454356126345019,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Hashed",
+  "fit_entries": 18,
+  "fit_hits": 3,
+  "fit_lift": 1.454356126345019,
+  "test_entries": 36,
+  "test_hits": 2,
+  "test_lift": 1.7229280096793709
+ },
+ {
+  "name": "ConsenSys Mesh",
+  "fit_entries": 27,
+  "fit_hits": 4,
+  "fit_lift": 1.4432644469957903,
+  "test_entries": 12,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "First Cheque",
+  "fit_entries": 36,
+  "fit_hits": 5,
+  "fit_lift": 1.4354457222086292,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "Mark Cuban",
+  "fit_entries": 19,
+  "fit_hits": 3,
+  "fit_lift": 1.421302578018996,
+  "test_entries": 17,
+  "test_hits": 1,
+  "test_lift": 1.8242767161310987
+ },
+ {
+  "name": "Magma Partners",
+  "fit_entries": 19,
+  "fit_hits": 3,
+  "fit_lift": 1.421302578018996,
+  "test_entries": 23,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Polychain",
+  "fit_entries": 28,
+  "fit_hits": 4,
+  "fit_lift": 1.4160330423354925,
+  "test_entries": 37,
+  "test_hits": 2,
+  "test_lift": 1.6763623877961447
+ },
+ {
+  "name": "FundersClub",
+  "fit_entries": 29,
+  "fit_hits": 4,
+  "fit_lift": 1.3898102082181685,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Madrona",
+  "fit_entries": 29,
+  "fit_hits": 4,
+  "fit_lift": 1.3898102082181685,
+  "test_entries": 16,
+  "test_hits": 1,
+  "test_lift": 1.9382940108892923
+ },
+ {
+  "name": "Animoca Brands",
+  "fit_entries": 29,
+  "fit_hits": 4,
+  "fit_lift": 1.3898102082181685,
+  "test_entries": 102,
+  "test_hits": 1,
+  "test_lift": 0.3040461193551831
+ },
+ {
+  "name": "Pillar Ventures",
+  "fit_entries": 20,
+  "fit_hits": 3,
+  "fit_lift": 1.3897180762852406,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Multicoin Capital",
+  "fit_entries": 20,
+  "fit_hits": 3,
+  "fit_lift": 1.3897180762852406,
+  "test_entries": 23,
+  "test_hits": 2,
+  "test_lift": 2.696756884715537
+ },
+ {
+  "name": "Firstminute Capital",
+  "fit_entries": 39,
+  "fit_hits": 5,
+  "fit_lift": 1.3681592039800996,
+  "test_entries": 30,
+  "test_hits": 4,
+  "test_lift": 4.13502722323049
+ },
+ {
+  "name": "Streamlined Ventures",
+  "fit_entries": 21,
+  "fit_hits": 3,
+  "fit_lift": 1.3595068137573005,
+  "test_entries": 20,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "APX",
+  "fit_entries": 21,
+  "fit_hits": 3,
+  "fit_lift": 1.3595068137573005,
+  "test_entries": 26,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Third Kind Venture Capital",
+  "fit_entries": 22,
+  "fit_hits": 3,
+  "fit_lift": 1.3305811368688474,
+  "test_entries": 13,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Kevin Lin",
+  "fit_entries": 22,
+  "fit_hits": 3,
+  "fit_lift": 1.3305811368688474,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "True Capital Management",
+  "fit_entries": 51,
+  "fit_hits": 6,
+  "fit_lift": 1.3167714061272584,
+  "test_entries": 60,
+  "test_hits": 1,
+  "test_lift": 0.5168784029038113
+ },
+ {
+  "name": "Acequia Capital (AceCap)",
+  "fit_entries": 42,
+  "fit_hits": 5,
+  "fit_lift": 1.3068983441003936,
+  "test_entries": 47,
+  "test_hits": 2,
+  "test_lift": 1.31968953932888
+ },
+ {
+  "name": "Human Ventures",
+  "fit_entries": 42,
+  "fit_hits": 5,
+  "fit_lift": 1.3068983441003936,
+  "test_entries": 29,
+  "test_hits": 1,
+  "test_lift": 1.069403592214782
+ },
+ {
+  "name": "Y Combinator",
+  "fit_entries": 1374,
+  "fit_hits": 144,
+  "fit_lift": 1.3057834487320368,
+  "test_entries": 1170,
+  "test_hits": 56,
+  "test_lift": 1.484368746800689
+ },
+ {
+  "name": "Maveron",
+  "fit_entries": 23,
+  "fit_hits": 3,
+  "fit_lift": 1.302860696517413,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Dorm Room Fund",
+  "fit_entries": 23,
+  "fit_hits": 3,
+  "fit_lift": 1.302860696517413,
+  "test_entries": 19,
+  "test_hits": 1,
+  "test_lift": 1.6322475881172986
+ },
+ {
+  "name": "IOSG Ventures",
+  "fit_entries": 23,
+  "fit_hits": 3,
+  "fit_lift": 1.302860696517413,
+  "test_entries": 30,
+  "test_hits": 1,
+  "test_lift": 1.0337568058076225
+ },
+ {
+  "name": "Seedcamp",
+  "fit_entries": 91,
+  "fit_hits": 10,
+  "fit_lift": 1.294175673357351,
+  "test_entries": 70,
+  "test_hits": 3,
+  "test_lift": 1.329115893181229
+ },
+ {
+  "name": "LocalGlobe",
+  "fit_entries": 53,
+  "fit_hits": 6,
+  "fit_lift": 1.2830080367393801,
+  "test_entries": 33,
+  "test_hits": 2,
+  "test_lift": 1.8795578287411319
+ },
+ {
+  "name": "Gradient",
+  "fit_entries": 34,
+  "fit_hits": 4,
+  "fit_lift": 1.2720296820979846,
+  "test_entries": 42,
+  "test_hits": 7,
+  "test_lift": 5.168784029038112
+ },
+ {
+  "name": "Pareto Holdings",
+  "fit_entries": 103,
+  "fit_hits": 11,
+  "fit_lift": 1.2706001243781095,
+  "test_entries": 118,
+  "test_hits": 11,
+  "test_lift": 2.8910147959026733
+ },
+ {
+  "name": "Betaworks",
+  "fit_entries": 25,
+  "fit_hits": 3,
+  "fit_lift": 1.2507462686567166,
+  "test_entries": 18,
+  "test_hits": 3,
+  "test_lift": 5.168784029038112
+ },
+ {
+  "name": "Entr\u00e9e Capital",
+  "fit_entries": 25,
+  "fit_hits": 3,
+  "fit_lift": 1.2507462686567166,
+  "test_entries": 18,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Four Cities Capital",
+  "fit_entries": 25,
+  "fit_hits": 3,
+  "fit_lift": 1.2507462686567166,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Wonder Ventures",
+  "fit_entries": 15,
+  "fit_hits": 2,
+  "fit_lift": 1.2506218905472637,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Freestyle Capital",
+  "fit_entries": 15,
+  "fit_hits": 2,
+  "fit_lift": 1.2506218905472637,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Republic",
+  "fit_entries": 15,
+  "fit_hits": 2,
+  "fit_lift": 1.2506218905472637,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Newfund",
+  "fit_entries": 15,
+  "fit_hits": 2,
+  "fit_lift": 1.2506218905472637,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Edward Lando",
+  "fit_entries": 107,
+  "fit_hits": 11,
+  "fit_lift": 1.2320970903060455,
+  "test_entries": 92,
+  "test_hits": 9,
+  "test_lift": 3.033851495304979
+ },
+ {
+  "name": "Speedinvest",
+  "fit_entries": 57,
+  "fit_hits": 6,
+  "fit_lift": 1.2204222788496544,
+  "test_entries": 72,
+  "test_hits": 1,
+  "test_lift": 0.4307320024198427
+ },
+ {
+  "name": "Anupam Mittal",
+  "fit_entries": 16,
+  "fit_hits": 2,
+  "fit_lift": 1.2201189176070866,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Courtside Ventures",
+  "fit_entries": 16,
+  "fit_hits": 2,
+  "fit_lift": 1.2201189176070866,
+  "test_entries": 12,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Creandum",
+  "fit_entries": 16,
+  "fit_hits": 2,
+  "fit_lift": 1.2201189176070866,
+  "test_entries": 12,
+  "test_hits": 1,
+  "test_lift": 2.584392014519056
+ },
+ {
+  "name": "Unshackled Ventures",
+  "fit_entries": 16,
+  "fit_hits": 2,
+  "fit_lift": 1.2201189176070866,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Global Founders Capital",
+  "fit_entries": 202,
+  "fit_hits": 20,
+  "fit_lift": 1.212549586867425,
+  "test_entries": 139,
+  "test_hits": 3,
+  "test_lift": 0.6693389390121297
+ },
+ {
+  "name": "Bloomberg Beta",
+  "fit_entries": 37,
+  "fit_hits": 4,
+  "fit_lift": 1.2104798587706629,
+  "test_entries": 22,
+  "test_hits": 2,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Tribe Capital",
+  "fit_entries": 27,
+  "fit_hits": 3,
+  "fit_lift": 1.2026406429391505,
+  "test_entries": 25,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Axilor Ventures",
+  "fit_entries": 17,
+  "fit_hits": 2,
+  "fit_lift": 1.1910684671878702,
+  "test_entries": 17,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Lemniscap",
+  "fit_entries": 17,
+  "fit_hits": 2,
+  "fit_lift": 1.1910684671878702,
+  "test_entries": 30,
+  "test_hits": 1,
+  "test_lift": 1.0337568058076225
+ },
+ {
+  "name": "ParaFi Capital",
+  "fit_entries": 17,
+  "fit_hits": 2,
+  "fit_lift": 1.1910684671878702,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "MGV",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "Ventures Platform",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 18,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Costanoa Ventures",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 16,
+  "test_hits": 2,
+  "test_lift": 3.8765880217785846
+ },
+ {
+  "name": "UpHonest Capital",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 35,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Fifty Years",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 12,
+  "test_hits": 1,
+  "test_lift": 2.584392014519056
+ },
+ {
+  "name": "Framework Ventures",
+  "fit_entries": 18,
+  "fit_hits": 2,
+  "fit_lift": 1.1633692005090823,
+  "test_entries": 30,
+  "test_hits": 1,
+  "test_lift": 1.0337568058076225
+ },
+ {
+  "name": "Eniac Ventures",
+  "fit_entries": 29,
+  "fit_hits": 3,
+  "fit_lift": 1.1580983969043672,
+  "test_entries": 30,
+  "test_hits": 4,
+  "test_lift": 4.13502722323049
+ },
+ {
+  "name": "Quiet Capital",
+  "fit_entries": 73,
+  "fit_hits": 7,
+  "fit_lift": 1.148847598740989,
+  "test_entries": 44,
+  "test_hits": 7,
+  "test_lift": 4.933839300445471
+ },
+ {
+  "name": "Soma Capital",
+  "fit_entries": 84,
+  "fit_hits": 8,
+  "fit_lift": 1.1477018576840567,
+  "test_entries": 170,
+  "test_hits": 7,
+  "test_lift": 1.276993701291769
+ },
+ {
+  "name": "Alumni Ventures",
+  "fit_entries": 161,
+  "fit_hits": 15,
+  "fit_lift": 1.1434761675493499,
+  "test_entries": 223,
+  "test_hits": 11,
+  "test_lift": 1.5297746453655399
+ },
+ {
+  "name": "Pioneer Fund",
+  "fit_entries": 74,
+  "fit_hits": 7,
+  "fit_lift": 1.1372430775415852,
+  "test_entries": 127,
+  "test_hits": 5,
+  "test_lift": 1.2209726052845935
+ },
+ {
+  "name": "Atlantic Labs",
+  "fit_entries": 19,
+  "fit_hits": 2,
+  "fit_lift": 1.1369289914066032,
+  "test_entries": 16,
+  "test_hits": 1,
+  "test_lift": 1.9382940108892923
+ },
+ {
+  "name": "Flex Capital",
+  "fit_entries": 19,
+  "fit_hits": 2,
+  "fit_lift": 1.1369289914066032,
+  "test_entries": 19,
+  "test_hits": 2,
+  "test_lift": 3.2644951762345973
+ },
+ {
+  "name": "Capital Factory",
+  "fit_entries": 19,
+  "fit_hits": 2,
+  "fit_lift": 1.1369289914066032,
+  "test_entries": 21,
+  "test_hits": 2,
+  "test_lift": 2.953590873736064
+ },
+ {
+  "name": "Calm/Storm Ventures",
+  "fit_entries": 19,
+  "fit_hits": 2,
+  "fit_lift": 1.1369289914066032,
+  "test_entries": 23,
+  "test_hits": 2,
+  "test_lift": 2.696756884715537
+ },
+ {
+  "name": "Lerer Hippeau",
+  "fit_entries": 42,
+  "fit_hits": 4,
+  "fit_lift": 1.1201455409519567,
+  "test_entries": 23,
+  "test_hits": 2,
+  "test_lift": 2.696756884715537
+ },
+ {
+  "name": "iSeed",
+  "fit_entries": 20,
+  "fit_hits": 2,
+  "fit_lift": 1.111663902708679,
+  "test_entries": 31,
+  "test_hits": 1,
+  "test_lift": 1.0004098120718927
+ },
+ {
+  "name": "Founder Collective",
+  "fit_entries": 43,
+  "fit_hits": 4,
+  "fit_lift": 1.1036728124085455,
+  "test_entries": 28,
+  "test_hits": 1,
+  "test_lift": 1.1075965776510242
+ },
+ {
+  "name": "Revolution\u2019s Rise of the Rest Seed Fund",
+  "fit_entries": 21,
+  "fit_hits": 2,
+  "fit_lift": 1.0874972961280553,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Shrug Capital",
+  "fit_entries": 21,
+  "fit_hits": 2,
+  "fit_lift": 1.0874972961280553,
+  "test_entries": 20,
+  "test_hits": 2,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "Mechanism Capital",
+  "fit_entries": 21,
+  "fit_hits": 2,
+  "fit_lift": 1.0874972961280553,
+  "test_entries": 22,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Kima Ventures",
+  "fit_entries": 92,
+  "fit_hits": 8,
+  "fit_lift": 1.069226516987711,
+  "test_entries": 105,
+  "test_hits": 5,
+  "test_lift": 1.476795436868032
+ },
+ {
+  "name": "Hack VC",
+  "fit_entries": 22,
+  "fit_hits": 2,
+  "fit_lift": 1.0643590557849054,
+  "test_entries": 23,
+  "test_hits": 2,
+  "test_lift": 2.696756884715537
+ },
+ {
+  "name": "Charlie Songhurst",
+  "fit_entries": 46,
+  "fit_hits": 4,
+  "fit_lift": 1.0570387499124099,
+  "test_entries": 29,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Brooklyn Bridge Ventures",
+  "fit_entries": 23,
+  "fit_hits": 2,
+  "fit_lift": 1.0421849087893864,
+  "test_entries": 15,
+  "test_hits": 1,
+  "test_lift": 2.067513611615245
+ },
+ {
+  "name": "Picus Capital",
+  "fit_entries": 36,
+  "fit_hits": 3,
+  "fit_lift": 1.0252018595546857,
+  "test_entries": 46,
+  "test_hits": 3,
+  "test_lift": 2.0225676635366527
+ },
+ {
+  "name": "Day One Ventures",
+  "fit_entries": 24,
+  "fit_hits": 2,
+  "fit_lift": 1.0209158290181746,
+  "test_entries": 19,
+  "test_hits": 1,
+  "test_lift": 1.6322475881172986
+ },
+ {
+  "name": "Plug and Play",
+  "fit_entries": 86,
+  "fit_hits": 7,
+  "fit_lift": 1.014297879969522,
+  "test_entries": 203,
+  "test_hits": 2,
+  "test_lift": 0.3055438834899377
+ },
+ {
+  "name": "Alameda Research",
+  "fit_entries": 37,
+  "fit_hits": 3,
+  "fit_lift": 1.0086663456909004,
+  "test_entries": 45,
+  "test_hits": 1,
+  "test_lift": 0.6891712038717484
+ },
+ {
+  "name": "Kindred Capital",
+  "fit_entries": 37,
+  "fit_hits": 3,
+  "fit_lift": 1.0086663456909004,
+  "test_entries": 19,
+  "test_hits": 1,
+  "test_lift": 1.6322475881172986
+ },
+ {
+  "name": "LD Capital",
+  "fit_entries": 25,
+  "fit_hits": 2,
+  "fit_lift": 1.000497512437811,
+  "test_entries": 31,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Forum Ventures",
+  "fit_entries": 38,
+  "fit_hits": 3,
+  "fit_lift": 0.9926557687751719,
+  "test_entries": 26,
+  "test_hits": 2,
+  "test_lift": 2.385592628786821
+ },
+ {
+  "name": "Better Capital",
+  "fit_entries": 51,
+  "fit_hits": 4,
+  "fit_lift": 0.9874967268918565,
+  "test_entries": 67,
+  "test_hits": 1,
+  "test_lift": 0.46287618170490563
+ },
+ {
+  "name": "Neo",
+  "fit_entries": 26,
+  "fit_hits": 2,
+  "fit_lift": 0.9808799141547166,
+  "test_entries": 27,
+  "test_hits": 4,
+  "test_lift": 4.594474692478322
+ },
+ {
+  "name": "Greycroft",
+  "fit_entries": 52,
+  "fit_hits": 4,
+  "fit_lift": 0.9746720940750792,
+  "test_entries": 33,
+  "test_hits": 2,
+  "test_lift": 1.8795578287411319
+ },
+ {
+  "name": "Hustle Fund",
+  "fit_entries": 78,
+  "fit_hits": 6,
+  "fit_lift": 0.9715983190841907,
+  "test_entries": 94,
+  "test_hits": 3,
+  "test_lift": 0.9897671544966598
+ },
+ {
+  "name": "K50 Ventures",
+  "fit_entries": 41,
+  "fit_hits": 3,
+  "fit_lift": 0.947535052012664,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "(ERA) Entrepreneurs Roundtable Accelerator",
+  "fit_entries": 28,
+  "fit_hits": 2,
+  "fit_lift": 0.9438655777715198,
+  "test_entries": 39,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "BEENEXT",
+  "fit_entries": 28,
+  "fit_hits": 2,
+  "fit_lift": 0.9438655777715198,
+  "test_entries": 32,
+  "test_hits": 1,
+  "test_lift": 0.9691470054446462
+ },
+ {
+  "name": "DCM Ventures",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Matchstick Ventures",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Chris Murphy",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 13,
+  "test_hits": 1,
+  "test_lift": 2.385592628786821
+ },
+ {
+  "name": "Kickstart",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 28,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Techstart Ventures",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 13,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Draper Associates",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 26,
+  "test_hits": 2,
+  "test_lift": 2.385592628786821
+ },
+ {
+  "name": "SaaS Ventures",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "LongHash Ventures",
+  "fit_entries": 15,
+  "fit_hits": 1,
+  "fit_lift": 0.937810945273632,
+  "test_entries": 23,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "2048 Ventures",
+  "fit_entries": 29,
+  "fit_hits": 2,
+  "fit_lift": 0.9263865855905657,
+  "test_entries": 12,
+  "test_hits": 1,
+  "test_lift": 2.584392014519056
+ },
+ {
+  "name": "Coughdrop Capital",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "DeFiance Capital",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 15,
+  "test_hits": 1,
+  "test_lift": 2.067513611615245
+ },
+ {
+  "name": "Clocktower Technology Ventures",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 17,
+  "test_hits": 1,
+  "test_lift": 1.8242767161310987
+ },
+ {
+  "name": "The Ark Fund",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "LedgerPrime",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "GSR Ventures",
+  "fit_entries": 16,
+  "fit_hits": 1,
+  "fit_lift": 0.914937507584031,
+  "test_entries": 67,
+  "test_hits": 1,
+  "test_lift": 0.46287618170490563
+ },
+ {
+  "name": "Correlation Ventures",
+  "fit_entries": 30,
+  "fit_hits": 2,
+  "fit_lift": 0.9095431931252826,
+  "test_entries": 33,
+  "test_hits": 1,
+  "test_lift": 0.9397789143705659
+ },
+ {
+  "name": "Right Side Capital Management",
+  "fit_entries": 58,
+  "fit_hits": 4,
+  "fit_lift": 0.9042138704070012,
+  "test_entries": 64,
+  "test_hits": 2,
+  "test_lift": 0.9691470054446462
+ },
+ {
+  "name": "Bling Capital",
+  "fit_entries": 31,
+  "fit_hits": 2,
+  "fit_lift": 0.8933013503909025,
+  "test_entries": 25,
+  "test_hits": 2,
+  "test_lift": 2.4810163339382942
+ },
+ {
+  "name": "Crosslink Capital",
+  "fit_entries": 17,
+  "fit_hits": 1,
+  "fit_lift": 0.8931532812129827,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "MetaProp",
+  "fit_entries": 17,
+  "fit_hits": 1,
+  "fit_lift": 0.8931532812129827,
+  "test_entries": 10,
+  "test_hits": 1,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "Verve Ventures",
+  "fit_entries": 17,
+  "fit_hits": 1,
+  "fit_lift": 0.8931532812129827,
+  "test_entries": 21,
+  "test_hits": 1,
+  "test_lift": 1.476795436868032
+ },
+ {
+  "name": "Fusion Fund",
+  "fit_entries": 17,
+  "fit_hits": 1,
+  "fit_lift": 0.8931532812129827,
+  "test_entries": 15,
+  "test_hits": 1,
+  "test_lift": 2.067513611615245
+ },
+ {
+  "name": "Atlantic",
+  "fit_entries": 17,
+  "fit_hits": 1,
+  "fit_lift": 0.8931532812129827,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "MMC Ventures",
+  "fit_entries": 18,
+  "fit_hits": 1,
+  "fit_lift": 0.8723822746731458,
+  "test_entries": 14,
+  "test_hits": 2,
+  "test_lift": 4.430386310604097
+ },
+ {
+  "name": "Techstars",
+  "fit_entries": 364,
+  "fit_hits": 25,
+  "fit_lift": 0.8684085996751462,
+  "test_entries": 480,
+  "test_hits": 5,
+  "test_lift": 0.323049001814882
+ },
+ {
+  "name": "LoftyInc Capital",
+  "fit_entries": 33,
+  "fit_hits": 2,
+  "fit_lift": 0.862497855549837,
+  "test_entries": 27,
+  "test_hits": 1,
+  "test_lift": 1.1486186731195804
+ },
+ {
+  "name": "NGC Ventures",
+  "fit_entries": 33,
+  "fit_hits": 2,
+  "fit_lift": 0.862497855549837,
+  "test_entries": 42,
+  "test_hits": 1,
+  "test_lift": 0.738397718434016
+ },
+ {
+  "name": "HV Capital",
+  "fit_entries": 20,
+  "fit_hits": 1,
+  "fit_lift": 0.8336097291321172,
+  "test_entries": 12,
+  "test_hits": 2,
+  "test_lift": 5.168784029038112
+ },
+ {
+  "name": "Panache Ventures",
+  "fit_entries": 20,
+  "fit_hits": 1,
+  "fit_lift": 0.8336097291321172,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "Venrex",
+  "fit_entries": 20,
+  "fit_hits": 1,
+  "fit_lift": 0.8336097291321172,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Jon Oringer",
+  "fit_entries": 36,
+  "fit_hits": 2,
+  "fit_lift": 0.8200799282277139,
+  "test_entries": 38,
+  "test_hits": 5,
+  "test_lift": 4.080618970293247
+ },
+ {
+  "name": "NextView Ventures",
+  "fit_entries": 21,
+  "fit_hits": 1,
+  "fit_lift": 0.8154877784988104,
+  "test_entries": 23,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Wavemaker Partners",
+  "fit_entries": 21,
+  "fit_hits": 1,
+  "fit_lift": 0.8154877784988104,
+  "test_entries": 22,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "100X.VC",
+  "fit_entries": 21,
+  "fit_hits": 1,
+  "fit_lift": 0.8154877784988104,
+  "test_entries": 21,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Sand Hill Angels",
+  "fit_entries": 22,
+  "fit_hits": 1,
+  "fit_lift": 0.7981369747009633,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "CMS Holdings",
+  "fit_entries": 22,
+  "fit_hits": 1,
+  "fit_lift": 0.7981369747009633,
+  "test_entries": 20,
+  "test_hits": 1,
+  "test_lift": 1.550635208711434
+ },
+ {
+  "name": "HAX",
+  "fit_entries": 23,
+  "fit_hits": 1,
+  "fit_lift": 0.7815091210613598,
+  "test_entries": 29,
+  "test_hits": 2,
+  "test_lift": 2.138807184429564
+ },
+ {
+  "name": "Sprint Vc",
+  "fit_entries": 25,
+  "fit_hits": 1,
+  "fit_lift": 0.7502487562189055,
+  "test_entries": 48,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "LAUNCH",
+  "fit_entries": 42,
+  "fit_hits": 2,
+  "fit_lift": 0.7466399346550828,
+  "test_entries": 29,
+  "test_hits": 3,
+  "test_lift": 3.208210776644346
+ },
+ {
+  "name": "Asymmetry Ventures",
+  "fit_entries": 43,
+  "fit_hits": 2,
+  "fit_lift": 0.7356599356160375,
+  "test_entries": 34,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Elaia",
+  "fit_entries": 26,
+  "fit_hits": 1,
+  "fit_lift": 0.7355379962930446,
+  "test_entries": 18,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "100Unicorns",
+  "fit_entries": 27,
+  "fit_hits": 1,
+  "fit_lift": 0.7213930348258706,
+  "test_entries": 26,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Canaan Partners",
+  "fit_entries": 28,
+  "fit_hits": 1,
+  "fit_lift": 0.7077818454895335,
+  "test_entries": 13,
+  "test_hits": 1,
+  "test_lift": 2.385592628786821
+ },
+ {
+  "name": "Bpifrance",
+  "fit_entries": 28,
+  "fit_hits": 1,
+  "fit_lift": 0.7077818454895335,
+  "test_entries": 132,
+  "test_hits": 2,
+  "test_lift": 0.46988945718528297
+ },
+ {
+  "name": "Ulu Ventures",
+  "fit_entries": 28,
+  "fit_hits": 1,
+  "fit_lift": 0.7077818454895335,
+  "test_entries": 33,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Nexus Venture Partners",
+  "fit_entries": 29,
+  "fit_hits": 1,
+  "fit_lift": 0.6946747742767644,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Gaingels",
+  "fit_entries": 48,
+  "fit_hits": 2,
+  "fit_lift": 0.6852722687930212,
+  "test_entries": 144,
+  "test_hits": 5,
+  "test_lift": 1.0768300060496068
+ },
+ {
+  "name": "Cherry Ventures",
+  "fit_entries": 30,
+  "fit_hits": 1,
+  "fit_lift": 0.6820443238353686,
+  "test_entries": 33,
+  "test_hits": 1,
+  "test_lift": 0.9397789143705659
+ },
+ {
+  "name": "Ascension",
+  "fit_entries": 31,
+  "fit_hits": 1,
+  "fit_lift": 0.669864960909737,
+  "test_entries": 20,
+  "test_hits": 2,
+  "test_lift": 3.101270417422868
+ },
+ {
+  "name": "Entrepreneurs First",
+  "fit_entries": 71,
+  "fit_hits": 3,
+  "fit_lift": 0.6514303482587065,
+  "test_entries": 54,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "IndieBio",
+  "fit_entries": 33,
+  "fit_hits": 1,
+  "fit_lift": 0.6467661691542288,
+  "test_entries": 35,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Canary",
+  "fit_entries": 33,
+  "fit_hits": 1,
+  "fit_lift": 0.6467661691542288,
+  "test_entries": 33,
+  "test_hits": 1,
+  "test_lift": 0.9397789143705659
+ },
+ {
+  "name": "MAGIC Fund",
+  "fit_entries": 34,
+  "fit_hits": 1,
+  "fit_lift": 0.6358040306939877,
+  "test_entries": 34,
+  "test_hits": 1,
+  "test_lift": 0.9121383580655493
+ },
+ {
+  "name": "Ascend",
+  "fit_entries": 15,
+  "fit_hits": 0,
+  "fit_lift": 0.625,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Oqal",
+  "fit_entries": 15,
+  "fit_hits": 0,
+  "fit_lift": 0.625,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Artesian VC",
+  "fit_entries": 15,
+  "fit_hits": 0,
+  "fit_lift": 0.625,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Berkeley SkyDeck Fund",
+  "fit_entries": 15,
+  "fit_hits": 0,
+  "fit_lift": 0.625,
+  "test_entries": 17,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Kepple Africa Ventures",
+  "fit_entries": 15,
+  "fit_hits": 0,
+  "fit_lift": 0.625,
+  "test_entries": 10,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Fika Ventures",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 11,
+  "test_hits": 1,
+  "test_lift": 2.819336743111698
+ },
+ {
+  "name": "VentureSouq",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "ANIMO Ventures",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 17,
+  "test_hits": 1,
+  "test_lift": 1.8242767161310987
+ },
+ {
+  "name": "Parkwalk Advisors",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 11,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Exnetwork Capital",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 14,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "SkyVision Capital",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 19,
+  "test_hits": 1,
+  "test_lift": 1.6322475881172986
+ },
+ {
+  "name": "SuperAngel.Fund",
+  "fit_entries": 16,
+  "fit_hits": 0,
+  "fit_lift": 0.6097560975609756,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "F6 Ventures",
+  "fit_entries": 17,
+  "fit_hits": 0,
+  "fit_lift": 0.5952380952380952,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Enterprise Ireland",
+  "fit_entries": 17,
+  "fit_hits": 0,
+  "fit_lift": 0.5952380952380952,
+  "test_entries": 15,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "DCVC",
+  "fit_entries": 17,
+  "fit_hits": 0,
+  "fit_lift": 0.5952380952380952,
+  "test_entries": 14,
+  "test_hits": 1,
+  "test_lift": 2.2151931553020483
+ },
+ {
+  "name": "EXPERT DOJO",
+  "fit_entries": 17,
+  "fit_hits": 0,
+  "fit_lift": 0.5952380952380952,
+  "test_entries": 28,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "TA Ventures",
+  "fit_entries": 18,
+  "fit_hits": 0,
+  "fit_lift": 0.5813953488372093,
+  "test_entries": 22,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Solana",
+  "fit_entries": 18,
+  "fit_hits": 0,
+  "fit_lift": 0.5813953488372093,
+  "test_entries": 45,
+  "test_hits": 1,
+  "test_lift": 0.6891712038717484
+ },
+ {
+  "name": "AngelList",
+  "fit_entries": 18,
+  "fit_hits": 0,
+  "fit_lift": 0.5813953488372093,
+  "test_entries": 18,
+  "test_hits": 1,
+  "test_lift": 1.7229280096793709
+ },
+ {
+  "name": "Anthemis",
+  "fit_entries": 18,
+  "fit_hits": 0,
+  "fit_lift": 0.5813953488372093,
+  "test_entries": 16,
+  "test_hits": 2,
+  "test_lift": 3.8765880217785846
+ },
+ {
+  "name": "Mucker Capital",
+  "fit_entries": 40,
+  "fit_hits": 1,
+  "fit_lift": 0.5771144278606966,
+  "test_entries": 40,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Sat Industries",
+  "fit_entries": 19,
+  "fit_hits": 0,
+  "fit_lift": 0.5681818181818182,
+  "test_entries": 19,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "City Light Capital",
+  "fit_entries": 19,
+  "fit_hits": 0,
+  "fit_lift": 0.5681818181818182,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Outlier Ventures",
+  "fit_entries": 19,
+  "fit_hits": 0,
+  "fit_lift": 0.5681818181818182,
+  "test_entries": 43,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Chris Adelsbach",
+  "fit_entries": 20,
+  "fit_hits": 0,
+  "fit_lift": 0.5555555555555556,
+  "test_entries": 27,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Lombardstreet Ventures",
+  "fit_entries": 21,
+  "fit_hits": 0,
+  "fit_lift": 0.5434782608695652,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "SFC Capital",
+  "fit_entries": 21,
+  "fit_hits": 0,
+  "fit_lift": 0.5434782608695652,
+  "test_entries": 16,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Possible Ventures",
+  "fit_entries": 22,
+  "fit_hits": 0,
+  "fit_lift": 0.5319148936170213,
+  "test_entries": 33,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Norte Ventures",
+  "fit_entries": 22,
+  "fit_hits": 0,
+  "fit_lift": 0.5319148936170213,
+  "test_entries": 24,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Venture Catalysts",
+  "fit_entries": 46,
+  "fit_hits": 1,
+  "fit_lift": 0.528344194520356,
+  "test_entries": 54,
+  "test_hits": 1,
+  "test_lift": 0.5743093365597902
+ },
+ {
+  "name": "Startup Wise Guys",
+  "fit_entries": 23,
+  "fit_hits": 0,
+  "fit_lift": 0.5208333333333334,
+  "test_entries": 30,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Goodwater Capital",
+  "fit_entries": 72,
+  "fit_hits": 2,
+  "fit_lift": 0.515720367235985,
+  "test_entries": 225,
+  "test_hits": 4,
+  "test_lift": 0.5513369630973987
+ },
+ {
+  "name": "Fuel Capital",
+  "fit_entries": 24,
+  "fit_hits": 0,
+  "fit_lift": 0.5102040816326531,
+  "test_entries": 23,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Genblock Capital",
+  "fit_entries": 24,
+  "fit_hits": 0,
+  "fit_lift": 0.5102040816326531,
+  "test_entries": 25,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "8VC",
+  "fit_entries": 50,
+  "fit_hits": 1,
+  "fit_lift": 0.5001658374792702,
+  "test_entries": 49,
+  "test_hits": 4,
+  "test_lift": 2.5316493203451977
+ },
+ {
+  "name": "Inflection Point Ventures",
+  "fit_entries": 25,
+  "fit_hits": 0,
+  "fit_lift": 0.5,
+  "test_entries": 38,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "East Ventures",
+  "fit_entries": 25,
+  "fit_hits": 0,
+  "fit_lift": 0.5,
+  "test_entries": 57,
+  "test_hits": 1,
+  "test_lift": 0.5440825293724328
+ },
+ {
+  "name": "GBV Capital",
+  "fit_entries": 27,
+  "fit_hits": 0,
+  "fit_lift": 0.4807692307692307,
+  "test_entries": 29,
+  "test_hits": 2,
+  "test_lift": 2.138807184429564
+ },
+ {
+  "name": "LVX Ventures",
+  "fit_entries": 30,
+  "fit_hits": 0,
+  "fit_lift": 0.45454545454545453,
+  "test_entries": 54,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "Nadav Ben-Chanoch",
+  "fit_entries": 32,
+  "fit_hits": 0,
+  "fit_lift": 0.43859649122807015,
+  "test_entries": 63,
+  "test_hits": 5,
+  "test_lift": 2.461325728113387
+ },
+ {
+  "name": "Antler",
+  "fit_entries": 93,
+  "fit_hits": 2,
+  "fit_lift": 0.42393962391432666,
+  "test_entries": 257,
+  "test_hits": 4,
+  "test_lift": 0.4826880027117304
+ },
+ {
+  "name": "Boost VC",
+  "fit_entries": 40,
+  "fit_hits": 0,
+  "fit_lift": 0.3846153846153846,
+  "test_entries": 50,
+  "test_hits": 0,
+  "test_lift": 0.0
+ },
+ {
+  "name": "SOSV",
+  "fit_entries": 143,
+  "fit_hits": 2,
+  "fit_lift": 0.29776711679696755,
+  "test_entries": 204,
+  "test_hits": 2,
+  "test_lift": 0.3040461193551831
+ },
+ {
+  "name": "500 Global",
+  "fit_entries": 428,
+  "fit_hits": 8,
+  "fit_lift": 0.27615784213589883,
+  "test_entries": 236,
+  "test_hits": 5,
+  "test_lift": 0.6570488172506075
+ },
+ {
+  "name": "HTGF (High-Tech Gruenderfonds)",
+  "fit_entries": 79,
+  "fit_hits": 0,
+  "fit_lift": 0.24038461538461536,
+  "test_entries": 74,
+  "test_hits": 0,
+  "test_lift": 0.0
+ }
+]
