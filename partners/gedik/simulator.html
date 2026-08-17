@@ -70,49 +70,43 @@ td{padding:5px 8px 5px 0;border-top:1px solid #f0f0f0;vertical-align:top}
 
 <div class="note" style="background:#f4f4f4;border-left-color:#003876;margin:22px 0 6px">
 <b>What on this page is measured, and what is assumed.</b>
-<b>Measured</b> — the 22 convergence cases and their 8.2-month median; the 137 conversions out of 5,323 flagged founders and their 8.6-month median; the 5.88% base rate across 26,636 companies and every manager hit rate against it; the sector head starts; the 19 co-investment windows; the 2024 marks.
-<b>Assumed</b> — that a measured hit rate converts into fund returns at 0.35 &times; ln(lift); that half of it persists into the next fund; that informed co-investment returns 2.20x where random co-investment measured 1.27x; that access to oversubscribed funds can be bought with a signal feed.
+<b>Measured</b> — the seven verified convergence cases and their 8.7-month median; the 137 conversions out of 5,323 flagged founders and their 8.6-month median; the 5.88% base rate across 26,636 companies and every manager hit rate against it; the sector head starts; the 19 co-investment windows; the 2024 marks.
+<b>Assumed</b> — that a measured hit rate converts into fund returns at 0.35 &times; ln(lift); that 85% of it persists into the next fund, which a walk-forward test supports; that informed co-investment returns 2.20x where random co-investment measured 1.27x; that access to oversubscribed funds can be bought with a signal feed.
 Every forward number in section 6 rests on those four assumptions. The first is the one Fund&nbsp;I exists to test, and none of them is established by the evidence above.
 </div>
 
 <p class="sub">What follows runs in the order the edge is built, then tested: what we saw first, whether it holds at scale, how we pick funds, where it pays, how we double down, what the model says, and what the model got right on real money.</p>
 
 <!-- ═══════════ 1 ═══════════ -->
-<h2><span class="num">1</span>We beat these managers to 22 of their own deals</h2>
-<p class="deck">Not a backtest of a formula — a delivery record. Since March 2024 we have sent a US venture firm a weekly list of stealth founders. Matching that list against 350 positions our candidate managers actually bought since then, 22 appear on our list first — 6% of their book — by a median of 8.2 months.</p>
+<h2><span class="num">1</span>We beat these managers to seven of their own deals</h2>
+<p class="deck">Not a backtest of a formula — a delivery record. Since March 2024 we have sent a US venture firm a weekly list of stealth founders, timestamped by a third party. Matching that list against what our candidate managers actually bought, then checking every match line by line against the round records, <b>seven cases confirm</b>: the founder was on our list before the manager invested, with both dates verified. The median lead is <b>8.7 months</b>.</p>
 
 <table>
-<tr><th style="width:38%">Founder · company</th><th>We flagged</th><th>Manager invested</th><th style="text-align:right">Lead</th></tr>
-<tr><td><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15</td><td style="text-align:right"><b>9 mo</b></td></tr>
-<tr><td>Snir Kodesh · Petual</td><td>2025-04-18</td><td>Quiet Capital 2026-04-23</td><td style="text-align:right">12 mo</td></tr>
-<tr><td>Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29</td><td style="text-align:right">10 mo</td></tr>
-<tr><td>Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One (Bucher) 2025-05-21</td><td style="text-align:right">9 mo</td></tr>
-<tr><td>Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27</td><td style="text-align:right">7 mo</td></tr>
+<tr><th style="width:36%">Founder · company</th><th>We flagged</th><th>Manager invested</th><th style="text-align:right">Lead</th></tr>
+<tr><td>Daniel Shimoni + Tomer Mesika · Modus</td><td>2025-09-26</td><td>Soma 2026-07-29 · $10M seed</td><td style="text-align:right">10.1 mo</td></tr>
+<tr><td>Penny Chen · Pax AI</td><td>2024-07-05</td><td>Soma 2025-04-08 · $4.5M seed</td><td style="text-align:right">9.1 mo</td></tr>
+<tr><td><b>Dan Shiebler + Shachar Hirshberg</b> · Artemis</td><td>2025-07-25</td><td><b>Theory (Tunguz)</b> 2026-04-15 · $55M Series A</td><td style="text-align:right"><b>8.7 mo</b></td></tr>
+<tr><td>Leroy Kerry · Filed</td><td>2024-08-30</td><td>Day One (Bucher) 2025-05-21 · $17M seed</td><td style="text-align:right">8.7 mo</td></tr>
+<tr><td>Shubham Choudhary + Vardhan Kapoor · FirstWork</td><td>2024-07-26</td><td>Soma 2025-02-27 · $5M seed</td><td style="text-align:right">7.1 mo</td></tr>
+<tr><td>Talha Faiz · Candid Intelligence</td><td>2025-08-15</td><td>Quiet Capital 2025-09-08 · $5.5M seed</td><td style="text-align:right">0.8 mo</td></tr>
+<tr><td>Bryan Lacaillade · freightmate AI</td><td>2024-06-14</td><td>Wischoff 2024-06-27 · $0.7M pre-seed</td><td style="text-align:right">0.4 mo</td></tr>
 </table>
 
 <div class="chart-card" id="convergence-lead">
-<div class="chart-title">Most of the leads run six to twelve months</div>
-<div class="chart-sub">Months between our signal and the manager's investment, for the 20 matched cases with a dated round — median 8.2 months</div>
-<div class="chart-legend"><span><span class="swatch" style="background:#003876;"></span>Cases where our signal came first</span></div>
-<div class="chart-single" style="height:260px"><canvas id="cLead" style="height:260px!important" role="img" aria-label="Bar chart of lead time between our signal and the manager's investment: 2 cases at 0 to 3 months, 1 at 3 to 6, 5 at 6 to 9, 6 at 9 to 12, 3 at 12 to 18, 3 at 18 to 24 months.">Eleven of the twenty cases fall between six and twelve months of lead, with a median of 8.2 months.</canvas></div>
-<div class="chart-source">Source: Olympos signal log (5,329 founders since Mar 2024), Crunchbase round histories</div>
+<div class="chart-title">Five of the seven gave us seven months or more</div>
+<div class="chart-sub">Months between our signal and the manager's investment, for every case where both dates are confirmed against round records — median 8.7 months</div>
+<div class="chart-legend"><span><span class="swatch" style="background:#003876;"></span>Confirmed lead over the manager</span></div>
+<div class="chart-single" style="height:270px"><canvas id="cLead" style="height:270px!important" role="img" aria-label="Horizontal bar chart of confirmed lead time per company: Modus 10.1 months, Pax AI 9.1, Artemis 8.7, Filed 8.7, FirstWork 7.1, Candid Intelligence 0.8, freightmate AI 0.4.">Five of the seven confirmed cases gave us seven months or more of lead; the median is 8.7 months.</canvas></div>
+<div class="chart-source chart-source-wrap">Source: Olympos signal log (5,329 signals since Mar 2024, third-party timestamped), Crunchbase parsed round records (199,620 rounds) — every date in this chart verified against a round record</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
-<div class="chart-card" id="convergence-share">
-<div class="chart-title">Theory bought 18% of its recent book off our list</div>
-<div class="chart-sub">Share of each manager's positions taken since 2024 that had already appeared on our weekly stealth-founder list before they invested — 350 positions across the five, so individual shares rest on small books</div>
-<div class="chart-legend"><span><span class="swatch" style="background:#003876;"></span>Share we flagged first</span></div>
-<div class="chart-single" style="height:250px"><canvas id="cShare" style="height:250px!important" role="img" aria-label="Horizontal bar chart of the share of each manager's post-2024 positions we flagged first: Theory 18.2 percent, Soma 10.0, Quiet 7.4, Wischoff 6.7, Day One 4.8 percent.">Theory bought 18 percent of its recent book out of names we had already flagged.</canvas></div>
-<div class="chart-source">Source: Olympos signal log, Crunchbase round histories — 350 manager positions matched</div>
-<div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
-</div>
+<div class="note"><b>What the check threw out, and the one case it reversed.</b> An earlier pass on this data claimed 22 convergence cases. Re-checked against the parsed round records: seven confirm outright; three carry a Crunchbase date of exactly 1 January 2026, a year-granularity artifact that makes the lead time worthless; three name a manager the round record does not list; four companies are absent from the corpus altogether; and <b>one case reverses</b> — we had claimed Paces, but Soma was already in from June 2022, twenty-one months <i>before</i> our signal. Only the seven above appear anywhere on this page. The rest are not disproved, but they are not evidence either, and seven verified cases are worth more than twenty-two you have to take on trust.</div>
 
-<p>We know of no other limited partner making this offer. We are not asking a manager to take our money and report back. We are handing them a feed that reached 22 of their own best names before they did.</p>
+<p>We know of no other limited partner making this offer. We are not asking a manager to take our money and report back. We are handing them a feed that reached seven of their own names before they did.</p>
 
-<!-- ═══════════ 2 ═══════════ -->
-<h2><span class="num">2</span>The lead holds across 5,323 founders, not just 22</h2>
-<p class="deck">Twenty-two cases could be luck. So we took every founder the system has ever flagged — 5,329 signals, 5,323 distinct founders, 5,290 matched to a LinkedIn profile — found their company, and asked whether one of the 29 top firms later put money in. It happened 137 times — 2.6% of the founders we flagged. For those 137 the median gap between our flag and the cheque was <b>8.6 months</b>. That gap is measured after the fact on the ones that converted; what a manager buys is the earlier look, not a guarantee that any given name will convert.</p>
+<h2><span class="num">2</span>The lead holds across 5,323 founders, not just seven</h2>
+<p class="deck">Seven cases could be luck. So we took every founder the system has ever flagged — 5,329 signals, 5,323 distinct founders, 5,290 matched to a LinkedIn profile — found their company, and asked whether one of the 29 top firms later put money in. It happened 137 times — 2.6% of the founders we flagged. For those 137 the median gap between our flag and the cheque was <b>8.6 months</b>. That gap is measured after the fact on the ones that converted; what a manager buys is the earlier look, not a guarantee that any given name will convert.</p>
 
 <div class="chart-card" id="arrival">
 <div class="chart-title">Half the money arrives within nine months of our flag</div>
@@ -201,11 +195,11 @@ Every forward number in section 6 rests on those four assumptions. The first is 
 
 <!-- ═══════════ 6 ═══════════ -->
 <h2><span class="num">6</span>Size the fund yourself</h2>
-<p class="deck">Every number below moves. The control that matters most is <b>edge persistence</b> — it sets how much of our measured advantage we assume survives into the next fund. It ships at 50%, because our own persistence test found roughly half of top performers stay top. Drag it to zero and the fund still returns 2.48x — because that removes our <i>picking</i> edge but not our <i>access</i>: the right to buy funds an ordinary limited partner cannot get into. Switching the strategy to market pick removes both, and drops the fund to 1.6x.</p>
+<p class="deck">Every number below moves. The control that matters most is <b>edge persistence</b> — it sets how much of our measured advantage we assume survives into the next fund. It ships at 85%, which is measured rather than assumed: fitting hit rates on 2019-21 seed entries and scoring them on 2022-23, the top twelve investors went from a 2.65x fit lift to a <b>2.33x forward lift</b> — a persistence coefficient of 0.87. Drag it to zero and the fund still returns about 2.5x — because that removes our <i>picking</i> edge but not our <i>access</i>: the right to buy funds an ordinary limited partner cannot get into. Switching the strategy to market pick removes both, and drops the fund to 1.6x.</p>
 
 <div class="chart-card" id="simulator">
-<div class="chart-title">The default fund returns 2.7x net, or 15% a year</div>
-<div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive. Measured edge is discounted 50% for persistence before it is used.</div>
+<div class="chart-title">The default fund returns 2.9x net, or 16% a year</div>
+<div class="chart-sub">Monte Carlo, 8,000 scenarios over the measured manager roster — TVPI is total value against committed capital, so it starts near 1.0 and dips as fees are drawn before marks arrive. Measured edge is discounted 15% for persistence, a haircut taken from a walk-forward test rather than assumed.</div>
 <form class="controls" autocomplete="off" onsubmit="return false">
   <div><label>Size <span class="val" id="vSize">$40M</span></label><input type="range" id="size" autocomplete="off" min="20" max="200" value="40" step="5"></div>
   <div><label>Managers <span class="val" id="vMgr">12</span></label><input type="range" id="mgr" autocomplete="off" min="3" max="18" step="1" value="12" style="width:104px"></div>
@@ -214,7 +208,7 @@ Every forward number in section 6 rests on those four assumptions. The first is 
     <option value="equal" selected>Selected, equal weight</option>
     <option value="tiered">Selected, tiered by conviction</option>
     <option value="none">No selection — market pick</option></select></div>
-  <div><label>Persistence <span class="val" id="vPers">50%</span></label><input type="range" id="pers" autocomplete="off" min="0" max="100" value="50" step="5"></div>
+  <div><label>Persistence <span class="val" id="vPers">85%</span></label><input type="range" id="pers" autocomplete="off" min="0" max="100" value="85" step="5"></div>
   <div><label>Scenario <span class="val" id="vSeed">#42</span></label><button type="button" id="reroll">&#8635; Re-roll</button></div>
 </form>
 <div class="chart-legend">
@@ -240,7 +234,7 @@ Every forward number in section 6 rests on those four assumptions. The first is 
 <tr><td>Direct US venture fund — median</td><td>~1.8–2.0x</td><td>~13–15%</td></tr>
 <tr><td>Direct US venture fund — top quartile</td><td>~2.5x+</td><td>~20%+</td></tr>
 </table>
-<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories; benchmark rows are indicative ranges from published industry statistics, not a single cited series — manager premiums derived from measured hit rate as 0.35 &times; ln(lift), then halved for persistence; full model notes at the foot of the page</div>
+<div class="chart-source chart-source-wrap">Source: Olympos analysis, Crunchbase round histories; benchmark rows are indicative ranges from published industry statistics, not a single cited series — manager premiums derived from measured hit rate as 0.35 &times; ln(lift), then discounted for measured persistence; full model notes at the foot of the page</div>
 <div class="chart-olympos"><a href="https://olymposhq.com/" target="_blank" rel="noopener"><img src="olymposlogo.png" alt="Olympos"></a><span class="chart-date">Aug 2026</span></div>
 </div>
 
@@ -274,7 +268,7 @@ Every forward number in section 6 rests on those four assumptions. The first is 
 <p><b>Why selection pays.</b> Not by avoiding losers. Oversubscribed funds ration allocation, so an ordinary limited partner cannot buy the right tail at all — in the model this is a cap on how large any single manager outcome can be, lifted from 2.3x to 25x when selection is on. Turn selection off and drop the direct sleeve and the fund returns about 1.5x with roughly a fifth of scenarios below cost, against a published fund-of-funds median of 1.4-1.6x and a comparable loss rate. That calibration was not fitted; it is the check on everything else.</p><p><b>Estimation error.</b> Each manager's premium is drawn per scenario around its measured value, with a spread set by how many seed entries the measurement rests on — five entries give a wide draw, 177 a tight one. Unmeasured managers get the widest spread of all. This is why the roster chart labels entry counts: they are inputs to the model, not decoration.</p><p><b>What manager count does and does not do.</b> The model shows almost no return penalty for holding six managers instead of twelve, because the dominant risks — the vintage and the direct sleeve — are common to all of them. The case for twelve is not diversification of returns; it is that our premiums rest on small samples, and a concentrated fund is a bet that a handful of those estimates are right.</p>
 <p><b>Fees and costs.</b> An 8% haircut on terminal value covers the vehicle's own management fee and carried interest, plus fixed operating cost of about $60K a year for administration, audit, tax, legal and compliance — a quoted figure, not an estimate. Fixed cost is flat in dollars, so it bites small funds hardest and is what sets the minimum viable size.</p>
 <p><b>Cash flows.</b> Capital called evenly over five years. Distributions of 60% of terminal value paid <b>from year six</b> on a rising schedule, with the remaining 40% held as residual value at year ten. Seed funds do not return cash before then, and an earlier schedule was flattering the IRR by roughly two points. IRR is computed on those flows, which is why it is higher than the tenth root of the multiple — committed capital is not outstanding for the full ten years.</p>
-<p><b>Persistence.</b> The roster is the top of 816 measured investors, so its hit rates are in-sample maxima and will not repeat at full strength. Our own Seed-100 persistence test found 48 of 100 top performers persisted, with a median 22-place move, so the measured premium is discounted by half before the model uses it. The slider exposes this: at 100% the fund returns roughly a point and a half more, at zero it returns the unselected case.</p>
+<p><b>Persistence, measured.</b> The roster is the top of 816 measured investors, so its hit rates are in-sample maxima. We tested how much survives: hit rates fitted on seed entries from 2019-2021, then scored on entries from 2022-2023, across 272 investors with enough of both. The result is monotone — the top fit quartile went on to 1.95x the base rate, the second to 1.59x, the third to 1.16x, the bottom to 0.65x, a threefold spread out of sample with a correlation of +0.30. At our roster size the top twelve went from a 2.65x fit lift to a 2.33x forward lift, a coefficient of <b>0.87</b>, so the model discounts to 85%. <b>The aggregate persists; individual managers do not.</b> Inside that same top twelve, SV Angel went from 3.31x to 5.28x while Naval Ravikant went from 2.35x to zero on 29 entries. That dispersion is why the model draws each premium with error rather than treating it as known, and why a concentrated fund is a worse idea than the return numbers alone suggest.</p>
 <p><b>Vintage risk is regime-switching, not lognormal.</b> A thin-tailed draw cannot produce a 2000 or a 2021, yet both happened inside 25 years. The model gives 18% of vintages a bust regime centred near a 55% haircut, which puts a fund-halving vintage at 12% rather than the 6.5% a lognormal allows. This is the single largest driver of the chance of losing money, and no amount of manager selection diversifies it away.</p>
 <p><b>The direct sleeve.</b> Positions of about $1M each, so the count moves with both fund size and sleeve share. Single-company outcomes are drawn from a power law with dispersion of 1.45 in logs, calibrated so the sleeve returns <b>1.27x without selection — the figure our own 2024 window measured for random co-investment — and 2.20x with it.</b> That 1.7x skill premium is the largest single assumption on this page. Two corrections are applied and both reduce the number: the sleeve holds the same companies as the fund sleeve, so part of its fate is shared rather than independent; and allocation is contingent on being a meaningful limited partner, so if cheques fall below what a manager will accept, the co-investment invitations do not arrive either.</p>
 <p><b>Market risk.</b> A single vintage factor with dispersion of 0.46 in logs multiplies every path. This is the dominant risk in a fund of funds and it is not diversifiable by holding more managers — 2021 vintages are the reference case.</p>
@@ -292,15 +286,12 @@ const GRID={color:'rgba(0,0,0,0.06)'}, NOGRID={display:false}, TICK={color:'#999
 const AX=t=>({display:true,text:t,color:'#888',font:{size:11,weight:500}});
 
 /* 1 — convergence */
-new Chart(document.getElementById('cLead'),{type:'bar',data:{labels:['0–3','3–6','6–9','9–12','12–18','18–24'],
- datasets:[{data:[2,1,5,6,3,3],backgroundColor:NAVY,borderWidth:0,barPercentage:.72}]},
- options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.y+' founders'}}},
-  scales:{x:{grid:NOGRID,ticks:TICK,title:AX('months between our signal and the investment')},
-   y:{grid:GRID,ticks:{...TICK,stepSize:1},title:AX('founders')}}}});
-new Chart(document.getElementById('cShare'),{type:'bar',data:{labels:['Theory','Soma','Quiet','Wischoff','Day One'],
- datasets:[{data:[18.2,10.0,7.4,6.7,4.8],backgroundColor:NAVY,borderWidth:0,barPercentage:.68}]},
- options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(1)+'% of their book'}}},
-  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+'%'},title:AX('share of their 2024+ positions we flagged first')},
+new Chart(document.getElementById('cLead'),{type:'bar',
+ data:{labels:['Modus','Pax AI','Artemis','Filed','FirstWork','Candid Intelligence','freightmate AI'],
+  datasets:[{data:[10.1,9.1,8.7,8.7,7.1,0.8,0.4],backgroundColor:NAVY,borderWidth:0,barPercentage:.72}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+  tooltip:{...TT,callbacks:{label:i=>i.parsed.x.toFixed(1)+' months before the manager invested'}}},
+  scales:{x:{grid:GRID,ticks:{...TICK,callback:v=>v+' mo'},title:AX('months we were ahead of the manager')},
    y:{grid:NOGRID,ticks:TICK}}}});
 
 /* 2 — arrival */
@@ -457,7 +448,7 @@ const size_=document.getElementById('size'),mgr_=document.getElementById('mgr'),
  mode_=document.getElementById('mode'),pers_=document.getElementById('pers');
 ['input','change'].forEach(e=>[size_,mgr_,co_,mode_,pers_].forEach(el=>el.addEventListener(e,simulate)));
 document.getElementById('reroll').onclick=()=>{SEED=Math.floor(Math.random()*9000)+100;simulate();};
-size_.value=40; mgr_.value=12; co_.value=35; mode_.value='equal'; pers_.value=50;
+size_.value=40; mgr_.value=12; co_.value=35; mode_.value='equal'; pers_.value=85;
 simulate();
 
 /* 7 — backtest calibration */

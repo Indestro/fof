@@ -167,3 +167,51 @@ The chart's source line now names the calibration anchor explicitly.
 **Added:** a visible measured-versus-assumed panel above section 1, so a reader does not have to
 open the model notes to see that all of section 6 rests on four assumptions, none of which the
 evidence above establishes.
+
+---
+
+# Fourth pass: two assumptions tested against data, one of them fatal to a headline
+
+## Persistence is 0.87, not the 0.50 we guessed — walk-forward tested
+
+Fitted hit rates on seed/pre-seed entries 2019-2021, then scored the same investors on entries
+2022-2023, 272 investors with at least 15 entries in the fit window and 10 in the test window.
+Base rates: 7.99% fit, 3.22% test.
+
+| Fit-window quartile | Fit lift | Forward lift |
+|---|---|---|
+| Top | 2.00x | **1.95x** |
+| Second | 1.37x | 1.59x |
+| Third | 1.00x | 1.16x |
+| Bottom | 0.60x | **0.65x** |
+
+Monotone, threefold top-to-bottom spread, correlation +0.30. Regression to the mean at the extreme
+is mild: top decile 0.82, top 5% 0.86, **top twelve (our roster size) 2.65x -> 2.33x = 0.87.**
+Model default moved 50% -> 85%, which raises the default fund from 2.74x/15.4% to **2.95x/16.5%**.
+
+**But the aggregate persists where individuals do not.** Inside that top twelve, SV Angel went
+3.31x -> 5.28x while Naval Ravikant went 2.35x -> 0.00x on 29 entries, and Ameet Patel 2.84x -> 0.00x
+on 10. This is the empirical case for keeping estimation error in the model and for not concentrating.
+
+Data: `backtests/walkforward_lift_validation.json`.
+
+## The 22 convergence cases do not survive checking. Seven do.
+
+Re-verified every case against the parsed round corpus:
+
+- **7 confirmed** — Modus, Pax AI, Artemis, Filed, FirstWork, Candid Intelligence, freightmate AI.
+  Median lead **8.7 months** (was 8.2 across the unverified 22).
+- **1 reversed** — Paces. We claimed a +4-month lead; Soma's seed was **2022-06-02**, twenty-one
+  months *before* our 2024-03-12 signal. The case runs the wrong way.
+- 3 carry a Crunchbase date of exactly 2026-01-01 (year-granularity artifact): dmodel, 1849 Bio,
+  Apex Compute. Lead times unusable.
+- 3 name a manager the round record does not list: Boardy, Minerva, Petual.
+- 4 absent from the corpus: Haplotype, Pepr, MindFort, Atum.
+
+Absence from this corpus is not disproof — the original match used a different Crunchbase pull. But
+none of it is quotable. **The page now claims seven, names all seven with both dates, and states in
+full what the check discarded and what it reversed.** The per-manager share chart (Theory 18% etc.)
+rested on the unverified set and has been removed.
+
+This is the single most important correction of the session: the strongest claim on the page was
+three times overstated, and it sat in the first section.
