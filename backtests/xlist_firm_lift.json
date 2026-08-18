@@ -1,0 +1,1125 @@
+{
+ "base": 0.018426993715296845,
+ "firms": [
+  {
+   "fund": "Premise Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Battery Ventures",
+   "handles": 1,
+   "lift": 0.7575757575757576,
+   "entries": 8,
+   "hits": 0
+  },
+  {
+   "fund": "Outcast Ventures",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Scale Venture Partners",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Menlo Ventures",
+   "handles": 18,
+   "lift": 3.2569859473429172,
+   "entries": 16,
+   "hits": 2
+  },
+  {
+   "fund": "Sapphire Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Index Ventures",
+   "handles": 6,
+   "lift": 4.246892064598582,
+   "entries": 32,
+   "hits": 4
+  },
+  {
+   "fund": "Emergence Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Accel",
+   "handles": 30,
+   "lift": 5.923336486912645,
+   "entries": 80,
+   "hits": 11
+  },
+  {
+   "fund": "CapitalG",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Lightspeed",
+   "handles": 24,
+   "lift": 6.826979018382126,
+   "entries": 82,
+   "hits": 13
+  },
+  {
+   "fund": "Felicis",
+   "handles": 12,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Overmatch Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Bain Capital Ventures",
+   "handles": 1,
+   "lift": 2.6707284768211923,
+   "entries": 25,
+   "hits": 2
+  },
+  {
+   "fund": "Village Global",
+   "handles": 2,
+   "lift": 0.8616109991361937,
+   "entries": 67,
+   "hits": 1
+  },
+  {
+   "fund": "ICONIQ Growth",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Emerson Collective",
+   "handles": 1,
+   "lift": 2.2018947755702722,
+   "entries": 11,
+   "hits": 1
+  },
+  {
+   "fund": "NEA",
+   "handles": 2,
+   "lift": 4.246892064598582,
+   "entries": 32,
+   "hits": 4
+  },
+  {
+   "fund": "Khosla Ventures",
+   "handles": 20,
+   "lift": 6.755446148483792,
+   "entries": 51,
+   "hits": 9
+  },
+  {
+   "fund": "Salesforce Ventures",
+   "handles": 1,
+   "lift": 2.1423841059602653,
+   "entries": 12,
+   "hits": 1
+  },
+  {
+   "fund": "Bessemer",
+   "handles": 36,
+   "lift": 6.654285440061426,
+   "entries": 44,
+   "hits": 8
+  },
+  {
+   "fund": "Boldstart",
+   "handles": 1,
+   "lift": 0.5813953488372092,
+   "entries": 18,
+   "hits": 0
+  },
+  {
+   "fund": "Conviction",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Cyberstarts",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Essence VC",
+   "handles": 1,
+   "lift": 0.5952380952380952,
+   "entries": 17,
+   "hits": 0
+  },
+  {
+   "fund": "First Round Capital",
+   "handles": 1,
+   "lift": 6.044987440054807,
+   "entries": 33,
+   "hits": 6
+  },
+  {
+   "fund": "Floodgate",
+   "handles": 1,
+   "lift": 1.9817052980132452,
+   "entries": 15,
+   "hits": 1
+  },
+  {
+   "fund": "Greylock",
+   "handles": 11,
+   "lift": 5.810609011816647,
+   "entries": 26,
+   "hits": 5
+  },
+  {
+   "fund": "Haystack",
+   "handles": 2,
+   "lift": 1.9817052980132452,
+   "entries": 15,
+   "hits": 1
+  },
+  {
+   "fund": "HF0",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Allison Pickens Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "NFX",
+   "handles": 2,
+   "lift": 0.36764705882352944,
+   "entries": 43,
+   "hits": 0
+  },
+  {
+   "fund": "Pear VC",
+   "handles": 2,
+   "lift": 2.721806315385354,
+   "entries": 44,
+   "hits": 3
+  },
+  {
+   "fund": "Pebblebed",
+   "handles": 1,
+   "lift": 2.4020670278948426,
+   "entries": 8,
+   "hits": 1
+  },
+  {
+   "fund": "Primary Venture Partners",
+   "handles": 1,
+   "lift": 2.2018947755702722,
+   "entries": 11,
+   "hits": 1
+  },
+  {
+   "fund": "South Park Commons",
+   "handles": 4,
+   "lift": 6.042947514085203,
+   "entries": 42,
+   "hits": 7
+  },
+  {
+   "fund": "Susa Ventures",
+   "handles": 1,
+   "lift": 5.478269867549669,
+   "entries": 39,
+   "hits": 6
+  },
+  {
+   "fund": "K5 Global",
+   "handles": 1,
+   "lift": 2.1586739742711427,
+   "entries": 62,
+   "hits": 3
+  },
+  {
+   "fund": "Uncork Capital",
+   "handles": 1,
+   "lift": 2.032518254372559,
+   "entries": 14,
+   "hits": 1
+  },
+  {
+   "fund": "Unusual Ventures",
+   "handles": 1,
+   "lift": 5.150486120896153,
+   "entries": 22,
+   "hits": 4
+  },
+  {
+   "fund": "BoxGroup",
+   "handles": 2,
+   "lift": 4.54918520723268,
+   "entries": 64,
+   "hits": 7
+  },
+  {
+   "fund": "Kyber Knight",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "SV Angel",
+   "handles": 1,
+   "lift": 6.338443299811953,
+   "entries": 56,
+   "hits": 9
+  },
+  {
+   "fund": "a16z",
+   "handles": 38,
+   "lift": 7.532539959169448,
+   "entries": 108,
+   "hits": 18
+  },
+  {
+   "fund": "Cambrian",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Coatue",
+   "handles": 2,
+   "lift": 6.542509396814032,
+   "entries": 12,
+   "hits": 4
+  },
+  {
+   "fund": "Kleiner Perkins",
+   "handles": 8,
+   "lift": 4.940262197594269,
+   "entries": 24,
+   "hits": 4
+  },
+  {
+   "fund": "Infinity Ventures",
+   "handles": 1,
+   "lift": 4.046558298213927,
+   "entries": 8,
+   "hits": 2
+  },
+  {
+   "fund": "Construct Capital",
+   "handles": 1,
+   "lift": 2.557039094210639,
+   "entries": 6,
+   "hits": 1
+  },
+  {
+   "fund": "Redpoint",
+   "handles": 12,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "AMP",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Stealth (ex-a16z)",
+   "handles": 3,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "SKU'd Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "U.S. Office of Personnel Management",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "VZVC",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Meta",
+   "handles": 3,
+   "lift": 0.8064516129032258,
+   "entries": 6,
+   "hits": 0
+  },
+  {
+   "fund": "Tribe Capital",
+   "handles": 1,
+   "lift": 2.1891217023124527,
+   "entries": 36,
+   "hits": 2
+  },
+  {
+   "fund": "Sound Ventures",
+   "handles": 1,
+   "lift": 0.7142857142857142,
+   "entries": 10,
+   "hits": 0
+  },
+  {
+   "fund": "ACTAI Ventures",
+   "handles": 1,
+   "lift": 0.8333333333333334,
+   "entries": 5,
+   "hits": 0
+  },
+  {
+   "fund": "Form Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Baobab Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Superlist",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Y Combinator",
+   "handles": 3,
+   "lift": 2.2968664674285373,
+   "entries": 1309,
+   "hits": 56
+  },
+  {
+   "fund": "Hugging Face",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Z Fellows",
+   "handles": 1,
+   "lift": 0.7575757575757576,
+   "entries": 8,
+   "hits": 0
+  },
+  {
+   "fund": "Tempo",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Sentry",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Pareto Holdings",
+   "handles": 1,
+   "lift": 1.6372434232190551,
+   "entries": 156,
+   "hits": 5
+  },
+  {
+   "fund": "Innovation Endeavors",
+   "handles": 1,
+   "lift": 2.1423841059602653,
+   "entries": 12,
+   "hits": 1
+  },
+  {
+   "fund": "Radical Ventures",
+   "handles": 7,
+   "lift": 0.6756756756756757,
+   "entries": 12,
+   "hits": 0
+  },
+  {
+   "fund": "Marathon Management Partners",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Plural",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Benchmark",
+   "handles": 7,
+   "lift": 2.557039094210639,
+   "entries": 6,
+   "hits": 1
+  },
+  {
+   "fund": "poolside",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Bezos Expeditions",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Stripe",
+   "handles": 1,
+   "lift": 2.26480605487228,
+   "entries": 10,
+   "hits": 1
+  },
+  {
+   "fund": "Thinking Machines Lab",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Goat Capital",
+   "handles": 1,
+   "lift": 2.2018947755702722,
+   "entries": 11,
+   "hits": 1
+  },
+  {
+   "fund": "Ramp",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "A*",
+   "handles": 1,
+   "lift": 4.815503481066395,
+   "entries": 14,
+   "hits": 3
+  },
+  {
+   "fund": "SNR",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Lachy Groom Fund",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Native Markets",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "DCVC",
+   "handles": 1,
+   "lift": 3.179438662882372,
+   "entries": 17,
+   "hits": 2
+  },
+  {
+   "fund": "SciFi VC",
+   "handles": 1,
+   "lift": 0.7575757575757576,
+   "entries": 8,
+   "hits": 0
+  },
+  {
+   "fund": "Anthropic",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "AngelList",
+   "handles": 1,
+   "lift": 1.6177186106230572,
+   "entries": 24,
+   "hits": 1
+  },
+  {
+   "fund": "Oscilar",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Halcyon",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "X",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "B12",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "OpenAI",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "LEGO Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Founders Fund",
+   "handles": 3,
+   "lift": 3.130077262693157,
+   "entries": 35,
+   "hits": 3
+  },
+  {
+   "fund": "AIX Ventures",
+   "handles": 2,
+   "lift": 1.8873383790602336,
+   "entries": 17,
+   "hits": 1
+  },
+  {
+   "fund": "Inactive (ex-Angel)",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "A24",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Otherwise Fund",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Preston-Werner Ventures",
+   "handles": 1,
+   "lift": 0.8333333333333334,
+   "entries": 5,
+   "hits": 0
+  },
+  {
+   "fund": "NuVentures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Kima Ventures",
+   "handles": 1,
+   "lift": 2.04373144553551,
+   "entries": 120,
+   "hits": 5
+  },
+  {
+   "fund": "AMI Labs",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Diffusion",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Crosslink Capital",
+   "handles": 1,
+   "lift": 0.6756756756756757,
+   "entries": 12,
+   "hits": 0
+  },
+  {
+   "fund": "Breyer Capital",
+   "handles": 1,
+   "lift": 1.9333710224519465,
+   "entries": 16,
+   "hits": 1
+  },
+  {
+   "fund": "Costanoa",
+   "handles": 6,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "CRV",
+   "handles": 12,
+   "lift": 2.5680081507896078,
+   "entries": 27,
+   "hits": 2
+  },
+  {
+   "fund": "Striker",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Firestreak Ventures",
+   "handles": 2,
+   "lift": 4.841456953642384,
+   "entries": 25,
+   "hits": 4
+  },
+  {
+   "fund": "Prist Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "First Round",
+   "handles": 5,
+   "lift": 6.044987440054807,
+   "entries": 33,
+   "hits": 6
+  },
+  {
+   "fund": "Forerunner",
+   "handles": 5,
+   "lift": 2.3314179976626415,
+   "entries": 9,
+   "hits": 1
+  },
+  {
+   "fund": "Tactile Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "General Catalyst",
+   "handles": 12,
+   "lift": 10.560960264900663,
+   "entries": 75,
+   "hits": 19
+  },
+  {
+   "fund": "Verdict Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Stealth (ex-General Catalyst)",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Vine Ventures",
+   "handles": 1,
+   "lift": 0.8333333333333334,
+   "entries": 5,
+   "hits": 0
+  },
+  {
+   "fund": "Index",
+   "handles": 3,
+   "lift": 4.246892064598582,
+   "entries": 32,
+   "hits": 4
+  },
+  {
+   "fund": "Hanabi Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Creandum",
+   "handles": 1,
+   "lift": 0.625,
+   "entries": 15,
+   "hits": 0
+  },
+  {
+   "fund": "Atomus",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Stealth (ex-Khosla Ventures)",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Laude Ventures",
+   "handles": 3,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Duration Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Union Square Ventures",
+   "handles": 1,
+   "lift": 1.9817052980132452,
+   "entries": 15,
+   "hits": 1
+  },
+  {
+   "fund": "Connect Ventures",
+   "handles": 1,
+   "lift": 0.5319148936170213,
+   "entries": 22,
+   "hits": 0
+  },
+  {
+   "fund": "Stealth (ex-Lightspeed)",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Sequoia",
+   "handles": 26,
+   "lift": 6.335399934244517,
+   "entries": 116,
+   "hits": 16
+  },
+  {
+   "fund": "Stealth (ex-Sequoia)",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Evantic",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Wing",
+   "handles": 5,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "JAM Fund",
+   "handles": 1,
+   "lift": 1.8434467888495305,
+   "entries": 18,
+   "hits": 1
+  },
+  {
+   "fund": "Day One Ventures",
+   "handles": 1,
+   "lift": 1.5853642384105961,
+   "entries": 25,
+   "hits": 1
+  },
+  {
+   "fund": "Angel (Mercury CEO)",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Matrix Partners",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Amplify Partners",
+   "handles": 2,
+   "lift": 6.891652548898813,
+   "entries": 18,
+   "hits": 5
+  },
+  {
+   "fund": "Soma Capital",
+   "handles": 1,
+   "lift": 3.343818984547461,
+   "entries": 161,
+   "hits": 11
+  },
+  {
+   "fund": "Celesta Capital",
+   "handles": 3,
+   "lift": 0.8333333333333334,
+   "entries": 5,
+   "hits": 0
+  },
+  {
+   "fund": "Quiet Capital",
+   "handles": 3,
+   "lift": 4.938158753847589,
+   "entries": 46,
+   "hits": 6
+  },
+  {
+   "fund": "AlleyCorp",
+   "handles": 1,
+   "lift": 1.6177186106230572,
+   "entries": 24,
+   "hits": 1
+  },
+  {
+   "fund": "redalpine",
+   "handles": 1,
+   "lift": 0.7142857142857142,
+   "entries": 10,
+   "hits": 0
+  },
+  {
+   "fund": "Alloy Fund",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "AIspace Ventures",
+   "handles": 2,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "E1 Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Flixfounders",
+   "handles": 3,
+   "lift": 0.6944444444444444,
+   "entries": 11,
+   "hits": 0
+  },
+  {
+   "fund": "SGH Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Cota Capital",
+   "handles": 3,
+   "lift": 0.7352941176470589,
+   "entries": 9,
+   "hits": 0
+  },
+  {
+   "fund": "Four Cities Capital",
+   "handles": 3,
+   "lift": 2.0860055768560475,
+   "entries": 13,
+   "hits": 1
+  },
+  {
+   "fund": "AltaIR Capital",
+   "handles": 1,
+   "lift": 2.0860055768560475,
+   "entries": 13,
+   "hits": 1
+  },
+  {
+   "fund": "Lux Capital",
+   "handles": 2,
+   "lift": 7.652428256070641,
+   "entries": 35,
+   "hits": 8
+  },
+  {
+   "fund": "Founders Fund / GPx",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Theory Ventures",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Spark Capital",
+   "handles": 1,
+   "lift": 3.3384105960264905,
+   "entries": 15,
+   "hits": 2
+  },
+  {
+   "fund": "Altimeter Capital",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Chemistry",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "GV",
+   "handles": 2,
+   "lift": 5.942530025816589,
+   "entries": 34,
+   "hits": 6
+  },
+  {
+   "fund": "Andreessen Horowitz",
+   "handles": 1,
+   "lift": 7.532539959169448,
+   "entries": 108,
+   "hits": 18
+  },
+  {
+   "fund": "Lightspeed India",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Inveo Ventures / Gedik",
+   "handles": 1,
+   "lift": null,
+   "entries": null,
+   "hits": null
+  },
+  {
+   "fund": "Caffeinated Capital",
+   "handles": 1,
+   "lift": 0.4166666666666667,
+   "entries": 35,
+   "hits": 0
+  }
+ ]
+}

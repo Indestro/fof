@@ -38,6 +38,12 @@ Full table in `backtests/yasin_preceders_reranked.json`.
 | Nadav Ben-Chanoch | 18 | 41 | 75 | 1.3% | **0.42x** |
 | Goodwater Capital | 46 | 40 | 193 | 2.1% | **0.43x** |
 
+**CORRECTION 2026-08-18 — re-measured on an independent tape (`crunchbase_investments`), Gaingels
+came back 1.32x on 200 entries and Goodwater 1.23x on 303. Their below-base readings do NOT replicate.
+Only Nadav Ben-Chanoch (0.42x -> 0.73x) and Outset Ventures survive as below-base on both tapes. Treat
+the below-base column here as one tape's estimate, not a finding; see
+`t1-edge-for-wing-sourcing.md` §3.**
+
 Gaingels, Ben-Chanoch and Goodwater sit **below** the base rate. A company they seeded is *less*
 likely to attract a new tier-1 investor within two years than a randomly chosen seeded company.
 On a volume-ranked list they read as strong signals; they are mild negative ones.
