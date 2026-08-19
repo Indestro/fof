@@ -246,3 +246,20 @@ takes.
 
 Related: [[t1-canonical-list]], [[preceder-rank-volume]], [[t1-arrival-worth]], [[scout-fund-in-a-box]],
 [[weekly-selection]], [[tier1-round-too-late]].
+
+---
+
+## 10. Nine pipeline defects (2026-08-19) — read before trusting any count
+
+A full weekly run surfaced nine silent defects, four of which systematically UNDER-report
+selections. Two of the four were analyst-written filters, not data faults: a founder regex that
+omitted "founding" (cost ~39 rows across four sweeps, including the batch's top row at z=15.56) and
+a sheet read capped at 400 of 1,911 rows (cost 24 selects). One tool, `bulk_get_crunchbase_data`,
+actively FABRICATES a Series A for any unmatched URN and is pointed straight at the funding sweep.
+The departure sweep mis-attributes the employer ~50% of the time.
+
+**Operating rule that generalises: in this pipeline a low count is not a thin week, it is the most
+common symptom of a bug. Sanity-check every count against its baseline before reporting it.**
+
+Full detail, including the four catch-all URNs and the verification-tooling failure modes:
+`intel/sourcing-pipeline-defects-2026-08-19.md`.
