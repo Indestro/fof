@@ -170,68 +170,10 @@ misses Ameet Patel's (whole portfolio compressed into one description as initial
   (Paces — Soma entered twenty-one months *before* our signal). Any Wing-facing convergence number must
   be the audited 7, not the raw match count.
 
----
-
-## 9. Lift alone does not find preceders — it is uncorrelated with actually being early
-
-*Added 2026-08-18 (second session). The engine from Next action #1 is now committed at
-`~/sourcing/fof/scripts/measure_lift.py`; this section is what running it showed.*
-
-§1 fixed *counting the wrong unit* (handles instead of funds). There is a second unit error one
-level down: **a "hit" says tier-1 later appeared on the cap table, not that our investor got there
-first.** A crossover writing a Series B cheque alongside Sequoia scores exactly the same hit as an
-angel who was three years early. Ranking preceders by lift therefore promotes late money.
-
-Measured on the dated tape (`syndicates.csv`, 250 companies, earliness = entered >60d before the
-first tier-1 entry, both terms beta-shrunk):
-
-**corr(lift, earliness) = −0.14 across 53 investors.** Not weak-positive — *nothing*, tilting
-negative. The two rankings barely overlap:
-
-| Ranked by lift | | Ranked by lift x earliness | |
-|---|---|---|---|
-| SV Angel | 1.35 | Soma Capital | 46% early |
-| NVIDIA | 1.34 | Plug and Play | 42% early |
-| BoxGroup | 1.31 | Evolution VC | 42% early |
-| Y Combinator | 1.26 | Scott Belsky | 28% early |
-| Quiet Capital | 1.26 | Justin Mateen | 28% early |
-
-The lift column's top names are near-base on earliness; the early names are near-base on lift.
-An earlier cut of this analysis ranked on lift alone and returned Coatue, CRV, IVP, Meritech,
-Bain, Databricks Ventures and Salesforce Ventures as "preceders" — every one of them a growth or
-strategic investor whose presence is a *consequence* of the company already winning. Their
-earliness rows read 0/4, 0/3, 0/6, 0/8. The signal was entirely an artifact.
-
-**Fix.** Any preceder-derived weight must be `lift x earliness`, and any investor with no dated
-opportunities is unranked, not top-ranked. `measure_lift.py --earliness` prints both columns plus
-the correlation so this cannot silently regress.
-
-**Two traps this exposed, both worth carrying forward:**
-
-- **`t1_live_list.json` is not the tier-1 list** and must never be used for this. It omits Coatue,
-  Greylock, CRV, Felicis, IVP, Thrive, Norwest, USV and Iconiq — so those firms get scored *as
-  preceders of themselves*, which is circular and inflates them straight to the top. The canonical
-  29 is `intel/t1_canonical_handpicked.json`; `measure_lift.py` loads it with an alias map and
-  refuses the other file. `analyze_precursors.py` in `~/sourcing/t1-sensor/` still uses the wrong
-  list — its output is not safe to quote.
-- **Base rate is a property of the tape, not of the world.** Same engine, same definition:
-  showcase gives base 25.9% on 1,257 companies, `syndicates.csv` gives **50.8%** — because that
-  tape is unicorns-only and has no negatives at all. Lift there is compressed toward 1 and means
-  nothing in absolute terms. Use showcase (or the big Mongo tape) for lift, `syndicates.csv` only
-  for earliness, and never put the two in one table — the §8 rule, now with a worked example.
-
-**Operationally for the weekly run:** the preceders worth watching are small and individual —
-Soma, Plug and Play, Scott Belsky, Justin Mateen, K5, Mei Z., Operator Partners, JAM Fund — not
-the brand funds that top the lift table. That is the same conclusion §7 reached from the book
-side, arrived at independently from the timing side, which is the strongest form this evidence
-takes.
-
 ## Next actions, in order
 
-1. ~~Rebuild and commit the lift engine as `~/sourcing/fof/scripts/measure_lift.py`~~ **DONE
-   2026-08-18** — committed, tape-agnostic, canonical-T1 only, `--earliness` and `--seed-only`
-   flags, writes `backtests/measured_lift.json`. Still needs repointing at the big Mongo tape;
-   the two local tapes are small (1,257 and 250 companies).
+1. Rebuild and commit the lift engine as `~/sourcing/fof/scripts/measure_lift.py` (inputs: investor
+   names, window, T1 list; outputs: entries/hits/shrunk/lift). Everything else waits on it.
 2. Finish the fund alias map, re-measure all 539 handles, write `xlist_firm_lift.json` as the live
    weight table.
 3. Change `enrich_and_filter.py` to dedupe follows by fund and score `sum(log(lift))`; keep raw `n_vcs`
@@ -240,9 +182,6 @@ takes.
    graph to cover robotics.
 5. Add `active24`-ranked individuals from `individuals_ranked.json` as a watchlist for new-position
    diffs — a new weekly-selection source, discovery only, never a score.
-6. Re-rank every preceder-derived weight on `lift x earliness` (§9), and fix or retire
-   `~/sourcing/t1-sensor/analyze_precursors.py`, which still ranks raw counts against the wrong
-   tier-1 list.
 
 Related: [[t1-canonical-list]], [[preceder-rank-volume]], [[t1-arrival-worth]], [[scout-fund-in-a-box]],
 [[weekly-selection]], [[tier1-round-too-late]].
